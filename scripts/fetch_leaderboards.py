@@ -25,10 +25,24 @@ from jsonschema import Draft202012Validator
 JINA_READER_BASE = "https://r.jina.ai/"
 ARENA_BASE = "https://arena.ai/leaderboard/"
 
-# 已验证可用的榜单分类，对应 arena.ai 页面 footer "LEADERBOARD RANKINGS" 列表
+# 已验证可用的榜单分类，对应 arena.ai 页面 footer "LEADERBOARD RANKINGS" 列表。
+# 每项是 (文件名用的 slug, 实际请求路径)：Code 分类下 arena.ai 有两个独立子榜
+# —— /leaderboard/code 与 /leaderboard/code/webdev 内容完全相同（前者只是后者的别名），
+# 真正独立的第二个子榜是 /leaderboard/code/image-to-webdev，之前的版本遗漏了它。
+# 文件名不能带斜杠，所以 "code/webdev" 落盘成 code-webdev.json。
 LEADERBOARDS = [
-    "agent", "text", "code", "vision", "document", "search",
-    "text-to-image", "image-edit", "text-to-video", "image-to-video", "video-edit",
+    ("agent", "agent"),
+    ("text", "text"),
+    ("code-webdev", "code/webdev"),
+    ("code-image-to-webdev", "code/image-to-webdev"),
+    ("vision", "vision"),
+    ("document", "document"),
+    ("search", "search"),
+    ("text-to-image", "text-to-image"),
+    ("image-edit", "image-edit"),
+    ("text-to-video", "text-to-video"),
+    ("image-to-video", "image-to-video"),
+    ("video-edit", "video-edit"),
 ]
 
 # 厂商白名单：按长度降序匹配，避免短词（如 "AI"）在匹配更长厂商名（如 "Microsoft AI"）
@@ -321,10 +335,10 @@ def main():
     results = {}
     errors = []
 
-    for slug in LEADERBOARDS:
+    for file_slug, url_path in LEADERBOARDS:
         print(f"\n{'='*50}", file=sys.stderr)
-        print(f"Processing: {slug}", file=sys.stderr)
-        url = f"{ARENA_BASE}{slug}"
+        print(f"Processing: {file_slug} ({url_path})", file=sys.stderr)
+        url = f"{ARENA_BASE}{url_path}"
         try:
             raw = fetch_page(url, jina_key)
             payload = json.loads(raw)
@@ -340,7 +354,7 @@ def main():
 
             output = {
                 "meta": {
-                    "leaderboard": slug,
+                    "leaderboard": file_slug,
                     "source_url": url,
                     "fetched_at": now.isoformat(),
                     "last_updated": extract_last_updated(content, header_idx),
@@ -354,16 +368,16 @@ def main():
                 err_msgs = [f"{e.json_path}: {e.message}" for e in schema_errors[:5]]
                 raise ValueError(f"Schema validation failed: {'; '.join(err_msgs)}")
 
-            fp = day_dir / f"{slug}.json"
+            fp = day_dir / f"{file_slug}.json"
             with open(fp, "w") as f:
                 json.dump(output, f, indent=2, ensure_ascii=False)
             print(f"  wrote {fp} ({len(models)} models)", file=sys.stderr)
-            results[slug] = len(models)
+            results[file_slug] = len(models)
             time.sleep(2)
 
         except Exception as e:
             print(f"  ERROR: {e}", file=sys.stderr)
-            errors.append({"leaderboard": slug, "error": str(e)})
+            errors.append({"leaderboard": file_slug, "error": str(e)})
 
     index = {
         "date": date_str,
