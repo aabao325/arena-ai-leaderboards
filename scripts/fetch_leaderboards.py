@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 """
-Fetch arena.ai leaderboard data using Jina Reader + LLM parsing.
-Validates each result against JSON Schema before writing.
+Fetch arena.ai leaderboard data via Jina Reader (a public read-only page-to-text
+proxy), then parse the returned markdown table with plain regex/string logic —
+no LLM involved anywhere in this pipeline. This intentionally replaces the
+original repo's LLM-based extraction: same fetch mechanism, fully deterministic
+parsing, and an expanded schema that also captures Rank Spread, Price ($/M
+tokens), and Context Length whenever arena.ai actually shows them for a given
+category (it does not for the image/video categories — we leave those null
+rather than inventing data).
 """
 
 import json
@@ -19,9 +25,49 @@ from jsonschema import Draft202012Validator
 JINA_READER_BASE = "https://r.jina.ai/"
 ARENA_BASE = "https://arena.ai/leaderboard/"
 
+# 已验证可用的榜单分类，对应 arena.ai 页面 footer "LEADERBOARD RANKINGS" 列表
+LEADERBOARDS = [
+    "agent", "text", "code", "vision", "document", "search",
+    "text-to-image", "image-edit", "text-to-video", "image-to-video", "video-edit",
+]
+
+# 厂商白名单：按长度降序匹配，避免短词（如 "AI"）在匹配更长厂商名（如 "Microsoft AI"）
+# 时截断出错。这份名单来自对 2026-06 至 2026-07 期间所有分类历史快照的人工核对，
+# 覆盖了当前活跃模型的绝大多数厂商；长尾的停用/实验性模型如果匹配不到，
+# vendor 会诚实地留 null，不做猜测。
+VENDORS = sorted([
+    "Alibaba-ATH", "Alibaba", "Amazon", "Ant Group", "Anthropic", "Baidu",
+    "Black Forest Labs", "Bytedance", "Cohere", "DeepSeek", "Diffbot",
+    "Genmo AI", "Google", "HiDream", "IBM", "Ideogram", "Inception AI",
+    "Kandinsky", "KlingAI", "Krea", "Leonardo AI", "Luma AI", "Meituan",
+    "Meta", "Microsoft AI", "Microsoft", "MiniMax", "Mistral", "Moonshot",
+    "NexusFlow", "Nvidia", "OpenAI", "Perplexity AI", "Pika", "Pixverse",
+    "Pruna", "Recraft", "Reve", "Runway", "Shengshu", "SpaceXAI",
+    "Stability AI", "StepFun", "Tencent", "Xiaomi", "Z.ai", "lightricks",
+    "xAI", "Ai2",
+], key=len, reverse=True)
+
+# 没有展示厂商的老模型，用 license 短语兜底切分模型名（同样按长度降序）
+LICENSE_PHRASES = sorted([
+    "Apache-2.0", "Apache 2.0", "CC-BY-NC-SA-4.0", "CC-BY-NC-4.0",
+    "Non-commercial", "Jamba Open", "DBRX LICENSE", "Yi License",
+    "Falcon-180B TII License", "AI2 ImpACT Low-risk", "Qianwen LICENSE",
+    "Gemma license", "Llama 2 Community", "Llama 3.1 Community",
+    "Llama 3 Community", "Proprietary", "MIT", "Other",
+], key=len, reverse=True)
+
+SIGNAL_COLUMNS = {
+    "Net Improvement": "net_improvement",
+    "Confirmed Success": "confirmed_success",
+    "Praise vs Complaint": "praise_vs_complaint",
+    "Steerability": "steerability",
+    "Bash Recovery": "bash_recovery",
+    "Tool Hallucination": "tool_hallucination",
+}
+
 
 def fetch_page(url: str, jina_api_key: str | None = None) -> str:
-    """Fetch a page via Jina Reader and return markdown text."""
+    """Fetch a page via Jina Reader; returns the raw JSON-wrapped response text."""
     reader_url = f"{JINA_READER_BASE}{url}"
     headers = {
         "Accept": "application/json",
@@ -32,7 +78,6 @@ def fetch_page(url: str, jina_api_key: str | None = None) -> str:
         headers["Authorization"] = f"Bearer {jina_api_key}"
 
     req = urllib.request.Request(reader_url, headers=headers)
-
     for attempt in range(3):
         try:
             with urllib.request.urlopen(req, timeout=60) as resp:
@@ -41,147 +86,222 @@ def fetch_page(url: str, jina_api_key: str | None = None) -> str:
             print(f"  Attempt {attempt+1} failed: {e}", file=sys.stderr)
             if attempt < 2:
                 time.sleep(5 * (attempt + 1))
-
     raise RuntimeError(f"Failed to fetch {url} after 3 attempts")
 
 
-def discover_leaderboards(overview_text: str) -> list[tuple[str, str]]:
-    """Extract leaderboard slugs from overview page links."""
-    pattern = r'arena\.ai/leaderboard/([a-z][a-z0-9-]*)'
-    slugs = sorted(set(re.findall(pattern, overview_text)))
-    return [(s, s) for s in slugs]
+def strip_md_link(text: str):
+    """'[name](url) rest' -> (name, url, rest). If no link, (None, None, text)."""
+    m = re.match(r"^\[([^\]]+)\]\(([^)]+)\)\s*(.*)$", text)
+    if m:
+        return m.group(1).strip(), m.group(2), m.group(3).strip()
+    return None, None, text.strip()
 
 
-SYSTEM_PROMPT = """You are a data extraction assistant. Extract the FULL leaderboard table from the provided text.
-
-Return ONLY valid JSON with this exact structure:
-{
-  "last_updated": "string or null (e.g., '21 hours ago', '5 days ago')",
-  "models": [
-    {
-      "rank": 1,
-      "model": "model-name-exactly-as-shown",
-      "vendor": "OpenAI",
-      "license": "proprietary",
-      "score": 1502,
-      "ci": 8,
-      "votes": 11671
-    }
-  ]
-}
-
-Rules:
-- Extract ALL models in the leaderboard, every single row
-- "rank": integer rank
-- "model": exact model name string as displayed
-- "vendor": organization/company name (e.g., "OpenAI", "Google", "Anthropic", "xAI", "Meta"). null if not shown
-- "license": MUST be exactly "proprietary" or "open". Map any open-source license (MIT, Apache, etc.) to "open". null only if not shown
-- "score": the ELO/Arena score as integer
-- "ci": the confidence interval number (e.g., if shown as "±8" or "1502±8", extract 8). null if not shown
-- "votes": vote count as integer. Remove commas
-- If any field is missing or shows "-", use null
-- Return raw JSON only, no markdown fences, no commentary"""
-
-
-def _parse_llm_response(content: str) -> dict:
-    """Clean and parse LLM JSON response."""
-    content = content.strip()
-    if content.startswith("```"):
-        content = content.split("\n", 1)[1]
-        if content.endswith("```"):
-            content = content[:-3]
-    return json.loads(content)
-
-
-def parse_with_azure(text: str, slug: str, api_key: str, endpoint: str,
-                     deployment: str, api_version: str) -> dict:
-    url = (f"{endpoint.rstrip('/')}/openai/deployments/{deployment}"
-           f"/chat/completions?api-version={api_version}")
-    payload = json.dumps({
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": f'Extract the "{slug}" leaderboard data:\n\n{text[:15000]}'}
-        ],
-        "temperature": 0,
-        "max_tokens": 16000,
-    }).encode("utf-8")
-    req = urllib.request.Request(url, data=payload, headers={
-        "Content-Type": "application/json", "api-key": api_key,
-    }, method="POST")
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-    return _parse_llm_response(data["choices"][0]["message"]["content"])
-
-
-def parse_with_openai(text: str, slug: str, api_key: str) -> dict:
-    payload = json.dumps({
-        "model": "gpt-4o",
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": f'Extract the "{slug}" leaderboard data:\n\n{text[:15000]}'}
-        ],
-        "temperature": 0,
-        "max_tokens": 16000,
-    }).encode("utf-8")
-    req = urllib.request.Request(
-        "https://api.openai.com/v1/chat/completions",
-        data=payload,
-        headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"},
-        method="POST"
-    )
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-    return _parse_llm_response(data["choices"][0]["message"]["content"])
-
-
-def normalize_license(lic):
-    """Normalize license to 'proprietary' | 'open' | None."""
-    if not isinstance(lic, str):
+def normalize_license(raw: str | None) -> str | None:
+    if not raw:
         return None
-    lic_lower = lic.lower()
-    if lic_lower == "proprietary":
+    low = raw.lower()
+    if low.startswith("proprietary"):
         return "proprietary"
-    if lic_lower in ("open", "open source", "open-source"):
-        return "open"
-    if any(kw in lic_lower for kw in ("mit", "apache", "bsd", "gpl", "cc-", "community", "non-commercial")):
-        return "open"
-    return "open"  # default non-proprietary to open
+    return "open"
+
+
+def split_vendor_license(block: str):
+    """'Anthropic · Proprietary' -> ('Anthropic', 'proprietary')."""
+    if " · " in block:
+        vendor_part, _, license_part = block.partition(" · ")
+        return vendor_part.strip(), normalize_license(license_part.strip())
+    return None, None
+
+
+def parse_model_cell(raw: str) -> dict:
+    """Parse a 'Model' column cell into model/model_url/vendor/license."""
+    name, url, remainder = strip_md_link(raw)
+
+    if name is not None:
+        vendor, license_ = split_vendor_license(remainder)
+        return {"model": name, "model_url": url, "vendor": vendor, "license": license_}
+
+    block = remainder
+    if " · " in block:
+        left, _, license_part = block.partition(" · ")
+        license_norm = normalize_license(license_part.strip())
+        for v in VENDORS:
+            if left == v or left.endswith(" " + v):
+                model_name = left[: -len(v)].strip()
+                return {"model": model_name, "model_url": None, "vendor": v, "license": license_norm}
+        return {"model": left.strip(), "model_url": None, "vendor": None, "license": license_norm}
+
+    for phrase in LICENSE_PHRASES:
+        if block == phrase or block.endswith(" " + phrase):
+            model_name = block[: -len(phrase)].strip()
+            return {"model": model_name, "model_url": None, "vendor": None, "license": normalize_license(phrase)}
+    for v in VENDORS:
+        if block == v or block.endswith(" " + v):
+            model_name = block[: -len(v)].strip()
+            return {"model": model_name, "model_url": None, "vendor": v, "license": None}
+    return {"model": block.strip(), "model_url": None, "vendor": None, "license": None}
+
+
+def parse_score(raw: str) -> dict:
+    """'1508±7' or '1631+17/-17', optionally trailed by ' Preliminary'."""
+    preliminary = "Preliminary" in raw
+    text = raw.replace("Preliminary", "").strip()
+    m = re.match(r"^(-?\d+)±(\d+)$", text)
+    if m:
+        score, ci = int(m.group(1)), int(m.group(2))
+        return {"score": score, "ci_low": ci, "ci_high": ci, "preliminary": preliminary}
+    m = re.match(r"^(-?\d+)\+(\d+)/-(\d+)$", text)
+    if m:
+        score, ci_high, ci_low = int(m.group(1)), int(m.group(2)), int(m.group(3))
+        return {"score": score, "ci_low": ci_low, "ci_high": ci_high, "preliminary": preliminary}
+    m = re.match(r"^(-?\d+)$", text)
+    if m:
+        return {"score": int(m.group(1)), "ci_low": None, "ci_high": None, "preliminary": preliminary}
+    return {"score": None, "ci_low": None, "ci_high": None, "preliminary": preliminary}
+
+
+def parse_int(raw: str):
+    text = raw.replace(",", "").strip()
+    return int(text) if re.match(r"^-?\d+$", text) else None
+
+
+def parse_price(raw: str):
+    """'$10 / $50' -> (10.0, 50.0). 'N/A' -> (None, None)."""
+    m = re.match(r"^\$([\d.]+)\s*/\s*\$([\d.]+)$", raw.strip())
+    if m:
+        return float(m.group(1)), float(m.group(2))
+    return None, None
+
+
+def parse_context(raw: str):
+    """'1M' -> 1000000, '1.1M' -> 1100000, '200K' -> 200000. 'N/A' -> None."""
+    m = re.match(r"^([\d.]+)([KM])$", raw.strip(), re.IGNORECASE)
+    if not m:
+        return None
+    n = float(m.group(1))
+    mult = 1_000_000 if m.group(2).upper() == "M" else 1_000
+    return int(round(n * mult))
+
+
+def parse_signal(raw: str):
+    """'13.94%±1.56%' -> {'value': 13.94, 'ci': 1.56}."""
+    m = re.match(r"^(-?[\d.]+)%±([\d.]+)%$", raw.strip())
+    if not m:
+        return None
+    return {"value": float(m.group(1)), "ci": float(m.group(2))}
+
+
+def split_table_row(line: str) -> list[str]:
+    parts = line.split("|")
+    return [c.strip() for c in parts[1:-1]]
+
+
+def find_table(content: str):
+    lines = content.split("\n")
+    header_idx = next((i for i, l in enumerate(lines) if re.match(r"^\|\s*Rank\s*\|", l)), None)
+    if header_idx is None:
+        return None
+    header = split_table_row(lines[header_idx])
+    rows = []
+    for i in range(header_idx + 2, len(lines)):
+        if not lines[i].startswith("|"):
+            break
+        rows.append(lines[i])
+    return header, rows, header_idx
+
+
+def extract_last_updated(content: str, header_idx_hint: int | None) -> str | None:
+    """Best-effort: find a 'Mon DD, YYYY' date line in the page preamble
+    (before the leaderboard table starts), to avoid matching unrelated dates
+    that might appear deep inside model names or links."""
+    preamble = content if header_idx_hint is None else "\n".join(content.split("\n")[:header_idx_hint])
+    m = re.search(r"\b([A-Z][a-z]{2} \d{1,2}, \d{4})\b", preamble)
+    return m.group(1) if m else None
+
+
+def parse_leaderboard(content: str) -> list[dict]:
+    table = find_table(content)
+    if not table:
+        raise ValueError("no leaderboard table found in fetched content")
+    header, rows, _ = table
+
+    has_rank_spread_col = "Rank Spread" in header
+    has_price_col = "Price $/M" in header
+    has_context_col = "Context" in header
+    has_score_col = "Score" in header
+    votes_col_name = "Sessions" if "Sessions" in header else "Votes"
+    idx = {name: i for i, name in enumerate(header)}
+
+    models = []
+    skipped = 0
+    for row_line in rows:
+        cells = split_table_row(row_line)
+        if len(cells) != len(header):
+            skipped += 1
+            continue
+
+        rank_cell = cells[idx["Rank"]]
+        if has_rank_spread_col:
+            rank = parse_int(rank_cell)
+            spread_parts = cells[idx["Rank Spread"]].split()
+            rank_spread = [int(spread_parts[0]), int(spread_parts[1])] if len(spread_parts) == 2 else None
+        else:
+            # agent 分类没有独立的 Rank Spread 列，区间数字挤在 Rank 单元格里：
+            # "1 1 2" = 排名1，区间[1,2]
+            parts = rank_cell.split()
+            rank = int(parts[0]) if parts else None
+            rank_spread = [int(parts[1]), int(parts[2])] if len(parts) == 3 else None
+
+        model_info = parse_model_cell(cells[idx["Model"]])
+
+        record = {
+            "rank": rank,
+            "rank_spread": rank_spread,
+            "model": model_info["model"],
+            "model_url": model_info["model_url"],
+            "vendor": model_info["vendor"],
+            "license": model_info["license"],
+            "votes": parse_int(cells[idx[votes_col_name]]) if votes_col_name in idx else None,
+        }
+
+        if has_score_col:
+            record.update(parse_score(cells[idx["Score"]]))
+        else:
+            record.update({"score": None, "ci_low": None, "ci_high": None, "preliminary": False})
+
+        if has_price_col:
+            p_in, p_out = parse_price(cells[idx["Price $/M"]])
+            record["price_prompt"] = p_in
+            record["price_completion"] = p_out
+        else:
+            record["price_prompt"] = None
+            record["price_completion"] = None
+
+        record["context_length"] = parse_context(cells[idx["Context"]]) if has_context_col else None
+
+        signals = {}
+        for col_name, key in SIGNAL_COLUMNS.items():
+            if col_name in idx:
+                signals[key] = parse_signal(cells[idx[col_name]])
+        record["signals"] = signals if signals else None
+
+        models.append(record)
+
+    if skipped:
+        print(f"  (skipped {skipped} malformed row(s))", file=sys.stderr)
+    return models
 
 
 def main():
     jina_key = os.environ.get("JINA_API_KEY")
-    openai_key = os.environ.get("OPENAI_API_KEY")
-    azure_key = os.environ.get("AZURE_OPENAI_KEY")
-    azure_endpoint = os.environ.get("AZURE_ENDPOINT")
-    azure_deployment = os.environ.get("AZURE_DEPLOYMENT", "gpt-4o")
-    azure_api_version = os.environ.get("AZURE_API_VERSION", "2025-01-01-preview")
 
-    use_azure = bool(azure_key and azure_endpoint)
-    use_openai = bool(openai_key)
-
-    if not (use_azure or use_openai):
-        print("ERROR: Set OPENAI_API_KEY or AZURE_OPENAI_KEY + AZURE_ENDPOINT", file=sys.stderr)
-        sys.exit(1)
-
-    print(f"Using {'Azure OpenAI' if use_azure else 'OpenAI'}", file=sys.stderr)
-
-    # Load schemas
     repo_root = Path(__file__).resolve().parent.parent
     schema_dir = repo_root / "schemas"
     lb_schema = json.loads((schema_dir / "leaderboard.json").read_text())
     idx_schema = json.loads((schema_dir / "index.json").read_text())
     lb_validator = Draft202012Validator(lb_schema)
     idx_validator = Draft202012Validator(idx_schema)
-
-    # Discover leaderboards
-    print("\nDiscovering leaderboards from overview...", file=sys.stderr)
-    overview_text = fetch_page(ARENA_BASE, jina_key)
-    leaderboards = discover_leaderboards(overview_text)
-    print(f"Found {len(leaderboards)} leaderboards: {[s for s, _ in leaderboards]}", file=sys.stderr)
-
-    if not leaderboards:
-        print("ERROR: No leaderboards discovered", file=sys.stderr)
-        sys.exit(1)
 
     now = datetime.now(timezone.utc)
     date_str = now.strftime("%Y-%m-%d")
@@ -191,72 +311,50 @@ def main():
     results = {}
     errors = []
 
-    for slug, url_path in leaderboards:
+    for slug in LEADERBOARDS:
         print(f"\n{'='*50}", file=sys.stderr)
         print(f"Processing: {slug}", file=sys.stderr)
-
+        url = f"{ARENA_BASE}{slug}"
         try:
-            # 1. Fetch
-            url = f"{ARENA_BASE}{url_path}"
-            print(f"  Fetching {url}...", file=sys.stderr)
-            text = fetch_page(url, jina_key)
-            print(f"  Got {len(text)} chars", file=sys.stderr)
+            raw = fetch_page(url, jina_key)
+            payload = json.loads(raw)
+            content = payload["data"]["content"]
 
-            # 2. Parse with LLM
-            print(f"  Parsing with LLM...", file=sys.stderr)
-            if use_azure:
-                parsed = parse_with_azure(text, slug, azure_key, azure_endpoint,
-                                          azure_deployment, azure_api_version)
-            else:
-                parsed = parse_with_openai(text, slug, openai_key)
+            table = find_table(content)
+            if not table:
+                raise ValueError("no leaderboard table found in fetched content")
+            _, _, header_idx = table
+            models = parse_leaderboard(content)
+            if not models:
+                raise ValueError("parser found zero models")
 
-            if not isinstance(parsed.get("models"), list) or len(parsed["models"]) == 0:
-                raise ValueError("LLM returned no models")
-
-            # 3. Build output + normalize
             output = {
                 "meta": {
                     "leaderboard": slug,
                     "source_url": url,
                     "fetched_at": now.isoformat(),
-                    "last_updated": parsed.get("last_updated"),
-                    "model_count": len(parsed["models"]),
+                    "last_updated": extract_last_updated(content, header_idx),
+                    "model_count": len(models),
                 },
-                "models": parsed["models"],
+                "models": models,
             }
 
-            for m in output["models"]:
-                m.setdefault("rank", None)
-                m.setdefault("model", None)
-                m.setdefault("vendor", None)
-                m.setdefault("score", None)
-                m.setdefault("ci", None)
-                m.setdefault("votes", None)
-                m["license"] = normalize_license(m.get("license"))
-
-            # 4. Schema validation
-            print(f"  Validating schema...", file=sys.stderr)
             schema_errors = list(lb_validator.iter_errors(output))
             if schema_errors:
                 err_msgs = [f"{e.json_path}: {e.message}" for e in schema_errors[:5]]
                 raise ValueError(f"Schema validation failed: {'; '.join(err_msgs)}")
 
-            print(f"  ✅ {len(parsed['models'])} models, schema valid", file=sys.stderr)
-
-            # 5. Write
             fp = day_dir / f"{slug}.json"
             with open(fp, "w") as f:
                 json.dump(output, f, indent=2, ensure_ascii=False)
-            print(f"  Wrote {fp}", file=sys.stderr)
-
-            results[slug] = len(parsed["models"])
+            print(f"  wrote {fp} ({len(models)} models)", file=sys.stderr)
+            results[slug] = len(models)
             time.sleep(2)
 
         except Exception as e:
-            print(f"  ❌ Error: {e}", file=sys.stderr)
+            print(f"  ERROR: {e}", file=sys.stderr)
             errors.append({"leaderboard": slug, "error": str(e)})
 
-    # Write & validate index
     index = {
         "date": date_str,
         "fetched_at": now.isoformat(),
@@ -265,30 +363,24 @@ def main():
     }
     idx_errors = list(idx_validator.iter_errors(index))
     if idx_errors:
-        print(f"  ❌ Index schema invalid: {idx_errors[0].message}", file=sys.stderr)
+        print(f"  Index schema invalid: {idx_errors[0].message}", file=sys.stderr)
 
     with open(day_dir / "_index.json", "w") as f:
         json.dump(index, f, indent=2, ensure_ascii=False)
 
-    # Write latest.json pointer
     latest = {"date": date_str, "path": date_str}
     with open(repo_root / "data" / "latest.json", "w") as f:
         json.dump(latest, f, indent=2)
-    print(f"\nUpdated data/latest.json → {date_str}", file=sys.stderr)
+    print(f"\nUpdated data/latest.json -> {date_str}", file=sys.stderr)
 
-    # Summary
     print(f"\n{'='*50}", file=sys.stderr)
-    print(f"Done: {len(results)}/{len(leaderboards)} leaderboards → {day_dir}", file=sys.stderr)
+    print(f"Done: {len(results)}/{len(LEADERBOARDS)} leaderboards", file=sys.stderr)
     for slug, count in results.items():
         print(f"  {slug}: {count} models", file=sys.stderr)
     if errors:
         print(f"Errors: {len(errors)}", file=sys.stderr)
         for e in errors:
             print(f"  {e['leaderboard']}: {e['error']}", file=sys.stderr)
-        sys.exit(1)
-
-    if len(results) < len(leaderboards):
-        print(f"FAIL: only {len(results)}/{len(leaderboards)} succeeded", file=sys.stderr)
         sys.exit(1)
 
 

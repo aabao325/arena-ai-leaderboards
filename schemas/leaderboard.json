@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Arena Leaderboard",
-  "description": "A single leaderboard snapshot from arena.ai",
+  "description": "A single leaderboard snapshot from arena.ai, fetched via Jina Reader and parsed deterministically (no LLM).",
   "type": "object",
   "required": ["meta", "models"],
   "additionalProperties": false,
@@ -29,16 +29,45 @@
   "$defs": {
     "model": {
       "type": "object",
-      "required": ["rank", "model", "vendor", "license", "score", "ci", "votes"],
+      "required": [
+        "rank", "rank_spread", "model", "model_url", "vendor", "license",
+        "score", "ci_low", "ci_high", "preliminary", "votes",
+        "price_prompt", "price_completion", "context_length", "signals"
+      ],
       "additionalProperties": false,
       "properties": {
-        "rank": { "type": "integer", "minimum": 1 },
+        "rank": { "type": ["integer", "null"], "minimum": 1 },
+        "rank_spread": {
+          "type": ["array", "null"],
+          "items": { "type": "integer", "minimum": 1 },
+          "minItems": 2,
+          "maxItems": 2
+        },
         "model": { "type": "string", "minLength": 1 },
+        "model_url": { "type": ["string", "null"], "format": "uri" },
         "vendor": { "type": ["string", "null"] },
         "license": { "enum": ["proprietary", "open", null] },
         "score": { "type": ["integer", "null"] },
-        "ci": { "type": ["integer", "null"] },
-        "votes": { "type": ["integer", "null"] }
+        "ci_low": { "type": ["integer", "null"], "minimum": 0 },
+        "ci_high": { "type": ["integer", "null"], "minimum": 0 },
+        "preliminary": { "type": "boolean" },
+        "votes": { "type": ["integer", "null"] },
+        "price_prompt": { "type": ["number", "null"], "minimum": 0 },
+        "price_completion": { "type": ["number", "null"], "minimum": 0 },
+        "context_length": { "type": ["integer", "null"], "minimum": 0 },
+        "signals": {
+          "type": ["object", "null"],
+          "additionalProperties": { "$ref": "#/$defs/signal" }
+        }
+      }
+    },
+    "signal": {
+      "type": ["object", "null"],
+      "required": ["value", "ci"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "number" },
+        "ci": { "type": "number", "minimum": 0 }
       }
     }
   }

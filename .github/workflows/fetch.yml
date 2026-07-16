@@ -24,11 +24,6 @@ jobs:
       - name: Fetch leaderboards
         env:
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          AZURE_OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
-          AZURE_ENDPOINT: ${{ secrets.AZURE_ENDPOINT }}
-          AZURE_DEPLOYMENT: ${{ secrets.AZURE_DEPLOYMENT }}
-          AZURE_API_VERSION: ${{ secrets.AZURE_API_VERSION }}
         run: python scripts/fetch_leaderboards.py
 
       - name: Commit and push
