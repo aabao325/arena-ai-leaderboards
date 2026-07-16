@@ -46,8 +46,11 @@ def main():
     out_dir = repo_root / "debug"
     out_dir.mkdir(exist_ok=True)
 
-    # 只抓两个有代表性的分类：text（预期有 price/context）、agent（预期 score 为 null）
-    targets = ["text", "agent"]
+    # 抓全部分类，核对每个分类页面经 Jina 转换后的表头/列结构是否一致
+    targets = [
+        "text", "agent", "code", "vision", "document", "search",
+        "text-to-image", "image-edit", "text-to-video", "image-to-video", "video-edit",
+    ]
     for slug in targets:
         url = f"{ARENA_BASE}{slug}"
         print(f"Fetching {url} ...", file=sys.stderr)
