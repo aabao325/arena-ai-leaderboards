@@ -90,8 +90,18 @@ def fetch_page(url: str, jina_api_key: str | None = None) -> str:
 
 
 def strip_md_link(text: str):
-    """'[name](url) rest' -> (name, url, rest). If no link, (None, None, text)."""
-    m = re.match(r"^\[([^\]]+)\]\(([^)]+)\)\s*(.*)$", text)
+    """'[name](url) rest' -> (name, url, rest). If no link, (None, None, text).
+
+    Handles two edge cases seen in real arena.ai data:
+    - a leading markdown image badge before the actual model link, e.g.
+      '![Image 1: Kandinsky](thumb.png) [kandinsky-5.0-t2v-pro](url) rest'
+    - model names that themselves contain a literal '[...]' segment, e.g.
+      '[gemini-3.1-flash-image (nano-banana-2) [web-search]](url)' -- a
+      non-greedy '[^\\]]+' would stop at the first ']' inside the name and
+      truncate it, so the link-name capture below is intentionally greedy.
+    """
+    text = re.sub(r"^!\[[^\]]*\]\([^)]*\)\s*", "", text)
+    m = re.match(r"^\[(.+)\]\(([^)]+)\)\s*(.*)$", text)
     if m:
         return m.group(1).strip(), m.group(2), m.group(3).strip()
     return None, None, text.strip()
