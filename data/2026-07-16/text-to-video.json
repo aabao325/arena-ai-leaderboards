@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text-to-video",
     "source_url": "https://arena.ai/leaderboard/text-to-video",
-    "fetched_at": "2026-07-16T07:32:11.906130+00:00",
+    "fetched_at": "2026-07-16T08:03:38.545055+00:00",
     "last_updated": "Jul 5, 2026",
     "model_count": 42
   },
@@ -613,8 +613,8 @@
         24,
         35
       ],
-      "model": "![Image 1: Kandinsky](https://arena.ai/images/models/kandinsky_light.png) [kandinsky-5.0-t2v-pro](https://github.com/kandinskylab/kandinsky-5/#kandinsky-50-video-pro)",
-      "model_url": null,
+      "model": "kandinsky-5.0-t2v-pro",
+      "model_url": "https://github.com/kandinskylab/kandinsky-5/#kandinsky-50-video-pro",
       "vendor": "Kandinsky",
       "license": "open",
       "votes": 2018,
@@ -733,8 +733,8 @@
         36,
         38
       ],
-      "model": "![Image 2: Kandinsky](https://arena.ai/images/models/kandinsky_light.png) [kandinsky-5.0-t2v-lite](https://github.com/kandinskylab/kandinsky-5/?tab=readme-ov-file#kandinsky-50-video-lite)",
-      "model_url": null,
+      "model": "kandinsky-5.0-t2v-lite",
+      "model_url": "https://github.com/kandinskylab/kandinsky-5/?tab=readme-ov-file#kandinsky-50-video-lite",
       "vendor": "Kandinsky",
       "license": "open",
       "votes": 1475,

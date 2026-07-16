@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "image-edit",
     "source_url": "https://arena.ai/leaderboard/image-edit",
-    "fetched_at": "2026-07-16T07:32:11.906130+00:00",
+    "fetched_at": "2026-07-16T08:03:38.545055+00:00",
     "last_updated": "Jul 10, 2026",
     "model_count": 52
   },
@@ -173,8 +173,8 @@
         4,
         10
       ],
-      "model": "[gemini-3.1-flash-image (nano-banana-2) [web-search]](https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-image)",
-      "model_url": null,
+      "model": "gemini-3.1-flash-image (nano-banana-2) [web-search]",
+      "model_url": "https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-image",
       "vendor": "Google",
       "license": "proprietary",
       "votes": 60941,
