@@ -1,0 +1,31 @@
+name: Debug Check Images
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check for inline vendor/model logo images
+        env:
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+        run: python scripts/debug_check_images.py
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add debug/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "debug: check inline logo image availability"
+            git push
+          fi
