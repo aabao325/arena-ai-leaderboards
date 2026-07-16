@@ -1,0 +1,13 @@
+{
+  "dash_like_chars_found": [
+    {
+      "char": "-",
+      "codepoint": "U+002D",
+      "name": "HYPHEN-MINUS"
+    }
+  ],
+  "candidate_negative_number_contexts": [
+    "enMDW-1.1 | 13.68%±2"
+  ],
+  "candidate_count": 1
+}
