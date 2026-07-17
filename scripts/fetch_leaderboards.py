@@ -80,12 +80,12 @@ SIGNAL_COLUMNS = {
 }
 
 
-def fetch_page(url: str, jina_api_key: str | None = None) -> str:
+def fetch_page(url: str, jina_api_key: str | None = None, fmt: str = "markdown") -> str:
     """Fetch a page via Jina Reader; returns the raw JSON-wrapped response text."""
     reader_url = f"{JINA_READER_BASE}{url}"
     headers = {
         "Accept": "application/json",
-        "X-Return-Format": "markdown",
+        "X-Return-Format": fmt,
         "User-Agent": "Mozilla/5.0 (compatible; arena-leaderboard-bot/1.0)",
     }
     if jina_api_key:
@@ -94,7 +94,7 @@ def fetch_page(url: str, jina_api_key: str | None = None) -> str:
     req = urllib.request.Request(reader_url, headers=headers)
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=60) as resp:
+            with urllib.request.urlopen(req, timeout=90) as resp:
                 return resp.read().decode("utf-8")
         except urllib.error.URLError as e:
             print(f"  Attempt {attempt+1} failed: {e}", file=sys.stderr)
@@ -209,11 +209,70 @@ def parse_context(raw: str):
 
 
 def parse_signal(raw: str):
-    """'13.94%±1.56%' -> {'value': 13.94, 'ci': 1.56}."""
+    """'13.94%±1.56%' -> {'value': 13.94, 'ci': 1.56}.
+
+    IMPORTANT: arena.ai's Agent page never puts a literal minus sign in this
+    cell's text — verified by direct inspection of the raw HTML. Positive vs.
+    negative is conveyed purely visually, via a CSS class on the wrapping span
+    (text-interactive-positive / text-interactive-negative) and a decorative
+    SVG arrow icon (aria-label="Up"/"Down"), neither of which survive Jina's
+    markdown conversion. The value returned here is always the unsigned
+    magnitude; extract_agent_signs() below recovers the true sign from a
+    separate HTML-mode fetch and flips the sign of `value` accordingly.
+    """
     m = re.match(r"^(-?[\d.]+)%±([\d.]+)%$", raw.strip())
     if not m:
         return None
     return {"value": float(m.group(1)), "ci": float(m.group(2))}
+
+
+AGENT_SIGNAL_ORDER = [
+    "net_improvement", "confirmed_success", "praise_vs_complaint",
+    "steerability", "bash_recovery", "tool_hallucination",
+]
+
+
+def extract_agent_signs(html: str, model_names_in_rank_order: list[str]) -> dict:
+    """Recover the true +/- sign for each of the 6 Agent signal columns per
+    model, by scanning the raw (non-markdown) HTML for
+    'text-interactive-(positive|negative)' markers in row order.
+
+    Each model's row is bounded by its own `title="ModelName"` marker and the
+    next model's marker (found via the already-known rank-ordered name list,
+    not by searching for the *next* occurrence of `title="` generically,
+    since tooltips elsewhere in a row also carry `title="..."` attributes and
+    would produce a false/too-short boundary). The very last row has no
+    "next model" to bound it, so falls back to the "Signal Leaders" heading
+    that immediately follows the table in the page layout.
+
+    Returns {model_name: [bool, ...]} (True = positive) with exactly 6
+    entries per model, or omits a model entirely if its row can't be located
+    or doesn't contain exactly 6 sign markers (caller must treat a missing
+    entry as "sign unknown, leave value as the unsigned magnitude" rather
+    than guessing).
+    """
+    result = {}
+    n = len(model_names_in_rank_order)
+    for i, name in enumerate(model_names_in_rank_order):
+        marker = f'title="{name}"'
+        start = html.find(marker)
+        if start == -1:
+            continue
+        end = html.find("Signal Leaders", start)
+        if end == -1:
+            end = len(html)
+        for j in range(i + 1, n):
+            next_marker = f'title="{model_names_in_rank_order[j]}"'
+            next_idx = html.find(next_marker, start + len(marker))
+            if next_idx != -1:
+                end = min(end, next_idx)
+                break
+        row_slice = html[start:end]
+        signs = re.findall(r"text-interactive-(positive|negative)", row_slice)
+        if len(signs) != 6:
+            continue
+        result[name] = [s == "positive" for s in signs]
+    return result
 
 
 def split_table_row(line: str) -> list[str]:
@@ -351,6 +410,35 @@ def main():
             models = parse_leaderboard(content)
             if not models:
                 raise ValueError("parser found zero models")
+
+            # Agent 分类的 6 个信号列在 markdown 文本里永远不带负号（见 parse_signal 的说明），
+            # 真实正负号只存在于渲染后的 HTML（CSS 类名 + SVG 图标），markdown 抓不到。
+            # 额外拉一次 HTML 模式，扫描每一行的符号标记，回填到已解析的 signals 里。
+            if file_slug == "agent":
+                try:
+                    html_raw = fetch_page(url, jina_key, fmt="html")
+                    html_payload = json.loads(html_raw)
+                    html_content = html_payload["data"]["html"]
+                    ordered_names = [m["model"] for m in sorted(models, key=lambda x: x["rank"] or 0)]
+                    signs_by_model = extract_agent_signs(html_content, ordered_names)
+                    applied, missing = 0, []
+                    for m in models:
+                        signs = signs_by_model.get(m["model"])
+                        if not signs or not m["signals"]:
+                            missing.append(m["model"])
+                            continue
+                        for key, is_pos in zip(AGENT_SIGNAL_ORDER, signs):
+                            sig = m["signals"].get(key)
+                            if sig is not None and not is_pos:
+                                sig["value"] = -abs(sig["value"])
+                        applied += 1
+                    print(f"  applied signs to {applied}/{len(models)} agent rows", file=sys.stderr)
+                    if missing:
+                        print(f"  sign lookup missed: {missing}", file=sys.stderr)
+                except Exception as e:
+                    # 符号回填失败不应该让整个 agent 类目抓取失败 —— 退化为「全部按未带符号的
+                    # 正值处理」，总比整个分类抓取报错、页面完全没有 agent 数据要好。
+                    print(f"  WARNING: failed to backfill agent signs ({e}); keeping unsigned magnitudes", file=sys.stderr)
 
             output = {
                 "meta": {
