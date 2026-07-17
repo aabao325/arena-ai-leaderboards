@@ -36,8 +36,8 @@
         "model": { "type": "string", "minLength": 1 },
         "vendor": { "type": ["string", "null"] },
         "license": { "enum": ["proprietary", "open", null] },
-        "score": { "type": ["integer", "null"] },
-        "ci": { "type": ["integer", "null"] },
+        "score": { "type": ["number", "null"] },
+        "ci": { "type": ["number", "null"] },
         "votes": { "type": ["integer", "null"] }
       }
     }
