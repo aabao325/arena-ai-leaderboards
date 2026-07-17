@@ -130,7 +130,7 @@ def parse_with_azure(text: str, slug: str, system_prompt: str, api_key: str, end
             {"role": "user", "content": f'Extract the "{slug}" leaderboard data:\n\n{text[:20000]}'}
         ],
         "temperature": 0,
-        "max_tokens": 20000,
+        "max_tokens": 16000,
     }).encode("utf-8")
     req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json", "api-key": api_key}, method="POST")
     with urllib.request.urlopen(req, timeout=120) as resp:
@@ -146,7 +146,7 @@ def parse_with_openai(text: str, slug: str, system_prompt: str, api_key: str) ->
             {"role": "user", "content": f'Extract the "{slug}" leaderboard data:\n\n{text[:20000]}'}
         ],
         "temperature": 0,
-        "max_tokens": 20000,
+        "max_tokens": 16000,
     }).encode("utf-8")
     req = urllib.request.Request("https://api.openai.com/v1/chat/completions", data=payload, headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}, method="POST")
     with urllib.request.urlopen(req, timeout=120) as resp:
@@ -328,3 +328,7 @@ def main():
         for e in errors:
             print(f"  {e['leaderboard']}: {e['error']}", file=sys.stderr)
         sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
