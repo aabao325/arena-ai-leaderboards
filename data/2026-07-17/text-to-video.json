@@ -2,8 +2,8 @@
   "meta": {
     "leaderboard": "text-to-video",
     "source_url": "https://arena.ai/leaderboard/text-to-video",
-    "fetched_at": "2026-07-17T07:30:34.405240+00:00",
-    "last_updated": null,
+    "fetched_at": "2026-07-17T09:35:42.481229+00:00",
+    "last_updated": "Jul 5, 2026",
     "model_count": 42
   },
   "models": [
@@ -12,8 +12,8 @@
       "model": "gemini-omni-flash",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1527,
-      "ci": 13,
+      "score": 1527.0,
+      "ci": 13.0,
       "votes": 5449
     },
     {
@@ -21,8 +21,8 @@
       "model": "dreamina-seedance-2.0-720p",
       "vendor": "Bytedance",
       "license": "proprietary",
-      "score": 1482,
-      "ci": 10,
+      "score": 1482.0,
+      "ci": 10.0,
       "votes": 41953
     },
     {
@@ -30,8 +30,8 @@
       "model": "muse-video",
       "vendor": "Meta",
       "license": "proprietary",
-      "score": 1459,
-      "ci": 15,
+      "score": 1459.0,
+      "ci": 15.0,
       "votes": 2152
     },
     {
@@ -39,8 +39,8 @@
       "model": "happyhorse-1.0",
       "vendor": "Alibaba-ATH",
       "license": "proprietary",
-      "score": 1430,
-      "ci": 13,
+      "score": 1430.0,
+      "ci": 13.0,
       "votes": 21985
     },
     {
@@ -48,8 +48,8 @@
       "model": "sora-2-pro",
       "vendor": "OpenAI",
       "license": "proprietary",
-      "score": 1366,
-      "ci": 8,
+      "score": 1366.0,
+      "ci": 8.0,
       "votes": 39773
     },
     {
@@ -57,8 +57,8 @@
       "model": "veo-3.1-audio-1080p",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1364,
-      "ci": 11,
+      "score": 1364.0,
+      "ci": 11.0,
       "votes": 23200
     },
     {
@@ -66,8 +66,8 @@
       "model": "veo-3.1-audio",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1364,
-      "ci": 14,
+      "score": 1364.0,
+      "ci": 14.0,
       "votes": 13691
     },
     {
@@ -75,8 +75,8 @@
       "model": "veo-3.1-fast-audio",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1362,
-      "ci": 11,
+      "score": 1362.0,
+      "ci": 11.0,
       "votes": 39333
     },
     {
@@ -84,8 +84,8 @@
       "model": "veo-3.1-fast-audio-1080p",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1360,
-      "ci": 10,
+      "score": 1360.0,
+      "ci": 10.0,
       "votes": 23506
     },
     {
@@ -93,8 +93,8 @@
       "model": "grok-imagine-video-720p",
       "vendor": "SpaceXAI",
       "license": "proprietary",
-      "score": 1352,
-      "ci": 8,
+      "score": 1352.0,
+      "ci": 8.0,
       "votes": 144437
     },
     {
@@ -102,8 +102,8 @@
       "model": "wan2.7-t2v",
       "vendor": "Alibaba",
       "license": "proprietary",
-      "score": 1348,
-      "ci": 10,
+      "score": 1348.0,
+      "ci": 10.0,
       "votes": 8092
     },
     {
@@ -111,8 +111,8 @@
       "model": "veo-3-fast-audio",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1347,
-      "ci": 11,
+      "score": 1347.0,
+      "ci": 11.0,
       "votes": 25153
     },
     {
@@ -120,8 +120,8 @@
       "model": "veo-3-audio",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1339,
-      "ci": 12,
+      "score": 1339.0,
+      "ci": 12.0,
       "votes": 18961
     },
     {
@@ -129,8 +129,8 @@
       "model": "sora-2",
       "vendor": "OpenAI",
       "license": "proprietary",
-      "score": 1337,
-      "ci": 7,
+      "score": 1337.0,
+      "ci": 7.0,
       "votes": 53767
     },
     {
@@ -138,8 +138,8 @@
       "model": "wan2.6-t2v",
       "vendor": "Alibaba",
       "license": "proprietary",
-      "score": 1333,
-      "ci": 10,
+      "score": 1333.0,
+      "ci": 10.0,
       "votes": 34624
     },
     {
@@ -147,8 +147,8 @@
       "model": "seedance-v1.5-pro",
       "vendor": "Bytedance",
       "license": "proprietary",
-      "score": 1257,
-      "ci": 7,
+      "score": 1257.0,
+      "ci": 7.0,
       "votes": 72436
     },
     {
@@ -156,8 +156,8 @@
       "model": "wan2.5-t2v-preview",
       "vendor": "Alibaba",
       "license": "proprietary",
-      "score": 1254,
-      "ci": 11,
+      "score": 1254.0,
+      "ci": 11.0,
       "votes": 22102
     },
     {
@@ -165,8 +165,8 @@
       "model": "veo-3",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1252,
-      "ci": 11,
+      "score": 1252.0,
+      "ci": 11.0,
       "votes": 14948
     },
     {
@@ -174,8 +174,8 @@
       "model": "veo-3-fast",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1248,
-      "ci": 12,
+      "score": 1248.0,
+      "ci": 12.0,
       "votes": 15230
     },
     {
@@ -183,8 +183,8 @@
       "model": "pixverse-v5.6",
       "vendor": "Pixverse",
       "license": "proprietary",
-      "score": 1241,
-      "ci": 11,
+      "score": 1241.0,
+      "ci": 11.0,
       "votes": 30216
     },
     {
@@ -192,8 +192,8 @@
       "model": "runway-gen-4.5",
       "vendor": "Runway",
       "license": "proprietary",
-      "score": 1228,
-      "ci": 12,
+      "score": 1228.0,
+      "ci": 12.0,
       "votes": 30013
     },
     {
@@ -201,8 +201,8 @@
       "model": "kling-2.5-turbo-1080p",
       "vendor": "KlingAI",
       "license": "proprietary",
-      "score": 1219,
-      "ci": 17,
+      "score": 1219.0,
+      "ci": 17.0,
       "votes": 2104
     },
     {
@@ -210,8 +210,8 @@
       "model": "kling-2.6-pro",
       "vendor": "KlingAI",
       "license": "proprietary",
-      "score": 1218,
-      "ci": 7,
+      "score": 1218.0,
+      "ci": 7.0,
       "votes": 70615
     },
     {
@@ -219,8 +219,8 @@
       "model": "p-video",
       "vendor": "Pruna",
       "license": "proprietary",
-      "score": 1207,
-      "ci": 16,
+      "score": 1207.0,
+      "ci": 16.0,
       "votes": 7039
     },
     {
@@ -228,8 +228,8 @@
       "model": "kling-o1-pro",
       "vendor": "KlingAI",
       "license": "proprietary",
-      "score": 1205,
-      "ci": 27,
+      "score": 1205.0,
+      "ci": 27.0,
       "votes": 1193
     },
     {
@@ -237,8 +237,8 @@
       "model": "ray-3",
       "vendor": "Luma AI",
       "license": "proprietary",
-      "score": 1205,
-      "ci": 22,
+      "score": 1205.0,
+      "ci": 22.0,
       "votes": 1121
     },
     {
@@ -246,8 +246,8 @@
       "model": "hailuo-2.3",
       "vendor": "MiniMax",
       "license": "proprietary",
-      "score": 1199,
-      "ci": 7,
+      "score": 1199.0,
+      "ci": 7.0,
       "votes": 62088
     },
     {
@@ -255,8 +255,8 @@
       "model": "hailuo-02-pro",
       "vendor": "MiniMax",
       "license": "proprietary",
-      "score": 1197,
-      "ci": 12,
+      "score": 1197.0,
+      "ci": 12.0,
       "votes": 9367
     },
     {
@@ -264,8 +264,8 @@
       "model": "seedance-v1-pro",
       "vendor": "Bytedance",
       "license": "proprietary",
-      "score": 1190,
-      "ci": 11,
+      "score": 1190.0,
+      "ci": 11.0,
       "votes": 12120
     },
     {
@@ -273,8 +273,8 @@
       "model": "hailuo-02-standard",
       "vendor": "MiniMax",
       "license": "proprietary",
-      "score": 1179,
-      "ci": 12,
+      "score": 1179.0,
+      "ci": 12.0,
       "votes": 9333
     },
     {
@@ -282,8 +282,8 @@
       "model": "kandinsky-5.0-t2v-pro",
       "vendor": "Kandinsky",
       "license": "open",
-      "score": 1172,
-      "ci": 20,
+      "score": 1172.0,
+      "ci": 20.0,
       "votes": 2018
     },
     {
@@ -291,8 +291,8 @@
       "model": "hunyuan-video-1.5",
       "vendor": "Tencent",
       "license": null,
-      "score": 1169,
-      "ci": 16,
+      "score": 1169.0,
+      "ci": 16.0,
       "votes": 4271
     },
     {
@@ -300,8 +300,8 @@
       "model": "veo-2",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1163,
-      "ci": 16,
+      "score": 1163.0,
+      "ci": 16.0,
       "votes": 6509
     },
     {
@@ -309,8 +309,8 @@
       "model": "kling-v2.1-master",
       "vendor": "KlingAI",
       "license": "proprietary",
-      "score": 1162,
-      "ci": 10,
+      "score": 1162.0,
+      "ci": 10.0,
       "votes": 14049
     },
     {
@@ -318,8 +318,8 @@
       "model": "ltx-2-19b",
       "vendor": "lightricks",
       "license": null,
-      "score": 1143,
-      "ci": 10,
+      "score": 1143.0,
+      "ci": 10.0,
       "votes": 53873
     },
     {
@@ -327,8 +327,8 @@
       "model": "wan-v2.2-a14b",
       "vendor": "Alibaba",
       "license": "open",
-      "score": 1131,
-      "ci": 15,
+      "score": 1131.0,
+      "ci": 15.0,
       "votes": 10418
     },
     {
@@ -336,8 +336,8 @@
       "model": "kandinsky-5.0-t2v-lite",
       "vendor": "Kandinsky",
       "license": "open",
-      "score": 1113,
-      "ci": 18,
+      "score": 1113.0,
+      "ci": 18.0,
       "votes": 1475
     },
     {
@@ -345,8 +345,8 @@
       "model": "seedance-v1-lite",
       "vendor": "Bytedance",
       "license": "proprietary",
-      "score": 1112,
-      "ci": 9,
+      "score": 1112.0,
+      "ci": 9.0,
       "votes": 16212
     },
     {
@@ -354,8 +354,8 @@
       "model": "sora",
       "vendor": "OpenAI",
       "license": "proprietary",
-      "score": 1068,
-      "ci": 16,
+      "score": 1068.0,
+      "ci": 16.0,
       "votes": 4080
     },
     {
@@ -363,8 +363,8 @@
       "model": "ray2",
       "vendor": "Luma AI",
       "license": "proprietary",
-      "score": 1064,
-      "ci": 17,
+      "score": 1064.0,
+      "ci": 17.0,
       "votes": 5217
     },
     {
@@ -372,8 +372,8 @@
       "model": "pika-v2.2",
       "vendor": "Pika",
       "license": "proprietary",
-      "score": 1008,
-      "ci": 15,
+      "score": 1008.0,
+      "ci": 15.0,
       "votes": 5728
     },
     {
@@ -381,8 +381,8 @@
       "model": "mochi-v1",
       "vendor": "Genmo AI",
       "license": "open",
-      "score": 1005,
-      "ci": 16,
+      "score": 1005.0,
+      "ci": 16.0,
       "votes": 5862
     }
   ]

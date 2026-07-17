@@ -1,12 +1,12 @@
 {
   "date": "2026-07-17",
-  "fetched_at": "2026-07-17T07:30:34.405240+00:00",
+  "fetched_at": "2026-07-17T09:35:42.481229+00:00",
   "leaderboards": {
     "agent": {
-      "model_count": 35
+      "model_count": 5
     },
     "code": {
-      "model_count": 20
+      "model_count": 30
     },
     "document": {
       "model_count": 32
@@ -21,7 +21,7 @@
       "model_count": 32
     },
     "text": {
-      "model_count": 10
+      "model_count": 20
     },
     "text-to-image": {
       "model_count": 74
@@ -33,7 +33,7 @@
       "model_count": 7
     },
     "vision": {
-      "model_count": 50
+      "model_count": 30
     }
   },
   "errors": []

@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "video-edit",
     "source_url": "https://arena.ai/leaderboard/video-edit",
-    "fetched_at": "2026-07-17T07:30:34.405240+00:00",
+    "fetched_at": "2026-07-17T09:35:42.481229+00:00",
     "last_updated": "Jun 29, 2026",
     "model_count": 7
   },
@@ -12,8 +12,8 @@
       "model": "dreamina-seedance-2.0-720p",
       "vendor": "Bytedance",
       "license": "proprietary",
-      "score": 1377,
-      "ci": 12,
+      "score": 1377.0,
+      "ci": 12.0,
       "votes": 3010
     },
     {
@@ -21,8 +21,8 @@
       "model": "gemini-omni-flash",
       "vendor": "Google",
       "license": "proprietary",
-      "score": 1347,
-      "ci": 16,
+      "score": 1347.0,
+      "ci": 16.0,
       "votes": 998
     },
     {
@@ -30,8 +30,8 @@
       "model": "happyhorse-1.0",
       "vendor": "Alibaba-ATH",
       "license": "proprietary",
-      "score": 1308,
-      "ci": 12,
+      "score": 1308.0,
+      "ci": 12.0,
       "votes": 2681
     },
     {
@@ -39,8 +39,8 @@
       "model": "grok-imagine-video",
       "vendor": "SpaceXAI",
       "license": "proprietary",
-      "score": 1264,
-      "ci": 8,
+      "score": 1264.0,
+      "ci": 8.0,
       "votes": 11736
     },
     {
@@ -48,8 +48,8 @@
       "model": "kling-o3-pro",
       "vendor": "KlingAI",
       "license": "proprietary",
-      "score": 1251,
-      "ci": 10,
+      "score": 1251.0,
+      "ci": 10.0,
       "votes": 6165
     },
     {
@@ -57,8 +57,8 @@
       "model": "kling-o1-pro",
       "vendor": "KlingAI",
       "license": "proprietary",
-      "score": 1203,
-      "ci": 9,
+      "score": 1203.0,
+      "ci": 9.0,
       "votes": 8322
     },
     {
@@ -66,8 +66,8 @@
       "model": "runway-gen4-aleph",
       "vendor": "Runway",
       "license": "proprietary",
-      "score": 1194,
-      "ci": 8,
+      "score": 1194.0,
+      "ci": 8.0,
       "votes": 8368
     }
   ]
