@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "agent",
     "source_url": "https://arena.ai/leaderboard/agent",
-    "fetched_at": "2026-07-17T04:45:36.470399+00:00",
+    "fetched_at": "2026-07-17T10:38:34.288714+00:00",
     "last_updated": "Jul 12, 2026",
     "model_count": 35
   },
@@ -632,7 +632,7 @@
           "ci": 1.22
         },
         "tool_hallucination": {
-          "value": 15.63,
+          "value": -15.63,
           "ci": 3.62
         }
       }
@@ -661,11 +661,11 @@
           "ci": 1.12
         },
         "confirmed_success": {
-          "value": 1.95,
+          "value": -1.95,
           "ci": 2.64
         },
         "praise_vs_complaint": {
-          "value": 0.75,
+          "value": -0.75,
           "ci": 3.63
         },
         "steerability": {
@@ -714,7 +714,7 @@
           "ci": 2.83
         },
         "steerability": {
-          "value": 0.62,
+          "value": -0.62,
           "ci": 1.68
         },
         "bash_recovery": {
@@ -759,7 +759,7 @@
           "ci": 5.26
         },
         "steerability": {
-          "value": 7.21,
+          "value": -7.21,
           "ci": 6.54
         },
         "bash_recovery": {
@@ -792,19 +792,19 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 0.61,
+          "value": -0.61,
           "ci": 1.38
         },
         "confirmed_success": {
-          "value": 1.1,
+          "value": -1.1,
           "ci": 3.18
         },
         "praise_vs_complaint": {
-          "value": 4.04,
+          "value": -4.04,
           "ci": 4.31
         },
         "steerability": {
-          "value": 2.73,
+          "value": -2.73,
           "ci": 3.04
         },
         "bash_recovery": {
@@ -837,7 +837,7 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 0.7,
+          "value": -0.7,
           "ci": 0.69
         },
         "confirmed_success": {
@@ -845,7 +845,7 @@
           "ci": 1.53
         },
         "praise_vs_complaint": {
-          "value": 0.07,
+          "value": -0.07,
           "ci": 2.19
         },
         "steerability": {
@@ -853,7 +853,7 @@
           "ci": 1.26
         },
         "bash_recovery": {
-          "value": 7.21,
+          "value": -7.21,
           "ci": 1.15
         },
         "tool_hallucination": {
@@ -882,7 +882,7 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 0.76,
+          "value": -0.76,
           "ci": 2.01
         },
         "confirmed_success": {
@@ -894,11 +894,11 @@
           "ci": 7.14
         },
         "steerability": {
-          "value": 10.78,
+          "value": -10.78,
           "ci": 4.26
         },
         "bash_recovery": {
-          "value": 0.23,
+          "value": -0.23,
           "ci": 2.2
         },
         "tool_hallucination": {
@@ -927,19 +927,19 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 0.81,
+          "value": -0.81,
           "ci": 1.39
         },
         "confirmed_success": {
-          "value": 2.25,
+          "value": -2.25,
           "ci": 3.3
         },
         "praise_vs_complaint": {
-          "value": 5.38,
+          "value": -5.38,
           "ci": 4.5
         },
         "steerability": {
-          "value": 4.16,
+          "value": -4.16,
           "ci": 2.97
         },
         "bash_recovery": {
@@ -972,19 +972,19 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 1.11,
+          "value": -1.11,
           "ci": 1.36
         },
         "confirmed_success": {
-          "value": 2.95,
+          "value": -2.95,
           "ci": 3.3
         },
         "praise_vs_complaint": {
-          "value": 4.79,
+          "value": -4.79,
           "ci": 4.46
         },
         "steerability": {
-          "value": 3.1,
+          "value": -3.1,
           "ci": 2.94
         },
         "bash_recovery": {
@@ -1017,7 +1017,7 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 1.12,
+          "value": -1.12,
           "ci": 0.77
         },
         "confirmed_success": {
@@ -1025,19 +1025,19 @@
           "ci": 1.74
         },
         "praise_vs_complaint": {
-          "value": 4.58,
+          "value": -4.58,
           "ci": 2.42
         },
         "steerability": {
-          "value": 0.8,
+          "value": -0.8,
           "ci": 1.43
         },
         "bash_recovery": {
-          "value": 0.71,
+          "value": -0.71,
           "ci": 1.29
         },
         "tool_hallucination": {
-          "value": 1.17,
+          "value": -1.17,
           "ci": 0.35
         }
       }
@@ -1062,7 +1062,7 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 2.09,
+          "value": -2.09,
           "ci": 2.09
         },
         "confirmed_success": {
@@ -1070,15 +1070,15 @@
           "ci": 3.98
         },
         "praise_vs_complaint": {
-          "value": 0.2,
+          "value": -0.2,
           "ci": 6.64
         },
         "steerability": {
-          "value": 9.16,
+          "value": -9.16,
           "ci": 4.32
         },
         "bash_recovery": {
-          "value": 4.79,
+          "value": -4.79,
           "ci": 4.0
         },
         "tool_hallucination": {
@@ -1107,19 +1107,19 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 3.17,
+          "value": -3.17,
           "ci": 1.4
         },
         "confirmed_success": {
-          "value": 6.0,
+          "value": -6.0,
           "ci": 3.39
         },
         "praise_vs_complaint": {
-          "value": 9.22,
+          "value": -9.22,
           "ci": 4.41
         },
         "steerability": {
-          "value": 4.81,
+          "value": -4.81,
           "ci": 3.16
         },
         "bash_recovery": {
@@ -1152,19 +1152,19 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 3.23,
+          "value": -3.23,
           "ci": 1.36
         },
         "confirmed_success": {
-          "value": 7.51,
+          "value": -7.51,
           "ci": 3.38
         },
         "praise_vs_complaint": {
-          "value": 8.13,
+          "value": -8.13,
           "ci": 4.29
         },
         "steerability": {
-          "value": 7.92,
+          "value": -7.92,
           "ci": 3.02
         },
         "bash_recovery": {
@@ -1197,19 +1197,19 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 4.64,
+          "value": -4.64,
           "ci": 1.3
         },
         "confirmed_success": {
-          "value": 6.86,
+          "value": -6.86,
           "ci": 3.44
         },
         "praise_vs_complaint": {
-          "value": 12.9,
+          "value": -12.9,
           "ci": 3.9
         },
         "steerability": {
-          "value": 6.99,
+          "value": -6.99,
           "ci": 2.89
         },
         "bash_recovery": {
@@ -1217,7 +1217,7 @@
           "ci": 1.17
         },
         "tool_hallucination": {
-          "value": 0.53,
+          "value": -0.53,
           "ci": 0.48
         }
       }
@@ -1242,23 +1242,23 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 7.04,
+          "value": -7.04,
           "ci": 1.79
         },
         "confirmed_success": {
-          "value": 11.84,
+          "value": -11.84,
           "ci": 4.22
         },
         "praise_vs_complaint": {
-          "value": 8.07,
+          "value": -8.07,
           "ci": 5.27
         },
         "steerability": {
-          "value": 10.43,
+          "value": -10.43,
           "ci": 3.28
         },
         "bash_recovery": {
-          "value": 5.9,
+          "value": -5.9,
           "ci": 4.1
         },
         "tool_hallucination": {
@@ -1287,23 +1287,23 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 8.21,
+          "value": -8.21,
           "ci": 0.79
         },
         "confirmed_success": {
-          "value": 5.27,
+          "value": -5.27,
           "ci": 1.79
         },
         "praise_vs_complaint": {
-          "value": 13.65,
+          "value": -13.65,
           "ci": 2.36
         },
         "steerability": {
-          "value": 12.84,
+          "value": -12.84,
           "ci": 1.64
         },
         "bash_recovery": {
-          "value": 9.83,
+          "value": -9.83,
           "ci": 1.59
         },
         "tool_hallucination": {
@@ -1332,23 +1332,23 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 8.31,
+          "value": -8.31,
           "ci": 0.8
         },
         "confirmed_success": {
-          "value": 8.81,
+          "value": -8.81,
           "ci": 1.76
         },
         "praise_vs_complaint": {
-          "value": 15.63,
+          "value": -15.63,
           "ci": 1.99
         },
         "steerability": {
-          "value": 7.97,
+          "value": -7.97,
           "ci": 1.38
         },
         "bash_recovery": {
-          "value": 10.06,
+          "value": -10.06,
           "ci": 2.27
         },
         "tool_hallucination": {
@@ -1377,23 +1377,23 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 8.54,
+          "value": -8.54,
           "ci": 0.77
         },
         "confirmed_success": {
-          "value": 8.46,
+          "value": -8.46,
           "ci": 1.58
         },
         "praise_vs_complaint": {
-          "value": 12.83,
+          "value": -12.83,
           "ci": 1.9
         },
         "steerability": {
-          "value": 5.24,
+          "value": -5.24,
           "ci": 1.27
         },
         "bash_recovery": {
-          "value": 16.46,
+          "value": -16.46,
           "ci": 2.09
         },
         "tool_hallucination": {
@@ -1422,23 +1422,23 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 11.46,
+          "value": -11.46,
           "ci": 1.63
         },
         "confirmed_success": {
-          "value": 16.97,
+          "value": -16.97,
           "ci": 3.84
         },
         "praise_vs_complaint": {
-          "value": 15.68,
+          "value": -15.68,
           "ci": 4.65
         },
         "steerability": {
-          "value": 17.75,
+          "value": -17.75,
           "ci": 3.43
         },
         "bash_recovery": {
-          "value": 7.94,
+          "value": -7.94,
           "ci": 3.22
         },
         "tool_hallucination": {
@@ -1467,27 +1467,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 13.58,
+          "value": -13.58,
           "ci": 1.42
         },
         "confirmed_success": {
-          "value": 3.54,
+          "value": -3.54,
           "ci": 1.68
         },
         "praise_vs_complaint": {
-          "value": 6.03,
+          "value": -6.03,
           "ci": 2.4
         },
         "steerability": {
-          "value": 5.33,
+          "value": -5.33,
           "ci": 1.5
         },
         "bash_recovery": {
-          "value": 30.16,
+          "value": -30.16,
           "ci": 4.55
         },
         "tool_hallucination": {
-          "value": 22.86,
+          "value": -22.86,
           "ci": 4.41
         }
       }
@@ -1512,27 +1512,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 13.68,
+          "value": -13.68,
           "ci": 2.57
         },
         "confirmed_success": {
-          "value": 13.69,
+          "value": -13.69,
           "ci": 5.33
         },
         "praise_vs_complaint": {
-          "value": 11.1,
+          "value": -11.1,
           "ci": 7.85
         },
         "steerability": {
-          "value": 23.99,
+          "value": -23.99,
           "ci": 5.09
         },
         "bash_recovery": {
-          "value": 19.12,
+          "value": -19.12,
           "ci": 5.92
         },
         "tool_hallucination": {
-          "value": 0.51,
+          "value": -0.51,
           "ci": 0.81
         }
       }
@@ -1557,23 +1557,23 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 15.31,
+          "value": -15.31,
           "ci": 1.01
         },
         "confirmed_success": {
-          "value": 10.12,
+          "value": -10.12,
           "ci": 1.62
         },
         "praise_vs_complaint": {
-          "value": 16.64,
+          "value": -16.64,
           "ci": 1.86
         },
         "steerability": {
-          "value": 8.96,
+          "value": -8.96,
           "ci": 1.24
         },
         "bash_recovery": {
-          "value": 41.9,
+          "value": -41.9,
           "ci": 4.11
         },
         "tool_hallucination": {
