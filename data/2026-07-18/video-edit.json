@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "leaderboard": "video-edit",
+    "source_url": "https://arena.ai/leaderboard/video-edit",
+    "fetched_at": "2026-07-18T04:29:45.558274+00:00",
+    "last_updated": "Jun 29, 2026",
+    "model_count": 7
+  },
+  "models": [
+    {
+      "rank": 1,
+      "rank_spread": [
+        1,
+        1
+      ],
+      "model": "dreamina-seedance-2.0-720p",
+      "model_url": null,
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 3010,
+      "score": 1377,
+      "ci_low": 12,
+      "ci_high": 12,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 2,
+      "rank_spread": [
+        2,
+        2
+      ],
+      "model": "gemini-omni-flash",
+      "model_url": null,
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 998,
+      "score": 1347,
+      "ci_low": 16,
+      "ci_high": 16,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 3,
+      "rank_spread": [
+        3,
+        3
+      ],
+      "model": "happyhorse-1.0",
+      "model_url": null,
+      "vendor": "Alibaba-ATH",
+      "license": "proprietary",
+      "votes": 2681,
+      "score": 1308,
+      "ci_low": 12,
+      "ci_high": 12,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 4,
+      "rank_spread": [
+        4,
+        5
+      ],
+      "model": "grok-imagine-video",
+      "model_url": null,
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "votes": 11736,
+      "score": 1264,
+      "ci_low": 8,
+      "ci_high": 8,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 5,
+      "rank_spread": [
+        4,
+        5
+      ],
+      "model": "kling-o3-pro",
+      "model_url": null,
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "votes": 6165,
+      "score": 1251,
+      "ci_low": 10,
+      "ci_high": 10,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 6,
+      "rank_spread": [
+        6,
+        7
+      ],
+      "model": "kling-o1-pro",
+      "model_url": null,
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "votes": 8322,
+      "score": 1203,
+      "ci_low": 9,
+      "ci_high": 9,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 7,
+      "rank_spread": [
+        6,
+        7
+      ],
+      "model": "runway-gen4-aleph",
+      "model_url": null,
+      "vendor": "Runway",
+      "license": "proprietary",
+      "votes": 8368,
+      "score": 1194,
+      "ci_low": 8,
+      "ci_high": 8,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    }
+  ]
+}
