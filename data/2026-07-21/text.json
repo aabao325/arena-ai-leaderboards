@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text",
     "source_url": "https://arena.ai/leaderboard/text",
-    "fetched_at": "2026-07-21T18:52:01.665812+00:00",
+    "fetched_at": "2026-07-21T20:47:20.925563+00:00",
     "last_updated": "Jul 19, 2026",
     "model_count": 378
   },
@@ -684,7 +684,7 @@
       "preliminary": false,
       "price_prompt": 0.43,
       "price_completion": 0.87,
-      "context_length": 1000000,
+      "context_length": 1100000,
       "signals": null
     },
     {
@@ -1224,7 +1224,7 @@
       "preliminary": false,
       "price_prompt": 1.0,
       "price_completion": 4.05,
-      "context_length": 1000000,
+      "context_length": 524300,
       "signals": null
     },
     {
@@ -1384,7 +1384,7 @@
       "preliminary": false,
       "price_prompt": 0.4,
       "price_completion": 1.75,
-      "context_length": 202800,
+      "context_length": 204800,
       "signals": null
     },
     {
@@ -1604,7 +1604,7 @@
       "preliminary": false,
       "price_prompt": 0.14,
       "price_completion": 0.28,
-      "context_length": 1000000,
+      "context_length": 1100000,
       "signals": null
     },
     {
@@ -1804,7 +1804,7 @@
       "preliminary": false,
       "price_prompt": 0.5,
       "price_completion": 2.0,
-      "context_length": 202800,
+      "context_length": 204800,
       "signals": null
     },
     {
@@ -2124,7 +2124,7 @@
       "preliminary": false,
       "price_prompt": 0.27,
       "price_completion": 1.0,
-      "context_length": 131100,
+      "context_length": 163800,
       "signals": null
     },
     {
@@ -2224,7 +2224,7 @@
       "preliminary": false,
       "price_prompt": 0.21,
       "price_completion": 1.9,
-      "context_length": 131100,
+      "context_length": 262100,
       "signals": null
     },
     {
@@ -2244,7 +2244,7 @@
       "preliminary": false,
       "price_prompt": 0.27,
       "price_completion": 1.0,
-      "context_length": 131100,
+      "context_length": 163800,
       "signals": null
     },
     {
@@ -3324,7 +3324,7 @@
       "preliminary": false,
       "price_prompt": 0.06,
       "price_completion": 0.4,
-      "context_length": 200000,
+      "context_length": 202800,
       "signals": null
     },
     {
@@ -3364,7 +3364,7 @@
       "preliminary": false,
       "price_prompt": 0.1,
       "price_completion": 0.3,
-      "context_length": 131100,
+      "context_length": 262100,
       "signals": null
     },
     {
@@ -7204,7 +7204,7 @@
       "preliminary": false,
       "price_prompt": 0.03,
       "price_completion": 0.2,
-      "context_length": 131100,
+      "context_length": 60000,
       "signals": null
     },
     {
