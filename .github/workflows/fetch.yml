@@ -2,7 +2,7 @@ name: Fetch Arena Leaderboards
 
 on:
   schedule:
-    - cron: '37 1 * * *'  # Daily at 01:37 UTC (09:37 CST)
+    - cron: '37 * * * *'  # Hourly at :37 (source refreshes ~daily; commit step no-ops when data is unchanged)
   workflow_dispatch:       # Manual trigger
 
 permissions:
