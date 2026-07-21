@@ -115,7 +115,11 @@ def strip_md_link(text: str):
       truncate it, so the link-name capture below is intentionally greedy.
     """
     text = re.sub(r"^!\[[^\]]*\]\([^)]*\)\s*", "", text)
-    m = re.match(r"^\[(.+)\]\(([^)]+)\)\s*(.*)$", text)
+    # URL 后可能跟一个 markdown title：[name](url "title")。title 里常含 ')'（如
+    # 模型名 "GPT 5.6 Sol (xHigh)"），用 [^)]+ 贪婪吃到 title 内第一个 ')' 会把半截
+    # 标题并进 url、并让 vendor 残留 '") ...'。这里把 url 收窄成非空白串，title 段用
+    # 引号定界单独吃掉（可选），彻底与 url 分离。
+    m = re.match(r'^\[(.+)\]\((\S+?)(?:\s+"[^"]*")?\)\s*(.*)$', text)
     if m:
         return m.group(1).strip(), m.group(2), m.group(3).strip()
     return None, None, text.strip()
