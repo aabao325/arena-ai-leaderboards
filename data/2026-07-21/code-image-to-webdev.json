@@ -2,36 +2,16 @@
   "meta": {
     "leaderboard": "code-image-to-webdev",
     "source_url": "https://arena.ai/leaderboard/code/image-to-webdev",
-    "fetched_at": "2026-07-21T22:30:29.741468+00:00",
+    "fetched_at": "2026-07-21T23:35:19.657229+00:00",
     "last_updated": "Jul 17, 2026",
-    "model_count": 32
+    "model_count": 31
   },
   "models": [
     {
       "rank": 1,
       "rank_spread": [
         1,
-        4
-      ],
-      "model": "claude-fable-5",
-      "model_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-      "vendor": "Anthropic",
-      "license": "proprietary",
-      "votes": 120,
-      "score": 1636,
-      "ci_low": 62,
-      "ci_high": 62,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": null
-    },
-    {
-      "rank": 2,
-      "rank_spread": [
-        1,
-        2
+        1
       ],
       "model": "claude-fable-5",
       "model_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -48,10 +28,10 @@
       "signals": null
     },
     {
-      "rank": 3,
+      "rank": 2,
       "rank_spread": [
         2,
-        4
+        3
       ],
       "model": "claude-opus-4-7-thinking",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-7",
@@ -68,10 +48,10 @@
       "signals": null
     },
     {
-      "rank": 4,
+      "rank": 3,
       "rank_spread": [
         2,
-        5
+        4
       ],
       "model": "claude-opus-4-7",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-7",
@@ -88,10 +68,10 @@
       "signals": null
     },
     {
-      "rank": 5,
+      "rank": 4,
       "rank_spread": [
-        4,
-        11
+        3,
+        10
       ],
       "model": "claude-opus-4-6-thinking",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-6",
@@ -108,10 +88,10 @@
       "signals": null
     },
     {
-      "rank": 6,
+      "rank": 5,
       "rank_spread": [
-        5,
-        11
+        4,
+        10
       ],
       "model": "claude-sonnet-4-6",
       "model_url": "https://www.anthropic.com/news/claude-sonnet-4-6",
@@ -128,10 +108,10 @@
       "signals": null
     },
     {
-      "rank": 7,
+      "rank": 6,
       "rank_spread": [
-        5,
-        12
+        4,
+        11
       ],
       "model": "claude-opus-4-6",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-6",
@@ -148,10 +128,10 @@
       "signals": null
     },
     {
-      "rank": 8,
+      "rank": 7,
       "rank_spread": [
-        5,
-        13
+        4,
+        12
       ],
       "model": "claude-sonnet-5-high",
       "model_url": "https://www.anthropic.com/news/claude-sonnet-5",
@@ -168,10 +148,10 @@
       "signals": null
     },
     {
-      "rank": 9,
+      "rank": 8,
       "rank_spread": [
-        5,
-        13
+        4,
+        12
       ],
       "model": "gpt-5.5-xhigh (codex-harness)",
       "model_url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -188,10 +168,10 @@
       "signals": null
     },
     {
-      "rank": 10,
+      "rank": 9,
       "rank_spread": [
-        7,
-        14
+        6,
+        13
       ],
       "model": "kimi-k2.6",
       "model_url": "https://www.kimi.com/blog/kimi-k2-6",
@@ -208,10 +188,10 @@
       "signals": null
     },
     {
-      "rank": 11,
+      "rank": 10,
       "rank_spread": [
-        5,
-        16
+        4,
+        15
       ],
       "model": "seed-2.1-pro-preview",
       "model_url": "https://seed.bytedance.com/en/blog/seed-2-1-preview-model-release-on-arena",
@@ -228,10 +208,10 @@
       "signals": null
     },
     {
-      "rank": 12,
+      "rank": 11,
       "rank_spread": [
-        5,
-        16
+        4,
+        15
       ],
       "model": "kimi-k2.7-code",
       "model_url": "https://platform.kimi.ai/docs/guide/kimi-k2-7-code-quickstart",
@@ -248,10 +228,10 @@
       "signals": null
     },
     {
-      "rank": 13,
+      "rank": 12,
       "rank_spread": [
-        8,
-        15
+        7,
+        14
       ],
       "model": "gpt-5.5-high (codex-harness)",
       "model_url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -268,10 +248,10 @@
       "signals": null
     },
     {
-      "rank": 14,
+      "rank": 13,
       "rank_spread": [
-        11,
-        18
+        10,
+        17
       ],
       "model": "gpt-5.5 (codex-harness)",
       "model_url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -288,10 +268,10 @@
       "signals": null
     },
     {
-      "rank": 15,
+      "rank": 14,
       "rank_spread": [
-        10,
-        19
+        9,
+        18
       ],
       "model": "gemini-3.5-flash-medium",
       "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
@@ -308,10 +288,10 @@
       "signals": null
     },
     {
-      "rank": 16,
+      "rank": 15,
       "rank_spread": [
-        14,
-        19
+        13,
+        18
       ],
       "model": "gemini-3.1-pro-preview",
       "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
@@ -328,10 +308,10 @@
       "signals": null
     },
     {
-      "rank": 17,
+      "rank": 16,
       "rank_spread": [
-        12,
-        20
+        11,
+        19
       ],
       "model": "minimax-m3",
       "model_url": "https://www.minimax.io/models/text/m3",
@@ -348,10 +328,10 @@
       "signals": null
     },
     {
-      "rank": 18,
+      "rank": 17,
       "rank_spread": [
-        14,
-        20
+        13,
+        19
       ],
       "model": "qwen3.6-plus",
       "model_url": "https://qwen.ai/blog?id=qwen3.6",
@@ -368,10 +348,10 @@
       "signals": null
     },
     {
-      "rank": 19,
+      "rank": 18,
       "rank_spread": [
-        17,
-        23
+        16,
+        22
       ],
       "model": "gemini-3-flash",
       "model_url": "https://blog.google/products/gemini/gemini-3-flash",
@@ -388,10 +368,10 @@
       "signals": null
     },
     {
-      "rank": 20,
+      "rank": 19,
       "rank_spread": [
-        15,
-        27
+        14,
+        26
       ],
       "model": "gemini-3-pro",
       "model_url": "https://aistudio.google.com/app/prompts/new_chat?model=gemini-3-pro-preview",
@@ -408,10 +388,10 @@
       "signals": null
     },
     {
-      "rank": 21,
+      "rank": 20,
       "rank_spread": [
-        19,
-        27
+        18,
+        26
       ],
       "model": "gpt-5.3-codex (codex-harness)",
       "model_url": "https://openai.com/index/introducing-gpt-5-3-codex/",
@@ -428,10 +408,10 @@
       "signals": null
     },
     {
-      "rank": 22,
+      "rank": 21,
       "rank_spread": [
-        19,
-        27
+        18,
+        26
       ],
       "model": "kimi-k2.5-thinking",
       "model_url": "https://www.kimi.com/blog/kimi-k2-5.html",
@@ -448,10 +428,10 @@
       "signals": null
     },
     {
-      "rank": 23,
+      "rank": 22,
       "rank_spread": [
-        19,
-        27
+        18,
+        26
       ],
       "model": "gpt-5.4",
       "model_url": "https://platform.openai.com/docs/models/gpt-5.4",
@@ -468,10 +448,10 @@
       "signals": null
     },
     {
-      "rank": 24,
+      "rank": 23,
       "rank_spread": [
-        20,
-        27
+        19,
+        26
       ],
       "model": "gemini-3-flash (thinking-minimal)",
       "model_url": "https://blog.google/products/gemini/gemini-3-flash",
@@ -488,10 +468,10 @@
       "signals": null
     },
     {
-      "rank": 25,
+      "rank": 24,
       "rank_spread": [
-        20,
-        27
+        19,
+        26
       ],
       "model": "gpt-5.1-high",
       "model_url": "https://openai.com/index/gpt-5-1/",
@@ -508,10 +488,10 @@
       "signals": null
     },
     {
-      "rank": 26,
+      "rank": 25,
       "rank_spread": [
-        20,
-        27
+        19,
+        26
       ],
       "model": "glm-5v-turbo",
       "model_url": "https://docs.z.ai/guides/vlm/glm-5v-turbo",
@@ -528,10 +508,10 @@
       "signals": null
     },
     {
-      "rank": 27,
+      "rank": 26,
       "rank_spread": [
-        20,
-        27
+        19,
+        26
       ],
       "model": "kimi-k2.5-instant",
       "model_url": "https://www.kimi.com/blog/kimi-k2-5.html",
@@ -548,10 +528,10 @@
       "signals": null
     },
     {
-      "rank": 28,
+      "rank": 27,
       "rank_spread": [
-        28,
-        29
+        27,
+        28
       ],
       "model": "grok-4.3",
       "model_url": "https://docs.x.ai/developers/models/grok-4.3",
@@ -568,10 +548,10 @@
       "signals": null
     },
     {
-      "rank": 29,
+      "rank": 28,
       "rank_spread": [
-        28,
-        31
+        27,
+        30
       ],
       "model": "gpt-5.1",
       "model_url": "https://openai.com/index/gpt-5-1/",
@@ -588,10 +568,10 @@
       "signals": null
     },
     {
-      "rank": 30,
+      "rank": 29,
       "rank_spread": [
-        29,
-        31
+        28,
+        30
       ],
       "model": "gemini-3.1-flash-lite-preview",
       "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite",
@@ -608,10 +588,10 @@
       "signals": null
     },
     {
-      "rank": 31,
+      "rank": 30,
       "rank_spread": [
-        29,
-        32
+        28,
+        31
       ],
       "model": "mistral-large-3",
       "model_url": "https://mistral.ai/news/mistral-3",
@@ -628,10 +608,10 @@
       "signals": null
     },
     {
-      "rank": 32,
+      "rank": 31,
       "rank_spread": [
-        31,
-        32
+        30,
+        31
       ],
       "model": "gemini-2.5-pro",
       "model_url": "https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro",
