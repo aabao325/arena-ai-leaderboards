@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "leaderboard": "video-edit",
+    "source_url": "https://arena.ai/leaderboard/video-edit",
+    "fetched_at": "2026-07-22T01:03:33.881148+00:00",
+    "last_updated": "Jun 29, 2026",
+    "model_count": 7
+  },
+  "models": [
+    {
+      "rank": 1,
+      "rank_spread": [
+        1,
+        1
+      ],
+      "model": "dreamina-seedance-2.0-720p",
+      "model_url": "https://seed.bytedance.com/en/seedance2_0",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 3010,
+      "score": 1377,
+      "ci_low": 12,
+      "ci_high": 12,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 2,
+      "rank_spread": [
+        2,
+        2
+      ],
+      "model": "gemini-omni-flash",
+      "model_url": "https://deepmind.google/models/gemini-omni/",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 998,
+      "score": 1347,
+      "ci_low": 16,
+      "ci_high": 16,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 3,
+      "rank_spread": [
+        3,
+        3
+      ],
+      "model": "happyhorse-1.0",
+      "model_url": "https://x.com/happyhorseath/status/2044255725376151977?s=46",
+      "vendor": "Alibaba-ATH",
+      "license": "proprietary",
+      "votes": 2681,
+      "score": 1308,
+      "ci_low": 12,
+      "ci_high": 12,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 4,
+      "rank_spread": [
+        4,
+        5
+      ],
+      "model": "grok-imagine-video",
+      "model_url": "https://docs.x.ai/docs/guides/video-generations",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "votes": 11736,
+      "score": 1264,
+      "ci_low": 8,
+      "ci_high": 8,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 5,
+      "rank_spread": [
+        4,
+        5
+      ],
+      "model": "kling-o3-pro",
+      "model_url": "https://fal.ai/models/fal-ai/kling-video/o3/pro/video-to-video/edit",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "votes": 6165,
+      "score": 1251,
+      "ci_low": 10,
+      "ci_high": 10,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 6,
+      "rank_spread": [
+        6,
+        7
+      ],
+      "model": "kling-o1-pro",
+      "model_url": "https://app.klingai.com/global/release-notes/zipxp988c2?type=dialog",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "votes": 8322,
+      "score": 1203,
+      "ci_low": 9,
+      "ci_high": 9,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 7,
+      "rank_spread": [
+        6,
+        7
+      ],
+      "model": "runway-gen4-aleph",
+      "model_url": "https://runwayml.com/research/introducing-runway-aleph",
+      "vendor": "Runway",
+      "license": "proprietary",
+      "votes": 8368,
+      "score": 1194,
+      "ci_low": 8,
+      "ci_high": 8,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    }
+  ]
+}
