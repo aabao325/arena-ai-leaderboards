@@ -1,0 +1,1051 @@
+{
+  "meta": {
+    "leaderboard": "image-edit",
+    "source_url": "https://arena.ai/leaderboard/image-edit",
+    "fetched_at": "2026-07-23T10:37:36.124574+00:00",
+    "last_updated": "Jul 10, 2026",
+    "model_count": 52
+  },
+  "models": [
+    {
+      "rank": 1,
+      "rank_spread": [
+        1,
+        1
+      ],
+      "model": "gpt-image-2 (medium)",
+      "model_url": "https://x.com/OpenAI/status/2046665696898412887?s=20",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "votes": 145970,
+      "score": 1465,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 2,
+      "rank_spread": [
+        2,
+        4
+      ],
+      "model": "muse-image",
+      "model_url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "votes": 16932,
+      "score": 1402,
+      "ci_low": 6,
+      "ci_high": 6,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 3,
+      "rank_spread": [
+        2,
+        4
+      ],
+      "model": "mai-image-2.5",
+      "model_url": "https://microsoft.ai/news/introducing-mai-image-2-5/",
+      "vendor": "Microsoft AI",
+      "license": "proprietary",
+      "votes": 100526,
+      "score": 1401,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 4,
+      "rank_spread": [
+        2,
+        10
+      ],
+      "model": "seedream-5.0-pro",
+      "model_url": "https://seed.bytedance.com/en/seedream5_0_pro",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 4299,
+      "score": 1393,
+      "ci_low": 10,
+      "ci_high": 10,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 5,
+      "rank_spread": [
+        4,
+        10
+      ],
+      "model": "chatgpt-image-latest-high-fidelity (20251216)",
+      "model_url": "https://platform.openai.com/docs/models/chatgpt-image-latest",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "votes": 457021,
+      "score": 1389,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 6,
+      "rank_spread": [
+        4,
+        10
+      ],
+      "model": "grok-imagine-image-quality (20260519)",
+      "model_url": "http://grok.com/imagine",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "votes": 34756,
+      "score": 1389,
+      "ci_low": 5,
+      "ci_high": 5,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 7,
+      "rank_spread": [
+        4,
+        10
+      ],
+      "model": "gemini-3-pro-image-2k (nano-banana-pro)",
+      "model_url": "https://ai.studio/banana",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 459237,
+      "score": 1388,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 8,
+      "rank_spread": [
+        4,
+        10
+      ],
+      "model": "gemini-3-pro-image-preview (nano-banana-pro)",
+      "model_url": "https://ai.studio/banana",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 518398,
+      "score": 1385,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 9,
+      "rank_spread": [
+        4,
+        10
+      ],
+      "model": "gemini-3.1-flash-image (nano-banana-2) [web-search]",
+      "model_url": "https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-image",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 60941,
+      "score": 1385,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 10,
+      "rank_spread": [
+        4,
+        11
+      ],
+      "model": "reve-2.1",
+      "model_url": "http://reve.com/",
+      "vendor": "Reve",
+      "license": "proprietary",
+      "votes": 5165,
+      "score": 1383,
+      "ci_low": 9,
+      "ci_high": 9,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 11,
+      "rank_spread": [
+        10,
+        11
+      ],
+      "model": "gpt-image-1.5-high-fidelity",
+      "model_url": "https://platform.openai.com/docs/models/gpt-image-1.5",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "votes": 478581,
+      "score": 1372,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 12,
+      "rank_spread": [
+        12,
+        13
+      ],
+      "model": "grok-imagine-image-quality",
+      "model_url": "https://docs.x.ai/developers/models/grok-imagine-image-quality",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "votes": 111066,
+      "score": 1359,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 13,
+      "rank_spread": [
+        12,
+        13
+      ],
+      "model": "reve-2.0",
+      "model_url": "http://reve.com/",
+      "vendor": "Reve",
+      "license": "proprietary",
+      "votes": 14513,
+      "score": 1358,
+      "ci_low": 7,
+      "ci_high": 7,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 14,
+      "rank_spread": [
+        14,
+        15
+      ],
+      "model": "uni-1.1-max",
+      "model_url": "https://lumalabs.ai/api",
+      "vendor": "Luma AI",
+      "license": "proprietary",
+      "votes": 40859,
+      "score": 1334,
+      "ci_low": 5,
+      "ci_high": 5,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 15,
+      "rank_spread": [
+        14,
+        15
+      ],
+      "model": "grok-imagine-image",
+      "model_url": "https://docs.x.ai/developers/model-capabilities/images/generation",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "votes": 478004,
+      "score": 1329,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 16,
+      "rank_spread": [
+        16,
+        18
+      ],
+      "model": "qwen-image-2.0-pro-2026-06-22",
+      "model_url": "https://bailian.console.alibabacloud.com/cn-beijing?tab=api#/api/?type=model&url=2975126",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "votes": 32739,
+      "score": 1315,
+      "ci_low": 5,
+      "ci_high": 5,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 17,
+      "rank_spread": [
+        16,
+        18
+      ],
+      "model": "gemini-3.1-flash-lite-image (nano-banana-2-lite)",
+      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 26611,
+      "score": 1314,
+      "ci_low": 5,
+      "ci_high": 5,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 18,
+      "rank_spread": [
+        16,
+        18
+      ],
+      "model": "uni-1.1",
+      "model_url": "https://lumalabs.ai/api",
+      "vendor": "Luma AI",
+      "license": "proprietary",
+      "votes": 71570,
+      "score": 1311,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 19,
+      "rank_spread": [
+        19,
+        22
+      ],
+      "model": "wan2.7-image-pro",
+      "model_url": "https://modelstudio.console.alibabacloud.com/ap-southeast-1?tab=api#/api/?type=model&url=3026980",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "votes": 41467,
+      "score": 1302,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 20,
+      "rank_spread": [
+        19,
+        22
+      ],
+      "model": "hunyuan-image-3.0-instruct",
+      "model_url": "https://hunyuan.tencent.com/chat/HunyuanDefault?from=modelSquare&modelId=Hunyuan-Image-3.0-Instruct",
+      "vendor": "Tencent",
+      "license": "open",
+      "votes": 277487,
+      "score": 1302,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 21,
+      "rank_spread": [
+        19,
+        22
+      ],
+      "model": "seedream-4.5",
+      "model_url": "https://seed.bytedance.com/en/seedream4_5",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 898428,
+      "score": 1301,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 22,
+      "rank_spread": [
+        19,
+        23
+      ],
+      "model": "wan2.7-image",
+      "model_url": "https://modelstudio.console.alibabacloud.com/ap-southeast-1?tab=api#/api/?type=model&url=3026980",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "votes": 42318,
+      "score": 1301,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 23,
+      "rank_spread": [
+        22,
+        24
+      ],
+      "model": "gemini-2.5-flash-image-preview (nano-banana)",
+      "model_url": "https://ai.studio/banana",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 11005375,
+      "score": 1295,
+      "ci_low": 2,
+      "ci_high": 2,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 24,
+      "rank_spread": [
+        23,
+        24
+      ],
+      "model": "seedream-5.0-lite",
+      "model_url": "https://seed.bytedance.com/en/seedream5_0_lite",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 271130,
+      "score": 1294,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 25,
+      "rank_spread": [
+        25,
+        26
+      ],
+      "model": "seedream-4-2k",
+      "model_url": "https://seed.bytedance.com/en/seedream4_0",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 213066,
+      "score": 1271,
+      "ci_low": 7,
+      "ci_high": 7,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 26,
+      "rank_spread": [
+        25,
+        27
+      ],
+      "model": "flux-2-max",
+      "model_url": "https://bfl.ai/models/flux-2",
+      "vendor": "Black Forest Labs",
+      "license": "proprietary",
+      "votes": 352694,
+      "score": 1262,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 27,
+      "rank_spread": [
+        26,
+        27
+      ],
+      "model": "reve-v1.1",
+      "model_url": "https://api.reve.com/console/pricing",
+      "vendor": "Reve",
+      "license": "proprietary",
+      "votes": 631952,
+      "score": 1261,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 28,
+      "rank_spread": [
+        28,
+        28
+      ],
+      "model": "kling-image-o1",
+      "model_url": "https://kling.ai/release-note/release-notes/exv6o36sxa",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "votes": 135159,
+      "score": 1251,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 29,
+      "rank_spread": [
+        29,
+        31
+      ],
+      "model": "flux-2-pro",
+      "model_url": "https://bfl.ai/models/flux-2",
+      "vendor": "Black Forest Labs",
+      "license": "proprietary",
+      "votes": 436098,
+      "score": 1242,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 30,
+      "rank_spread": [
+        29,
+        31
+      ],
+      "model": "qwen-image-edit",
+      "model_url": "https://huggingface.co/Qwen/Qwen-Image-Edit",
+      "vendor": "Alibaba",
+      "license": "open",
+      "votes": 1983543,
+      "score": 1241,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 31,
+      "rank_spread": [
+        29,
+        33
+      ],
+      "model": "reve-v1",
+      "model_url": "https://blog.reve.com/posts/reve-editing-model/",
+      "vendor": "Reve",
+      "license": "proprietary",
+      "votes": 380892,
+      "score": 1234,
+      "ci_low": 5,
+      "ci_high": 5,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 32,
+      "rank_spread": [
+        31,
+        33
+      ],
+      "model": "qwen-image-edit-2511",
+      "model_url": "https://huggingface.co/Qwen/Qwen-Image-Edit-2511",
+      "vendor": "Alibaba",
+      "license": "open",
+      "votes": 401599,
+      "score": 1233,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 33,
+      "rank_spread": [
+        31,
+        34
+      ],
+      "model": "wan2.6-image",
+      "model_url": "https://modelstudio.console.alibabacloud.com/?tab=api#/api/?type=model&url=3001143",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "votes": 471616,
+      "score": 1230,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 34,
+      "rank_spread": [
+        33,
+        36
+      ],
+      "model": "flux-2-flex",
+      "model_url": "https://bfl.ai/models/flux-2",
+      "vendor": "Black Forest Labs",
+      "license": "proprietary",
+      "votes": 415399,
+      "score": 1225,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 35,
+      "rank_spread": [
+        34,
+        36
+      ],
+      "model": "flux-2-klein-9b",
+      "model_url": "https://bfl.ai/models/flux-2-klein",
+      "vendor": "Black Forest Labs",
+      "license": "open",
+      "votes": 506759,
+      "score": 1224,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 36,
+      "rank_spread": [
+        34,
+        37
+      ],
+      "model": "flux-2-dev",
+      "model_url": "https://bfl.ai/models/flux-2",
+      "vendor": "Black Forest Labs",
+      "license": "open",
+      "votes": 188220,
+      "score": 1220,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 37,
+      "rank_spread": [
+        36,
+        38
+      ],
+      "model": "seedream-4-high-res-fal",
+      "model_url": "https://seed.bytedance.com/en/seedream4_0",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 1184210,
+      "score": 1217,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 38,
+      "rank_spread": [
+        38,
+        40
+      ],
+      "model": "p-image-edit",
+      "model_url": "https://www.pruna.ai/p-image-edit",
+      "vendor": null,
+      "license": null,
+      "votes": 336435,
+      "score": 1211,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 39,
+      "rank_spread": [
+        37,
+        40
+      ],
+      "model": "seedream-4-fal",
+      "model_url": "https://seed.bytedance.com/en/seedream4_0",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 153950,
+      "score": 1210,
+      "ci_low": 6,
+      "ci_high": 6,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 40,
+      "rank_spread": [
+        38,
+        40
+      ],
+      "model": "reve-v1.1-fast",
+      "model_url": "https://api.reve.com/console/pricing",
+      "vendor": "Reve",
+      "license": "proprietary",
+      "votes": 521652,
+      "score": 1206,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 41,
+      "rank_spread": [
+        41,
+        41
+      ],
+      "model": "reve-edit-fast",
+      "model_url": "https://api.reve.com/console/pricing",
+      "vendor": "Reve",
+      "license": "proprietary",
+      "votes": 221315,
+      "score": 1198,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 42,
+      "rank_spread": [
+        42,
+        42
+      ],
+      "model": "flux-2-klein-4b",
+      "model_url": "https://bfl.ai/models/flux-2-klein",
+      "vendor": "Black Forest Labs",
+      "license": "open",
+      "votes": 506764,
+      "score": 1188,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 43,
+      "rank_spread": [
+        43,
+        45
+      ],
+      "model": "flux-1-kontext-max",
+      "model_url": "https://bfl.ai/announcements/flux-1-kontext",
+      "vendor": "Black Forest Labs",
+      "license": "proprietary",
+      "votes": 391731,
+      "score": 1181,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 44,
+      "rank_spread": [
+        43,
+        45
+      ],
+      "model": "wan2.5-i2i-preview",
+      "model_url": "https://modelstudio.console.alibabacloud.com/?tab=api#/api/?type=model&url=2982258",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "votes": 481319,
+      "score": 1181,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 45,
+      "rank_spread": [
+        43,
+        45
+      ],
+      "model": "flux-1-kontext-pro",
+      "model_url": "https://bfl.ai/announcements/flux-1-kontext",
+      "vendor": "Black Forest Labs",
+      "license": "proprietary",
+      "votes": 6424593,
+      "score": 1176,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 46,
+      "rank_spread": [
+        46,
+        46
+      ],
+      "model": "flux-1-kontext-dev",
+      "model_url": "https://bfl.ai/announcements/flux-1-kontext-dev",
+      "vendor": "Black Forest Labs",
+      "license": "open",
+      "votes": 3652473,
+      "score": 1149,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 47,
+      "rank_spread": [
+        47,
+        48
+      ],
+      "model": "seededit-3.0",
+      "model_url": "https://seed.bytedance.com/en/tech/seededit",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 4950659,
+      "score": 1139,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 48,
+      "rank_spread": [
+        47,
+        48
+      ],
+      "model": "gpt-image-1",
+      "model_url": "https://platform.openai.com/docs/models/gpt-image-1",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "votes": 2861463,
+      "score": 1139,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 49,
+      "rank_spread": [
+        49,
+        49
+      ],
+      "model": "gpt-image-1-mini",
+      "model_url": "https://platform.openai.com/docs/models/gpt-image-1-mini",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "votes": 653134,
+      "score": 1124,
+      "ci_low": 3,
+      "ci_high": 3,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 50,
+      "rank_spread": [
+        50,
+        50
+      ],
+      "model": "gemini-2.0-flash-preview-image-generation",
+      "model_url": "https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.0-flash-preview-image-generation",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 4966089,
+      "score": 1081,
+      "ci_low": 2,
+      "ci_high": 2,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 51,
+      "rank_spread": [
+        51,
+        51
+      ],
+      "model": "bagel",
+      "model_url": "https://huggingface.co/ByteDance-Seed/BAGEL-7B-MoT",
+      "vendor": "Bytedance",
+      "license": "open",
+      "votes": 13560,
+      "score": 1026,
+      "ci_low": 6,
+      "ci_high": 6,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 52,
+      "rank_spread": [
+        52,
+        52
+      ],
+      "model": "step1x-edit",
+      "model_url": "https://huggingface.co/stepfun-ai/Step1X-Edit",
+      "vendor": "StepFun",
+      "license": "open",
+      "votes": 155733,
+      "score": 998,
+      "ci_low": 4,
+      "ci_high": 4,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    }
+  ]
+}
