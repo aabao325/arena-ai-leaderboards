@@ -1,12 +1,9 @@
 {
   "date": "2026-07-23",
-  "fetched_at": "2026-07-23T10:37:36.124574+00:00",
+  "fetched_at": "2026-07-23T11:28:49.211193+00:00",
   "leaderboards": {
     "agent": {
       "model_count": 38
-    },
-    "text": {
-      "model_count": 378
     },
     "code-webdev": {
       "model_count": 101
@@ -39,5 +36,10 @@
       "model_count": 7
     }
   },
-  "errors": []
+  "errors": [
+    {
+      "leaderboard": "text",
+      "error": "no leaderboard table found in fetched content"
+    }
+  ]
 }
