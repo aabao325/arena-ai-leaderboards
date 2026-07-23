@@ -403,17 +403,34 @@ def main():
         print(f"Processing: {file_slug} ({url_path})", file=sys.stderr)
         url = f"{ARENA_BASE}{url_path}"
         try:
-            raw = fetch_page(url, jina_key)
-            payload = json.loads(raw)
-            content = payload["data"]["content"]
-
-            table = find_table(content)
-            if not table:
-                raise ValueError("no leaderboard table found in fetched content")
-            _, _, header_idx = table
-            models = parse_leaderboard(content)
+            # 无 key 免费层偶发「HTTP 200 但页面表格没渲染出来」（尤其 text 这种大页面），
+            # fetch_page 的重试只覆盖网络错误，覆不到这种「拿到了但内容不全」的情况。
+            # 这里对「取内容 + 找表 + 解析」整体再包一层重试：任一步抓空就重来，
+            # 多试几次基本能等到一次完整渲染，避免单页抽风拖垮整批。
+            content = None
+            table = None
+            models = None
+            last_soft_err = None
+            for content_attempt in range(3):
+                try:
+                    raw = fetch_page(url, jina_key)
+                    payload = json.loads(raw)
+                    content = payload["data"]["content"]
+                    table = find_table(content)
+                    if not table:
+                        raise ValueError("no leaderboard table found in fetched content")
+                    models = parse_leaderboard(content)
+                    if not models:
+                        raise ValueError("parser found zero models")
+                    break  # 拿到有效数据，跳出重试
+                except ValueError as soft_e:
+                    last_soft_err = soft_e
+                    print(f"  content attempt {content_attempt+1} incomplete: {soft_e}", file=sys.stderr)
+                    if content_attempt < 2:
+                        time.sleep(5 * (content_attempt + 1))
             if not models:
-                raise ValueError("parser found zero models")
+                raise last_soft_err or ValueError("no leaderboard table found in fetched content")
+            _, _, header_idx = table
 
             # Agent 分类的 6 个信号列在 markdown 文本里永远不带负号（见 parse_signal 的说明），
             # 真实正负号只存在于渲染后的 HTML（CSS 类名 + SVG 图标），markdown 抓不到。
@@ -497,7 +514,15 @@ def main():
         print(f"Errors: {len(errors)}", file=sys.stderr)
         for e in errors:
             print(f"  {e['leaderboard']}: {e['error']}", file=sys.stderr)
-        sys.exit(1)
+        # 容错退出：个别分类抽风（免费层偶发抓空）不该拖垮整批已抓好的数据。
+        # 只有「失败过多」才判定整体失败——阈值取超过半数，此时多半是 key 额度耗尽
+        # 或源站/Jina 整体不可用这类需要人工介入的真故障，交给 workflow 去开 Issue 提醒。
+        # 未超阈值：如实打印错误但 exit 0，让 commit 步骤把成功的分类正常入库。
+        if len(errors) > len(LEADERBOARDS) // 2:
+            print(f"Too many failures ({len(errors)}/{len(LEADERBOARDS)}); failing the run.", file=sys.stderr)
+            sys.exit(1)
+        print(f"Partial success: {len(results)}/{len(LEADERBOARDS)} ok, "
+              f"{len(errors)} skipped; committing what we have.", file=sys.stderr)
 
 
 if __name__ == "__main__":
