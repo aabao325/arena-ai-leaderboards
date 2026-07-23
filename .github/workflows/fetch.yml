@@ -2,11 +2,12 @@ name: Fetch Arena Leaderboards
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Hourly at :0 (source refreshes ~daily; commit step no-ops when data is unchanged)
+    - cron: '0 0 * * *'  # Daily at 00:00 UTC = 08:00 Beijing time (commit step no-ops when data is unchanged)
   workflow_dispatch:       # Manual trigger
 
 permissions:
   contents: write
+  issues: write   # 失败时自动开 Issue 提醒
 
 jobs:
   fetch:
@@ -27,6 +28,7 @@ jobs:
         run: python scripts/fetch_leaderboards.py
 
       - name: Commit and push
+        if: always()   # 即使抓取步骤失败，也把已成功抓到的分类正常入库，不浪费
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -38,5 +40,40 @@ jobs:
             git commit -m "data: update leaderboards $DATE"
             git push
           fi
+
+      - name: Notify on failure
+        if: failure()   # 仅当前面步骤真失败时才触发（脚本超阈值 exit 1）
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          # 去重防刷屏：已存在带 fetch-failure 标签的 open Issue 就不再新开，
+          # 避免每天失败都刷一条。等你处理完关掉它，下次再失败才会重新开。
+          TITLE="⚠️ 榜单抓取失败，可能需要更换 Jina API key"
+          EXISTING=$(gh issue list --state open --label fetch-failure --limit 1 --json number --jq '.[0].number' 2>/dev/null || echo "")
+          if [ -n "$EXISTING" ]; then
+            echo "已有未关闭的失败提醒 Issue #$EXISTING，跳过（避免刷屏）"
+            exit 0
+          fi
+          # 确保标签存在（不存在则创建，已存在忽略报错）
+          gh label create fetch-failure --color B60205 --description "榜单抓取失败自动提醒" 2>/dev/null || true
+          # 正文写进文件再用 --body-file，避免 heredoc 破坏 YAML 块缩进
+          {
+            echo "榜单抓取工作流失败了，且失败分类超过半数，通常意味着需要人工介入。"
+            echo ""
+            echo "**最常见原因：Jina API key 额度耗尽（返回 HTTP 402）。**"
+            echo "处理步骤："
+            echo "1. 去 https://jina.ai/ 登录，领一把有额度的新 API key"
+            echo "2. 到本仓库 Settings → Secrets and variables → Actions，更新 \`JINA_API_KEY\`"
+            echo "3. 手动重跑一次工作流验证（Actions → Fetch Arena Leaderboards → Run workflow）"
+            echo "4. 恢复正常后，**关闭本 Issue**（关掉后下次再失败才会重新提醒，不关会一直静默）"
+            echo ""
+            echo "> 注：偶发的单个分类抓空已由脚本自动重试 + 容错处理，不会触发本提醒；"
+            echo "> 能走到这里说明是较严重的整体性故障（额度耗尽 / 源站或 Jina 不可用等）。"
+            echo ""
+            echo "失败运行日志：$RUN_URL"
+          } > /tmp/issue_body.md
+          gh issue create --title "$TITLE" --label fetch-failure --body-file /tmp/issue_body.md
+          echo "已创建失败提醒 Issue"
 
 
