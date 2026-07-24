@@ -472,12 +472,19 @@ def main():
                     nxt = wait_timeouts[content_attempt + 1] if content_attempt < 2 else None
                     print(f"  content attempt {content_attempt+1} incomplete: {soft_e}"
                           + (f"; 次回は x-timeout={nxt}s で再試行" if nxt else ""), file=sys.stderr)
-                    # [临时诊断] 打印 Jina 实际返回的内容特征，定位 text 为何没表格
+                    # [临时诊断] 打印含模型名的行，看非表格形式下模型行如何排列
                     try:
                         _c = content or ""
-                        print(f"  [DEBUG] content len={len(_c)} first600={_c[:600]!r}", file=sys.stderr)
-                    except Exception:
-                        pass
+                        _lines = _c.split("\n")
+                        _hit = next((k for k, l in enumerate(_lines)
+                                     if "claude" in l.lower() or "gemini" in l.lower()), None)
+                        if _hit is not None:
+                            seg = _lines[max(0, _hit-2): _hit+30]
+                            print(f"  [DEBUG] model-row region (line {_hit}): {seg!r}", file=sys.stderr)
+                        else:
+                            print(f"  [DEBUG] no model name found; len={len(_c)}", file=sys.stderr)
+                    except Exception as _e:
+                        print(f"  [DEBUG] err {_e}", file=sys.stderr)
                     if content_attempt < 2:
                         time.sleep(5 * (content_attempt + 1))
             if not models:
