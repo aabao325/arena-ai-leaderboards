@@ -82,8 +82,16 @@ SIGNAL_COLUMNS = {
 }
 
 
-def fetch_page(url: str, jina_api_key: str | None = None, fmt: str = "markdown") -> str:
-    """Fetch a page via Jina Reader; returns the raw JSON-wrapped response text."""
+def fetch_page(url: str, jina_api_key: str | None = None, fmt: str = "markdown",
+               wait_timeout: int | None = None) -> str:
+    """Fetch a page via Jina Reader; returns the raw JSON-wrapped response text.
+
+    wait_timeout（秒）を渡すと Jina に `x-timeout` を指定する。Jina は既定では
+    「ページが十分描画できた」と判断した時点で早めに返すため、text のような
+    巨大ページでは表がまだ描画されていない骨組みが返ることがある。x-timeout を
+    付けると Jina は network-idle まで（最大 180s）待ってから返すので、
+    大ページでも表が揃った状態を取りやすくなる（docs: x-timeout≥20 で最も完全）。
+    """
     reader_url = f"{JINA_READER_BASE}{url}"
     headers = {
         "Accept": "application/json",
@@ -92,11 +100,16 @@ def fetch_page(url: str, jina_api_key: str | None = None, fmt: str = "markdown")
     }
     if jina_api_key:
         headers["Authorization"] = f"Bearer {jina_api_key}"
+    if wait_timeout:
+        headers["x-timeout"] = str(wait_timeout)
+
+    # クライアント側 urlopen の待ちは、Jina の x-timeout より必ず長くする
+    client_timeout = 90 if not wait_timeout else max(90, wait_timeout + 45)
 
     req = urllib.request.Request(reader_url, headers=headers)
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=90) as resp:
+            with urllib.request.urlopen(req, timeout=client_timeout) as resp:
                 return resp.read().decode("utf-8")
         except urllib.error.URLError as e:
             print(f"  Attempt {attempt+1} failed: {e}", file=sys.stderr)
@@ -437,9 +450,14 @@ def main():
             table = None
             models = None
             last_soft_err = None
+            # リトライごとに Jina の待ち時間(x-timeout)を段階的に上げる：
+            # 1回目=既定(速い) → 2回目=25s → 3回目=45s。text のような巨大ページは
+            # 描画完了に時間がかかるので、回を追うごとに network-idle まで待たせて
+            # 「表がまだ無い骨組み」が返るのを防ぐ。小さいページは1回目で通るので無駄がない。
+            wait_timeouts = [None, 25, 45]
             for content_attempt in range(3):
                 try:
-                    raw = fetch_page(url, jina_key)
+                    raw = fetch_page(url, jina_key, wait_timeout=wait_timeouts[content_attempt])
                     payload = json.loads(raw)
                     content = payload["data"]["content"]
                     table = find_table(content)
@@ -451,7 +469,9 @@ def main():
                     break  # 拿到有效数据，跳出重试
                 except ValueError as soft_e:
                     last_soft_err = soft_e
-                    print(f"  content attempt {content_attempt+1} incomplete: {soft_e}", file=sys.stderr)
+                    nxt = wait_timeouts[content_attempt + 1] if content_attempt < 2 else None
+                    print(f"  content attempt {content_attempt+1} incomplete: {soft_e}"
+                          + (f"; 次回は x-timeout={nxt}s で再試行" if nxt else ""), file=sys.stderr)
                     if content_attempt < 2:
                         time.sleep(5 * (content_attempt + 1))
             if not models:
