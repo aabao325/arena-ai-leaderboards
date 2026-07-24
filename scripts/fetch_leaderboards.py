@@ -472,6 +472,12 @@ def main():
                     nxt = wait_timeouts[content_attempt + 1] if content_attempt < 2 else None
                     print(f"  content attempt {content_attempt+1} incomplete: {soft_e}"
                           + (f"; 次回は x-timeout={nxt}s で再試行" if nxt else ""), file=sys.stderr)
+                    # [临时诊断] 打印 Jina 实际返回的内容特征，定位 text 为何没表格
+                    try:
+                        _c = content or ""
+                        print(f"  [DEBUG] content len={len(_c)} first600={_c[:600]!r}", file=sys.stderr)
+                    except Exception:
+                        pass
                     if content_attempt < 2:
                         time.sleep(5 * (content_attempt + 1))
             if not models:
