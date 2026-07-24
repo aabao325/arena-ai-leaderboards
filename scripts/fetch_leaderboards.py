@@ -395,6 +395,65 @@ def parse_leaderboard(content: str) -> list[dict]:
     return models
 
 
+def parse_leaderboard_flat(content: str) -> list[dict]:
+    """回退解析：当 arena.ai 把榜单以 div 网格渲染、Jina 转不出 markdown 表格时使用。
+
+    页面本身已完整抓到，模型数据以 flat-text 呈现。以 'Vendor · License' 行为锚点：
+    前一行是模型名，其后若干行依次是 score(纯数字)、±CI、以及一行 tab 分隔的
+    投票数/价格/上下文。此格式没有模型链接与 rank_spread（留 null），rank 按出现顺序。
+    与 parse_leaderboard 输出同构（同样的字段集），返回空列表表示没解析到任何模型。
+    """
+    lines = content.split("\n")
+    models = []
+    for i, line in enumerate(lines):
+        if " · " not in line:
+            continue
+        name = lines[i - 1].strip() if i > 0 else ""
+        if not name:
+            continue
+        vendor, license_ = split_vendor_license(line.strip())
+        seg = lines[i + 1:i + 7]
+        score = ci = votes = None
+        price_prompt = price_completion = context_length = None
+        for s in seg:
+            st = s.strip()
+            if score is None and re.fullmatch(r"\d{3,4}", st):
+                score = int(st)
+            elif ci is None and st.startswith("±"):
+                mm = re.match(r"±\s*(\d+)", st)
+                if mm:
+                    ci = int(mm.group(1))
+            elif s.count("\t") >= 2:
+                for p in (x for x in s.split("\t") if x):
+                    ps = p.strip()
+                    if votes is None and re.fullmatch(r"[\d,]+", ps):
+                        votes = int(ps.replace(",", ""))
+                    elif "$" in ps and "/" in ps:
+                        price_prompt, price_completion = parse_price(ps)
+                    elif re.fullmatch(r"[\d.]+[KM]", ps, re.IGNORECASE):
+                        context_length = parse_context(ps)
+        if score is None:
+            continue  # 没有分数的行不是有效模型行（如页脚/装饰）
+        models.append({
+            "rank": len(models) + 1,
+            "rank_spread": None,
+            "model": name,
+            "model_url": None,
+            "vendor": vendor,
+            "license": license_,
+            "votes": votes,
+            "score": score,
+            "ci_low": ci,
+            "ci_high": ci,
+            "preliminary": False,
+            "price_prompt": price_prompt,
+            "price_completion": price_completion,
+            "context_length": context_length,
+            "signals": None,
+        })
+    return models
+
+
 def carry_over_last_snapshot(data_root: Path, today_dir: Path, file_slug: str):
     """某分类本次抓取失败时，从最近一个有该分类的历史日期复制其快照到今天目录。
 
@@ -474,16 +533,21 @@ def main():
                           + (f"; 次回は x-timeout={nxt}s で再試行" if nxt else ""), file=sys.stderr)
                     if content_attempt < 2:
                         time.sleep(5 * (content_attempt + 1))
-            if not models:
-                # [临时诊断] 把完整 content 以 base64 输出，ローカルで正確に構造解析する
-                try:
-                    import base64 as _b64
-                    _raw = (content or "").encode("utf-8")
-                    print("[[RAWB64]]" + _b64.b64encode(_raw).decode(), file=sys.stderr)
-                except Exception as _e:
-                    print(f"  [DEBUG] dump err {_e}", file=sys.stderr)
-                raise last_soft_err or ValueError("no leaderboard table found in fetched content")
-            _, _, header_idx = table
+            if models:
+                # markdown 表格路径成功
+                _, _, header_idx = table
+            else:
+                # markdown 表格始终没出现（arena.ai 把该榜以 div 网格渲染，Jina 转不出表格）。
+                # 页面其实已完整抓到，改用 flat-text 回退解析：以 'Vendor · License' 行为锚点，
+                # 前一行=模型名，其后为 score/±CI/投票/价格/上下文。此路径拿不到模型链接与
+                # rank_spread（留 null），rank 按出现顺序。彻底解决 text 间歇性抓不到表格的问题。
+                flat = parse_leaderboard_flat(content or "")
+                if not flat:
+                    raise last_soft_err or ValueError("no leaderboard table found in fetched content")
+                print(f"  markdown 表格缺失，改用 flat-text 回退解析：得到 {len(flat)} 个模型",
+                      file=sys.stderr)
+                models = flat
+                header_idx = None  # flat 无表头行，last_updated 从整页 preamble 提取
 
             # Agent 分类的 6 个信号列在 markdown 文本里永远不带负号（见 parse_signal 的说明），
             # 真实正负号只存在于渲染后的 HTML（CSS 类名 + SVG 图标），markdown 抓不到。
