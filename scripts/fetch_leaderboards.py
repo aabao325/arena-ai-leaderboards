@@ -475,6 +475,13 @@ def main():
                     if content_attempt < 2:
                         time.sleep(5 * (content_attempt + 1))
             if not models:
+                # [临时诊断] 把完整 content 以 base64 输出，ローカルで正確に構造解析する
+                try:
+                    import base64 as _b64
+                    _raw = (content or "").encode("utf-8")
+                    print("[[RAWB64]]" + _b64.b64encode(_raw).decode(), file=sys.stderr)
+                except Exception as _e:
+                    print(f"  [DEBUG] dump err {_e}", file=sys.stderr)
                 raise last_soft_err or ValueError("no leaderboard table found in fetched content")
             _, _, header_idx = table
 
