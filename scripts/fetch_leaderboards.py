@@ -496,6 +496,31 @@ def carry_over_last_snapshot(data_root: Path, today_dir: Path, file_slug: str):
     return None
 
 
+def last_snapshot_model_count(data_root: Path, today_dir: Path, file_slug: str):
+    """读最近一个历史快照里该分类的 model_count，用于判断本次结果是否明显残缺。
+    找不到历史快照返回 None。"""
+    date_re = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+    day_dirs = sorted(
+        (d for d in data_root.iterdir()
+         if d.is_dir() and date_re.match(d.name) and d.name != today_dir.name),
+        key=lambda d: d.name, reverse=True,
+    )
+    for d in day_dirs:
+        src = d / f"{file_slug}.json"
+        if src.is_file():
+            try:
+                prev = json.loads(src.read_text(encoding="utf-8"))
+                return prev.get("meta", {}).get("model_count") or len(prev.get("models", []))
+            except Exception:
+                continue
+    return None
+
+
+# flat 回退解析的结果若不足上一个完整快照的这个比例，判定为「明显残缺」，
+# 宁可沿用上一个完整快照（完整优先），也不写残缺数据。
+FLAT_COMPLETENESS_MIN_RATIO = 0.95
+
+
 def main():
     jina_key = os.environ.get("JINA_API_KEY")
 
@@ -549,7 +574,7 @@ def main():
                     last_soft_err = soft_e
                     nxt = wait_timeouts[content_attempt + 1] if content_attempt < 2 else None
                     print(f"  content attempt {content_attempt+1} incomplete: {soft_e}"
-                          + (f"; 次回は x-timeout={nxt}s で再試行" if nxt else ""), file=sys.stderr)
+                          + (f"; 下次用 x-timeout={nxt}s 重试" if nxt else ""), file=sys.stderr)
                     if content_attempt < 2:
                         time.sleep(5 * (content_attempt + 1))
             if models:
@@ -557,13 +582,22 @@ def main():
                 _, _, header_idx = table
             else:
                 # markdown 表格始终没出现（arena.ai 把该榜以 div 网格渲染，Jina 转不出表格）。
-                # 页面其实已完整抓到，改用 flat-text 回退解析：以 'Vendor · License' 行为锚点，
-                # 前一行=模型名，其后为 score/±CI/投票/价格/上下文。此路径拿不到模型链接与
-                # rank_spread（留 null），rank 按出现顺序。彻底解决 text 间歇性抓不到表格的问题。
+                # 改用 flat-text 回退解析：以 'Vendor · License' 行为锚点，前一行=模型名，
+                # 锚点前 3 个数字=[rank, 区间下界, 区间上界]，其后为 score/±CI/投票/价格/上下文。
+                # 此路径拿不到模型链接（留 null）。注意：div 网格是虚拟列表，Jina 只抓到已渲染的行，
+                # 结果可能明显残缺（少掉靠后模型）。
                 flat = parse_leaderboard_flat(content or "")
                 if not flat:
                     raise last_soft_err or ValueError("no leaderboard table found in fetched content")
-                print(f"  markdown 表格缺失，改用 flat-text 回退解析：得到 {len(flat)} 个模型",
+                # 完整优先：flat 结果若明显少于上一个完整快照，判定为残缺，宁可抛错走「沿用旧快照」，
+                # 也不写残缺数据覆盖掉完整的历史快照（避免前端榜单突然少一截）。
+                prev_count = last_snapshot_model_count(repo_root / "data", day_dir, file_slug)
+                if prev_count and len(flat) < prev_count * FLAT_COMPLETENESS_MIN_RATIO:
+                    raise ValueError(
+                        f"flat 回退仅得 {len(flat)} 个模型，明显少于上次快照 {prev_count} 个"
+                        f"（阈值 {FLAT_COMPLETENESS_MIN_RATIO:.0%}），判定残缺，改为沿用完整旧快照")
+                print(f"  markdown 表格缺失，改用 flat-text 回退解析：得到 {len(flat)} 个模型"
+                      + (f"（上次快照 {prev_count} 个，达标）" if prev_count else ""),
                       file=sys.stderr)
                 models = flat
                 header_idx = None  # flat 无表头行，last_updated 从整页 preamble 提取
