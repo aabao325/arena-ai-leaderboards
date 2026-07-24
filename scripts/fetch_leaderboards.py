@@ -17,6 +17,8 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+import re
+import shutil
 import urllib.request
 import urllib.error
 
@@ -380,6 +382,29 @@ def parse_leaderboard(content: str) -> list[dict]:
     return models
 
 
+def carry_over_last_snapshot(data_root: Path, today_dir: Path, file_slug: str):
+    """某分类本次抓取失败时，从最近一个有该分类的历史日期复制其快照到今天目录。
+
+    这样即使 text 这种大页面偶发抓空，今天目录也始终 12 个分类齐全，
+    前端按 latest 日期逐分类请求时不会因文件缺失而 502，而是诚实地显示上一次的数据
+    （文件内 fetched_at/last_updated 保持旧值，前端展示的抓取时间即为旧时间）。
+    返回沿用的日期字符串；找不到任何历史快照则返回 None。
+    """
+    date_re = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+    # 所有历史日期目录，排除今天，按日期倒序（最近的在前）
+    day_dirs = sorted(
+        (d for d in data_root.iterdir()
+         if d.is_dir() and date_re.match(d.name) and d.name != today_dir.name),
+        key=lambda d: d.name, reverse=True,
+    )
+    for d in day_dirs:
+        src = d / f"{file_slug}.json"
+        if src.is_file():
+            shutil.copy2(src, today_dir / f"{file_slug}.json")
+            return d.name
+    return None
+
+
 def main():
     jina_key = os.environ.get("JINA_API_KEY")
 
@@ -397,6 +422,7 @@ def main():
 
     results = {}
     errors = []
+    carried = []  # 本次抓取失败、改为沿用历史快照的分类
 
     for file_slug, url_path in LEADERBOARDS:
         print(f"\n{'='*50}", file=sys.stderr)
@@ -487,6 +513,13 @@ def main():
         except Exception as e:
             print(f"  ERROR: {e}", file=sys.stderr)
             errors.append({"leaderboard": file_slug, "error": str(e)})
+            # 本次没抓到：沿用最近一次成功的该分类快照，保证今天目录分类齐全、前端不 502。
+            carried_from = carry_over_last_snapshot(repo_root / "data", day_dir, file_slug)
+            if carried_from:
+                print(f"  carried over {file_slug}.json from {carried_from}", file=sys.stderr)
+                carried.append({"leaderboard": file_slug, "from": carried_from})
+            else:
+                print(f"  no historical snapshot to carry over for {file_slug}", file=sys.stderr)
 
     index = {
         "date": date_str,
@@ -510,6 +543,10 @@ def main():
     print(f"Done: {len(results)}/{len(LEADERBOARDS)} leaderboards", file=sys.stderr)
     for slug, count in results.items():
         print(f"  {slug}: {count} models", file=sys.stderr)
+    if carried:
+        print(f"Carried over {len(carried)} stale snapshot(s) (fetch failed this run):", file=sys.stderr)
+        for c in carried:
+            print(f"  {c['leaderboard']}: reused {c['from']}", file=sys.stderr)
     if errors:
         print(f"Errors: {len(errors)}", file=sys.stderr)
         for e in errors:
