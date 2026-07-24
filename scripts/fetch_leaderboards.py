@@ -398,10 +398,15 @@ def parse_leaderboard(content: str) -> list[dict]:
 def parse_leaderboard_flat(content: str) -> list[dict]:
     """回退解析：当 arena.ai 把榜单以 div 网格渲染、Jina 转不出 markdown 表格时使用。
 
-    页面本身已完整抓到，模型数据以 flat-text 呈现。以 'Vendor · License' 行为锚点：
-    前一行是模型名，其后若干行依次是 score(纯数字)、±CI、以及一行 tab 分隔的
-    投票数/价格/上下文。此格式没有模型链接与 rank_spread（留 null），rank 按出现顺序。
-    与 parse_leaderboard 输出同构（同样的字段集），返回空列表表示没解析到任何模型。
+    页面本身已（部分）抓到，模型数据以 flat-text 呈现。以 'Vendor · License' 行为锚点：
+    - 模型名 = 锚点前一行；
+    - 锚点前（跨过 '\t' 分隔行，直到真正空行为界）有恰好 3 个数字 [rank, 区间下界, 区间上界]，
+      据此还原真实排名与排名区间（实测同一份数据 328/328 都是这个结构）；
+    - 锚点之后若干行依次是 score(纯数字)、±CI、一行 tab 分隔的 投票数/价格/上下文。
+    没有模型链接（留 null）。与 parse_leaderboard 输出同构。返回空列表表示没解析到模型。
+
+    注意：div 网格常是虚拟列表，Jina 只抓到已渲染的行，故此路径可能漏掉部分靠后模型
+    （不完整）。markdown 表格路径才是完整来源，本函数仅作 arena 以网格渲染时的兜底。
     """
     lines = content.split("\n")
     models = []
@@ -412,6 +417,20 @@ def parse_leaderboard_flat(content: str) -> list[dict]:
         if not name:
             continue
         vendor, license_ = split_vendor_license(line.strip())
+        # 向前回溯取 [rank, 区间下界, 区间上界]：跨过 '\t' 分隔行，遇真正空行('')为界
+        head_nums = []
+        j = i - 2
+        while j >= 0 and lines[j] != "":
+            tj = lines[j].strip()
+            if re.fullmatch(r"\d+", tj):
+                head_nums.insert(0, int(tj))
+            j -= 1
+        if len(head_nums) == 3:
+            rank_val = head_nums[0]
+            rank_spread_val = [head_nums[1], head_nums[2]]
+        else:
+            rank_val = None          # 结构异常时留 null，由 schema/前端各自兜底
+            rank_spread_val = None
         seg = lines[i + 1:i + 7]
         score = ci = votes = None
         price_prompt = price_completion = context_length = None
@@ -435,8 +454,8 @@ def parse_leaderboard_flat(content: str) -> list[dict]:
         if score is None:
             continue  # 没有分数的行不是有效模型行（如页脚/装饰）
         models.append({
-            "rank": len(models) + 1,
-            "rank_spread": None,
+            "rank": rank_val if rank_val is not None else len(models) + 1,
+            "rank_spread": rank_spread_val,
             "model": name,
             "model_url": None,
             "vendor": vendor,
