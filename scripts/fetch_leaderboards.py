@@ -625,7 +625,9 @@ def main():
     with open(day_dir / "_index.json", "w") as f:
         json.dump(index, f, indent=2, ensure_ascii=False)
 
-    latest = {"date": date_str, "path": date_str}
+    # fetched_at 作为「版本信号」：每次成功抓取都会前进，前端轮询只需比对这个值，
+    # 就能发现「同一天内数据已更新」（日期没变但内容变了）并自动重载，不必比对整份数据。
+    latest = {"date": date_str, "path": date_str, "fetched_at": now.isoformat()}
     with open(repo_root / "data" / "latest.json", "w") as f:
         json.dump(latest, f, indent=2)
     print(f"\nUpdated data/latest.json -> {date_str}", file=sys.stderr)
