@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text",
     "source_url": "https://arena.ai/leaderboard/text",
-    "fetched_at": "2026-07-24T23:36:46.814596+00:00",
+    "fetched_at": "2026-07-26T22:35:20.571182+00:00",
     "last_updated": "Jul 21, 2026",
     "model_count": 378
   },
@@ -1522,8 +1522,8 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 0.1,
-      "price_completion": 0.2,
+      "price_prompt": 0.14,
+      "price_completion": 0.28,
       "context_length": 1000000,
       "signals": null
     },
@@ -3042,8 +3042,8 @@
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
-      "price_prompt": 0.1,
-      "price_completion": 0.3,
+      "price_prompt": 0.05,
+      "price_completion": 0.19,
       "context_length": 262100,
       "signals": null
     },
@@ -3302,8 +3302,8 @@
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
-      "price_prompt": 0.25,
-      "price_completion": 0.8,
+      "price_prompt": 0.22,
+      "price_completion": 0.85,
       "context_length": 262100,
       "signals": null
     },
@@ -4282,8 +4282,8 @@
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
-      "price_prompt": 0.13,
-      "price_completion": 0.52,
+      "price_prompt": 0.12,
+      "price_completion": 0.5,
       "context_length": 131100,
       "signals": null
     },
