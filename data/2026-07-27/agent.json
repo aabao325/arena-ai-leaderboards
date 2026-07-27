@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "agent",
     "source_url": "https://arena.ai/leaderboard/agent",
-    "fetched_at": "2026-07-27T04:24:38.492279+00:00",
+    "fetched_at": "2026-07-27T08:04:35.342748+00:00",
     "last_updated": "Jul 21, 2026",
     "model_count": 38
   },
@@ -1094,7 +1094,7 @@
         29
       ],
       "model": "Hy3",
-      "model_url": null,
+      "model_url": "https://huggingface.co/tencent/Hy3",
       "vendor": "Tencent",
       "license": "open",
       "votes": 3530,
