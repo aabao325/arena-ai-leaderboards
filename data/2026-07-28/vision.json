@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "leaderboard": "vision",
+    "source_url": "https://arena.ai/leaderboard/vision",
+    "fetched_at": "2026-07-28T04:46:32.678847+00:00",
+    "last_updated": "Jul 26, 2026",
+    "model_count": 20
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "claude-fable-5",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1318.0,
+      "ci": 9.0,
+      "votes": 7618
+    },
+    {
+      "rank": 2,
+      "model": "claude-opus-4-7-thinking",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1304.0,
+      "ci": 7.0,
+      "votes": 19578
+    },
+    {
+      "rank": 3,
+      "model": "gemini-3.6-flash",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1301.0,
+      "ci": 38.0,
+      "votes": 238
+    },
+    {
+      "rank": 4,
+      "model": "claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1300.0,
+      "ci": 7.0,
+      "votes": 19445
+    },
+    {
+      "rank": 5,
+      "model": "claude-opus-5-high",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1299.0,
+      "ci": 14.0,
+      "votes": 1992
+    },
+    {
+      "rank": 6,
+      "model": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1298.0,
+      "ci": 7.0,
+      "votes": 20000
+    },
+    {
+      "rank": 7,
+      "model": "muse-spark",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "score": 1295.0,
+      "ci": 9.0,
+      "votes": 5584
+    },
+    {
+      "rank": 8,
+      "model": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1294.0,
+      "ci": 7.0,
+      "votes": 23722
+    },
+    {
+      "rank": 9,
+      "model": "gemini-3-pro",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1289.0,
+      "ci": 8.0,
+      "votes": 13089
+    },
+    {
+      "rank": 10,
+      "model": "gpt-5.5",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1287.0,
+      "ci": 7.0,
+      "votes": 17752
+    },
+    {
+      "rank": 11,
+      "model": "claude-opus-4-8-thinking",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1286.0,
+      "ci": 8.0,
+      "votes": 10268
+    },
+    {
+      "rank": 12,
+      "model": "gemini-3.5-flash-medium",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1285.0,
+      "ci": 10.0,
+      "votes": 4657
+    },
+    {
+      "rank": 13,
+      "model": "gpt-5.5-high",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1285.0,
+      "ci": 7.0,
+      "votes": 16623
+    },
+    {
+      "rank": 14,
+      "model": "muse-spark-1.1",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "score": 1283.0,
+      "ci": 11.0,
+      "votes": 3776
+    },
+    {
+      "rank": 15,
+      "model": "gpt-5.4-high",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1283.0,
+      "ci": 7.0,
+      "votes": 19622
+    },
+    {
+      "rank": 16,
+      "model": "grok-4.5",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "score": 1282.0,
+      "ci": 12.0,
+      "votes": 2839
+    },
+    {
+      "rank": 17,
+      "model": "claude-opus-4-8",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1279.0,
+      "ci": 8.0,
+      "votes": 10626
+    },
+    {
+      "rank": 18,
+      "model": "gpt-5.4",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1278.0,
+      "ci": 7.0,
+      "votes": 19583
+    },
+    {
+      "rank": 19,
+      "model": "gpt-5.2-chat-latest-20260210",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1278.0,
+      "ci": 7.0,
+      "votes": 15403
+    },
+    {
+      "rank": 20,
+      "model": "gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1278.0,
+      "ci": 6.0,
+      "votes": 35988
+    }
+  ]
+}
