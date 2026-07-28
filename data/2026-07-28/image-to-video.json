@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "image-to-video",
     "source_url": "https://arena.ai/leaderboard/image-to-video",
-    "fetched_at": "2026-07-28T21:43:46.736260+00:00",
+    "fetched_at": "2026-07-28T23:33:57.897642+00:00",
     "last_updated": "Jun 23, 2026",
     "model_count": 42
   },
@@ -41,7 +41,7 @@
       "score": 1469,
       "ci_low": 11,
       "ci_high": 11,
-      "preliminary": false,
+      "preliminary": true,
       "price_prompt": null,
       "price_completion": null,
       "context_length": null,
@@ -61,7 +61,7 @@
       "score": 1466,
       "ci_low": 5,
       "ci_high": 5,
-      "preliminary": false,
+      "preliminary": true,
       "price_prompt": null,
       "price_completion": null,
       "context_length": null,

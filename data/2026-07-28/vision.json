@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "vision",
     "source_url": "https://arena.ai/leaderboard/vision",
-    "fetched_at": "2026-07-28T21:43:46.736260+00:00",
+    "fetched_at": "2026-07-28T23:33:57.897642+00:00",
     "last_updated": "Jul 26, 2026",
     "model_count": 140
   },
@@ -22,9 +22,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 5.0,
-      "price_completion": 25.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -42,9 +42,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 12.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -61,10 +61,10 @@
       "score": 1301,
       "ci_low": 38,
       "ci_high": 38,
-      "preliminary": true,
-      "price_prompt": 0.75,
-      "price_completion": 3.75,
-      "context_length": 1000000,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -82,9 +82,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 12.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -102,9 +102,9 @@
       "ci_low": 14,
       "ci_high": 14,
       "preliminary": false,
-      "price_prompt": 5.0,
-      "price_completion": 25.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -122,9 +122,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 12.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -141,7 +141,7 @@
       "score": 1295,
       "ci_low": 9,
       "ci_high": 9,
-      "preliminary": true,
+      "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
       "context_length": null,
@@ -162,9 +162,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 12.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -182,9 +182,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 2.0,
-      "price_completion": 12.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -202,9 +202,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 15.0,
-      "context_length": 1100000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -222,9 +222,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 12.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -242,9 +242,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.75,
-      "price_completion": 4.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -262,9 +262,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 15.0,
-      "context_length": 1100000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -281,10 +281,10 @@
       "score": 1283,
       "ci_low": 11,
       "ci_high": 11,
-      "preliminary": true,
-      "price_prompt": 1.25,
-      "price_completion": 4.25,
-      "context_length": 1000000,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -302,9 +302,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 1.25,
-      "price_completion": 7.5,
-      "context_length": 1100000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -322,9 +322,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 2.0,
-      "price_completion": 6.0,
-      "context_length": 500000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -342,9 +342,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 12.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -362,9 +362,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 1.25,
-      "price_completion": 7.5,
-      "context_length": 1100000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -382,9 +382,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 1.75,
-      "price_completion": 14.0,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -402,9 +402,9 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 1.0,
-      "price_completion": 6.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -422,9 +422,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 15.0,
-      "context_length": 1100000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -442,9 +442,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 0.75,
-      "price_completion": 4.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -462,9 +462,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 3.0,
-      "price_completion": 15.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -482,9 +482,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 1.0,
-      "price_completion": 5.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -502,9 +502,9 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.5,
-      "price_completion": 3.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -522,9 +522,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.95,
-      "price_completion": 4.0,
-      "context_length": 262100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -542,9 +542,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 0.32,
-      "price_completion": 1.28,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -561,10 +561,10 @@
       "score": 1260,
       "ci_low": 37,
       "ci_high": 37,
-      "preliminary": true,
-      "price_prompt": 0.15,
-      "price_completion": 1.25,
-      "context_length": 1000000,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -602,9 +602,9 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.5,
-      "price_completion": 3.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -622,9 +622,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.14,
-      "price_completion": 0.4,
-      "context_length": 262100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -642,9 +642,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 2.0,
-      "price_completion": 6.0,
-      "context_length": 2000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -662,9 +662,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.75,
-      "price_completion": 4.5,
-      "context_length": 400000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -682,9 +682,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 2.0,
-      "price_completion": 6.0,
-      "context_length": 2000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -702,9 +702,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.63,
-      "price_completion": 5.0,
-      "context_length": 400000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -722,9 +722,9 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.39,
-      "price_completion": 2.34,
-      "context_length": 262100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -742,8 +742,8 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.6,
-      "price_completion": 3.0,
+      "price_prompt": null,
+      "price_completion": null,
       "context_length": null,
       "signals": null
     },
@@ -762,9 +762,9 @@
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
-      "price_prompt": 0.63,
-      "price_completion": 5.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -782,9 +782,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 1.25,
-      "price_completion": 2.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -802,9 +802,9 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.88,
-      "price_completion": 7.0,
-      "context_length": 400000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -822,9 +822,9 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 5.0,
-      "price_completion": 15.0,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -842,8 +842,8 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.6,
-      "price_completion": 2.4,
+      "price_prompt": null,
+      "price_completion": null,
       "context_length": null,
       "signals": null
     },
@@ -862,9 +862,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.14,
-      "price_completion": 0.28,
-      "context_length": 1100000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -902,9 +902,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.63,
-      "price_completion": 5.0,
-      "context_length": 400000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -922,9 +922,9 @@
       "ci_low": 11,
       "ci_high": 11,
       "preliminary": false,
-      "price_prompt": 0.57,
-      "price_completion": 2.85,
-      "context_length": 262100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -942,9 +942,9 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.25,
-      "price_completion": 1.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -962,9 +962,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 1.2,
-      "price_completion": 4.0,
-      "context_length": 202800,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -982,9 +982,9 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.88,
-      "price_completion": 7.0,
-      "context_length": 400000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1002,9 +1002,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.26,
-      "price_completion": 2.08,
-      "context_length": 262100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1022,9 +1022,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 75.0,
-      "price_completion": 150.0,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1042,8 +1042,8 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 1.25,
-      "price_completion": 10.0,
+      "price_prompt": null,
+      "price_completion": null,
       "context_length": null,
       "signals": null
     },
@@ -1062,9 +1062,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.3,
-      "price_completion": 2.5,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1082,9 +1082,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.2,
-      "price_completion": 1.56,
-      "context_length": 262100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1122,9 +1122,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.4,
-      "price_completion": 2.0,
-      "context_length": 262100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1142,9 +1142,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 2.0,
-      "price_completion": 8.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1162,9 +1162,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.21,
-      "price_completion": 1.9,
-      "context_length": 262100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1182,9 +1182,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 2.0,
-      "price_completion": 8.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1202,9 +1202,9 @@
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
-      "price_prompt": 0.15,
-      "price_completion": 1.25,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1222,9 +1222,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.63,
-      "price_completion": 5.0,
-      "context_length": 400000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1242,9 +1242,9 @@
       "ci_low": 17,
       "ci_high": 17,
       "preliminary": false,
-      "price_prompt": 3.0,
-      "price_completion": 15.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1262,9 +1262,9 @@
       "ci_low": 16,
       "ci_high": 16,
       "preliminary": false,
-      "price_prompt": 15.0,
-      "price_completion": 75.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1282,9 +1282,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.2,
-      "price_completion": 1.25,
-      "context_length": 400000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1302,9 +1302,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.4,
-      "price_completion": 1.6,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1322,9 +1322,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 1.1,
-      "price_completion": 4.4,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1342,8 +1342,8 @@
       "ci_low": 14,
       "ci_high": 14,
       "preliminary": false,
-      "price_prompt": 0.5,
-      "price_completion": 1.5,
+      "price_prompt": null,
+      "price_completion": null,
       "context_length": null,
       "signals": null
     },
@@ -1362,9 +1362,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 1.5,
-      "price_completion": 7.5,
-      "context_length": 262100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1382,9 +1382,9 @@
       "ci_low": 15,
       "ci_high": 15,
       "preliminary": false,
-      "price_prompt": 3.0,
-      "price_completion": 15.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1402,9 +1402,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.2,
-      "price_completion": 0.5,
-      "context_length": 2000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1422,9 +1422,9 @@
       "ci_low": 11,
       "ci_high": 11,
       "preliminary": false,
-      "price_prompt": 15.0,
-      "price_completion": 60.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1442,9 +1442,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 0.26,
-      "price_completion": 2.6,
-      "context_length": 131100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1462,9 +1462,9 @@
       "ci_low": 14,
       "ci_high": 14,
       "preliminary": false,
-      "price_prompt": 3.0,
-      "price_completion": 15.0,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1482,9 +1482,9 @@
       "ci_low": 13,
       "ci_high": 13,
       "preliminary": false,
-      "price_prompt": 15.0,
-      "price_completion": 75.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1502,9 +1502,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.1,
-      "price_completion": 0.4,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1522,9 +1522,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 0.52,
-      "price_completion": 2.08,
-      "context_length": 131100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1542,9 +1542,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.13,
-      "price_completion": 1.0,
-      "context_length": 400000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1562,9 +1562,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 3.0,
-      "price_completion": 15.0,
-      "context_length": 256000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1582,9 +1582,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 3.5,
-      "price_completion": 10.5,
-      "context_length": 2100000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1602,9 +1602,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 3.0,
-      "price_completion": 15.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1622,9 +1622,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.1,
-      "price_completion": 0.4,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1642,9 +1642,9 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.1,
-      "price_completion": 0.4,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1662,9 +1662,9 @@
       "ci_low": 14,
       "ci_high": 14,
       "preliminary": false,
-      "price_prompt": 0.3,
-      "price_completion": 0.9,
-      "context_length": 131100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1682,9 +1682,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 5.0,
-      "price_completion": 15.0,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1702,9 +1702,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 3.0,
-      "price_completion": 15.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1742,9 +1742,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.08,
-      "price_completion": 0.45,
-      "context_length": 262100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1762,9 +1762,9 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.4,
-      "price_completion": 2.0,
-      "context_length": 131100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1802,9 +1802,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.4,
-      "price_completion": 2.0,
-      "context_length": 131100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1822,9 +1822,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 0.6,
-      "price_completion": 1.8,
-      "context_length": 65500,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1862,9 +1862,9 @@
       "ci_low": 11,
       "ci_high": 11,
       "preliminary": false,
-      "price_prompt": 0.03,
-      "price_completion": 0.2,
-      "context_length": 400000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1882,9 +1882,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 0.63,
-      "price_completion": 1.8,
-      "context_length": 131100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1902,9 +1902,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 3.0,
-      "price_completion": 15.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1922,9 +1922,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 0.57,
-      "price_completion": 1.42,
-      "context_length": 65500,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1942,9 +1942,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.07,
-      "price_completion": 0.3,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1962,9 +1962,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 0.1,
-      "price_completion": 0.3,
-      "context_length": 32000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -1982,9 +1982,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.07,
-      "price_completion": 0.3,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2002,9 +2002,9 @@
       "ci_low": 16,
       "ci_high": 16,
       "preliminary": false,
-      "price_prompt": 1.0,
-      "price_completion": 5.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2022,9 +2022,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.4,
-      "price_completion": 0.7,
-      "context_length": 8200,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2042,9 +2042,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 0.1,
-      "price_completion": 0.3,
-      "context_length": 32000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2082,9 +2082,9 @@
       "ci_low": 11,
       "ci_high": 11,
       "preliminary": false,
-      "price_prompt": 0.8,
-      "price_completion": 1.0,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2102,9 +2102,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 3.5,
-      "price_completion": 10.5,
-      "context_length": 2100000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2122,9 +2122,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 10.0,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2142,9 +2142,9 @@
       "ci_low": 15,
       "ci_high": 15,
       "preliminary": false,
-      "price_prompt": 0.2,
-      "price_completion": 0.6,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2162,9 +2162,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 10.0,
-      "price_completion": 30.0,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2182,9 +2182,9 @@
       "ci_low": 20,
       "ci_high": 20,
       "preliminary": false,
-      "price_prompt": 0.2,
-      "price_completion": 0.2,
-      "context_length": 36900,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2202,9 +2202,9 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.15,
-      "price_completion": 0.6,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2222,9 +2222,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 2.0,
-      "price_completion": 6.0,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2242,9 +2242,9 @@
       "ci_low": 18,
       "ci_high": 18,
       "preliminary": false,
-      "price_prompt": 0.1,
-      "price_completion": 0.4,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2262,9 +2262,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.9,
-      "price_completion": 0.9,
-      "context_length": 32800,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2282,9 +2282,9 @@
       "ci_low": 16,
       "ci_high": 16,
       "preliminary": false,
-      "price_prompt": 0.8,
-      "price_completion": 3.2,
-      "context_length": 131100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2302,9 +2302,9 @@
       "ci_low": 11,
       "ci_high": 11,
       "preliminary": false,
-      "price_prompt": 0.07,
-      "price_completion": 0.3,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2342,9 +2342,9 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 15.0,
-      "price_completion": 75.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2362,9 +2362,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 0.07,
-      "price_completion": 0.3,
-      "context_length": 1000000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2442,9 +2442,9 @@
       "ci_low": 11,
       "ci_high": 11,
       "preliminary": false,
-      "price_prompt": 0.2,
-      "price_completion": 0.2,
-      "context_length": 32800,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2462,9 +2462,9 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 0.15,
-      "price_completion": 0.15,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2502,9 +2502,9 @@
       "ci_low": 14,
       "ci_high": 14,
       "preliminary": false,
-      "price_prompt": 0.8,
-      "price_completion": 3.2,
-      "context_length": 300000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2522,9 +2522,9 @@
       "ci_low": 15,
       "ci_high": 15,
       "preliminary": false,
-      "price_prompt": 0.06,
-      "price_completion": 0.24,
-      "context_length": 300000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2542,9 +2542,9 @@
       "ci_low": 11,
       "ci_high": 11,
       "preliminary": false,
-      "price_prompt": 3.0,
-      "price_completion": 15.0,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2582,9 +2582,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 0.25,
-      "price_completion": 1.25,
-      "context_length": 200000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2782,9 +2782,9 @@
       "ci_low": 16,
       "ci_high": 16,
       "preliminary": false,
-      "price_prompt": 0.13,
-      "price_completion": 0.52,
-      "context_length": 128000,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     },
     {
@@ -2802,9 +2802,9 @@
       "ci_low": 19,
       "ci_high": 19,
       "preliminary": false,
-      "price_prompt": 0.2,
-      "price_completion": 0.2,
-      "context_length": 32100,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
       "signals": null
     }
   ]
