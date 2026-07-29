@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text-to-video",
     "source_url": "https://arena.ai/leaderboard/text-to-video",
-    "fetched_at": "2026-07-29T01:04:37.657747+00:00",
+    "fetched_at": "2026-07-29T04:51:50.436608+00:00",
     "last_updated": "Jul 5, 2026",
     "model_count": 42
   },
@@ -21,7 +21,7 @@
       "score": 1527,
       "ci_low": 13,
       "ci_high": 13,
-      "preliminary": false,
+      "preliminary": true,
       "price_prompt": null,
       "price_completion": null,
       "context_length": null,
@@ -61,7 +61,7 @@
       "score": 1459,
       "ci_low": 15,
       "ci_high": 15,
-      "preliminary": false,
+      "preliminary": true,
       "price_prompt": null,
       "price_completion": null,
       "context_length": null,
