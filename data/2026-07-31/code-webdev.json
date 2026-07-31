@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "code-webdev",
     "source_url": "https://arena.ai/leaderboard/code/webdev",
-    "fetched_at": "2026-07-31T15:39:06.431132+00:00",
+    "fetched_at": "2026-07-31T18:07:26.843774+00:00",
     "last_updated": "Jul 28, 2026",
     "model_count": 106
   },
@@ -82,8 +82,8 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 5.0,
-      "price_completion": 25.0,
+      "price_prompt": 10.0,
+      "price_completion": 50.0,
       "context_length": 1000000,
       "signals": null
     },
