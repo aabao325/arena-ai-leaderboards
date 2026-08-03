@@ -2,9 +2,9 @@
   "meta": {
     "leaderboard": "code-image-to-webdev",
     "source_url": "https://arena.ai/leaderboard/code/image-to-webdev",
-    "fetched_at": "2026-08-03T18:21:16.449856+00:00",
+    "fetched_at": "2026-08-03T20:16:35.437009+00:00",
     "last_updated": "Jul 31, 2026",
-    "model_count": 40
+    "model_count": 41
   },
   "models": [
     {
@@ -151,7 +151,7 @@
       "rank": 8,
       "rank_spread": [
         3,
-        17
+        18
       ],
       "model": "muse-spark-1.1",
       "model_url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
@@ -191,7 +191,7 @@
       "rank": 10,
       "rank_spread": [
         3,
-        22
+        23
       ],
       "model": "gemini-3.6-flash",
       "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
@@ -251,7 +251,7 @@
       "rank": 13,
       "rank_spread": [
         5,
-        22
+        23
       ],
       "model": "gpt-5.6-terra-xhigh (codex-harness)",
       "model_url": "https://openai.com/index/gpt-5-6/",
@@ -271,7 +271,7 @@
       "rank": 14,
       "rank_spread": [
         8,
-        20
+        21
       ],
       "model": "claude-sonnet-4-6",
       "model_url": "https://www.anthropic.com/news/claude-sonnet-4-6",
@@ -291,7 +291,7 @@
       "rank": 15,
       "rank_spread": [
         8,
-        20
+        21
       ],
       "model": "gpt-5.5-xhigh (codex-harness)",
       "model_url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -311,7 +311,7 @@
       "rank": 16,
       "rank_spread": [
         9,
-        21
+        22
       ],
       "model": "kimi-k2.6",
       "model_url": "https://www.kimi.com/blog/kimi-k2-6",
@@ -331,7 +331,7 @@
       "rank": 17,
       "rank_spread": [
         12,
-        22
+        23
       ],
       "model": "gpt-5.5-high (codex-harness)",
       "model_url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -351,7 +351,7 @@
       "rank": 18,
       "rank_spread": [
         8,
-        23
+        24
       ],
       "model": "kimi-k2.7-code",
       "model_url": "https://platform.kimi.ai/docs/guide/kimi-k2-7-code-quickstart",
@@ -371,7 +371,7 @@
       "rank": 19,
       "rank_spread": [
         12,
-        24
+        25
       ],
       "model": "seed-2.1-pro-preview",
       "model_url": "https://seed.bytedance.com/en/blog/seed-2-1-preview-model-release-on-arena",
@@ -390,8 +390,28 @@
     {
       "rank": 20,
       "rank_spread": [
+        11,
+        26
+      ],
+      "model": "gemini-3.5-flash-high",
+      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 677,
+      "score": 1502,
+      "ci_low": 24,
+      "ci_high": 24,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 21,
+      "rank_spread": [
         15,
-        24
+        25
       ],
       "model": "gpt-5.5 (codex-harness)",
       "model_url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -408,10 +428,10 @@
       "signals": null
     },
     {
-      "rank": 21,
+      "rank": 22,
       "rank_spread": [
         12,
-        25
+        26
       ],
       "model": "gpt-5.6-luna-xhigh (codex-harness)",
       "model_url": "https://openai.com/index/gpt-5-6/",
@@ -428,10 +448,10 @@
       "signals": null
     },
     {
-      "rank": 22,
+      "rank": 23,
       "rank_spread": [
         14,
-        25
+        26
       ],
       "model": "gemini-3.5-flash-medium",
       "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
@@ -448,10 +468,10 @@
       "signals": null
     },
     {
-      "rank": 23,
+      "rank": 24,
       "rank_spread": [
         19,
-        26
+        27
       ],
       "model": "gemini-3.1-pro-preview",
       "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
@@ -468,10 +488,10 @@
       "signals": null
     },
     {
-      "rank": 24,
+      "rank": 25,
       "rank_spread": [
         18,
-        28
+        29
       ],
       "model": "minimax-m3",
       "model_url": "https://www.minimax.io/models/text/m3",
@@ -488,10 +508,10 @@
       "signals": null
     },
     {
-      "rank": 25,
+      "rank": 26,
       "rank_spread": [
         21,
-        29
+        30
       ],
       "model": "qwen3.6-plus",
       "model_url": "https://qwen.ai/blog?id=qwen3.6",
@@ -508,10 +528,10 @@
       "signals": null
     },
     {
-      "rank": 26,
+      "rank": 27,
       "rank_spread": [
-        24,
-        31
+        25,
+        32
       ],
       "model": "gemini-3-flash",
       "model_url": "https://blog.google/products/gemini/gemini-3-flash",
@@ -528,10 +548,10 @@
       "signals": null
     },
     {
-      "rank": 27,
+      "rank": 28,
       "rank_spread": [
-        24,
-        35
+        25,
+        36
       ],
       "model": "gemini-3-pro",
       "model_url": "https://aistudio.google.com/app/prompts/new_chat?model=gemini-3-pro-preview",
@@ -548,10 +568,10 @@
       "signals": null
     },
     {
-      "rank": 28,
+      "rank": 29,
       "rank_spread": [
-        25,
-        35
+        26,
+        36
       ],
       "model": "gpt-5.4",
       "model_url": "https://platform.openai.com/docs/models/gpt-5.4",
@@ -568,10 +588,10 @@
       "signals": null
     },
     {
-      "rank": 29,
+      "rank": 30,
       "rank_spread": [
-        26,
-        35
+        27,
+        36
       ],
       "model": "gpt-5.3-codex (codex-harness)",
       "model_url": "https://openai.com/index/introducing-gpt-5-3-codex/",
@@ -588,10 +608,10 @@
       "signals": null
     },
     {
-      "rank": 30,
+      "rank": 31,
       "rank_spread": [
-        26,
-        35
+        27,
+        36
       ],
       "model": "kimi-k2.5-thinking",
       "model_url": "https://www.kimi.com/blog/kimi-k2-5.html",
@@ -608,10 +628,10 @@
       "signals": null
     },
     {
-      "rank": 31,
+      "rank": 32,
       "rank_spread": [
-        23,
-        35
+        24,
+        36
       ],
       "model": "gemini-3.5-flash-lite",
       "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
@@ -628,10 +648,10 @@
       "signals": null
     },
     {
-      "rank": 32,
+      "rank": 33,
       "rank_spread": [
-        27,
-        35
+        28,
+        36
       ],
       "model": "gemini-3-flash (thinking-minimal)",
       "model_url": "https://blog.google/products/gemini/gemini-3-flash",
@@ -648,10 +668,10 @@
       "signals": null
     },
     {
-      "rank": 33,
+      "rank": 34,
       "rank_spread": [
-        27,
-        35
+        28,
+        36
       ],
       "model": "glm-5v-turbo",
       "model_url": "https://docs.z.ai/guides/vlm/glm-5v-turbo",
@@ -668,10 +688,10 @@
       "signals": null
     },
     {
-      "rank": 34,
+      "rank": 35,
       "rank_spread": [
-        27,
-        35
+        28,
+        36
       ],
       "model": "gpt-5.1-high",
       "model_url": "https://openai.com/index/gpt-5-1/",
@@ -688,10 +708,10 @@
       "signals": null
     },
     {
-      "rank": 35,
+      "rank": 36,
       "rank_spread": [
-        27,
-        35
+        28,
+        36
       ],
       "model": "kimi-k2.5-instant",
       "model_url": "https://www.kimi.com/blog/kimi-k2-5.html",
@@ -708,10 +728,10 @@
       "signals": null
     },
     {
-      "rank": 36,
+      "rank": 37,
       "rank_spread": [
-        36,
-        38
+        37,
+        39
       ],
       "model": "grok-4.3",
       "model_url": "https://docs.x.ai/developers/models/grok-4.3",
@@ -728,10 +748,10 @@
       "signals": null
     },
     {
-      "rank": 37,
+      "rank": 38,
       "rank_spread": [
-        36,
-        39
+        37,
+        40
       ],
       "model": "mistral-large-3",
       "model_url": "https://mistral.ai/news/mistral-3",
@@ -748,10 +768,10 @@
       "signals": null
     },
     {
-      "rank": 38,
+      "rank": 39,
       "rank_spread": [
-        36,
-        39
+        37,
+        40
       ],
       "model": "gpt-5.1",
       "model_url": "https://openai.com/index/gpt-5-1/",
@@ -768,10 +788,10 @@
       "signals": null
     },
     {
-      "rank": 39,
+      "rank": 40,
       "rank_spread": [
-        37,
-        39
+        38,
+        40
       ],
       "model": "gemini-3.1-flash-lite-preview",
       "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite",
@@ -788,10 +808,10 @@
       "signals": null
     },
     {
-      "rank": 40,
+      "rank": 41,
       "rank_spread": [
-        40,
-        40
+        41,
+        41
       ],
       "model": "gemini-2.5-pro",
       "model_url": "https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro",
