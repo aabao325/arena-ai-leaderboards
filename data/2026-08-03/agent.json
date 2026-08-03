@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "agent",
     "source_url": "https://arena.ai/leaderboard/agent",
-    "fetched_at": "2026-08-03T20:16:35.437009+00:00",
+    "fetched_at": "2026-08-03T21:44:26.598042+00:00",
     "last_updated": "Jul 28, 2026",
     "model_count": 45
   },
@@ -1277,7 +1277,7 @@
       "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
       "vendor": "Google",
       "license": "proprietary",
-      "votes": 45993,
+      "votes": null,
       "score": null,
       "ci_low": null,
       "ci_high": null,
