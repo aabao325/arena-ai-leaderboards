@@ -1,21 +1,21 @@
 {
   "date": "2026-08-03",
-  "fetched_at": "2026-08-03T01:11:20.186751+00:00",
+  "fetched_at": "2026-08-03T05:08:17.699740+00:00",
   "leaderboards": {
     "agent": {
       "model_count": 44
     },
     "text": {
-      "model_count": 384
+      "model_count": 385
     },
     "code-webdev": {
-      "model_count": 108
+      "model_count": 109
     },
     "code-image-to-webdev": {
       "model_count": 40
     },
     "vision": {
-      "model_count": 143
+      "model_count": 144
     },
     "document": {
       "model_count": 38
