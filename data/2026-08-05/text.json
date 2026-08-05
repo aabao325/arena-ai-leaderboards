@@ -2,9 +2,9 @@
   "meta": {
     "leaderboard": "text",
     "source_url": "https://arena.ai/leaderboard/text",
-    "fetched_at": "2026-08-05T18:08:16.944477+00:00",
+    "fetched_at": "2026-08-05T20:11:53.832545+00:00",
     "last_updated": "Aug 1, 2026",
-    "model_count": 386
+    "model_count": 385
   },
   "models": [
     {
@@ -1828,23 +1828,6 @@
       "signals": null
     },
     {
-      "rank": null,
-      "rank_spread": null,
-      "model": "inkling-small Thinky",
-      "model_url": null,
-      "vendor": null,
-      "license": "open",
-      "votes": null,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": null
-    },
-    {
       "rank": 92,
       "rank_spread": [
         76,
@@ -2879,8 +2862,8 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.98,
-      "price_completion": 3.95,
+      "price_prompt": 0.4,
+      "price_completion": 4.0,
       "context_length": 131100,
       "signals": null
     },
@@ -3019,7 +3002,7 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 0.15,
+      "price_prompt": 0.22,
       "price_completion": 0.9,
       "context_length": 204800,
       "signals": null
