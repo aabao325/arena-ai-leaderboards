@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "vision",
     "source_url": "https://arena.ai/leaderboard/vision",
-    "fetched_at": "2026-08-06T04:47:43.736289+00:00",
+    "fetched_at": "2026-08-06T08:03:30.761056+00:00",
     "last_updated": "Aug 1, 2026",
     "model_count": 145
   },
@@ -1542,8 +1542,8 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 0.4,
-      "price_completion": 4.0,
+      "price_prompt": 0.98,
+      "price_completion": 3.95,
       "context_length": 131100,
       "signals": null
     },
