@@ -1,9 +1,12 @@
 {
   "date": "2026-08-07",
-  "fetched_at": "2026-08-07T12:25:06.240013+00:00",
+  "fetched_at": "2026-08-07T13:54:11.143855+00:00",
   "leaderboards": {
     "agent": {
       "model_count": 46
+    },
+    "text": {
+      "model_count": 385
     },
     "code-webdev": {
       "model_count": 111
@@ -36,10 +39,5 @@
       "model_count": 7
     }
   },
-  "errors": [
-    {
-      "leaderboard": "text",
-      "error": "The read operation timed out"
-    }
-  ]
+  "errors": []
 }
