@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-07",
+  "fetched_at": "2026-08-07T04:13:30.837260+00:00",
+  "leaderboards": {
+    "agent": {
+      "model_count": 10
+    },
+    "code": {
+      "model_count": 111
+    },
+    "document": {
+      "model_count": 39
+    },
+    "image-edit": {
+      "model_count": 52
+    },
+    "image-to-video": {
+      "model_count": 43
+    },
+    "search": {
+      "model_count": 32
+    },
+    "text": {
+      "model_count": 20
+    },
+    "text-to-image": {
+      "model_count": 20
+    },
+    "text-to-video": {
+      "model_count": 43
+    },
+    "video-edit": {
+      "model_count": 7
+    },
+    "vision": {
+      "model_count": 20
+    }
+  },
+  "errors": []
+}
