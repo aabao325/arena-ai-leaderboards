@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text-to-image",
     "source_url": "https://arena.ai/leaderboard/text-to-image",
-    "fetched_at": "2026-08-08T07:32:08.930727+00:00",
+    "fetched_at": "2026-08-08T08:09:04.123976+00:00",
     "last_updated": "Aug 7, 2026",
     "model_count": 76
   },
@@ -34,7 +34,7 @@
         3
       ],
       "model": "grok-imagine-image-2.0 (low)",
-      "model_url": "https://docs.x.ai/developers/model-capabilities/images/generation",
+      "model_url": "https://x.ai/news/grok-imagine-image-2",
       "vendor": "SpaceXAI",
       "license": "proprietary",
       "votes": 2722,
