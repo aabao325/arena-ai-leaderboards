@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text",
     "source_url": "https://arena.ai/leaderboard/text",
-    "fetched_at": "2026-08-12T06:56:02.641833+00:00",
+    "fetched_at": "2026-08-12T08:49:43.344928+00:00",
     "last_updated": "Aug 11, 2026",
     "model_count": 389
   },
@@ -622,9 +622,9 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 2.0,
-      "price_completion": 6.0,
-      "context_length": 2000000,
+      "price_prompt": 1.25,
+      "price_completion": 2.5,
+      "context_length": 1000000,
       "signals": null
     },
     {
@@ -642,9 +642,9 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 2.0,
-      "price_completion": 6.0,
-      "context_length": 2000000,
+      "price_prompt": 1.25,
+      "price_completion": 2.5,
+      "context_length": 1000000,
       "signals": null
     },
     {
@@ -2059,8 +2059,8 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 0.5,
-      "price_completion": 2.0,
+      "price_prompt": 0.55,
+      "price_completion": 2.2,
       "context_length": 204800,
       "signals": null
     },
@@ -2260,7 +2260,7 @@
       "ci_high": 10,
       "preliminary": false,
       "price_prompt": 0.27,
-      "price_completion": 1.0,
+      "price_completion": 0.95,
       "context_length": 163800,
       "signals": null
     },
@@ -2400,7 +2400,7 @@
       "ci_high": 10,
       "preliminary": false,
       "price_prompt": 0.27,
-      "price_completion": 1.0,
+      "price_completion": 0.95,
       "context_length": 163800,
       "signals": null
     },
@@ -2419,8 +2419,8 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.21,
-      "price_completion": 1.9,
+      "price_prompt": 0.26,
+      "price_completion": 1.04,
       "context_length": 262100,
       "signals": null
     },
@@ -3319,9 +3319,9 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
+      "price_prompt": 0.03,
+      "price_completion": 0.12,
+      "context_length": 524300,
       "signals": null
     },
     {
@@ -3819,7 +3819,7 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 0.04,
+      "price_prompt": 0.03,
       "price_completion": 0.17,
       "context_length": 131100,
       "signals": null
