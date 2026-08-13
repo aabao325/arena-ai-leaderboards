@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "video-edit",
     "source_url": "https://arena.ai/leaderboard/video-edit",
-    "fetched_at": "2026-08-13T07:00:31.946894+00:00",
+    "fetched_at": "2026-08-13T08:52:55.412876+00:00",
     "last_updated": "Aug 13, 2026",
     "model_count": 8
   },
@@ -14,7 +14,7 @@
         3
       ],
       "model": "minimax-h3",
-      "model_url": "https://app.notion.com/p/MiniMax-H3-The-Next-Gen-Open-Weight-Multimodal-Video-Generation-Model-3acbb3a8c3ae81618844cb0a3904e247",
+      "model_url": "https://app.notion.com/p/MiniMax-H3-The-Next-Gen-Open-Weight-Multimodal-Generation-Model-5cdd99c3d331822397f18130e7b480a8",
       "vendor": "MiniMax",
       "license": "open",
       "votes": 499,
