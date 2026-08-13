@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "code-webdev",
     "source_url": "https://arena.ai/leaderboard/code/webdev",
-    "fetched_at": "2026-08-13T05:20:11.351192+00:00",
+    "fetched_at": "2026-08-13T07:00:31.946894+00:00",
     "last_updated": "Aug 12, 2026",
     "model_count": 115
   },
@@ -819,8 +819,8 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.43,
-      "price_completion": 0.87,
+      "price_prompt": 1.17,
+      "price_completion": 2.34,
       "context_length": 1000000,
       "signals": null
     },
@@ -939,8 +939,8 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.43,
-      "price_completion": 0.87,
+      "price_prompt": 1.17,
+      "price_completion": 2.34,
       "context_length": 1000000,
       "signals": null
     },
@@ -1239,8 +1239,8 @@
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
-      "price_prompt": 0.5,
-      "price_completion": 3.6,
+      "price_prompt": 0.45,
+      "price_completion": 3.0,
       "context_length": 262100,
       "signals": null
     },
@@ -2039,8 +2039,8 @@
       "ci_low": 18,
       "ci_high": 18,
       "preliminary": false,
-      "price_prompt": 0.14,
-      "price_completion": 1.0,
+      "price_prompt": 0.25,
+      "price_completion": 1.25,
       "context_length": 262100,
       "signals": null
     },
