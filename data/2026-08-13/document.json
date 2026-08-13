@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "document",
     "source_url": "https://arena.ai/leaderboard/document",
-    "fetched_at": "2026-08-13T00:10:06.104736+00:00",
+    "fetched_at": "2026-08-13T03:11:07.768389+00:00",
     "last_updated": "Jul 26, 2026",
     "model_count": 39
   },
@@ -53,7 +53,7 @@
         1,
         6
       ],
-      "model": "claude-opus-4-6-thinking",
+      "model": "claude-opus-4-6-high",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-6",
       "vendor": "Anthropic",
       "license": "proprietary",
@@ -113,7 +113,7 @@
         2,
         9
       ],
-      "model": "claude-opus-4-7-thinking",
+      "model": "claude-opus-4-7-high",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-7",
       "vendor": "Anthropic",
       "license": "proprietary",
@@ -233,7 +233,7 @@
         7,
         20
       ],
-      "model": "claude-opus-4-8-thinking",
+      "model": "claude-opus-4-8-high",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-8",
       "vendor": "Anthropic",
       "license": "proprietary",
@@ -261,7 +261,7 @@
       "score": 1472,
       "ci_low": 13,
       "ci_high": 13,
-      "preliminary": true,
+      "preliminary": false,
       "price_prompt": 1.25,
       "price_completion": 4.25,
       "context_length": 1000000,
@@ -501,7 +501,7 @@
       "score": 1443,
       "ci_low": 18,
       "ci_high": 18,
-      "preliminary": true,
+      "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
       "context_length": null,
