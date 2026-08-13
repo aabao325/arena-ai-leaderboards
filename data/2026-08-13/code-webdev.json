@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "code-webdev",
     "source_url": "https://arena.ai/leaderboard/code/webdev",
-    "fetched_at": "2026-08-13T18:32:20.012849+00:00",
+    "fetched_at": "2026-08-13T19:39:02.013125+00:00",
     "last_updated": "Aug 12, 2026",
     "model_count": 116
   },
@@ -150,10 +150,10 @@
     {
       "rank": null,
       "rank_spread": null,
-      "model": "deepseek-v4-pro-max-20260813",
-      "model_url": "https://api-docs.deepseek.com/updates/#date-2026-08-13",
-      "vendor": "DeepSeek",
-      "license": "open",
+      "model": "deepseek-v4-pro-max-20260813-webdev",
+      "model_url": null,
+      "vendor": null,
+      "license": null,
       "votes": null,
       "score": null,
       "ci_low": null,
@@ -399,8 +399,8 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 0.75,
-      "price_completion": 3.75,
+      "price_prompt": 0.38,
+      "price_completion": 1.88,
       "context_length": 1000000,
       "signals": null
     },
@@ -1459,7 +1459,7 @@
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
-      "price_prompt": 0.23,
+      "price_prompt": 0.22,
       "price_completion": 0.9,
       "context_length": 204800,
       "signals": null
