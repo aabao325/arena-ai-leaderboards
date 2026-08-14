@@ -2,8 +2,8 @@
   "meta": {
     "leaderboard": "agent",
     "source_url": "https://arena.ai/leaderboard/agent",
-    "fetched_at": "2026-08-14T03:49:31.363149+00:00",
-    "last_updated": "Aug 12, 2026",
+    "fetched_at": "2026-08-14T06:02:28.016487+00:00",
+    "last_updated": "Aug 13, 2026",
     "model_count": 48
   },
   "models": [
@@ -17,7 +17,52 @@
       "model_url": "https://www.anthropic.com/news/claude-opus-5",
       "vendor": "Anthropic",
       "license": "proprietary",
-      "votes": 19732,
+      "votes": 19739,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": 12.19,
+          "ci": 1.45
+        },
+        "confirmed_success": {
+          "value": 15.35,
+          "ci": 3.03
+        },
+        "praise_vs_complaint": {
+          "value": 19.26,
+          "ci": 5.29
+        },
+        "steerability": {
+          "value": 11.34,
+          "ci": 2.79
+        },
+        "bash_recovery": {
+          "value": 13.89,
+          "ci": 0.79
+        },
+        "tool_hallucination": {
+          "value": 1.13,
+          "ci": 0.19
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "rank_spread": [
+        1,
+        8
+      ],
+      "model": "Claude Fable 5 (High)",
+      "model_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "votes": 24417,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -28,71 +73,26 @@
       "signals": {
         "net_improvement": {
           "value": 12.01,
-          "ci": 1.45
+          "ci": 2.57
         },
         "confirmed_success": {
-          "value": 15.13,
-          "ci": 3.03
+          "value": 10.66,
+          "ci": 4.9
         },
         "praise_vs_complaint": {
-          "value": 19.31,
-          "ci": 5.29
+          "value": 25.14,
+          "ci": 9.01
         },
         "steerability": {
-          "value": 10.73,
-          "ci": 2.79
+          "value": 8.84,
+          "ci": 5.23
         },
         "bash_recovery": {
-          "value": 13.74,
-          "ci": 0.79
+          "value": 14.19,
+          "ci": 3.71
         },
         "tool_hallucination": {
-          "value": 1.14,
-          "ci": 0.19
-        }
-      }
-    },
-    {
-      "rank": 2,
-      "rank_spread": [
-        1,
-        6
-      ],
-      "model": "Claude Opus 5 (Max)",
-      "model_url": "https://www.anthropic.com/news/claude-opus-5",
-      "vendor": "Anthropic",
-      "license": "proprietary",
-      "votes": 15509,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": {
-        "net_improvement": {
-          "value": 12.0,
-          "ci": 1.71
-        },
-        "confirmed_success": {
-          "value": 17.81,
-          "ci": 3.18
-        },
-        "praise_vs_complaint": {
-          "value": 19.64,
-          "ci": 6.25
-        },
-        "steerability": {
-          "value": 7.09,
-          "ci": 3.4
-        },
-        "bash_recovery": {
-          "value": 14.26,
-          "ci": 0.88
-        },
-        "tool_hallucination": {
-          "value": 1.19,
+          "value": 1.22,
           "ci": 0.19
         }
       }
@@ -101,13 +101,13 @@
       "rank": 3,
       "rank_spread": [
         1,
-        9
+        6
       ],
-      "model": "Claude Fable 5 (High)",
-      "model_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "model": "Claude Opus 5 (Max)",
+      "model_url": "https://www.anthropic.com/news/claude-opus-5",
       "vendor": "Anthropic",
       "license": "proprietary",
-      "votes": 24407,
+      "votes": 15515,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -117,27 +117,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 11.98,
-          "ci": 2.55
+          "value": 11.95,
+          "ci": 1.71
         },
         "confirmed_success": {
-          "value": 10.72,
-          "ci": 4.84
+          "value": 17.96,
+          "ci": 3.18
         },
         "praise_vs_complaint": {
-          "value": 24.96,
-          "ci": 8.96
+          "value": 19.3,
+          "ci": 6.26
         },
         "steerability": {
-          "value": 8.98,
-          "ci": 5.19
+          "value": 6.95,
+          "ci": 3.43
         },
         "bash_recovery": {
-          "value": 14.03,
-          "ci": 3.67
+          "value": 14.38,
+          "ci": 0.88
         },
         "tool_hallucination": {
-          "value": 1.23,
+          "value": 1.18,
           "ci": 0.19
         }
       }
@@ -146,13 +146,13 @@
       "rank": 4,
       "rank_spread": [
         1,
-        10
+        11
       ],
       "model": "GPT 5.6 Sol (xHigh)",
       "model_url": "https://openai.com/index/gpt-5-6/",
       "vendor": "OpenAI",
       "license": "proprietary",
-      "votes": 18086,
+      "votes": 18091,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -162,27 +162,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 10.8,
+          "value": 10.86,
           "ci": 1.8
         },
         "confirmed_success": {
-          "value": 9.72,
-          "ci": 3.67
-        },
-        "praise_vs_complaint": {
-          "value": 23.35,
-          "ci": 6.69
-        },
-        "steerability": {
-          "value": 9.13,
+          "value": 10.12,
           "ci": 3.69
         },
+        "praise_vs_complaint": {
+          "value": 23.03,
+          "ci": 6.72
+        },
+        "steerability": {
+          "value": 9.23,
+          "ci": 3.74
+        },
         "bash_recovery": {
-          "value": 10.56,
-          "ci": 1.26
+          "value": 10.71,
+          "ci": 1.27
         },
         "tool_hallucination": {
-          "value": 1.23,
+          "value": 1.22,
           "ci": 0.19
         }
       }
@@ -191,7 +191,7 @@
       "rank": 5,
       "rank_spread": [
         1,
-        9
+        8
       ],
       "model": "Kimi K3 (Max)",
       "model_url": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart",
@@ -207,114 +207,24 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 10.54,
+          "value": 10.6,
           "ci": 1.04
         },
         "confirmed_success": {
-          "value": 15.42,
-          "ci": 2.05
+          "value": 15.55,
+          "ci": 2.06
         },
         "praise_vs_complaint": {
-          "value": 20.3,
-          "ci": 3.77
+          "value": 20.31,
+          "ci": 3.78
         },
         "steerability": {
-          "value": 7.7,
+          "value": 7.8,
           "ci": 1.91
         },
         "bash_recovery": {
-          "value": 8.04,
+          "value": 8.12,
           "ci": 0.83
-        },
-        "tool_hallucination": {
-          "value": 1.23,
-          "ci": 0.19
-        }
-      }
-    },
-    {
-      "rank": 6,
-      "rank_spread": [
-        1,
-        12
-      ],
-      "model": "Claude Opus 4.8 (High)",
-      "model_url": "https://www.anthropic.com/news/claude-opus-4-8",
-      "vendor": "Anthropic",
-      "license": "proprietary",
-      "votes": 35146,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": {
-        "net_improvement": {
-          "value": 9.65,
-          "ci": 1.77
-        },
-        "confirmed_success": {
-          "value": 9.08,
-          "ci": 3.09
-        },
-        "praise_vs_complaint": {
-          "value": 22.46,
-          "ci": 5.68
-        },
-        "steerability": {
-          "value": 8.28,
-          "ci": 3.29
-        },
-        "bash_recovery": {
-          "value": 9.24,
-          "ci": 2.84
-        },
-        "tool_hallucination": {
-          "value": -0.82,
-          "ci": 2.51
-        }
-      }
-    },
-    {
-      "rank": 7,
-      "rank_spread": [
-        3,
-        12
-      ],
-      "model": "GPT 5.5 (xHigh)",
-      "model_url": "https://openai.com/index/introducing-gpt-5-5/",
-      "vendor": "OpenAI",
-      "license": "proprietary",
-      "votes": 47563,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": {
-        "net_improvement": {
-          "value": 8.83,
-          "ci": 1.02
-        },
-        "confirmed_success": {
-          "value": 4.84,
-          "ci": 2.17
-        },
-        "praise_vs_complaint": {
-          "value": 14.5,
-          "ci": 3.6
-        },
-        "steerability": {
-          "value": 9.07,
-          "ci": 1.9
-        },
-        "bash_recovery": {
-          "value": 14.53,
-          "ci": 1.22
         },
         "tool_hallucination": {
           "value": 1.22,
@@ -323,16 +233,16 @@
       }
     },
     {
-      "rank": 8,
+      "rank": 6,
       "rank_spread": [
-        3,
-        15
+        1,
+        13
       ],
-      "model": "Claude Opus 4.7 (High)",
-      "model_url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "model": "Claude Opus 4.8 (High)",
+      "model_url": "https://www.anthropic.com/news/claude-opus-4-8",
       "vendor": "Anthropic",
       "license": "proprietary",
-      "votes": 36108,
+      "votes": 35151,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -342,27 +252,117 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 8.22,
+          "value": 9.78,
+          "ci": 1.78
+        },
+        "confirmed_success": {
+          "value": 9.45,
+          "ci": 3.1
+        },
+        "praise_vs_complaint": {
+          "value": 22.52,
+          "ci": 5.71
+        },
+        "steerability": {
+          "value": 8.44,
+          "ci": 3.33
+        },
+        "bash_recovery": {
+          "value": 9.29,
+          "ci": 2.89
+        },
+        "tool_hallucination": {
+          "value": -0.8,
+          "ci": 2.47
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "rank_spread": [
+        3,
+        13
+      ],
+      "model": "GPT 5.5 (xHigh)",
+      "model_url": "https://openai.com/index/introducing-gpt-5-5/",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "votes": 47586,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": 8.9,
+          "ci": 1.03
+        },
+        "confirmed_success": {
+          "value": 4.97,
+          "ci": 2.18
+        },
+        "praise_vs_complaint": {
+          "value": 14.61,
+          "ci": 3.62
+        },
+        "steerability": {
+          "value": 9.17,
+          "ci": 1.92
+        },
+        "bash_recovery": {
+          "value": 14.53,
+          "ci": 1.25
+        },
+        "tool_hallucination": {
+          "value": 1.21,
+          "ci": 0.19
+        }
+      }
+    },
+    {
+      "rank": 8,
+      "rank_spread": [
+        3,
+        16
+      ],
+      "model": "Claude Opus 4.7 (High)",
+      "model_url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "votes": 36116,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": 8.17,
           "ci": 1.43
         },
         "confirmed_success": {
-          "value": 6.71,
-          "ci": 2.92
+          "value": 6.61,
+          "ci": 2.95
         },
         "praise_vs_complaint": {
-          "value": 12.51,
-          "ci": 4.8
+          "value": 12.32,
+          "ci": 4.81
         },
         "steerability": {
-          "value": 7.81,
-          "ci": 2.9
+          "value": 7.72,
+          "ci": 2.91
         },
         "bash_recovery": {
-          "value": 12.95,
-          "ci": 2.05
+          "value": 13.09,
+          "ci": 2.08
         },
         "tool_hallucination": {
-          "value": 1.13,
+          "value": 1.12,
           "ci": 0.21
         }
       }
@@ -371,13 +371,13 @@
       "rank": 9,
       "rank_spread": [
         6,
-        15
+        16
       ],
       "model": "GPT 5.5 (High)",
       "model_url": "https://openai.com/index/introducing-gpt-5-5/",
       "vendor": "OpenAI",
       "license": "proprietary",
-      "votes": 72813,
+      "votes": 72849,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -387,27 +387,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 7.72,
-          "ci": 0.96
+          "value": 7.73,
+          "ci": 0.97
         },
         "confirmed_success": {
-          "value": 3.99,
-          "ci": 2.03
+          "value": 4.03,
+          "ci": 2.04
         },
         "praise_vs_complaint": {
-          "value": 11.75,
+          "value": 11.62,
           "ci": 3.39
         },
         "steerability": {
-          "value": 8.49,
-          "ci": 1.78
+          "value": 8.59,
+          "ci": 1.79
         },
         "bash_recovery": {
-          "value": 13.15,
-          "ci": 0.96
+          "value": 13.21,
+          "ci": 0.97
         },
         "tool_hallucination": {
-          "value": 1.23,
+          "value": 1.22,
           "ci": 0.19
         }
       }
@@ -416,13 +416,13 @@
       "rank": 10,
       "rank_spread": [
         5,
-        15
+        16
       ],
       "model": "Claude Opus 4.7",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-7",
       "vendor": "Anthropic",
       "license": "proprietary",
-      "votes": 36671,
+      "votes": 36677,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -432,87 +432,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 7.68,
-          "ci": 1.44
+          "value": 7.66,
+          "ci": 1.45
         },
         "confirmed_success": {
-          "value": 5.37,
-          "ci": 3.06
+          "value": 5.45,
+          "ci": 3.08
         },
         "praise_vs_complaint": {
-          "value": 11.63,
-          "ci": 4.7
+          "value": 11.57,
+          "ci": 4.71
         },
         "steerability": {
+          "value": 9.95,
+          "ci": 2.87
+        },
+        "bash_recovery": {
           "value": 10.15,
-          "ci": 2.85
-        },
-        "bash_recovery": {
-          "value": 10.07,
-          "ci": 2.28
+          "ci": 2.31
         },
         "tool_hallucination": {
-          "value": 1.18,
+          "value": 1.17,
           "ci": 0.19
-        }
-      }
-    },
-    {
-      "rank": 11,
-      "rank_spread": [
-        3,
-        17
-      ],
-      "model": "Claude Sonnet 5 (High)",
-      "model_url": "https://www.anthropic.com/news/claude-sonnet-5",
-      "vendor": "Anthropic",
-      "license": "proprietary",
-      "votes": 25715,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": {
-        "net_improvement": {
-          "value": 7.27,
-          "ci": 2.28
-        },
-        "confirmed_success": {
-          "value": 3.83,
-          "ci": 4.66
-        },
-        "praise_vs_complaint": {
-          "value": 15.43,
-          "ci": 7.92
-        },
-        "steerability": {
-          "value": 5.04,
-          "ci": 4.83
-        },
-        "bash_recovery": {
-          "value": 10.97,
-          "ci": 1.79
-        },
-        "tool_hallucination": {
-          "value": 1.08,
-          "ci": 0.2
         }
       }
     },
     {
       "rank": 12,
       "rank_spread": [
-        6,
-        17
+        5,
+        20
       ],
-      "model": "Claude Opus 4.6",
-      "model_url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "model": "Claude Sonnet 5 (High)",
+      "model_url": "https://www.anthropic.com/news/claude-sonnet-5",
       "vendor": "Anthropic",
       "license": "proprietary",
-      "votes": 35844,
+      "votes": 25733,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -522,42 +477,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 6.86,
-          "ci": 1.38
+          "value": 7.14,
+          "ci": 2.29
         },
         "confirmed_success": {
-          "value": 5.3,
-          "ci": 2.96
+          "value": 3.13,
+          "ci": 4.73
         },
         "praise_vs_complaint": {
-          "value": 8.38,
-          "ci": 4.52
+          "value": 15.08,
+          "ci": 7.93
         },
         "steerability": {
-          "value": 8.11,
-          "ci": 2.71
+          "value": 5.22,
+          "ci": 4.88
         },
         "bash_recovery": {
-          "value": 11.31,
-          "ci": 1.81
+          "value": 11.21,
+          "ci": 1.8
         },
         "tool_hallucination": {
-          "value": 1.23,
-          "ci": 0.19
+          "value": 1.07,
+          "ci": 0.2
         }
       }
     },
     {
       "rank": 13,
       "rank_spread": [
-        8,
-        17
+        6,
+        18
       ],
-      "model": "GLM 5.2 (Max)",
-      "model_url": "https://huggingface.co/zai-org/GLM-5.2",
-      "vendor": "Z.ai",
-      "license": "open",
-      "votes": 53295,
+      "model": "Claude Opus 4.6",
+      "model_url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "votes": 35853,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -567,27 +522,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 6.71,
-          "ci": 0.89
+          "value": 6.89,
+          "ci": 1.39
         },
         "confirmed_success": {
-          "value": 8.51,
-          "ci": 1.87
+          "value": 5.28,
+          "ci": 2.98
         },
         "praise_vs_complaint": {
-          "value": 11.57,
-          "ci": 3.15
+          "value": 8.21,
+          "ci": 4.53
         },
         "steerability": {
-          "value": 6.13,
-          "ci": 1.58
+          "value": 8.3,
+          "ci": 2.73
         },
         "bash_recovery": {
-          "value": 6.12,
-          "ci": 1.08
+          "value": 11.46,
+          "ci": 1.8
         },
         "tool_hallucination": {
-          "value": 1.23,
+          "value": 1.22,
           "ci": 0.19
         }
       }
@@ -596,13 +551,13 @@
       "rank": 14,
       "rank_spread": [
         8,
-        17
+        18
       ],
-      "model": "GPT 5.5",
-      "model_url": "https://openai.com/index/introducing-gpt-5-5/",
-      "vendor": "OpenAI",
-      "license": "proprietary",
-      "votes": 73965,
+      "model": "GLM 5.2 (Max)",
+      "model_url": "https://huggingface.co/zai-org/GLM-5.2",
+      "vendor": "Z.ai",
+      "license": "open",
+      "votes": 53469,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -612,27 +567,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 6.26,
+          "value": 6.74,
           "ci": 0.9
         },
         "confirmed_success": {
-          "value": 3.6,
-          "ci": 1.96
+          "value": 8.39,
+          "ci": 1.91
         },
         "praise_vs_complaint": {
-          "value": 7.61,
-          "ci": 3.09
+          "value": 11.6,
+          "ci": 3.18
         },
         "steerability": {
-          "value": 7.22,
-          "ci": 1.7
+          "value": 6.14,
+          "ci": 1.58
         },
         "bash_recovery": {
-          "value": 11.66,
-          "ci": 1.0
+          "value": 6.33,
+          "ci": 1.07
         },
         "tool_hallucination": {
-          "value": 1.23,
+          "value": 1.22,
           "ci": 0.19
         }
       }
@@ -641,13 +596,13 @@
       "rank": 15,
       "rank_spread": [
         8,
-        19
+        18
       ],
-      "model": "Grok 4.5",
-      "model_url": "https://docs.x.ai/developers/models/grok-4.5",
-      "vendor": "SpaceXAI",
+      "model": "GPT 5.5",
+      "model_url": "https://openai.com/index/introducing-gpt-5-5/",
+      "vendor": "OpenAI",
       "license": "proprietary",
-      "votes": 29791,
+      "votes": 73997,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -657,27 +612,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 6.0,
-          "ci": 1.2
+          "value": 6.35,
+          "ci": 0.91
         },
         "confirmed_success": {
-          "value": 6.24,
-          "ci": 2.69
+          "value": 3.63,
+          "ci": 1.98
         },
         "praise_vs_complaint": {
-          "value": 4.82,
-          "ci": 4.26
+          "value": 7.71,
+          "ci": 3.12
         },
         "steerability": {
-          "value": 6.71,
-          "ci": 2.29
+          "value": 7.36,
+          "ci": 1.72
         },
         "bash_recovery": {
-          "value": 10.98,
-          "ci": 1.22
+          "value": 11.86,
+          "ci": 1.0
         },
         "tool_hallucination": {
-          "value": 1.23,
+          "value": 1.22,
           "ci": 0.19
         }
       }
@@ -685,14 +640,59 @@
     {
       "rank": 16,
       "rank_spread": [
-        11,
-        22
+        8,
+        19
+      ],
+      "model": "Grok 4.5",
+      "model_url": "https://docs.x.ai/developers/models/grok-4.5",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "votes": 29943,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": 6.19,
+          "ci": 1.2
+        },
+        "confirmed_success": {
+          "value": 6.42,
+          "ci": 2.68
+        },
+        "praise_vs_complaint": {
+          "value": 5.04,
+          "ci": 4.27
+        },
+        "steerability": {
+          "value": 7.04,
+          "ci": 2.29
+        },
+        "bash_recovery": {
+          "value": 11.22,
+          "ci": 1.2
+        },
+        "tool_hallucination": {
+          "value": 1.22,
+          "ci": 0.19
+        }
+      }
+    },
+    {
+      "rank": 17,
+      "rank_spread": [
+        12,
+        23
       ],
       "model": "GPT 5.4 (High)",
       "model_url": "https://platform.openai.com/docs/models/gpt-5.4",
       "vendor": "OpenAI",
       "license": "proprietary",
-      "votes": 73194,
+      "votes": 73220,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -703,71 +703,26 @@
       "signals": {
         "net_improvement": {
           "value": 4.99,
-          "ci": 0.94
+          "ci": 0.95
         },
         "confirmed_success": {
-          "value": 4.58,
-          "ci": 2.04
+          "value": 4.33,
+          "ci": 2.06
         },
         "praise_vs_complaint": {
-          "value": 3.61,
-          "ci": 3.15
+          "value": 3.82,
+          "ci": 3.18
         },
         "steerability": {
-          "value": 6.13,
-          "ci": 1.79
+          "value": 6.05,
+          "ci": 1.81
         },
         "bash_recovery": {
-          "value": 9.4,
-          "ci": 1.31
+          "value": 9.55,
+          "ci": 1.32
         },
         "tool_hallucination": {
-          "value": 1.23,
-          "ci": 0.19
-        }
-      }
-    },
-    {
-      "rank": 17,
-      "rank_spread": [
-        11,
-        23
-      ],
-      "model": "GPT 5.6 Luna (xHigh)",
-      "model_url": "https://openai.com/index/gpt-5-6/",
-      "vendor": "OpenAI",
-      "license": "proprietary",
-      "votes": 8682,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": {
-        "net_improvement": {
-          "value": 4.29,
-          "ci": 1.87
-        },
-        "confirmed_success": {
-          "value": -1.07,
-          "ci": 4.24
-        },
-        "praise_vs_complaint": {
-          "value": 8.24,
-          "ci": 6.49
-        },
-        "steerability": {
-          "value": 1.55,
-          "ci": 3.82
-        },
-        "bash_recovery": {
-          "value": 11.48,
-          "ci": 1.44
-        },
-        "tool_hallucination": {
-          "value": 1.23,
+          "value": 1.22,
           "ci": 0.19
         }
       }
@@ -775,14 +730,14 @@
     {
       "rank": 18,
       "rank_spread": [
-        16,
-        23
+        11,
+        24
       ],
-      "model": "Deepseek V4 Flash (High) (20260731)",
-      "model_url": null,
-      "vendor": "DeepSeek",
-      "license": "open",
-      "votes": 35404,
+      "model": "GPT 5.6 Luna (xHigh)",
+      "model_url": "https://openai.com/index/gpt-5-6/",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "votes": 8692,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -792,24 +747,24 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 3.89,
-          "ci": 0.82
+          "value": 4.28,
+          "ci": 1.88
         },
         "confirmed_success": {
-          "value": 8.68,
-          "ci": 1.95
+          "value": -1.09,
+          "ci": 4.27
         },
         "praise_vs_complaint": {
-          "value": 2.27,
-          "ci": 2.7
+          "value": 8.16,
+          "ci": 6.5
         },
         "steerability": {
-          "value": 3.0,
-          "ci": 1.58
+          "value": 1.48,
+          "ci": 3.85
         },
         "bash_recovery": {
-          "value": 4.29,
-          "ci": 0.71
+          "value": 11.65,
+          "ci": 1.45
         },
         "tool_hallucination": {
           "value": 1.22,
@@ -820,14 +775,14 @@
     {
       "rank": 19,
       "rank_spread": [
-        15,
-        23
+        16,
+        24
       ],
-      "model": "GPT 5.6 Terra (xHigh)",
-      "model_url": "https://openai.com/index/gpt-5-6/",
-      "vendor": "OpenAI",
-      "license": "proprietary",
-      "votes": 13958,
+      "model": "Deepseek V4 Flash (High) (20260731)",
+      "model_url": null,
+      "vendor": "DeepSeek",
+      "license": "open",
+      "votes": 36264,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -837,27 +792,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 3.67,
-          "ci": 1.25
+          "value": 4.04,
+          "ci": 0.81
         },
         "confirmed_success": {
-          "value": -1.3,
-          "ci": 3.02
+          "value": 8.7,
+          "ci": 1.93
         },
         "praise_vs_complaint": {
-          "value": 3.39,
-          "ci": 4.22
+          "value": 2.46,
+          "ci": 2.71
         },
         "steerability": {
-          "value": 5.54,
-          "ci": 2.44
+          "value": 3.34,
+          "ci": 1.57
         },
         "bash_recovery": {
-          "value": 9.46,
-          "ci": 1.15
+          "value": 4.48,
+          "ci": 0.69
         },
         "tool_hallucination": {
-          "value": 1.23,
+          "value": 1.21,
           "ci": 0.19
         }
       }
@@ -865,14 +820,14 @@
     {
       "rank": 20,
       "rank_spread": [
-        16,
-        23
+        15,
+        24
       ],
-      "model": "Gemini 3.7 Flash (High)",
-      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
-      "vendor": "Google",
+      "model": "GPT 5.6 Terra (xHigh)",
+      "model_url": "https://openai.com/index/gpt-5-6/",
+      "vendor": "OpenAI",
       "license": "proprietary",
-      "votes": 12299,
+      "votes": 14022,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -882,42 +837,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 3.36,
-          "ci": 1.26
+          "value": 3.78,
+          "ci": 1.25
         },
         "confirmed_success": {
-          "value": 10.03,
-          "ci": 2.96
+          "value": -1.8,
+          "ci": 3.04
         },
         "praise_vs_complaint": {
-          "value": -0.05,
-          "ci": 4.0
+          "value": 3.56,
+          "ci": 4.22
         },
         "steerability": {
-          "value": 3.57,
-          "ci": 2.64
+          "value": 6.22,
+          "ci": 2.43
         },
         "bash_recovery": {
-          "value": 2.05,
-          "ci": 1.5
+          "value": 9.7,
+          "ci": 1.15
         },
         "tool_hallucination": {
-          "value": 1.19,
-          "ci": 0.2
+          "value": 1.22,
+          "ci": 0.19
         }
       }
     },
     {
       "rank": 21,
       "rank_spread": [
-        16,
+        17,
         24
       ],
-      "model": "Claude Sonnet 4.6",
-      "model_url": "https://www.anthropic.com/news/claude-sonnet-4-6",
-      "vendor": "Anthropic",
+      "model": "Gemini 3.7 Flash (High)",
+      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+      "vendor": "Google",
       "license": "proprietary",
-      "votes": 36697,
+      "votes": 13000,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -927,42 +882,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 3.06,
-          "ci": 1.39
+          "value": 3.61,
+          "ci": 1.22
         },
         "confirmed_success": {
-          "value": 0.04,
-          "ci": 3.12
+          "value": 9.85,
+          "ci": 2.83
         },
         "praise_vs_complaint": {
-          "value": 1.08,
-          "ci": 4.15
+          "value": 1.84,
+          "ci": 4.04
         },
         "steerability": {
-          "value": 2.04,
-          "ci": 2.69
+          "value": 2.83,
+          "ci": 2.51
         },
         "bash_recovery": {
-          "value": 11.04,
-          "ci": 2.69
+          "value": 2.33,
+          "ci": 1.39
         },
         "tool_hallucination": {
-          "value": 1.11,
-          "ci": 0.24
+          "value": 1.18,
+          "ci": 0.19
         }
       }
     },
     {
       "rank": 22,
       "rank_spread": [
-        15,
-        32
+        17,
+        26
       ],
-      "model": "Claude Opus 4.8",
-      "model_url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "model": "Claude Sonnet 4.6",
+      "model_url": "https://www.anthropic.com/news/claude-sonnet-4-6",
       "vendor": "Anthropic",
       "license": "proprietary",
-      "votes": 33186,
+      "votes": 36710,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -972,42 +927,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 2.14,
-          "ci": 2.7
+          "value": 3.12,
+          "ci": 1.4
         },
         "confirmed_success": {
-          "value": 8.71,
-          "ci": 3.14
+          "value": 0.06,
+          "ci": 3.15
         },
         "praise_vs_complaint": {
-          "value": 13.77,
-          "ci": 5.37
+          "value": 1.07,
+          "ci": 4.17
         },
         "steerability": {
-          "value": 8.5,
-          "ci": 3.18
+          "value": 2.21,
+          "ci": 2.7
         },
         "bash_recovery": {
-          "value": 10.73,
-          "ci": 2.24
+          "value": 11.15,
+          "ci": 2.72
         },
         "tool_hallucination": {
-          "value": -30.98,
-          "ci": 10.84
+          "value": 1.09,
+          "ci": 0.24
         }
       }
     },
     {
       "rank": 23,
       "rank_spread": [
-        22,
-        28
+        17,
+        32
       ],
-      "model": "Muse Spark 1.1",
-      "model_url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
-      "vendor": "Meta",
+      "model": "Claude Opus 4.8",
+      "model_url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "vendor": "Anthropic",
       "license": "proprietary",
-      "votes": 72126,
+      "votes": 33192,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1017,42 +972,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 1.06,
-          "ci": 0.6
+          "value": 2.12,
+          "ci": 2.72
         },
         "confirmed_success": {
-          "value": 7.02,
-          "ci": 1.4
+          "value": 8.76,
+          "ci": 3.17
         },
         "praise_vs_complaint": {
-          "value": -5.13,
-          "ci": 1.77
+          "value": 13.67,
+          "ci": 5.4
         },
         "steerability": {
-          "value": -3.21,
-          "ci": 1.14
+          "value": 8.34,
+          "ci": 3.22
         },
         "bash_recovery": {
-          "value": 5.41,
-          "ci": 1.24
+          "value": 10.86,
+          "ci": 2.23
         },
         "tool_hallucination": {
-          "value": 1.2,
-          "ci": 0.19
+          "value": -31.01,
+          "ci": 10.9
         }
       }
     },
     {
       "rank": 24,
       "rank_spread": [
-        17,
-        32
+        22,
+        29
       ],
-      "model": "Kimi K2.7 Code",
-      "model_url": null,
-      "vendor": "Moonshot",
-      "license": "open",
-      "votes": 11021,
+      "model": "Muse Spark 1.1",
+      "model_url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "votes": 72668,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1062,27 +1017,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 1.03,
-          "ci": 2.12
+          "value": 1.17,
+          "ci": 0.61
         },
         "confirmed_success": {
-          "value": 4.74,
-          "ci": 4.47
+          "value": 7.28,
+          "ci": 1.4
         },
         "praise_vs_complaint": {
-          "value": 3.03,
-          "ci": 7.26
+          "value": -4.95,
+          "ci": 1.82
         },
         "steerability": {
-          "value": -2.5,
-          "ci": 4.83
+          "value": -3.25,
+          "ci": 1.15
         },
         "bash_recovery": {
-          "value": -1.34,
-          "ci": 2.58
+          "value": 5.59,
+          "ci": 1.2
         },
         "tool_hallucination": {
-          "value": 1.23,
+          "value": 1.19,
           "ci": 0.19
         }
       }
@@ -1090,14 +1045,14 @@
     {
       "rank": 25,
       "rank_spread": [
-        22,
-        31
+        18,
+        34
       ],
-      "model": "GLM 5.1",
-      "model_url": "https://huggingface.co/zai-org/GLM-5.1",
-      "vendor": "Z.ai",
+      "model": "Kimi K2.7 Code",
+      "model_url": null,
+      "vendor": "Moonshot",
       "license": "open",
-      "votes": 71302,
+      "votes": 11029,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1107,42 +1062,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 0.57,
-          "ci": 0.81
+          "value": 1.08,
+          "ci": 2.15
         },
         "confirmed_success": {
-          "value": 1.66,
-          "ci": 1.81
+          "value": 4.43,
+          "ci": 4.55
         },
         "praise_vs_complaint": {
-          "value": 1.13,
-          "ci": 2.56
+          "value": 2.74,
+          "ci": 7.27
         },
         "steerability": {
-          "value": 1.54,
-          "ci": 1.47
+          "value": -1.76,
+          "ci": 4.86
         },
         "bash_recovery": {
-          "value": -0.95,
-          "ci": 1.45
+          "value": -1.22,
+          "ci": 2.58
         },
         "tool_hallucination": {
-          "value": -0.5,
-          "ci": 0.37
+          "value": 1.22,
+          "ci": 0.19
         }
       }
     },
     {
       "rank": 26,
       "rank_spread": [
-        22,
+        23,
         32
       ],
-      "model": "Qwen3.7 Max",
-      "model_url": null,
-      "vendor": "Alibaba",
-      "license": "proprietary",
-      "votes": 30583,
+      "model": "GLM 5.1",
+      "model_url": "https://huggingface.co/zai-org/GLM-5.1",
+      "vendor": "Z.ai",
+      "license": "open",
+      "votes": 71334,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1152,24 +1107,69 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 0.09,
-          "ci": 0.85
+          "value": 0.58,
+          "ci": 0.82
         },
         "confirmed_success": {
-          "value": -0.4,
-          "ci": 2.11
+          "value": 1.75,
+          "ci": 1.82
         },
         "praise_vs_complaint": {
-          "value": -4.75,
-          "ci": 2.63
+          "value": 0.84,
+          "ci": 2.56
         },
         "steerability": {
-          "value": -0.05,
+          "value": 1.73,
+          "ci": 1.48
+        },
+        "bash_recovery": {
+          "value": -0.91,
+          "ci": 1.47
+        },
+        "tool_hallucination": {
+          "value": -0.53,
+          "ci": 0.37
+        }
+      }
+    },
+    {
+      "rank": 27,
+      "rank_spread": [
+        23,
+        33
+      ],
+      "model": "Qwen3.7 Max",
+      "model_url": null,
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "votes": 30743,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": 0.2,
+          "ci": 0.87
+        },
+        "confirmed_success": {
+          "value": -0.34,
+          "ci": 2.13
+        },
+        "praise_vs_complaint": {
+          "value": -4.24,
+          "ci": 2.67
+        },
+        "steerability": {
+          "value": -0.03,
           "ci": 1.52
         },
         "bash_recovery": {
-          "value": 5.05,
-          "ci": 1.38
+          "value": 5.02,
+          "ci": 1.47
         },
         "tool_hallucination": {
           "value": 0.6,
@@ -1178,16 +1178,16 @@
       }
     },
     {
-      "rank": 27,
+      "rank": 28,
       "rank_spread": [
-        22,
-        32
+        23,
+        33
       ],
       "model": "DeepSeek V4 Pro",
       "model_url": "https://api-docs.deepseek.com/news/news260424",
       "vendor": "DeepSeek",
       "license": "open",
-      "votes": 30047,
+      "votes": 30083,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1197,87 +1197,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": 0.0,
-          "ci": 0.87
+          "value": 0.14,
+          "ci": 0.88
         },
         "confirmed_success": {
-          "value": -2.17,
-          "ci": 2.19
+          "value": -2.16,
+          "ci": 2.21
         },
         "praise_vs_complaint": {
-          "value": -2.94,
-          "ci": 2.77
+          "value": -2.5,
+          "ci": 2.82
         },
         "steerability": {
-          "value": 0.55,
-          "ci": 1.61
+          "value": 0.59,
+          "ci": 1.63
         },
         "bash_recovery": {
-          "value": 4.21,
+          "value": 4.41,
           "ci": 0.98
         },
         "tool_hallucination": {
-          "value": 0.36,
+          "value": 0.35,
           "ci": 0.29
-        }
-      }
-    },
-    {
-      "rank": 28,
-      "rank_spread": [
-        23,
-        32
-      ],
-      "model": "Gemini 3.5 Flash (High)",
-      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-      "vendor": "Google",
-      "license": "proprietary",
-      "votes": 93726,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": {
-        "net_improvement": {
-          "value": -0.39,
-          "ci": 0.62
-        },
-        "confirmed_success": {
-          "value": 0.4,
-          "ci": 1.48
-        },
-        "praise_vs_complaint": {
-          "value": -0.6,
-          "ci": 1.93
-        },
-        "steerability": {
-          "value": -0.33,
-          "ci": 1.15
-        },
-        "bash_recovery": {
-          "value": -1.75,
-          "ci": 0.99
-        },
-        "tool_hallucination": {
-          "value": 0.34,
-          "ci": 0.22
         }
       }
     },
     {
       "rank": 29,
       "rank_spread": [
-        23,
-        32
+        24,
+        33
       ],
-      "model": "Gemini 3.1 Pro Preview",
-      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+      "model": "Gemini 3.5 Flash (High)",
+      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
       "vendor": "Google",
       "license": "proprietary",
-      "votes": 81316,
+      "votes": 93770,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1287,42 +1242,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -0.47,
-          "ci": 0.74
+          "value": -0.29,
+          "ci": 0.64
         },
         "confirmed_success": {
-          "value": 1.49,
-          "ci": 1.67
+          "value": 0.63,
+          "ci": 1.5
         },
         "praise_vs_complaint": {
-          "value": 3.62,
-          "ci": 2.31
+          "value": -0.28,
+          "ci": 1.99
         },
         "steerability": {
-          "value": 3.08,
-          "ci": 1.29
+          "value": -0.47,
+          "ci": 1.17
         },
         "bash_recovery": {
-          "value": -11.5,
-          "ci": 1.42
+          "value": -1.66,
+          "ci": 1.0
         },
         "tool_hallucination": {
-          "value": 0.96,
-          "ci": 0.3
+          "value": 0.32,
+          "ci": 0.22
         }
       }
     },
     {
       "rank": 30,
       "rank_spread": [
-        21,
-        37
+        24,
+        35
       ],
-      "model": "Kimi K2.6",
-      "model_url": "https://www.kimi.com/blog/kimi-k2-6",
-      "vendor": "Moonshot",
-      "license": "open",
-      "votes": 11168,
+      "model": "Gemini 3.1 Pro Preview",
+      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 81349,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1332,42 +1287,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -0.54,
-          "ci": 2.29
+          "value": -0.44,
+          "ci": 0.75
         },
         "confirmed_success": {
-          "value": 0.7,
-          "ci": 4.6
+          "value": 1.49,
+          "ci": 1.69
         },
         "praise_vs_complaint": {
-          "value": 1.57,
-          "ci": 7.22
+          "value": 3.65,
+          "ci": 2.32
         },
         "steerability": {
-          "value": -0.48,
-          "ci": 4.91
+          "value": 3.21,
+          "ci": 1.32
         },
         "bash_recovery": {
-          "value": -5.72,
-          "ci": 4.38
+          "value": -11.48,
+          "ci": 1.43
         },
         "tool_hallucination": {
-          "value": 1.23,
-          "ci": 0.19
+          "value": 0.93,
+          "ci": 0.31
         }
       }
     },
     {
       "rank": 31,
       "rank_spread": [
-        23,
-        37
+        22,
+        38
       ],
-      "model": "Hy3",
-      "model_url": "https://huggingface.co/tencent/Hy3",
-      "vendor": "Tencent",
+      "model": "Kimi K2.6",
+      "model_url": "https://www.kimi.com/blog/kimi-k2-6",
+      "vendor": "Moonshot",
       "license": "open",
-      "votes": 18212,
+      "votes": 11177,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1377,28 +1332,28 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -1.14,
-          "ci": 1.28
+          "value": -0.56,
+          "ci": 2.31
         },
         "confirmed_success": {
-          "value": -2.16,
-          "ci": 2.81
+          "value": 0.56,
+          "ci": 4.67
         },
         "praise_vs_complaint": {
-          "value": 2.4,
-          "ci": 4.42
+          "value": 2.05,
+          "ci": 7.32
         },
         "steerability": {
-          "value": -8.24,
-          "ci": 2.36
+          "value": -1.15,
+          "ci": 4.96
         },
         "bash_recovery": {
-          "value": 3.62,
-          "ci": 1.6
+          "value": -5.46,
+          "ci": 4.4
         },
         "tool_hallucination": {
-          "value": -1.29,
-          "ci": 0.72
+          "value": 1.22,
+          "ci": 0.19
         }
       }
     },
@@ -1406,13 +1361,13 @@
       "rank": 32,
       "rank_spread": [
         24,
-        37
+        38
       ],
-      "model": "Qwen3.7 Plus",
-      "model_url": "https://qwen.ai/blog?id=qwen3.7-plus",
-      "vendor": "Alibaba",
-      "license": "proprietary",
-      "votes": 16722,
+      "model": "Hy3",
+      "model_url": "https://huggingface.co/tencent/Hy3",
+      "vendor": "Tencent",
+      "license": "open",
+      "votes": 18388,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1422,42 +1377,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -1.77,
-          "ci": 1.35
+          "value": -1.31,
+          "ci": 1.27
         },
         "confirmed_success": {
-          "value": -0.82,
-          "ci": 3.42
+          "value": -2.47,
+          "ci": 2.84
         },
         "praise_vs_complaint": {
-          "value": -9.16,
-          "ci": 4.08
+          "value": 1.8,
+          "ci": 4.39
         },
         "steerability": {
-          "value": -5.14,
-          "ci": 2.78
+          "value": -8.63,
+          "ci": 2.38
         },
         "bash_recovery": {
-          "value": 6.12,
-          "ci": 1.82
+          "value": 4.01,
+          "ci": 1.56
         },
         "tool_hallucination": {
-          "value": 0.16,
-          "ci": 0.42
+          "value": -1.27,
+          "ci": 0.71
         }
       }
     },
     {
       "rank": 33,
       "rank_spread": [
-        30,
-        37
+        29,
+        38
       ],
       "model": "Mimo V2.5 Pro",
       "model_url": "https://mimo.xiaomi.com/mimo-v2-5-pro/",
       "vendor": "Xiaomi",
       "license": "open",
-      "votes": 31251,
+      "votes": 31435,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1467,27 +1422,27 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -2.24,
-          "ci": 0.9
+          "value": -1.97,
+          "ci": 0.91
         },
         "confirmed_success": {
-          "value": -3.36,
-          "ci": 2.2
+          "value": -2.81,
+          "ci": 2.21
         },
         "praise_vs_complaint": {
-          "value": -7.05,
-          "ci": 2.73
+          "value": -6.62,
+          "ci": 2.77
         },
         "steerability": {
-          "value": -2.19,
-          "ci": 1.62
+          "value": -1.98,
+          "ci": 1.63
         },
         "bash_recovery": {
-          "value": 1.42,
-          "ci": 1.61
+          "value": 1.57,
+          "ci": 1.59
         },
         "tool_hallucination": {
-          "value": -0.01,
+          "value": 0.01,
           "ci": 0.34
         }
       }
@@ -1495,8 +1450,53 @@
     {
       "rank": 34,
       "rank_spread": [
-        30,
-        37
+        26,
+        38
+      ],
+      "model": "Qwen3.7 Plus",
+      "model_url": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "votes": 16766,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": -1.98,
+          "ci": 1.34
+        },
+        "confirmed_success": {
+          "value": -1.1,
+          "ci": 3.43
+        },
+        "praise_vs_complaint": {
+          "value": -9.74,
+          "ci": 4.03
+        },
+        "steerability": {
+          "value": -5.57,
+          "ci": 2.78
+        },
+        "bash_recovery": {
+          "value": 6.35,
+          "ci": 1.81
+        },
+        "tool_hallucination": {
+          "value": 0.17,
+          "ci": 0.4
+        }
+      }
+    },
+    {
+      "rank": 35,
+      "rank_spread": [
+        31,
+        38
       ],
       "model": "DeepSeek V4 Flash",
       "model_url": "https://api-docs.deepseek.com/news/news260424",
@@ -1512,73 +1512,28 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -2.24,
+          "value": -2.2,
           "ci": 0.9
         },
         "confirmed_success": {
-          "value": -2.15,
+          "value": -2.02,
           "ci": 2.43
         },
         "praise_vs_complaint": {
-          "value": -9.25,
+          "value": -9.24,
           "ci": 2.73
         },
         "steerability": {
-          "value": -1.07,
+          "value": -1.0,
           "ci": 1.69
         },
         "bash_recovery": {
-          "value": 2.57,
-          "ci": 1.01
+          "value": 2.61,
+          "ci": 1.02
         },
         "tool_hallucination": {
-          "value": -1.29,
-          "ci": 0.41
-        }
-      }
-    },
-    {
-      "rank": 35,
-      "rank_spread": [
-        30,
-        37
-      ],
-      "model": "gemini-3.6-flash-high",
-      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
-      "vendor": "Google",
-      "license": "proprietary",
-      "votes": null,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": {
-        "net_improvement": {
-          "value": -2.52,
-          "ci": 1.2
-        },
-        "confirmed_success": {
-          "value": -0.56,
-          "ci": 2.98
-        },
-        "praise_vs_complaint": {
-          "value": -5.36,
-          "ci": 3.77
-        },
-        "steerability": {
-          "value": -4.53,
-          "ci": 2.41
-        },
-        "bash_recovery": {
-          "value": -3.34,
-          "ci": 1.6
-        },
-        "tool_hallucination": {
-          "value": 1.19,
-          "ci": 0.2
+          "value": -1.33,
+          "ci": 0.42
         }
       }
     },
@@ -1586,13 +1541,13 @@
       "rank": 36,
       "rank_spread": [
         30,
-        37
+        38
       ],
-      "model": "Minimax M3",
-      "model_url": "https://www.minimax.io/models/text/m3",
-      "vendor": "MiniMax",
-      "license": "open",
-      "votes": 30987,
+      "model": "Gemini 3.6 Flash (High)",
+      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 12411,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1602,42 +1557,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -2.54,
-          "ci": 0.84
+          "value": -2.36,
+          "ci": 1.22
         },
         "confirmed_success": {
-          "value": -5.73,
-          "ci": 2.2
+          "value": -0.87,
+          "ci": 2.99
         },
         "praise_vs_complaint": {
-          "value": -8.26,
-          "ci": 2.6
+          "value": -4.12,
+          "ci": 3.9
         },
         "steerability": {
-          "value": -5.09,
-          "ci": 1.58
+          "value": -4.42,
+          "ci": 2.38
         },
         "bash_recovery": {
-          "value": 5.66,
-          "ci": 0.83
+          "value": -3.57,
+          "ci": 1.69
         },
         "tool_hallucination": {
-          "value": 0.7,
-          "ci": 0.33
+          "value": 1.18,
+          "ci": 0.2
         }
       }
     },
     {
       "rank": 37,
       "rank_spread": [
-        30,
+        31,
         38
       ],
-      "model": "Gemini 3.5 Flash (Medium)",
-      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-      "vendor": "Google",
-      "license": "proprietary",
-      "votes": 12904,
+      "model": "Minimax M3",
+      "model_url": "https://www.minimax.io/models/text/m3",
+      "vendor": "MiniMax",
+      "license": "open",
+      "votes": 31143,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1647,42 +1602,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -3.7,
-          "ci": 1.43
+          "value": -2.53,
+          "ci": 0.84
         },
         "confirmed_success": {
-          "value": -8.58,
-          "ci": 3.62
+          "value": -5.81,
+          "ci": 2.22
         },
         "praise_vs_complaint": {
-          "value": -6.18,
-          "ci": 4.24
+          "value": -8.24,
+          "ci": 2.6
         },
         "steerability": {
-          "value": -3.72,
-          "ci": 2.83
+          "value": -5.14,
+          "ci": 1.58
         },
         "bash_recovery": {
-          "value": -0.53,
-          "ci": 2.28
+          "value": 5.87,
+          "ci": 0.83
         },
         "tool_hallucination": {
-          "value": 0.51,
-          "ci": 0.68
+          "value": 0.69,
+          "ci": 0.33
         }
       }
     },
     {
       "rank": 38,
       "rank_spread": [
-        38,
-        40
+        31,
+        38
       ],
-      "model": "Inkling",
-      "model_url": "https://thinkingmachines.ai/news/introducing-inkling/",
-      "vendor": "Thinky",
-      "license": "open",
-      "votes": 35643,
+      "model": "Gemini 3.5 Flash (Medium)",
+      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 12965,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1692,42 +1647,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -6.67,
-          "ci": 0.92
+          "value": -3.48,
+          "ci": 1.43
         },
         "confirmed_success": {
-          "value": -12.22,
-          "ci": 2.58
+          "value": -8.34,
+          "ci": 3.61
         },
         "praise_vs_complaint": {
-          "value": -16.32,
-          "ci": 2.62
+          "value": -5.74,
+          "ci": 4.26
         },
         "steerability": {
-          "value": -12.01,
-          "ci": 1.85
+          "value": -3.5,
+          "ci": 2.82
         },
         "bash_recovery": {
-          "value": 6.62,
-          "ci": 1.07
+          "value": -0.34,
+          "ci": 2.26
         },
         "tool_hallucination": {
-          "value": 0.58,
-          "ci": 0.27
+          "value": 0.51,
+          "ci": 0.67
         }
       }
     },
     {
       "rank": 39,
       "rank_spread": [
-        37,
-        43
+        39,
+        40
       ],
-      "model": "Mistral Medium 3.5",
-      "model_url": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04",
-      "vendor": "Mistral",
+      "model": "Inkling",
+      "model_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "vendor": "Thinky",
       "license": "open",
-      "votes": 5689,
+      "votes": 35781,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1737,42 +1692,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -6.9,
-          "ci": 2.02
+          "value": -6.57,
+          "ci": 0.91
         },
         "confirmed_success": {
-          "value": -9.55,
-          "ci": 4.63
+          "value": -11.7,
+          "ci": 2.59
         },
         "praise_vs_complaint": {
-          "value": -9.52,
-          "ci": 5.75
+          "value": -16.7,
+          "ci": 2.61
         },
         "steerability": {
-          "value": -10.84,
-          "ci": 4.05
+          "value": -11.78,
+          "ci": 1.86
         },
         "bash_recovery": {
-          "value": -1.63,
-          "ci": 3.58
+          "value": 6.79,
+          "ci": 1.08
         },
         "tool_hallucination": {
-          "value": -2.98,
-          "ci": 2.19
+          "value": 0.56,
+          "ci": 0.27
         }
       }
     },
     {
       "rank": 40,
       "rank_spread": [
-        38,
-        43
+        39,
+        44
       ],
-      "model": "Grok 4.3 (High)",
-      "model_url": "https://docs.x.ai/developers/models/grok-4.3",
-      "vendor": "SpaceXAI",
-      "license": "proprietary",
-      "votes": 62136,
+      "model": "Mistral Medium 3.5",
+      "model_url": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04",
+      "vendor": "Mistral",
+      "license": "open",
+      "votes": 5730,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1782,24 +1737,69 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -8.37,
-          "ci": 0.87
+          "value": -7.03,
+          "ci": 2.0
         },
         "confirmed_success": {
-          "value": -9.7,
-          "ci": 1.84
+          "value": -9.72,
+          "ci": 4.62
+        },
+        "praise_vs_complaint": {
+          "value": -9.83,
+          "ci": 5.7
+        },
+        "steerability": {
+          "value": -11.01,
+          "ci": 4.03
+        },
+        "bash_recovery": {
+          "value": -1.69,
+          "ci": 3.56
+        },
+        "tool_hallucination": {
+          "value": -2.87,
+          "ci": 2.12
+        }
+      }
+    },
+    {
+      "rank": 41,
+      "rank_spread": [
+        40,
+        45
+      ],
+      "model": "Grok 4.3 (High)",
+      "model_url": "https://docs.x.ai/developers/models/grok-4.3",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "votes": 62174,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": -8.47,
+          "ci": 0.89
+        },
+        "confirmed_success": {
+          "value": -9.71,
+          "ci": 1.86
         },
         "praise_vs_complaint": {
           "value": -13.27,
-          "ci": 2.0
+          "ci": 2.02
         },
         "steerability": {
-          "value": -7.02,
-          "ci": 1.35
+          "value": -7.2,
+          "ci": 1.37
         },
         "bash_recovery": {
-          "value": -12.97,
-          "ci": 2.89
+          "value": -13.25,
+          "ci": 2.98
         },
         "tool_hallucination": {
           "value": 1.09,
@@ -1808,16 +1808,16 @@
       }
     },
     {
-      "rank": 41,
+      "rank": 42,
       "rank_spread": [
-        39,
-        44
+        40,
+        45
       ],
       "model": "Gemini 3 Flash",
       "model_url": "https://blog.google/products/gemini/gemini-3-flash",
       "vendor": "Google",
       "license": "proprietary",
-      "votes": 82707,
+      "votes": 82748,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1827,87 +1827,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -8.63,
-          "ci": 0.86
+          "value": -8.5,
+          "ci": 0.87
         },
         "confirmed_success": {
-          "value": -7.15,
-          "ci": 1.68
+          "value": -7.16,
+          "ci": 1.7
         },
         "praise_vs_complaint": {
-          "value": -10.65,
-          "ci": 1.91
+          "value": -10.22,
+          "ci": 1.95
         },
         "steerability": {
-          "value": -3.65,
-          "ci": 1.27
+          "value": -3.43,
+          "ci": 1.29
         },
         "bash_recovery": {
-          "value": -21.08,
-          "ci": 2.37
+          "value": -21.02,
+          "ci": 2.39
         },
         "tool_hallucination": {
-          "value": -0.63,
-          "ci": 1.82
-        }
-      }
-    },
-    {
-      "rank": 42,
-      "rank_spread": [
-        39,
-        44
-      ],
-      "model": "Grok Build 0.1",
-      "model_url": null,
-      "vendor": "SpaceXAI",
-      "license": "proprietary",
-      "votes": 73679,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": {
-        "net_improvement": {
-          "value": -9.0,
-          "ci": 0.93
-        },
-        "confirmed_success": {
-          "value": -5.49,
-          "ci": 1.9
-        },
-        "praise_vs_complaint": {
-          "value": -10.75,
-          "ci": 2.32
-        },
-        "steerability": {
-          "value": -8.66,
-          "ci": 1.64
-        },
-        "bash_recovery": {
-          "value": -21.08,
-          "ci": 2.85
-        },
-        "tool_hallucination": {
-          "value": 0.97,
-          "ci": 0.19
+          "value": -0.65,
+          "ci": 1.86
         }
       }
     },
     {
       "rank": 43,
       "rank_spread": [
-        39,
+        40,
         45
       ],
-      "model": "gemini-3.5-flash-lite",
-      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
-      "vendor": "Google",
+      "model": "Grok Build 0.1",
+      "model_url": null,
+      "vendor": "SpaceXAI",
       "license": "proprietary",
-      "votes": null,
+      "votes": 73718,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1917,42 +1872,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -10.2,
-          "ci": 1.35
+          "value": -9.1,
+          "ci": 0.95
         },
         "confirmed_success": {
-          "value": -13.97,
-          "ci": 3.36
+          "value": -5.37,
+          "ci": 1.92
         },
         "praise_vs_complaint": {
-          "value": -13.65,
-          "ci": 3.45
+          "value": -11.02,
+          "ci": 2.32
         },
         "steerability": {
-          "value": -10.09,
-          "ci": 2.61
+          "value": -8.61,
+          "ci": 1.68
         },
         "bash_recovery": {
-          "value": -12.99,
-          "ci": 2.94
+          "value": -21.44,
+          "ci": 2.91
         },
         "tool_hallucination": {
-          "value": -0.32,
-          "ci": 0.56
+          "value": 0.96,
+          "ci": 0.19
         }
       }
     },
     {
       "rank": 44,
       "rank_spread": [
-        43,
-        46
+        40,
+        47
       ],
-      "model": "Minimax M2.7",
-      "model_url": "https://www.minimax.io/news/minimax-m27-en",
-      "vendor": "MiniMax",
-      "license": "open",
-      "votes": 31130,
+      "model": "Solar Pro 4",
+      "model_url": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "vendor": "Upstage",
+      "license": "proprietary",
+      "votes": 4851,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -1962,24 +1917,114 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -11.04,
+          "value": -10.1,
+          "ci": 2.23
+        },
+        "confirmed_success": {
+          "value": -8.44,
+          "ci": 5.67
+        },
+        "praise_vs_complaint": {
+          "value": -15.67,
+          "ci": 6.83
+        },
+        "steerability": {
+          "value": -13.32,
+          "ci": 4.02
+        },
+        "bash_recovery": {
+          "value": -13.56,
+          "ci": 4.52
+        },
+        "tool_hallucination": {
+          "value": 0.51,
+          "ci": 0.53
+        }
+      }
+    },
+    {
+      "rank": 45,
+      "rank_spread": [
+        41,
+        46
+      ],
+      "model": "Gemini 3.5 Flash Lite",
+      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+      "vendor": "Google",
+      "license": "proprietary",
+      "votes": 20237,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": -10.38,
+          "ci": 1.19
+        },
+        "confirmed_success": {
+          "value": -12.73,
+          "ci": 2.91
+        },
+        "praise_vs_complaint": {
+          "value": -13.51,
+          "ci": 3.03
+        },
+        "steerability": {
+          "value": -10.28,
+          "ci": 2.25
+        },
+        "bash_recovery": {
+          "value": -15.08,
+          "ci": 2.74
+        },
+        "tool_hallucination": {
+          "value": -0.28,
+          "ci": 0.5
+        }
+      }
+    },
+    {
+      "rank": 46,
+      "rank_spread": [
+        44,
+        47
+      ],
+      "model": "Minimax M2.7",
+      "model_url": "https://www.minimax.io/news/minimax-m27-en",
+      "vendor": "MiniMax",
+      "license": "open",
+      "votes": 31290,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": -11.17,
           "ci": 1.08
         },
         "confirmed_success": {
-          "value": -10.83,
-          "ci": 2.47
+          "value": -10.88,
+          "ci": 2.51
         },
         "praise_vs_complaint": {
-          "value": -15.06,
-          "ci": 2.9
+          "value": -15.51,
+          "ci": 2.87
         },
         "steerability": {
-          "value": -13.36,
-          "ci": 1.95
+          "value": -13.67,
+          "ci": 1.96
         },
         "bash_recovery": {
-          "value": -17.0,
-          "ci": 2.91
+          "value": -16.82,
+          "ci": 2.89
         },
         "tool_hallucination": {
           "value": 1.03,
@@ -1988,106 +2033,16 @@
       }
     },
     {
-      "rank": 45,
-      "rank_spread": [
-        41,
-        47
-      ],
-      "model": "Solar Pro 4",
-      "model_url": "https://www.upstage.ai/blog/en/solar-pro-4",
-      "vendor": "Upstage",
-      "license": "proprietary",
-      "votes": 4576,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": {
-        "net_improvement": {
-          "value": -11.54,
-          "ci": 2.16
-        },
-        "confirmed_success": {
-          "value": -7.79,
-          "ci": 5.75
-        },
-        "praise_vs_complaint": {
-          "value": -21.14,
-          "ci": 5.71
-        },
-        "steerability": {
-          "value": -13.13,
-          "ci": 4.04
-        },
-        "bash_recovery": {
-          "value": -16.02,
-          "ci": 5.04
-        },
-        "tool_hallucination": {
-          "value": 0.4,
-          "ci": 0.61
-        }
-      }
-    },
-    {
-      "rank": 46,
-      "rank_spread": [
-        45,
-        48
-      ],
-      "model": "Grok 4.3",
-      "model_url": "https://docs.x.ai/developers/models/grok-4.3",
-      "vendor": "SpaceXAI",
-      "license": "proprietary",
-      "votes": 82104,
-      "score": null,
-      "ci_low": null,
-      "ci_high": null,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": {
-        "net_improvement": {
-          "value": -14.56,
-          "ci": 1.23
-        },
-        "confirmed_success": {
-          "value": -10.85,
-          "ci": 1.74
-        },
-        "praise_vs_complaint": {
-          "value": -16.13,
-          "ci": 1.83
-        },
-        "steerability": {
-          "value": -5.87,
-          "ci": 1.28
-        },
-        "bash_recovery": {
-          "value": -41.12,
-          "ci": 5.32
-        },
-        "tool_hallucination": {
-          "value": 1.15,
-          "ci": 0.19
-        }
-      }
-    },
-    {
       "rank": 47,
       "rank_spread": [
-        44,
-        48
+        45,
+        49
       ],
       "model": "Nemotron 3 Ultra",
       "model_url": null,
       "vendor": "Nvidia",
       "license": "open",
-      "votes": 11987,
+      "votes": 11997,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -2097,42 +2052,42 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -14.62,
-          "ci": 2.52
+          "value": -14.63,
+          "ci": 2.54
         },
         "confirmed_success": {
-          "value": -15.63,
-          "ci": 5.4
+          "value": -15.38,
+          "ci": 5.41
         },
         "praise_vs_complaint": {
-          "value": -14.2,
+          "value": -14.33,
           "ci": 6.73
         },
         "steerability": {
-          "value": -19.89,
-          "ci": 4.72
+          "value": -19.91,
+          "ci": 4.74
         },
         "bash_recovery": {
-          "value": -23.93,
-          "ci": 7.1
+          "value": -24.09,
+          "ci": 7.19
         },
         "tool_hallucination": {
           "value": 0.54,
-          "ci": 0.36
+          "ci": 0.35
         }
       }
     },
     {
       "rank": 48,
       "rank_spread": [
-        46,
+        47,
         48
       ],
-      "model": "Gemma 4 31B",
-      "model_url": "https://aistudio.google.com/app/prompts/new_chat?model=gemma-4-31b-it",
-      "vendor": "Google",
-      "license": "open",
-      "votes": 56559,
+      "model": "Grok 4.3",
+      "model_url": "https://docs.x.ai/developers/models/grok-4.3",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "votes": 82146,
       "score": null,
       "ci_low": null,
       "ci_high": null,
@@ -2142,28 +2097,73 @@
       "context_length": null,
       "signals": {
         "net_improvement": {
-          "value": -18.36,
-          "ci": 2.72
+          "value": -14.67,
+          "ci": 1.27
         },
         "confirmed_success": {
-          "value": 0.15,
-          "ci": 2.05
+          "value": -10.83,
+          "ci": 1.76
         },
         "praise_vs_complaint": {
-          "value": -2.55,
-          "ci": 2.99
+          "value": -16.23,
+          "ci": 1.84
         },
         "steerability": {
-          "value": -9.32,
-          "ci": 2.02
+          "value": -5.65,
+          "ci": 1.3
         },
         "bash_recovery": {
-          "value": -49.11,
-          "ci": 10.34
+          "value": -41.77,
+          "ci": 5.52
         },
         "tool_hallucination": {
-          "value": -30.97,
-          "ci": 7.71
+          "value": 1.14,
+          "ci": 0.19
+        }
+      }
+    },
+    {
+      "rank": 49,
+      "rank_spread": [
+        48,
+        49
+      ],
+      "model": "Gemma 4 31B",
+      "model_url": "https://aistudio.google.com/app/prompts/new_chat?model=gemma-4-31b-it",
+      "vendor": "Google",
+      "license": "open",
+      "votes": 56561,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": -18.88,
+          "ci": 2.85
+        },
+        "confirmed_success": {
+          "value": 0.26,
+          "ci": 2.07
+        },
+        "praise_vs_complaint": {
+          "value": -2.58,
+          "ci": 3.0
+        },
+        "steerability": {
+          "value": -9.36,
+          "ci": 2.05
+        },
+        "bash_recovery": {
+          "value": -51.5,
+          "ci": 11.13
+        },
+        "tool_hallucination": {
+          "value": -31.21,
+          "ci": 7.86
         }
       }
     }
