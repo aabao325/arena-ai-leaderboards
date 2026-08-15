@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "agent",
     "source_url": "https://arena.ai/leaderboard/agent",
-    "fetched_at": "2026-08-15T04:06:11.203314+00:00",
+    "fetched_at": "2026-08-15T04:59:26.470140+00:00",
     "last_updated": "Aug 13, 2026",
     "model_count": 48
   },
@@ -22,8 +22,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 5.0,
+      "price_completion": 25.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -67,8 +67,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 10.0,
+      "price_completion": 50.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -112,8 +112,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 5.0,
+      "price_completion": 25.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -157,8 +157,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 5.0,
+      "price_completion": 30.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -202,8 +202,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 3.0,
+      "price_completion": 15.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -247,8 +247,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 5.0,
+      "price_completion": 25.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -292,8 +292,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 2.5,
+      "price_completion": 15.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -337,8 +337,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 5.0,
+      "price_completion": 25.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -382,8 +382,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 2.5,
+      "price_completion": 15.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -427,8 +427,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 5.0,
+      "price_completion": 25.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -472,8 +472,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.0,
+      "price_completion": 5.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -517,8 +517,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 5.0,
+      "price_completion": 25.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -562,8 +562,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.4,
+      "price_completion": 4.4,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -607,8 +607,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 2.5,
+      "price_completion": 15.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -652,8 +652,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 2.0,
+      "price_completion": 6.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -697,8 +697,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 2.5,
+      "price_completion": 15.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -742,8 +742,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.0,
+      "price_completion": 6.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -832,8 +832,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 2.5,
+      "price_completion": 15.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -877,8 +877,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.75,
+      "price_completion": 3.57,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -922,8 +922,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.5,
+      "price_completion": 7.5,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -967,8 +967,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 5.0,
+      "price_completion": 25.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1012,8 +1012,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.25,
+      "price_completion": 4.25,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1049,7 +1049,7 @@
         34
       ],
       "model": "Kimi K2.7 Code",
-      "model_url": null,
+      "model_url": "https://platform.kimi.ai/docs/guide/kimi-k2-7-code-quickstart",
       "vendor": "Moonshot",
       "license": "open",
       "votes": 11029,
@@ -1057,8 +1057,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.47,
+      "price_completion": 2.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1102,8 +1102,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.4,
+      "price_completion": 4.4,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1192,8 +1192,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.74,
+      "price_completion": 3.48,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1237,8 +1237,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.75,
+      "price_completion": 4.5,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1282,8 +1282,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.0,
+      "price_completion": 6.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1327,8 +1327,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.95,
+      "price_completion": 4.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1372,8 +1372,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.13,
+      "price_completion": 0.53,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1417,8 +1417,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.43,
+      "price_completion": 0.87,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1462,8 +1462,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.32,
+      "price_completion": 1.28,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1507,8 +1507,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.14,
+      "price_completion": 0.28,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1552,8 +1552,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.38,
+      "price_completion": 1.88,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1597,8 +1597,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.6,
+      "price_completion": 2.4,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1642,8 +1642,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.75,
+      "price_completion": 4.5,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1687,8 +1687,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.5,
+      "price_completion": 2.02,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1732,8 +1732,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.5,
+      "price_completion": 7.5,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1777,8 +1777,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.25,
+      "price_completion": 2.5,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1822,8 +1822,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.5,
+      "price_completion": 3.0,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1912,8 +1912,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.03,
+      "price_completion": 0.12,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1957,8 +1957,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.15,
+      "price_completion": 1.25,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -2002,8 +2002,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.3,
+      "price_completion": 1.2,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -2092,8 +2092,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.25,
+      "price_completion": 2.5,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -2137,8 +2137,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 0.14,
+      "price_completion": 0.4,
       "context_length": null,
       "signals": {
         "net_improvement": {
