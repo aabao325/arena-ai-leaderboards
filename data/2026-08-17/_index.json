@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "fetched_at": "2026-08-17T19:09:23.625231+00:00",
+  "fetched_at": "2026-08-17T19:54:15.135538+00:00",
   "leaderboards": {
     "agent": {
       "model_count": 49
@@ -30,10 +30,10 @@
       "model_count": 53
     },
     "text-to-video": {
-      "model_count": 44
+      "model_count": 45
     },
     "image-to-video": {
-      "model_count": 44
+      "model_count": 45
     },
     "video-edit": {
       "model_count": 8
