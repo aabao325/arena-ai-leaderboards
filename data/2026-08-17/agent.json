@@ -2,9 +2,9 @@
   "meta": {
     "leaderboard": "agent",
     "source_url": "https://arena.ai/leaderboard/agent",
-    "fetched_at": "2026-08-17T04:21:55.967200+00:00",
+    "fetched_at": "2026-08-17T05:18:09.123738+00:00",
     "last_updated": "Aug 13, 2026",
-    "model_count": 48
+    "model_count": 49
   },
   "models": [
     {
@@ -454,6 +454,51 @@
         "tool_hallucination": {
           "value": 1.17,
           "ci": 0.19
+        }
+      }
+    },
+    {
+      "rank": 11,
+      "rank_spread": [
+        5,
+        17
+      ],
+      "model": "Qwen3.8 Max",
+      "model_url": "https://www.qwencloud.com/models/qwen3.8-max",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "votes": 9314,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": 2.0,
+      "price_completion": 6.0,
+      "context_length": null,
+      "signals": {
+        "net_improvement": {
+          "value": 7.61,
+          "ci": 1.6
+        },
+        "confirmed_success": {
+          "value": 12.54,
+          "ci": 3.32
+        },
+        "praise_vs_complaint": {
+          "value": 11.64,
+          "ci": 5.58
+        },
+        "steerability": {
+          "value": 5.34,
+          "ci": 3.09
+        },
+        "bash_recovery": {
+          "value": 8.4,
+          "ci": 1.21
+        },
+        "tool_hallucination": {
+          "value": 0.11,
+          "ci": 0.41
         }
       }
     },
