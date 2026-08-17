@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "fetched_at": "2026-08-17T19:54:15.135538+00:00",
+  "fetched_at": "2026-08-17T20:57:28.753510+00:00",
   "leaderboards": {
     "agent": {
       "model_count": 49
@@ -36,7 +36,7 @@
       "model_count": 45
     },
     "video-edit": {
-      "model_count": 8
+      "model_count": 9
     }
   },
   "errors": []

@@ -2,25 +2,25 @@
   "meta": {
     "leaderboard": "video-edit",
     "source_url": "https://arena.ai/leaderboard/video-edit",
-    "fetched_at": "2026-08-17T19:54:15.135538+00:00",
-    "last_updated": "Aug 13, 2026",
-    "model_count": 8
+    "fetched_at": "2026-08-17T20:57:28.753510+00:00",
+    "last_updated": "Aug 14, 2026",
+    "model_count": 9
   },
   "models": [
     {
       "rank": 1,
       "rank_spread": [
         1,
-        3
+        2
       ],
-      "model": "minimax-h3",
-      "model_url": "https://app.notion.com/p/MiniMax-H3-The-Next-Gen-Open-Weight-Multimodal-Generation-Model-5cdd99c3d331822397f18130e7b480a8",
-      "vendor": "MiniMax",
-      "license": "open",
-      "votes": 499,
-      "score": 1390,
-      "ci_low": 26,
-      "ci_high": 26,
+      "model": "dreamina-seedance-2.5-720p",
+      "model_url": "https://seed.bytedance.com/en/seedance2_5",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 403,
+      "score": 1411,
+      "ci_low": 27,
+      "ci_high": 27,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -31,16 +31,16 @@
       "rank": 2,
       "rank_spread": [
         1,
-        3
+        4
       ],
-      "model": "dreamina-seedance-2.0-720p",
-      "model_url": "https://seed.bytedance.com/en/seedance2_0",
-      "vendor": "Bytedance",
-      "license": "proprietary",
-      "votes": 3620,
-      "score": 1358,
-      "ci_low": 14,
-      "ci_high": 14,
+      "model": "minimax-h3",
+      "model_url": "https://app.notion.com/p/MiniMax-H3-The-Next-Gen-Open-Weight-Multimodal-Generation-Model-5cdd99c3d331822397f18130e7b480a8",
+      "vendor": "MiniMax",
+      "license": "open",
+      "votes": 554,
+      "score": 1388,
+      "ci_low": 24,
+      "ci_high": 24,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -50,14 +50,34 @@
     {
       "rank": 3,
       "rank_spread": [
-        1,
-        3
+        2,
+        4
+      ],
+      "model": "dreamina-seedance-2.0-720p",
+      "model_url": "https://seed.bytedance.com/en/seedance2_0",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 3634,
+      "score": 1359,
+      "ci_low": 14,
+      "ci_high": 14,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 4,
+      "rank_spread": [
+        2,
+        4
       ],
       "model": "gemini-omni-flash",
       "model_url": "https://deepmind.google/models/gemini-omni/",
       "vendor": "Google",
       "license": "proprietary",
-      "votes": 1810,
+      "votes": 1868,
       "score": 1358,
       "ci_low": 15,
       "ci_high": 15,
@@ -68,10 +88,10 @@
       "signals": null
     },
     {
-      "rank": 4,
+      "rank": 5,
       "rank_spread": [
-        4,
-        4
+        5,
+        5
       ],
       "model": "happyhorse-1.0",
       "model_url": "https://x.com/happyhorseath/status/2044255725376151977?s=46",
@@ -88,17 +108,17 @@
       "signals": null
     },
     {
-      "rank": 5,
+      "rank": 6,
       "rank_spread": [
-        5,
-        6
+        6,
+        7
       ],
       "model": "grok-imagine-video",
       "model_url": "https://docs.x.ai/docs/guides/video-generations",
       "vendor": "SpaceXAI",
       "license": "proprietary",
-      "votes": 13224,
-      "score": 1263,
+      "votes": 13281,
+      "score": 1262,
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
@@ -108,17 +128,17 @@
       "signals": null
     },
     {
-      "rank": 6,
+      "rank": 7,
       "rank_spread": [
-        5,
-        6
+        6,
+        7
       ],
       "model": "kling-o3-pro",
       "model_url": "https://fal.ai/models/fal-ai/kling-video/o3/pro/video-to-video/edit",
       "vendor": "KlingAI",
       "license": "proprietary",
-      "votes": 7078,
-      "score": 1255,
+      "votes": 7125,
+      "score": 1257,
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
@@ -128,16 +148,16 @@
       "signals": null
     },
     {
-      "rank": 7,
+      "rank": 8,
       "rank_spread": [
-        7,
-        8
+        8,
+        9
       ],
       "model": "kling-o1-pro",
       "model_url": "https://app.klingai.com/global/release-notes/zipxp988c2?type=dialog",
       "vendor": "KlingAI",
       "license": "proprietary",
-      "votes": 10045,
+      "votes": 10104,
       "score": 1200,
       "ci_low": 10,
       "ci_high": 10,
@@ -148,10 +168,10 @@
       "signals": null
     },
     {
-      "rank": 8,
+      "rank": 9,
       "rank_spread": [
-        7,
-        8
+        8,
+        9
       ],
       "model": "runway-gen4-aleph",
       "model_url": "https://runwayml.com/research/introducing-runway-aleph",

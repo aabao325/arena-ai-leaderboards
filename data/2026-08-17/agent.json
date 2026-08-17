@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "agent",
     "source_url": "https://arena.ai/leaderboard/agent",
-    "fetched_at": "2026-08-17T19:54:15.135538+00:00",
+    "fetched_at": "2026-08-17T20:57:28.753510+00:00",
     "last_updated": "Aug 13, 2026",
     "model_count": 49
   },
@@ -1237,8 +1237,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": 1.74,
-      "price_completion": 3.48,
+      "price_prompt": 1.32,
+      "price_completion": 3.96,
       "context_length": null,
       "signals": {
         "net_improvement": {
@@ -1552,8 +1552,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": 0.14,
-      "price_completion": 0.28,
+      "price_prompt": 0.44,
+      "price_completion": 1.32,
       "context_length": null,
       "signals": {
         "net_improvement": {
