@@ -2,9 +2,9 @@
   "meta": {
     "leaderboard": "image-edit",
     "source_url": "https://arena.ai/leaderboard/image-edit",
-    "fetched_at": "2026-08-17T22:54:21.243432+00:00",
+    "fetched_at": "2026-08-17T23:52:28.797403+00:00",
     "last_updated": "Aug 7, 2026",
-    "model_count": 53
+    "model_count": 52
   },
   "models": [
     {
@@ -251,27 +251,7 @@
       "rank": 13,
       "rank_spread": [
         13,
-        14
-      ],
-      "model": "grok-imagine-image-quality",
-      "model_url": "https://docs.x.ai/developers/models/grok-imagine-image-quality",
-      "vendor": "SpaceXAI",
-      "license": "proprietary",
-      "votes": 155532,
-      "score": 1362,
-      "ci_low": 4,
-      "ci_high": 4,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": null
-    },
-    {
-      "rank": 14,
-      "rank_spread": [
-        13,
-        14
+        13
       ],
       "model": "reve-2.0",
       "model_url": "http://reve.com/",
@@ -288,10 +268,10 @@
       "signals": null
     },
     {
-      "rank": 15,
+      "rank": 14,
       "rank_spread": [
-        15,
-        16
+        14,
+        15
       ],
       "model": "uni-1.1-max",
       "model_url": "https://lumalabs.ai/api",
@@ -308,10 +288,10 @@
       "signals": null
     },
     {
-      "rank": 16,
+      "rank": 15,
       "rank_spread": [
-        15,
-        16
+        14,
+        15
       ],
       "model": "grok-imagine-image",
       "model_url": "https://docs.x.ai/developers/model-capabilities/images/generation",
@@ -328,10 +308,10 @@
       "signals": null
     },
     {
-      "rank": 17,
+      "rank": 16,
       "rank_spread": [
-        17,
-        18
+        16,
+        17
       ],
       "model": "gemini-3.1-flash-lite-image (nano-banana-2-lite)",
       "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/",
@@ -348,10 +328,10 @@
       "signals": null
     },
     {
-      "rank": 18,
+      "rank": 17,
       "rank_spread": [
-        17,
-        18
+        16,
+        17
       ],
       "model": "uni-1.1",
       "model_url": "https://lumalabs.ai/api",
@@ -368,10 +348,10 @@
       "signals": null
     },
     {
-      "rank": 19,
+      "rank": 18,
       "rank_spread": [
-        19,
-        23
+        18,
+        22
       ],
       "model": "qwen-image-2.0-pro-2026-06-22",
       "model_url": "https://bailian.console.alibabacloud.com/cn-beijing?tab=api#/api/?type=model&url=2975126",
@@ -388,10 +368,10 @@
       "signals": null
     },
     {
-      "rank": 20,
+      "rank": 19,
       "rank_spread": [
-        19,
-        23
+        18,
+        22
       ],
       "model": "hunyuan-image-3.0-instruct",
       "model_url": "https://hunyuan.tencent.com/chat/HunyuanDefault?from=modelSquare&modelId=Hunyuan-Image-3.0-Instruct",
@@ -408,10 +388,10 @@
       "signals": null
     },
     {
-      "rank": 21,
+      "rank": 20,
       "rank_spread": [
-        19,
-        23
+        18,
+        22
       ],
       "model": "wan2.7-image-pro",
       "model_url": "https://modelstudio.console.alibabacloud.com/ap-southeast-1?tab=api#/api/?type=model&url=3026980",
@@ -428,10 +408,10 @@
       "signals": null
     },
     {
-      "rank": 22,
+      "rank": 21,
       "rank_spread": [
-        19,
-        23
+        18,
+        22
       ],
       "model": "wan2.7-image",
       "model_url": "https://modelstudio.console.alibabacloud.com/ap-southeast-1?tab=api#/api/?type=model&url=3026980",
@@ -448,10 +428,10 @@
       "signals": null
     },
     {
-      "rank": 23,
+      "rank": 22,
       "rank_spread": [
-        19,
-        23
+        18,
+        22
       ],
       "model": "seedream-4.5",
       "model_url": "https://seed.bytedance.com/en/seedream4_5",
@@ -468,10 +448,10 @@
       "signals": null
     },
     {
-      "rank": 24,
+      "rank": 23,
       "rank_spread": [
-        24,
-        25
+        23,
+        24
       ],
       "model": "gemini-2.5-flash-image-preview (nano-banana)",
       "model_url": "https://ai.studio/banana",
@@ -488,10 +468,10 @@
       "signals": null
     },
     {
-      "rank": 25,
+      "rank": 24,
       "rank_spread": [
-        24,
-        25
+        23,
+        24
       ],
       "model": "seedream-5.0-lite",
       "model_url": "https://seed.bytedance.com/en/seedream5_0_lite",
@@ -508,10 +488,10 @@
       "signals": null
     },
     {
-      "rank": 26,
+      "rank": 25,
       "rank_spread": [
-        26,
-        28
+        25,
+        27
       ],
       "model": "seedream-4-2k",
       "model_url": "https://seed.bytedance.com/en/seedream4_0",
@@ -528,10 +508,10 @@
       "signals": null
     },
     {
-      "rank": 27,
+      "rank": 26,
       "rank_spread": [
-        26,
-        28
+        25,
+        27
       ],
       "model": "flux-2-max",
       "model_url": "https://bfl.ai/models/flux-2",
@@ -548,10 +528,10 @@
       "signals": null
     },
     {
-      "rank": 28,
+      "rank": 27,
       "rank_spread": [
-        26,
-        28
+        25,
+        27
       ],
       "model": "reve-v1.1",
       "model_url": "https://api.reve.com/console/pricing",
@@ -568,10 +548,10 @@
       "signals": null
     },
     {
-      "rank": 29,
+      "rank": 28,
       "rank_spread": [
-        29,
-        29
+        28,
+        28
       ],
       "model": "kling-image-o1",
       "model_url": "https://kling.ai/release-note/release-notes/exv6o36sxa",
@@ -588,10 +568,10 @@
       "signals": null
     },
     {
-      "rank": 30,
+      "rank": 29,
       "rank_spread": [
-        30,
-        31
+        29,
+        30
       ],
       "model": "flux-2-pro",
       "model_url": "https://bfl.ai/models/flux-2",
@@ -608,10 +588,10 @@
       "signals": null
     },
     {
-      "rank": 31,
+      "rank": 30,
       "rank_spread": [
-        30,
-        32
+        29,
+        31
       ],
       "model": "qwen-image-edit",
       "model_url": "https://huggingface.co/Qwen/Qwen-Image-Edit",
@@ -628,10 +608,10 @@
       "signals": null
     },
     {
-      "rank": 32,
+      "rank": 31,
       "rank_spread": [
-        32,
-        34
+        31,
+        33
       ],
       "model": "qwen-image-edit-2511",
       "model_url": "https://huggingface.co/Qwen/Qwen-Image-Edit-2511",
@@ -648,10 +628,10 @@
       "signals": null
     },
     {
-      "rank": 33,
+      "rank": 32,
       "rank_spread": [
-        31,
-        34
+        30,
+        33
       ],
       "model": "reve-v1",
       "model_url": "https://blog.reve.com/posts/reve-editing-model/",
@@ -668,10 +648,10 @@
       "signals": null
     },
     {
-      "rank": 34,
+      "rank": 33,
       "rank_spread": [
-        32,
-        36
+        31,
+        35
       ],
       "model": "wan2.6-image",
       "model_url": "https://modelstudio.console.alibabacloud.com/?tab=api#/api/?type=model&url=3001143",
@@ -688,10 +668,10 @@
       "signals": null
     },
     {
-      "rank": 35,
+      "rank": 34,
       "rank_spread": [
-        34,
-        37
+        33,
+        36
       ],
       "model": "flux-2-flex",
       "model_url": "https://bfl.ai/models/flux-2",
@@ -708,10 +688,10 @@
       "signals": null
     },
     {
-      "rank": 36,
+      "rank": 35,
       "rank_spread": [
-        35,
-        37
+        34,
+        36
       ],
       "model": "flux-2-klein-9b",
       "model_url": "https://bfl.ai/models/flux-2-klein",
@@ -728,10 +708,10 @@
       "signals": null
     },
     {
-      "rank": 37,
+      "rank": 36,
       "rank_spread": [
-        34,
-        38
+        33,
+        37
       ],
       "model": "flux-2-dev",
       "model_url": "https://bfl.ai/models/flux-2",
@@ -748,10 +728,10 @@
       "signals": null
     },
     {
-      "rank": 38,
+      "rank": 37,
       "rank_spread": [
-        37,
-        39
+        36,
+        38
       ],
       "model": "seedream-4-high-res-fal",
       "model_url": "https://seed.bytedance.com/en/seedream4_0",
@@ -768,10 +748,10 @@
       "signals": null
     },
     {
-      "rank": 39,
+      "rank": 38,
       "rank_spread": [
-        39,
-        41
+        38,
+        40
       ],
       "model": "p-image-edit",
       "model_url": "https://www.pruna.ai/p-image-edit",
@@ -788,10 +768,10 @@
       "signals": null
     },
     {
-      "rank": 40,
+      "rank": 39,
       "rank_spread": [
-        38,
-        41
+        37,
+        40
       ],
       "model": "seedream-4-fal",
       "model_url": "https://seed.bytedance.com/en/seedream4_0",
@@ -808,10 +788,10 @@
       "signals": null
     },
     {
-      "rank": 41,
+      "rank": 40,
       "rank_spread": [
-        39,
-        41
+        38,
+        40
       ],
       "model": "reve-v1.1-fast",
       "model_url": "https://api.reve.com/console/pricing",
@@ -828,10 +808,10 @@
       "signals": null
     },
     {
-      "rank": 42,
+      "rank": 41,
       "rank_spread": [
-        42,
-        42
+        41,
+        41
       ],
       "model": "reve-edit-fast",
       "model_url": "https://api.reve.com/console/pricing",
@@ -848,10 +828,10 @@
       "signals": null
     },
     {
-      "rank": 43,
+      "rank": 42,
       "rank_spread": [
-        43,
-        43
+        42,
+        42
       ],
       "model": "flux-2-klein-4b",
       "model_url": "https://bfl.ai/models/flux-2-klein",
@@ -868,10 +848,10 @@
       "signals": null
     },
     {
-      "rank": 44,
+      "rank": 43,
       "rank_spread": [
-        44,
-        46
+        43,
+        45
       ],
       "model": "wan2.5-i2i-preview",
       "model_url": "https://modelstudio.console.alibabacloud.com/?tab=api#/api/?type=model&url=2982258",
@@ -888,10 +868,10 @@
       "signals": null
     },
     {
-      "rank": 45,
+      "rank": 44,
       "rank_spread": [
-        44,
-        46
+        43,
+        45
       ],
       "model": "flux-1-kontext-max",
       "model_url": "https://bfl.ai/announcements/flux-1-kontext",
@@ -908,10 +888,10 @@
       "signals": null
     },
     {
-      "rank": 46,
+      "rank": 45,
       "rank_spread": [
-        44,
-        46
+        43,
+        45
       ],
       "model": "flux-1-kontext-pro",
       "model_url": "https://bfl.ai/announcements/flux-1-kontext",
@@ -928,10 +908,10 @@
       "signals": null
     },
     {
-      "rank": 47,
+      "rank": 46,
       "rank_spread": [
-        47,
-        47
+        46,
+        46
       ],
       "model": "flux-1-kontext-dev",
       "model_url": "https://bfl.ai/announcements/flux-1-kontext-dev",
@@ -948,10 +928,10 @@
       "signals": null
     },
     {
-      "rank": 48,
+      "rank": 47,
       "rank_spread": [
-        48,
-        49
+        47,
+        48
       ],
       "model": "seededit-3.0",
       "model_url": "https://seed.bytedance.com/en/tech/seededit",
@@ -968,10 +948,10 @@
       "signals": null
     },
     {
-      "rank": 49,
+      "rank": 48,
       "rank_spread": [
-        48,
-        49
+        47,
+        48
       ],
       "model": "gpt-image-1",
       "model_url": "https://platform.openai.com/docs/models/gpt-image-1",
@@ -988,10 +968,10 @@
       "signals": null
     },
     {
-      "rank": 50,
+      "rank": 49,
       "rank_spread": [
-        50,
-        50
+        49,
+        49
       ],
       "model": "gpt-image-1-mini",
       "model_url": "https://platform.openai.com/docs/models/gpt-image-1-mini",
@@ -1008,10 +988,10 @@
       "signals": null
     },
     {
-      "rank": 51,
+      "rank": 50,
       "rank_spread": [
-        51,
-        51
+        50,
+        50
       ],
       "model": "gemini-2.0-flash-preview-image-generation",
       "model_url": "https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.0-flash-preview-image-generation",
@@ -1028,10 +1008,10 @@
       "signals": null
     },
     {
-      "rank": 52,
+      "rank": 51,
       "rank_spread": [
-        52,
-        52
+        51,
+        51
       ],
       "model": "bagel",
       "model_url": "https://huggingface.co/ByteDance-Seed/BAGEL-7B-MoT",
@@ -1048,10 +1028,10 @@
       "signals": null
     },
     {
-      "rank": 53,
+      "rank": 52,
       "rank_spread": [
-        53,
-        53
+        52,
+        52
       ],
       "model": "step1x-edit",
       "model_url": "https://huggingface.co/stepfun-ai/Step1X-Edit",

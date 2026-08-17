@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text",
     "source_url": "https://arena.ai/leaderboard/text",
-    "fetched_at": "2026-08-16T23:50:33.990223+00:00",
+    "fetched_at": "2026-08-17T23:52:28.797403+00:00",
     "last_updated": "Aug 12, 2026",
     "model_count": 391
   },
@@ -802,8 +802,8 @@
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
+      "price_prompt": 1.2,
+      "price_completion": 6.0,
       "context_length": null,
       "signals": null
     },
@@ -859,9 +859,9 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
+      "price_prompt": 1.32,
+      "price_completion": 3.96,
+      "context_length": 1000000,
       "signals": null
     },
     {
@@ -1039,8 +1039,8 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 1.17,
-      "price_completion": 2.34,
+      "price_prompt": 1.32,
+      "price_completion": 3.96,
       "context_length": 1000000,
       "signals": null
     },
@@ -1159,8 +1159,8 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 1.17,
-      "price_completion": 2.34,
+      "price_prompt": 1.32,
+      "price_completion": 3.96,
       "context_length": 1000000,
       "signals": null
     },
@@ -1639,8 +1639,8 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 0.14,
-      "price_completion": 0.28,
+      "price_prompt": 0.44,
+      "price_completion": 1.32,
       "context_length": 1000000,
       "signals": null
     },
@@ -1719,8 +1719,8 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 0.14,
-      "price_completion": 0.28,
+      "price_prompt": 0.44,
+      "price_completion": 1.32,
       "context_length": 1000000,
       "signals": null
     },
@@ -2099,8 +2099,8 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 0.55,
-      "price_completion": 2.2,
+      "price_prompt": 0.5,
+      "price_completion": 2.0,
       "context_length": 204800,
       "signals": null
     },
@@ -2300,7 +2300,7 @@
       "ci_high": 10,
       "preliminary": false,
       "price_prompt": 0.27,
-      "price_completion": 0.95,
+      "price_completion": 1.0,
       "context_length": 163800,
       "signals": null
     },
@@ -2440,7 +2440,7 @@
       "ci_high": 10,
       "preliminary": false,
       "price_prompt": 0.27,
-      "price_completion": 0.95,
+      "price_completion": 1.0,
       "context_length": 163800,
       "signals": null
     },
@@ -2459,8 +2459,8 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.26,
-      "price_completion": 1.04,
+      "price_prompt": 0.21,
+      "price_completion": 1.9,
       "context_length": 262100,
       "signals": null
     },
