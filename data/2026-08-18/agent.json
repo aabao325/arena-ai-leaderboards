@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "agent",
     "source_url": "https://arena.ai/leaderboard/agent",
-    "fetched_at": "2026-08-18T20:54:15.572837+00:00",
+    "fetched_at": "2026-08-18T21:52:25.727887+00:00",
     "last_updated": "Aug 18, 2026",
     "model_count": 49
   },
@@ -1723,7 +1723,7 @@
         38,
         44
       ],
-      "model": "inkling-small",
+      "model": "Inkling Small",
       "model_url": "https://thinkingmachines.ai/news/inkling-small/",
       "vendor": "Thinky",
       "license": "open",
