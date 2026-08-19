@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "code-webdev",
     "source_url": "https://arena.ai/leaderboard/code/webdev",
-    "fetched_at": "2026-08-19T19:04:55.949760+00:00",
+    "fetched_at": "2026-08-19T19:54:05.845887+00:00",
     "last_updated": "Aug 15, 2026",
     "model_count": 117
   },
@@ -134,7 +134,7 @@
         12
       ],
       "model": "glm-5.3-max",
-      "model_url": null,
+      "model_url": "https://z.ai/blog/glm-5.3",
       "vendor": "Z.ai",
       "license": "open",
       "votes": 434,
