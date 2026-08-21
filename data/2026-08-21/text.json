@@ -2,9 +2,9 @@
   "meta": {
     "leaderboard": "text",
     "source_url": "https://arena.ai/leaderboard/text",
-    "fetched_at": "2026-08-21T05:07:35.794863+00:00",
+    "fetched_at": "2026-08-19T23:53:13.556231+00:00",
     "last_updated": "Aug 19, 2026",
-    "model_count": 393
+    "model_count": 394
   },
   "models": [
     {
@@ -845,6 +845,23 @@
       "price_prompt": null,
       "price_completion": null,
       "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": null,
+      "rank_spread": null,
+      "model": "deepseek-v4-pro-max-20260813",
+      "model_url": "https://api-docs.deepseek.com/updates/#date-2026-08-13",
+      "vendor": "DeepSeek",
+      "license": "open",
+      "votes": null,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": 1.32,
+      "price_completion": 3.96,
+      "context_length": 1000000,
       "signals": null
     },
     {
@@ -2704,7 +2721,7 @@
       "preliminary": false,
       "price_prompt": 0.45,
       "price_completion": 1.2,
-      "context_length": 1000000,
+      "context_length": 524300,
       "signals": null
     },
     {
@@ -3082,8 +3099,8 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 0.27,
-      "price_completion": 0.95,
+      "price_prompt": 0.23,
+      "price_completion": 0.9,
       "context_length": 204800,
       "signals": null
     },
