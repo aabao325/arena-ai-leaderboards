@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "vision",
     "source_url": "https://arena.ai/leaderboard/vision",
-    "fetched_at": "2026-08-23T22:53:07.992028+00:00",
+    "fetched_at": "2026-08-23T23:51:45.173849+00:00",
     "last_updated": "Aug 21, 2026",
     "model_count": 147
   },
@@ -382,8 +382,8 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 5.0,
-      "price_completion": 30.0,
+      "price_prompt": 4.0,
+      "price_completion": 20.0,
       "context_length": null,
       "signals": null
     },
@@ -602,8 +602,8 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 2.5,
-      "price_completion": 15.0,
+      "price_prompt": 2.0,
+      "price_completion": 12.0,
       "context_length": null,
       "signals": null
     },
@@ -762,8 +762,8 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 1.0,
-      "price_completion": 6.0,
+      "price_prompt": 0.2,
+      "price_completion": 1.2,
       "context_length": null,
       "signals": null
     },
