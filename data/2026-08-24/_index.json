@@ -1,0 +1,45 @@
+{
+  "date": "2026-08-24",
+  "fetched_at": "2026-08-24T02:09:36.124544+00:00",
+  "leaderboards": {
+    "agent": {
+      "model_count": 51
+    },
+    "code-webdev": {
+      "model_count": 118
+    },
+    "code-image-to-webdev": {
+      "model_count": 42
+    },
+    "vision": {
+      "model_count": 147
+    },
+    "document": {
+      "model_count": 39
+    },
+    "search": {
+      "model_count": 32
+    },
+    "text-to-image": {
+      "model_count": 76
+    },
+    "image-edit": {
+      "model_count": 53
+    },
+    "text-to-video": {
+      "model_count": 45
+    },
+    "image-to-video": {
+      "model_count": 45
+    },
+    "video-edit": {
+      "model_count": 9
+    }
+  },
+  "errors": [
+    {
+      "leaderboard": "text",
+      "error": "flat 回退仅得 344 个模型，明显少于上次快照 394 个（阈值 95%），判定残缺，改为沿用完整旧快照"
+    }
+  ]
+}
