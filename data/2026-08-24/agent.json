@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "agent",
     "source_url": "https://arena.ai/leaderboard/agent",
-    "fetched_at": "2026-08-24T04:25:14.547061+00:00",
+    "fetched_at": "2026-08-24T05:21:53.912769+00:00",
     "last_updated": "Aug 19, 2026",
     "model_count": 51
   },
@@ -599,7 +599,7 @@
         19
       ],
       "model": "DeepSeek V4 Pro (High) (0813)",
-      "model_url": null,
+      "model_url": "https://api-docs.deepseek.com/updates/#date-2026-08-13",
       "vendor": "DeepSeek",
       "license": "open",
       "votes": 13377,
@@ -644,7 +644,7 @@
         19
       ],
       "model": "Qwen3.8 Max",
-      "model_url": "https://www.qwencloud.com/models/qwen3.8-max",
+      "model_url": "https://qwen.ai/blog?id=qwen3.8",
       "vendor": "Alibaba",
       "license": "proprietary",
       "votes": 11800,
@@ -869,7 +869,7 @@
         24
       ],
       "model": "Deepseek V4 Flash (High) (20260731)",
-      "model_url": null,
+      "model_url": "https://api-docs.deepseek.com/updates/#date-2026-07-31",
       "vendor": "DeepSeek",
       "license": "open",
       "votes": 42582,
@@ -1994,7 +1994,7 @@
         47
       ],
       "model": "Grok Build 0.1",
-      "model_url": null,
+      "model_url": "https://docs.x.ai/developers/models/grok-build-0.1",
       "vendor": "SpaceXAI",
       "license": "proprietary",
       "votes": 74036,
@@ -2084,7 +2084,7 @@
         48
       ],
       "model": "Gemini 3.5 Flash Lite",
-      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+      "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
       "vendor": "Google",
       "license": "proprietary",
       "votes": 20524,
@@ -2174,7 +2174,7 @@
         51
       ],
       "model": "Nemotron 3 Ultra",
-      "model_url": null,
+      "model_url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/",
       "vendor": "Nvidia",
       "license": "open",
       "votes": 12106,
