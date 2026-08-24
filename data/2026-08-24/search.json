@@ -2,16 +2,16 @@
   "meta": {
     "leaderboard": "search",
     "source_url": "https://arena.ai/leaderboard/search",
-    "fetched_at": "2026-08-24T18:00:56.949389+00:00",
+    "fetched_at": "2026-08-24T19:13:09.666841+00:00",
     "last_updated": "Jul 21, 2026",
-    "model_count": 32
+    "model_count": 34
   },
   "models": [
     {
       "rank": 1,
       "rank_spread": [
         1,
-        1
+        2
       ],
       "model": "claude-opus-4-6-search",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-6",
@@ -30,8 +30,28 @@
     {
       "rank": 2,
       "rank_spread": [
+        1,
+        4
+      ],
+      "model": "gpt-5.6-sol-xhigh",
+      "model_url": "https://openai.com/index/gpt-5-6/",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "votes": 8405,
+      "score": 1249,
+      "ci_low": 7,
+      "ci_high": 7,
+      "preliminary": false,
+      "price_prompt": 4.0,
+      "price_completion": 20.0,
+      "context_length": 1100000,
+      "signals": null
+    },
+    {
+      "rank": 3,
+      "rank_spread": [
         2,
-        5
+        6
       ],
       "model": "gpt-5.5-search",
       "model_url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -48,10 +68,10 @@
       "signals": null
     },
     {
-      "rank": 3,
+      "rank": 4,
       "rank_spread": [
         2,
-        5
+        6
       ],
       "model": "claude-fable-5",
       "model_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -68,10 +88,10 @@
       "signals": null
     },
     {
-      "rank": 4,
+      "rank": 5,
       "rank_spread": [
-        2,
-        5
+        3,
+        7
       ],
       "model": "claude-opus-4-7",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-7",
@@ -88,10 +108,10 @@
       "signals": null
     },
     {
-      "rank": 5,
+      "rank": 6,
       "rank_spread": [
-        2,
-        7
+        3,
+        9
       ],
       "model": "ernie-5.1",
       "model_url": "https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/",
@@ -108,10 +128,30 @@
       "signals": null
     },
     {
-      "rank": 6,
+      "rank": 7,
       "rank_spread": [
         5,
-        7
+        9
+      ],
+      "model": "grok-4.5",
+      "model_url": "https://docs.x.ai/developers/models/grok-4.5",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "votes": 8677,
+      "score": 1221,
+      "ci_low": 7,
+      "ci_high": 7,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 8,
+      "rank_spread": [
+        6,
+        9
       ],
       "model": "claude-sonnet-4-6-search",
       "model_url": "https://www.anthropic.com/news/claude-sonnet-4-6",
@@ -128,10 +168,10 @@
       "signals": null
     },
     {
-      "rank": 7,
+      "rank": 9,
       "rank_spread": [
-        5,
-        11
+        6,
+        13
       ],
       "model": "gemini-3.1-pro-grounding",
       "model_url": "https://ai.google.dev/gemini-api/docs/google-search",
@@ -148,10 +188,10 @@
       "signals": null
     },
     {
-      "rank": 8,
+      "rank": 10,
       "rank_spread": [
-        7,
-        13
+        9,
+        15
       ],
       "model": "gemini-3-pro-grounding",
       "model_url": "https://ai.google.dev/gemini-api/docs/google-search",
@@ -168,10 +208,10 @@
       "signals": null
     },
     {
-      "rank": 9,
+      "rank": 11,
       "rank_spread": [
-        7,
-        14
+        9,
+        16
       ],
       "model": "gpt-5.2-search",
       "model_url": "https://openai.com/index/introducing-gpt-5-2/",
@@ -188,10 +228,10 @@
       "signals": null
     },
     {
-      "rank": 10,
+      "rank": 12,
       "rank_spread": [
-        7,
-        14
+        9,
+        16
       ],
       "model": "grok-4.20-multi-agent-beta-0309",
       "model_url": "https://docs.x.ai/developers/models/grok-4.20-multi-agent-beta-0309",
@@ -208,10 +248,10 @@
       "signals": null
     },
     {
-      "rank": 11,
+      "rank": 13,
       "rank_spread": [
-        7,
-        14
+        9,
+        16
       ],
       "model": "claude-opus-4-8",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-8",
@@ -228,10 +268,10 @@
       "signals": null
     },
     {
-      "rank": 12,
+      "rank": 14,
       "rank_spread": [
-        8,
-        16
+        10,
+        18
       ],
       "model": "gpt-5.1-search",
       "model_url": "https://openai.com/index/gpt-5-1/",
@@ -248,10 +288,10 @@
       "signals": null
     },
     {
-      "rank": 13,
+      "rank": 15,
       "rank_spread": [
-        8,
-        16
+        10,
+        18
       ],
       "model": "gemini-3-flash-grounding",
       "model_url": "https://ai.google.dev/gemini-api/docs/google-search",
@@ -268,10 +308,10 @@
       "signals": null
     },
     {
-      "rank": 14,
+      "rank": 16,
       "rank_spread": [
-        9,
-        16
+        11,
+        18
       ],
       "model": "gpt-5.4-search",
       "model_url": "https://platform.openai.com/docs/models/gpt-5.4",
@@ -288,10 +328,10 @@
       "signals": null
     },
     {
-      "rank": 15,
+      "rank": 17,
       "rank_spread": [
-        12,
-        17
+        14,
+        19
       ],
       "model": "grok-4.20-beta1",
       "model_url": "https://grok.com/",
@@ -308,10 +348,10 @@
       "signals": null
     },
     {
-      "rank": 16,
+      "rank": 18,
       "rank_spread": [
-        12,
-        17
+        14,
+        19
       ],
       "model": "claude-sonnet-5-search",
       "model_url": "https://www.anthropic.com/news/claude-sonnet-5",
@@ -328,10 +368,10 @@
       "signals": null
     },
     {
-      "rank": 17,
+      "rank": 19,
       "rank_spread": [
-        15,
-        20
+        17,
+        22
       ],
       "model": "claude-opus-4-5-search",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-5",
@@ -348,10 +388,10 @@
       "signals": null
     },
     {
-      "rank": 18,
+      "rank": 20,
       "rank_spread": [
-        17,
-        21
+        19,
+        23
       ],
       "model": "gpt-5.2-search-non-reasoning",
       "model_url": "https://openai.com/index/introducing-gpt-5-2/",
@@ -368,10 +408,10 @@
       "signals": null
     },
     {
-      "rank": 19,
+      "rank": 21,
       "rank_spread": [
-        17,
-        21
+        19,
+        23
       ],
       "model": "grok-4-1-fast-search",
       "model_url": "https://x.ai/news/grok-4-1-fast",
@@ -388,10 +428,10 @@
       "signals": null
     },
     {
-      "rank": 20,
+      "rank": 22,
       "rank_spread": [
-        17,
-        21
+        19,
+        23
       ],
       "model": "grok-4-fast-search",
       "model_url": "https://x.ai/news/grok-4-fast",
@@ -408,10 +448,10 @@
       "signals": null
     },
     {
-      "rank": 21,
+      "rank": 23,
       "rank_spread": [
-        18,
-        22
+        20,
+        24
       ],
       "model": "grok-4.3",
       "model_url": "https://docs.x.ai/developers/models/grok-4.3",
@@ -428,10 +468,10 @@
       "signals": null
     },
     {
-      "rank": 22,
+      "rank": 24,
       "rank_spread": [
-        21,
-        22
+        23,
+        24
       ],
       "model": "claude-sonnet-4-5-search",
       "model_url": "https://www.anthropic.com/news/claude-sonnet-4-5",
@@ -448,10 +488,10 @@
       "signals": null
     },
     {
-      "rank": 23,
+      "rank": 25,
       "rank_spread": [
-        23,
-        27
+        25,
+        29
       ],
       "model": "claude-opus-4-1-search",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-1",
@@ -468,10 +508,10 @@
       "signals": null
     },
     {
-      "rank": 24,
+      "rank": 26,
       "rank_spread": [
-        23,
-        27
+        25,
+        29
       ],
       "model": "o3-search",
       "model_url": "https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses",
@@ -488,10 +528,10 @@
       "signals": null
     },
     {
-      "rank": 25,
+      "rank": 27,
       "rank_spread": [
-        23,
-        28
+        25,
+        30
       ],
       "model": "gemini-2.5-pro-grounding",
       "model_url": "https://ai.google.dev/gemini-api/docs/google-search",
@@ -508,10 +548,10 @@
       "signals": null
     },
     {
-      "rank": 26,
+      "rank": 28,
       "rank_spread": [
-        23,
-        28
+        25,
+        30
       ],
       "model": "grok-4-search",
       "model_url": "https://docs.x.ai/docs/guides/live-search",
@@ -528,10 +568,10 @@
       "signals": null
     },
     {
-      "rank": 27,
+      "rank": 29,
       "rank_spread": [
-        23,
-        29
+        25,
+        31
       ],
       "model": "ppl-sonar-reasoning-pro-high",
       "model_url": "https://docs.perplexity.ai/getting-started/overview",
@@ -548,10 +588,10 @@
       "signals": null
     },
     {
-      "rank": 28,
+      "rank": 30,
       "rank_spread": [
-        25,
-        30
+        27,
+        32
       ],
       "model": "gpt-5-search",
       "model_url": "https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses",
@@ -568,10 +608,10 @@
       "signals": null
     },
     {
-      "rank": 29,
+      "rank": 31,
       "rank_spread": [
-        27,
-        30
+        29,
+        32
       ],
       "model": "ppl-sonar-pro-high",
       "model_url": "https://docs.perplexity.ai/getting-started/overview",
@@ -588,10 +628,10 @@
       "signals": null
     },
     {
-      "rank": 30,
+      "rank": 32,
       "rank_spread": [
-        28,
-        30
+        30,
+        32
       ],
       "model": "claude-opus-4-search",
       "model_url": "https://www.anthropic.com/news/claude-opus-4-1",
@@ -608,10 +648,10 @@
       "signals": null
     },
     {
-      "rank": 31,
+      "rank": 33,
       "rank_spread": [
-        31,
-        32
+        33,
+        34
       ],
       "model": "diffbot-small-xl",
       "model_url": "https://github.com/diffbot/diffbot-llm-inference",
@@ -628,10 +668,10 @@
       "signals": null
     },
     {
-      "rank": 32,
+      "rank": 34,
       "rank_spread": [
-        31,
-        32
+        33,
+        34
       ],
       "model": "api-gpt-4o-search",
       "model_url": "https://platform.openai.com/docs/models/gpt-4o-search-preview",
