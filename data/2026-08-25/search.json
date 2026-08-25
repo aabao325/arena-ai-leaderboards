@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "search",
     "source_url": "https://arena.ai/leaderboard/search",
-    "fetched_at": "2026-08-25T11:02:15.081345+00:00",
+    "fetched_at": "2026-08-25T11:58:23.272284+00:00",
     "last_updated": "Aug 24, 2026",
     "model_count": 34
   },
@@ -502,8 +502,8 @@
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
-      "price_prompt": 7.5,
-      "price_completion": 37.5,
+      "price_prompt": 15.0,
+      "price_completion": 75.0,
       "context_length": 200000,
       "signals": null
     },

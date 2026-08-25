@@ -1,9 +1,12 @@
 {
   "date": "2026-08-25",
-  "fetched_at": "2026-08-25T11:02:15.081345+00:00",
+  "fetched_at": "2026-08-25T11:58:23.272284+00:00",
   "leaderboards": {
     "agent": {
       "model_count": 52
+    },
+    "text": {
+      "model_count": 394
     },
     "code-webdev": {
       "model_count": 118
@@ -36,10 +39,5 @@
       "model_count": 9
     }
   },
-  "errors": [
-    {
-      "leaderboard": "text",
-      "error": "flat 回退仅得 344 个模型，明显少于上次快照 394 个（阈值 95%），判定残缺，改为沿用完整旧快照"
-    }
-  ]
+  "errors": []
 }
