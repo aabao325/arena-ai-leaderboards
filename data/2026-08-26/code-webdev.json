@@ -2,9 +2,9 @@
   "meta": {
     "leaderboard": "code-webdev",
     "source_url": "https://arena.ai/leaderboard/code/webdev",
-    "fetched_at": "2026-08-26T14:23:58.528660+00:00",
+    "fetched_at": "2026-08-26T16:03:22.684037+00:00",
     "last_updated": "Aug 21, 2026",
-    "model_count": 118
+    "model_count": 120
   },
   "models": [
     {
@@ -88,6 +88,23 @@
       "signals": null
     },
     {
+      "rank": null,
+      "rank_spread": null,
+      "model": "glm-5.3-flash",
+      "model_url": "https://z.ai/blog/glm-5.3-flash",
+      "vendor": "Z.ai",
+      "license": "open",
+      "votes": null,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": 0.15,
+      "price_completion": 0.5,
+      "context_length": 1000000,
+      "signals": null
+    },
+    {
       "rank": 5,
       "rank_spread": [
         5,
@@ -145,6 +162,23 @@
       "price_prompt": 4.0,
       "price_completion": 20.0,
       "context_length": 1100000,
+      "signals": null
+    },
+    {
+      "rank": null,
+      "rank_spread": null,
+      "model": "qwen3.8-flash-next",
+      "model_url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+      "vendor": "Alibaba",
+      "license": "open",
+      "votes": null,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": 0.16,
+      "price_completion": 0.47,
+      "context_length": 1000000,
       "signals": null
     },
     {
