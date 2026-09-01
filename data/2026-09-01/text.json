@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "leaderboard": "text",
+    "source_url": "https://arena.ai/leaderboard/text",
+    "fetched_at": "2026-09-01T06:44:23.815236+00:00",
+    "last_updated": "Aug 27, 2026",
+    "model_count": 10
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "claude-fable-5",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1507.0,
+      "ci": 5.0,
+      "votes": 25824
+    },
+    {
+      "rank": 2,
+      "model": "claude-opus-4-6-high",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1505.0,
+      "ci": 4.0,
+      "votes": 72104
+    },
+    {
+      "rank": 3,
+      "model": "claude-opus-4-7-high",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1502.0,
+      "ci": 4.0,
+      "votes": 60136
+    },
+    {
+      "rank": 4,
+      "model": "muse-spark-1.2 (xHigh)",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "score": 1498.0,
+      "ci": 10.0,
+      "votes": 3247
+    },
+    {
+      "rank": 5,
+      "model": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1497.0,
+      "ci": 3.0,
+      "votes": 76079
+    },
+    {
+      "rank": 6,
+      "model": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1494.0,
+      "ci": 4.0,
+      "votes": 61282
+    },
+    {
+      "rank": 7,
+      "model": "claude-opus-5-high",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1492.0,
+      "ci": 5.0,
+      "votes": 31570
+    },
+    {
+      "rank": 8,
+      "model": "muse-spark-1.1",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "score": 1490.0,
+      "ci": 5.0,
+      "votes": 22215
+    },
+    {
+      "rank": 9,
+      "model": "gemini-3.7-flash-high",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1490.0,
+      "ci": 8.0,
+      "votes": 5720
+    },
+    {
+      "rank": 10,
+      "model": "kimi-k3-max",
+      "vendor": "Moonshot",
+      "license": null,
+      "score": 1489.0,
+      "ci": 6.0,
+      "votes": 16586
+    }
+  ]
+}
