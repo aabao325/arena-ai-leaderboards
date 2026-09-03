@@ -1,12 +1,12 @@
 {
   "date": "2026-09-03",
-  "fetched_at": "2026-09-03T14:42:31.860288+00:00",
+  "fetched_at": "2026-09-03T18:51:04.337334+00:00",
   "leaderboards": {
     "agent": {
       "model_count": 58
     },
     "code-webdev": {
-      "model_count": 124
+      "model_count": 125
     },
     "code-image-to-webdev": {
       "model_count": 44

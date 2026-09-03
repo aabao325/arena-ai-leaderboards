@@ -2,9 +2,9 @@
   "meta": {
     "leaderboard": "code-webdev",
     "source_url": "https://arena.ai/leaderboard/code/webdev",
-    "fetched_at": "2026-09-03T14:42:31.860288+00:00",
+    "fetched_at": "2026-09-03T18:51:04.337334+00:00",
     "last_updated": "Sep 2, 2026",
-    "model_count": 124
+    "model_count": 125
   },
   "models": [
     {
@@ -184,6 +184,23 @@
       "preliminary": true,
       "price_prompt": 0.83,
       "price_completion": 2.5,
+      "context_length": 1000000,
+      "signals": null
+    },
+    {
+      "rank": null,
+      "rank_spread": null,
+      "model": "muse-spark-1.3-xhigh",
+      "model_url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "votes": null,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": 1.25,
+      "price_completion": 4.25,
       "context_length": 1000000,
       "signals": null
     },
@@ -722,8 +739,8 @@
       "ci_low": 11,
       "ci_high": 11,
       "preliminary": false,
-      "price_prompt": 0.13,
-      "price_completion": 0.53,
+      "price_prompt": 0.08,
+      "price_completion": 0.33,
       "context_length": 262100,
       "signals": null
     },
