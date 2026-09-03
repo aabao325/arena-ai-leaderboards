@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "video-edit",
     "source_url": "https://arena.ai/leaderboard/video-edit",
-    "fetched_at": "2026-09-03T02:02:27.085259+00:00",
+    "fetched_at": "2026-09-03T06:27:16.506342+00:00",
     "last_updated": "Aug 26, 2026",
     "model_count": 10
   },
@@ -29,7 +29,7 @@
       "rank": 3,
       "model": "minimax-h3",
       "vendor": "MiniMax",
-      "license": "proprietary",
+      "license": "open",
       "score": 1392.0,
       "ci": 19.0,
       "votes": 962
