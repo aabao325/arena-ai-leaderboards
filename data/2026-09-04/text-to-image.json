@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text-to-image",
     "source_url": "https://arena.ai/leaderboard/text-to-image",
-    "fetched_at": "2026-09-04T09:54:00.596417+00:00",
+    "fetched_at": "2026-09-04T14:31:07.999693+00:00",
     "last_updated": "Aug 25, 2026",
     "model_count": 76
   },
@@ -33,7 +33,7 @@
         2,
         3
       ],
-      "model": "mai-image-2.6-preview",
+      "model": "mai-image-2.6",
       "model_url": "https://microsoft.ai/news/mai-image-2-6-launches-at-no-2-on-arena-ahead-of-google-meta-and-xai/",
       "vendor": "Microsoft AI",
       "license": "proprietary",
