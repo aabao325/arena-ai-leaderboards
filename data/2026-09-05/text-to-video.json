@@ -2,16 +2,16 @@
   "meta": {
     "leaderboard": "text-to-video",
     "source_url": "https://arena.ai/leaderboard/text-to-video",
-    "fetched_at": "2026-09-05T16:55:15.639538+00:00",
+    "fetched_at": "2026-09-05T19:24:42.365894+00:00",
     "last_updated": "Sep 4, 2026",
-    "model_count": 47
+    "model_count": 48
   },
   "models": [
     {
       "rank": 1,
       "rank_spread": [
         1,
-        4
+        5
       ],
       "model": "gemini-omni-1.1-flash",
       "model_url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
@@ -31,7 +31,7 @@
       "rank": 2,
       "rank_spread": [
         1,
-        4
+        5
       ],
       "model": "gemini-omni-flash",
       "model_url": "https://deepmind.google/models/gemini-omni/",
@@ -51,7 +51,7 @@
       "rank": 3,
       "rank_spread": [
         1,
-        6
+        7
       ],
       "model": "wan3.0",
       "model_url": "https://www.alibabacloud.com/blog/wan3-0-30-second-ai-video-generation-from-any-input_603452",
@@ -71,7 +71,7 @@
       "rank": 4,
       "rank_spread": [
         1,
-        6
+        7
       ],
       "model": "flux-3-video",
       "model_url": "https://bfl.ai/models/flux-3",
@@ -90,8 +90,28 @@
     {
       "rank": 5,
       "rank_spread": [
+        1,
+        7
+      ],
+      "model": "grok-imagine-video-1.5-agent",
+      "model_url": "https://x.com/grok/status/2096298105213952178",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "votes": 1195,
+      "score": 1491,
+      "ci_low": 19,
+      "ci_high": 19,
+      "preliminary": true,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 6,
+      "rank_spread": [
         3,
-        8
+        9
       ],
       "model": "dreamina-seedance-2.5-720p",
       "model_url": "https://seed.bytedance.com/en/seedance2_5",
@@ -108,10 +128,10 @@
       "signals": null
     },
     {
-      "rank": 6,
+      "rank": 7,
       "rank_spread": [
         3,
-        8
+        9
       ],
       "model": "dreamina-seedance-2.0-720p",
       "model_url": "https://seed.bytedance.com/en/seedance2_0",
@@ -128,10 +148,10 @@
       "signals": null
     },
     {
-      "rank": 7,
+      "rank": 8,
       "rank_spread": [
-        5,
-        8
+        6,
+        9
       ],
       "model": "minimax-h3",
       "model_url": "https://app.notion.com/p/MiniMax-H3-The-Next-Gen-Open-Weight-Multimodal-Generation-Model-5cdd99c3d331822397f18130e7b480a8",
@@ -148,10 +168,10 @@
       "signals": null
     },
     {
-      "rank": 8,
+      "rank": 9,
       "rank_spread": [
-        5,
-        8
+        6,
+        9
       ],
       "model": "muse-video",
       "model_url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
@@ -168,10 +188,10 @@
       "signals": null
     },
     {
-      "rank": 9,
+      "rank": 10,
       "rank_spread": [
-        9,
-        9
+        10,
+        10
       ],
       "model": "happyhorse-1.0",
       "model_url": "https://x.com/happyhorseath/status/2044974356577611861?s=46",
@@ -188,10 +208,10 @@
       "signals": null
     },
     {
-      "rank": 10,
+      "rank": 11,
       "rank_spread": [
-        10,
-        14
+        11,
+        15
       ],
       "model": "sora-2-pro",
       "model_url": "https://platform.openai.com/docs/models/sora-2-pro",
@@ -208,10 +228,10 @@
       "signals": null
     },
     {
-      "rank": 11,
+      "rank": 12,
       "rank_spread": [
-        10,
-        16
+        11,
+        17
       ],
       "model": "veo-3.1-audio",
       "model_url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
@@ -228,10 +248,10 @@
       "signals": null
     },
     {
-      "rank": 12,
+      "rank": 13,
       "rank_spread": [
-        10,
-        16
+        11,
+        17
       ],
       "model": "veo-3.1-audio-1080p",
       "model_url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
@@ -248,10 +268,10 @@
       "signals": null
     },
     {
-      "rank": 13,
+      "rank": 14,
       "rank_spread": [
-        10,
-        16
+        11,
+        17
       ],
       "model": "veo-3.1-fast-audio",
       "model_url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
@@ -268,10 +288,10 @@
       "signals": null
     },
     {
-      "rank": 14,
+      "rank": 15,
       "rank_spread": [
-        10,
-        19
+        11,
+        20
       ],
       "model": "veo-3.1-fast-audio-1080p",
       "model_url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
@@ -288,10 +308,10 @@
       "signals": null
     },
     {
-      "rank": 15,
+      "rank": 16,
       "rank_spread": [
-        11,
-        19
+        12,
+        20
       ],
       "model": "veo-3-fast-audio",
       "model_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/veo-video-generation",
@@ -308,10 +328,10 @@
       "signals": null
     },
     {
-      "rank": 16,
+      "rank": 17,
       "rank_spread": [
-        14,
-        19
+        15,
+        20
       ],
       "model": "grok-imagine-video-720p",
       "model_url": "https://docs.x.ai/docs/guides/video-generations",
@@ -328,10 +348,10 @@
       "signals": null
     },
     {
-      "rank": 17,
+      "rank": 18,
       "rank_spread": [
-        14,
-        19
+        15,
+        20
       ],
       "model": "sora-2",
       "model_url": "https://platform.openai.com/docs/models/sora-2",
@@ -348,10 +368,10 @@
       "signals": null
     },
     {
-      "rank": 18,
+      "rank": 19,
       "rank_spread": [
-        14,
-        20
+        15,
+        21
       ],
       "model": "wan2.7-t2v",
       "model_url": "https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video-to-elevate-creators-from-executors-to-directors_603009",
@@ -368,10 +388,10 @@
       "signals": null
     },
     {
-      "rank": 19,
+      "rank": 20,
       "rank_spread": [
-        11,
-        20
+        12,
+        21
       ],
       "model": "veo-3-audio",
       "model_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/veo-video-generation",
@@ -388,10 +408,10 @@
       "signals": null
     },
     {
-      "rank": 20,
+      "rank": 21,
       "rank_spread": [
-        18,
-        20
+        19,
+        21
       ],
       "model": "wan2.6-t2v",
       "model_url": "https://modelstudio.console.alibabacloud.com/?tab=api#/api/?type=model&url=2865250",
@@ -408,10 +428,10 @@
       "signals": null
     },
     {
-      "rank": 21,
+      "rank": 22,
       "rank_spread": [
-        21,
-        25
+        22,
+        26
       ],
       "model": "seedance-v1.5-pro",
       "model_url": "https://seed.bytedance.com/en/seedance1_5_pro",
@@ -428,10 +448,10 @@
       "signals": null
     },
     {
-      "rank": 22,
+      "rank": 23,
       "rank_spread": [
-        21,
-        25
+        22,
+        26
       ],
       "model": "veo-3",
       "model_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/veo-video-generation",
@@ -448,10 +468,10 @@
       "signals": null
     },
     {
-      "rank": 23,
+      "rank": 24,
       "rank_spread": [
-        21,
-        26
+        22,
+        27
       ],
       "model": "veo-3-fast",
       "model_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/veo-video-generation",
@@ -468,10 +488,10 @@
       "signals": null
     },
     {
-      "rank": 24,
+      "rank": 25,
       "rank_spread": [
-        21,
-        25
+        22,
+        26
       ],
       "model": "wan2.5-t2v-preview",
       "model_url": "https://modelstudio.console.alibabacloud.com/?tab=api#/api/?type=model&url=2865250",
@@ -488,10 +508,10 @@
       "signals": null
     },
     {
-      "rank": 25,
+      "rank": 26,
       "rank_spread": [
-        21,
-        28
+        22,
+        29
       ],
       "model": "pixverse-v5.6",
       "model_url": "https://app.pixverse.ai/onboard",
@@ -508,10 +528,10 @@
       "signals": null
     },
     {
-      "rank": 26,
+      "rank": 27,
       "rank_spread": [
-        25,
-        31
+        26,
+        32
       ],
       "model": "runway-gen-4.5",
       "model_url": "https://runwayml.com/research/introducing-runway-gen-4.5",
@@ -528,10 +548,10 @@
       "signals": null
     },
     {
-      "rank": 27,
+      "rank": 28,
       "rank_spread": [
-        24,
-        33
+        25,
+        34
       ],
       "model": "kling-2.5-turbo-1080p",
       "model_url": "https://app.klingai.com/global/image-to-video/frame-mode/new?ra=4",
@@ -548,10 +568,10 @@
       "signals": null
     },
     {
-      "rank": 28,
+      "rank": 29,
       "rank_spread": [
-        26,
-        33
+        27,
+        34
       ],
       "model": "kling-2.6-pro",
       "model_url": "https://app.klingai.com/global/release-notes/c605hp1tzd?type=dialog",
@@ -568,10 +588,10 @@
       "signals": null
     },
     {
-      "rank": 29,
+      "rank": 30,
       "rank_spread": [
-        26,
-        36
+        27,
+        37
       ],
       "model": "p-video",
       "model_url": "https://www.pruna.ai/p-video",
@@ -588,10 +608,10 @@
       "signals": null
     },
     {
-      "rank": 30,
+      "rank": 31,
       "rank_spread": [
-        26,
-        37
+        27,
+        38
       ],
       "model": "ray-3",
       "model_url": "https://lumalabs.ai/ray",
@@ -608,10 +628,10 @@
       "signals": null
     },
     {
-      "rank": 31,
+      "rank": 32,
       "rank_spread": [
-        27,
-        34
+        28,
+        35
       ],
       "model": "hailuo-2.3",
       "model_url": "https://hailuoai.video/",
@@ -628,10 +648,10 @@
       "signals": null
     },
     {
-      "rank": 32,
+      "rank": 33,
       "rank_spread": [
-        25,
-        38
+        26,
+        39
       ],
       "model": "kling-o1-pro",
       "model_url": "https://app.klingai.com/global/release-notes/zipxp988c2?type=dialog",
@@ -648,10 +668,10 @@
       "signals": null
     },
     {
-      "rank": 33,
+      "rank": 34,
       "rank_spread": [
-        27,
-        36
+        28,
+        37
       ],
       "model": "hailuo-02-pro",
       "model_url": "https://www.minimax.io/news/minimax-hailuo-02",
@@ -668,10 +688,10 @@
       "signals": null
     },
     {
-      "rank": 34,
+      "rank": 35,
       "rank_spread": [
-        29,
-        38
+        30,
+        39
       ],
       "model": "seedance-v1-pro",
       "model_url": "https://seed.bytedance.com/en/seedance",
@@ -688,10 +708,10 @@
       "signals": null
     },
     {
-      "rank": 35,
+      "rank": 36,
       "rank_spread": [
-        30,
-        39
+        31,
+        40
       ],
       "model": "hailuo-02-standard",
       "model_url": "https://www.minimax.io/news/minimax-hailuo-02",
@@ -708,10 +728,10 @@
       "signals": null
     },
     {
-      "rank": 36,
+      "rank": 37,
       "rank_spread": [
-        30,
-        40
+        31,
+        41
       ],
       "model": "kandinsky-5.0-t2v-pro",
       "model_url": "https://github.com/kandinskylab/kandinsky-5/#kandinsky-50-video-pro",
@@ -728,10 +748,10 @@
       "signals": null
     },
     {
-      "rank": 37,
+      "rank": 38,
       "rank_spread": [
-        32,
-        40
+        33,
+        41
       ],
       "model": "hunyuan-video-1.5",
       "model_url": "https://hunyuan.tencent.com/video/en?tabIndex=0",
@@ -748,10 +768,10 @@
       "signals": null
     },
     {
-      "rank": 38,
+      "rank": 39,
       "rank_spread": [
-        33,
-        40
+        34,
+        41
       ],
       "model": "veo-2",
       "model_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/models/veo/2-0-generate-001",
@@ -768,10 +788,10 @@
       "signals": null
     },
     {
-      "rank": 39,
+      "rank": 40,
       "rank_spread": [
-        35,
-        40
+        36,
+        41
       ],
       "model": "kling-v2.1-master",
       "model_url": "https://fal.ai/models/fal-ai/kling-video/v2.1/master/text-to-video",
@@ -788,10 +808,10 @@
       "signals": null
     },
     {
-      "rank": 40,
+      "rank": 41,
       "rank_spread": [
-        36,
-        41
+        37,
+        42
       ],
       "model": "ltx-2-19b",
       "model_url": "https://huggingface.co/Lightricks/LTX-2",
@@ -808,10 +828,10 @@
       "signals": null
     },
     {
-      "rank": 41,
+      "rank": 42,
       "rank_spread": [
-        40,
-        43
+        41,
+        44
       ],
       "model": "wan-v2.2-a14b",
       "model_url": "https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B",
@@ -828,10 +848,10 @@
       "signals": null
     },
     {
-      "rank": 42,
+      "rank": 43,
       "rank_spread": [
-        41,
-        43
+        42,
+        44
       ],
       "model": "kandinsky-5.0-t2v-lite",
       "model_url": "https://github.com/kandinskylab/kandinsky-5/?tab=readme-ov-file#kandinsky-50-video-lite",
@@ -848,10 +868,10 @@
       "signals": null
     },
     {
-      "rank": 43,
+      "rank": 44,
       "rank_spread": [
-        41,
-        43
+        42,
+        44
       ],
       "model": "seedance-v1-lite",
       "model_url": "https://seed.bytedance.com/en/seedance",
@@ -868,10 +888,10 @@
       "signals": null
     },
     {
-      "rank": 44,
+      "rank": 45,
       "rank_spread": [
-        44,
-        45
+        45,
+        46
       ],
       "model": "sora",
       "model_url": "https://ai.azure.com/catalog/models/sora",
@@ -888,10 +908,10 @@
       "signals": null
     },
     {
-      "rank": 45,
+      "rank": 46,
       "rank_spread": [
-        44,
-        45
+        45,
+        46
       ],
       "model": "ray2",
       "model_url": "https://lumalabs.ai/ray",
@@ -908,10 +928,10 @@
       "signals": null
     },
     {
-      "rank": 46,
+      "rank": 47,
       "rank_spread": [
-        46,
-        47
+        47,
+        48
       ],
       "model": "pika-v2.2",
       "model_url": "https://fal.ai/models/fal-ai/pika/v2.2/text-to-video",
@@ -928,10 +948,10 @@
       "signals": null
     },
     {
-      "rank": 47,
+      "rank": 48,
       "rank_spread": [
-        46,
-        47
+        47,
+        48
       ],
       "model": "mochi-v1",
       "model_url": "https://huggingface.co/genmo/mochi-1-preview",
