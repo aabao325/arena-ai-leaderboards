@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "document",
     "source_url": "https://arena.ai/leaderboard/document",
-    "fetched_at": "2026-09-07T10:40:48.141293+00:00",
+    "fetched_at": "2026-09-07T16:38:22.137348+00:00",
     "last_updated": "Jul 26, 2026",
     "model_count": 39
   },
@@ -554,7 +554,7 @@
         33
       ],
       "model": "gemini-3-pro",
-      "model_url": "https://aistudio.google.com/app/prompts/new_chat?model=gemini-3-pro-preview",
+      "model_url": "http://aistudio.google.com/app/prompts/new_chat?model=gemini-3-pro-preview",
       "vendor": "Google",
       "license": "proprietary",
       "votes": 10739,
@@ -634,7 +634,7 @@
         35
       ],
       "model": "gemini-2.5-pro",
-      "model_url": "https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro",
+      "model_url": "http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro",
       "vendor": "Google",
       "license": "proprietary",
       "votes": 24963,
