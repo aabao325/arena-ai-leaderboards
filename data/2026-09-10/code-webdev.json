@@ -2,9 +2,9 @@
   "meta": {
     "leaderboard": "code-webdev",
     "source_url": "https://arena.ai/leaderboard/code/webdev",
-    "fetched_at": "2026-09-10T14:36:34.632245+00:00",
+    "fetched_at": "2026-09-10T17:51:23.384662+00:00",
     "last_updated": "Sep 8, 2026",
-    "model_count": 127
+    "model_count": 128
   },
   "models": [
     {
@@ -268,6 +268,23 @@
       "signals": null
     },
     {
+      "rank": null,
+      "rank_spread": null,
+      "model": "deepseek-v4.1-flash-max",
+      "model_url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+      "vendor": "DeepSeek",
+      "license": "open",
+      "votes": null,
+      "score": null,
+      "ci_low": null,
+      "ci_high": null,
+      "preliminary": false,
+      "price_prompt": 0.3,
+      "price_completion": 1.2,
+      "context_length": 1000000,
+      "signals": null
+    },
+    {
       "rank": 14,
       "rank_spread": [
         9,
@@ -402,8 +419,8 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.44,
-      "price_completion": 1.32,
+      "price_prompt": 0.3,
+      "price_completion": 1.2,
       "context_length": 1000000,
       "signals": null
     },
@@ -1342,8 +1359,8 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.44,
-      "price_completion": 1.32,
+      "price_prompt": 0.3,
+      "price_completion": 1.2,
       "context_length": 1000000,
       "signals": null
     },
