@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "image-edit",
     "source_url": "https://arena.ai/leaderboard/image-edit",
-    "fetched_at": "2026-09-11T16:43:25.915548+00:00",
+    "fetched_at": "2026-09-11T19:59:46.158597+00:00",
     "last_updated": "Sep 7, 2026",
     "model_count": 55
   },
@@ -234,7 +234,7 @@
         13
       ],
       "model": "gemini-3.1-flash-image (nano-banana-2) [web-search]",
-      "model_url": "https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-image",
+      "model_url": "http://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-image",
       "vendor": "Google",
       "license": "proprietary",
       "votes": 157693,
