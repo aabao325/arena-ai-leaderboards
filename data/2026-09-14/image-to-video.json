@@ -2,9 +2,9 @@
   "meta": {
     "leaderboard": "image-to-video",
     "source_url": "https://arena.ai/leaderboard/image-to-video",
-    "fetched_at": "2026-09-14T19:34:08.945770+00:00",
-    "last_updated": "Sep 2, 2026",
-    "model_count": 47
+    "fetched_at": "2026-09-14T22:43:23.870327+00:00",
+    "last_updated": "Sep 14, 2026",
+    "model_count": 48
   },
   "models": [
     {
@@ -17,10 +17,10 @@
       "model_url": "https://app.notion.com/p/MiniMax-H3-The-Next-Gen-Open-Weight-Multimodal-Generation-Model-5cdd99c3d331822397f18130e7b480a8",
       "vendor": "MiniMax",
       "license": "open",
-      "votes": 36137,
-      "score": 1497,
-      "ci_low": 6,
-      "ci_high": 6,
+      "votes": 49443,
+      "score": 1494,
+      "ci_low": 5,
+      "ci_high": 5,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -37,7 +37,7 @@
       "model_url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
       "vendor": "Google",
       "license": "proprietary",
-      "votes": 3732,
+      "votes": 3731,
       "score": 1488,
       "ci_low": 11,
       "ci_high": 11,
@@ -57,10 +57,10 @@
       "model_url": "https://www.alibabacloud.com/blog/wan3-0-30-second-ai-video-generation-from-any-input_603452",
       "vendor": "Alibaba",
       "license": "proprietary",
-      "votes": 1401,
-      "score": 1481,
-      "ci_low": 16,
-      "ci_high": 16,
+      "votes": 3444,
+      "score": 1479,
+      "ci_low": 11,
+      "ci_high": 11,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -77,10 +77,10 @@
       "model_url": "https://seed.bytedance.com/en/seedance2_5",
       "vendor": "Bytedance",
       "license": "proprietary",
-      "votes": 6725,
-      "score": 1478,
-      "ci_low": 10,
-      "ci_high": 10,
+      "votes": 12151,
+      "score": 1475,
+      "ci_low": 8,
+      "ci_high": 8,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -91,16 +91,16 @@
       "rank": 5,
       "rank_spread": [
         2,
-        5
+        6
       ],
       "model": "dreamina-seedance-2.0-720p",
       "model_url": "https://seed.bytedance.com/en/seedance2_0",
       "vendor": "Bytedance",
       "license": "proprietary",
-      "votes": 113611,
-      "score": 1477,
-      "ci_low": 8,
-      "ci_high": 8,
+      "votes": 118475,
+      "score": 1474,
+      "ci_low": 7,
+      "ci_high": 7,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -110,15 +110,15 @@
     {
       "rank": 6,
       "rank_spread": [
-        4,
-        7
+        3,
+        8
       ],
       "model": "gemini-omni-flash",
       "model_url": "https://deepmind.google/models/gemini-omni/",
       "vendor": "Google",
       "license": "proprietary",
-      "votes": 71006,
-      "score": 1462,
+      "votes": 80749,
+      "score": 1464,
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
@@ -137,10 +137,10 @@
       "model_url": "https://docs.x.ai/developers/models/grok-imagine-video-1.5-preview",
       "vendor": "SpaceXAI",
       "license": "proprietary",
-      "votes": 119111,
+      "votes": 130208,
       "score": 1456,
-      "ci_low": 5,
-      "ci_high": 5,
+      "ci_low": 4,
+      "ci_high": 4,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -150,18 +150,18 @@
     {
       "rank": 8,
       "rank_spread": [
-        7,
-        9
+        6,
+        10
       ],
-      "model": "flux-3-video-20260811",
-      "model_url": "https://bfl.ai/models/flux-3",
-      "vendor": "Black Forest Labs",
+      "model": "hidream-o1-video",
+      "model_url": "https://hiharness.ai/docs/hidream_o/video/introduction.html",
+      "vendor": "HiDream",
       "license": "proprietary",
-      "votes": 20601,
-      "score": 1449,
-      "ci_low": 6,
-      "ci_high": 6,
-      "preliminary": false,
+      "votes": 2735,
+      "score": 1452,
+      "ci_low": 12,
+      "ci_high": 12,
+      "preliminary": true,
       "price_prompt": null,
       "price_completion": null,
       "context_length": null,
@@ -173,14 +173,14 @@
         7,
         10
       ],
-      "model": "happyhorse-1.0",
-      "model_url": "https://x.com/happyhorseath/status/2044974356577611861?s=46",
-      "vendor": "Alibaba-ATH",
+      "model": "flux-3-video-20260811",
+      "model_url": "https://bfl.ai/models/flux-3",
+      "vendor": "Black Forest Labs",
       "license": "proprietary",
-      "votes": 70682,
-      "score": 1442,
-      "ci_low": 10,
-      "ci_high": 10,
+      "votes": 30684,
+      "score": 1450,
+      "ci_low": 5,
+      "ci_high": 5,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -190,17 +190,17 @@
     {
       "rank": 10,
       "rank_spread": [
-        9,
+        8,
         10
       ],
-      "model": "wan2.7-i2v",
-      "model_url": "https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video-to-elevate-creators-from-executors-to-directors_603009",
-      "vendor": "Alibaba",
+      "model": "happyhorse-1.0",
+      "model_url": "https://x.com/happyhorseath/status/2044974356577611861?s=46",
+      "vendor": "Alibaba-ATH",
       "license": "proprietary",
-      "votes": 72878,
-      "score": 1428,
-      "ci_low": 5,
-      "ci_high": 5,
+      "votes": 70658,
+      "score": 1442,
+      "ci_low": 10,
+      "ci_high": 10,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -213,14 +213,14 @@
         11,
         11
       ],
-      "model": "grok-imagine-video-720p",
-      "model_url": "https://docs.x.ai/docs/guides/video-generations",
-      "vendor": "SpaceXAI",
+      "model": "wan2.7-i2v",
+      "model_url": "https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video-to-elevate-creators-from-executors-to-directors_603009",
+      "vendor": "Alibaba",
       "license": "proprietary",
-      "votes": 536070,
-      "score": 1415,
-      "ci_low": 4,
-      "ci_high": 4,
+      "votes": 80260,
+      "score": 1426,
+      "ci_low": 5,
+      "ci_high": 5,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -231,16 +231,16 @@
       "rank": 12,
       "rank_spread": [
         12,
-        15
+        12
       ],
-      "model": "veo-3.1-audio",
-      "model_url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
-      "vendor": "Google",
+      "model": "grok-imagine-video-720p",
+      "model_url": "https://docs.x.ai/docs/guides/video-generations",
+      "vendor": "SpaceXAI",
       "license": "proprietary",
-      "votes": 25112,
-      "score": 1398,
-      "ci_low": 11,
-      "ci_high": 11,
+      "votes": 546908,
+      "score": 1415,
+      "ci_low": 4,
+      "ci_high": 4,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -250,17 +250,17 @@
     {
       "rank": 13,
       "rank_spread": [
-        12,
-        15
+        13,
+        16
       ],
-      "model": "veo-3.1-audio-1080p",
+      "model": "veo-3.1-audio",
       "model_url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
       "vendor": "Google",
       "license": "proprietary",
-      "votes": 53108,
-      "score": 1390,
-      "ci_low": 9,
-      "ci_high": 9,
+      "votes": 25116,
+      "score": 1398,
+      "ci_low": 10,
+      "ci_high": 10,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -270,15 +270,15 @@
     {
       "rank": 14,
       "rank_spread": [
-        12,
+        13,
         16
       ],
-      "model": "veo-3.1-fast-audio",
+      "model": "veo-3.1-audio-1080p",
       "model_url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
       "vendor": "Google",
       "license": "proprietary",
-      "votes": 99830,
-      "score": 1385,
+      "votes": 53107,
+      "score": 1390,
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
@@ -290,17 +290,17 @@
     {
       "rank": 15,
       "rank_spread": [
-        12,
-        16
+        13,
+        17
       ],
-      "model": "grok-imagine-video-480p",
-      "model_url": "https://docs.x.ai/docs/guides/video-generations",
-      "vendor": "SpaceXAI",
+      "model": "veo-3.1-fast-audio",
+      "model_url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
+      "vendor": "Google",
       "license": "proprietary",
-      "votes": 19424,
-      "score": 1384,
-      "ci_low": 8,
-      "ci_high": 8,
+      "votes": 99810,
+      "score": 1385,
+      "ci_low": 9,
+      "ci_high": 9,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -310,17 +310,17 @@
     {
       "rank": 16,
       "rank_spread": [
-        14,
-        18
+        13,
+        17
       ],
-      "model": "veo-3.1-fast-audio-1080p",
-      "model_url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
-      "vendor": "Google",
+      "model": "grok-imagine-video-480p",
+      "model_url": "https://docs.x.ai/docs/guides/video-generations",
+      "vendor": "SpaceXAI",
       "license": "proprietary",
-      "votes": 54402,
-      "score": 1371,
-      "ci_low": 10,
-      "ci_high": 10,
+      "votes": 19427,
+      "score": 1385,
+      "ci_low": 8,
+      "ci_high": 8,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -330,15 +330,15 @@
     {
       "rank": 17,
       "rank_spread": [
-        16,
+        15,
         18
       ],
-      "model": "vidu-q3-pro",
-      "model_url": "https://www.vidu.com/",
-      "vendor": "Shengshu",
+      "model": "veo-3.1-fast-audio-1080p",
+      "model_url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
+      "vendor": "Google",
       "license": "proprietary",
-      "votes": 36683,
-      "score": 1363,
+      "votes": 54392,
+      "score": 1372,
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
@@ -350,17 +350,17 @@
     {
       "rank": 18,
       "rank_spread": [
-        16,
-        18
+        17,
+        19
       ],
-      "model": "kling-v3-pro",
-      "model_url": "https://fal.ai/models/fal-ai/kling-video/v3/pro/image-to-video",
-      "vendor": "KlingAI",
+      "model": "vidu-q3-pro",
+      "model_url": "https://www.vidu.com/",
+      "vendor": "Shengshu",
       "license": "proprietary",
-      "votes": 188320,
-      "score": 1356,
-      "ci_low": 6,
-      "ci_high": 6,
+      "votes": 36685,
+      "score": 1363,
+      "ci_low": 9,
+      "ci_high": 9,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -370,8 +370,28 @@
     {
       "rank": 19,
       "rank_spread": [
-        19,
-        21
+        18,
+        19
+      ],
+      "model": "kling-v3-pro",
+      "model_url": "https://fal.ai/models/fal-ai/kling-video/v3/pro/image-to-video",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "votes": 199238,
+      "score": 1355,
+      "ci_low": 6,
+      "ci_high": 6,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 20,
+      "rank_spread": [
+        20,
+        22
       ],
       "model": "veo-3-audio",
       "model_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/veo-video-generation",
@@ -388,37 +408,17 @@
       "signals": null
     },
     {
-      "rank": 20,
+      "rank": 21,
       "rank_spread": [
-        19,
-        22
+        20,
+        23
       ],
       "model": "veo-3-fast-audio",
       "model_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/veo-video-generation",
       "vendor": "Google",
       "license": "proprietary",
-      "votes": 41193,
+      "votes": 41194,
       "score": 1326,
-      "ci_low": 9,
-      "ci_high": 9,
-      "preliminary": false,
-      "price_prompt": null,
-      "price_completion": null,
-      "context_length": null,
-      "signals": null
-    },
-    {
-      "rank": 21,
-      "rank_spread": [
-        19,
-        23
-      ],
-      "model": "wan2.5-i2v-preview",
-      "model_url": "https://modelstudio.console.alibabacloud.com/?tab=api#/api/?type=model&url=2867393",
-      "vendor": "Alibaba",
-      "license": "proprietary",
-      "votes": 16909,
-      "score": 1321,
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
@@ -433,14 +433,14 @@
         20,
         24
       ],
-      "model": "wan2.6-i2v",
+      "model": "wan2.5-i2v-preview",
       "model_url": "https://modelstudio.console.alibabacloud.com/?tab=api#/api/?type=model&url=2867393",
       "vendor": "Alibaba",
       "license": "proprietary",
-      "votes": 112315,
-      "score": 1310,
-      "ci_low": 7,
-      "ci_high": 7,
+      "votes": 16913,
+      "score": 1321,
+      "ci_low": 10,
+      "ci_high": 10,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -453,12 +453,12 @@
         21,
         25
       ],
-      "model": "seedance-v1.5-pro",
-      "model_url": "https://seed.bytedance.com/en/seedance1_5_pro",
-      "vendor": "Bytedance",
+      "model": "wan2.6-i2v",
+      "model_url": "https://modelstudio.console.alibabacloud.com/?tab=api#/api/?type=model&url=2867393",
+      "vendor": "Alibaba",
       "license": "proprietary",
-      "votes": 245260,
-      "score": 1307,
+      "votes": 116288,
+      "score": 1310,
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
@@ -471,14 +471,14 @@
       "rank": 24,
       "rank_spread": [
         22,
-        25
+        26
       ],
-      "model": "pixverse-v5.6",
-      "model_url": "https://app.pixverse.ai/onboard",
-      "vendor": null,
-      "license": null,
-      "votes": 126756,
-      "score": 1299,
+      "model": "seedance-v1.5-pro",
+      "model_url": "https://seed.bytedance.com/en/seedance1_5_pro",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "votes": 245233,
+      "score": 1307,
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
@@ -493,14 +493,14 @@
         23,
         26
       ],
-      "model": "kling-2.6-pro",
-      "model_url": "https://app.klingai.com/global/release-notes/c605hp1tzd?type=dialog",
-      "vendor": "KlingAI",
-      "license": "proprietary",
-      "votes": 202181,
-      "score": 1293,
-      "ci_low": 8,
-      "ci_high": 8,
+      "model": "pixverse-v5.6",
+      "model_url": "https://app.pixverse.ai/onboard",
+      "vendor": null,
+      "license": null,
+      "votes": 126713,
+      "score": 1299,
+      "ci_low": 7,
+      "ci_high": 7,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -510,17 +510,17 @@
     {
       "rank": 26,
       "rank_spread": [
-        25,
-        30
+        24,
+        27
       ],
-      "model": "kling-2.5-turbo-1080p",
-      "model_url": "https://app.klingai.com/global/image-to-video/frame-mode/new?ra=4",
+      "model": "kling-2.6-pro",
+      "model_url": "https://app.klingai.com/global/release-notes/c605hp1tzd?type=dialog",
       "vendor": "KlingAI",
       "license": "proprietary",
-      "votes": 3796,
-      "score": 1275,
-      "ci_low": 13,
-      "ci_high": 13,
+      "votes": 202157,
+      "score": 1294,
+      "ci_low": 8,
+      "ci_high": 8,
       "preliminary": false,
       "price_prompt": null,
       "price_completion": null,
@@ -531,7 +531,27 @@
       "rank": 27,
       "rank_spread": [
         26,
-        30
+        31
+      ],
+      "model": "kling-2.5-turbo-1080p",
+      "model_url": "https://app.klingai.com/global/image-to-video/frame-mode/new?ra=4",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "votes": 3796,
+      "score": 1276,
+      "ci_low": 13,
+      "ci_high": 13,
+      "preliminary": false,
+      "price_prompt": null,
+      "price_completion": null,
+      "context_length": null,
+      "signals": null
+    },
+    {
+      "rank": 28,
+      "rank_spread": [
+        27,
+        31
       ],
       "model": "seedance-v1-pro",
       "model_url": "https://seed.bytedance.com/en/seedance",
@@ -548,17 +568,17 @@
       "signals": null
     },
     {
-      "rank": 28,
+      "rank": 29,
       "rank_spread": [
-        26,
-        32
+        27,
+        33
       ],
       "model": "hailuo-2.3",
       "model_url": "https://hailuoai.video/",
       "vendor": "MiniMax",
       "license": "proprietary",
-      "votes": 372163,
-      "score": 1261,
+      "votes": 394450,
+      "score": 1262,
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
@@ -568,10 +588,10 @@
       "signals": null
     },
     {
-      "rank": 29,
+      "rank": 30,
       "rank_spread": [
-        26,
-        32
+        27,
+        33
       ],
       "model": "veo-3",
       "model_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/veo-video-generation",
@@ -588,10 +608,10 @@
       "signals": null
     },
     {
-      "rank": 30,
+      "rank": 31,
       "rank_spread": [
-        26,
-        32
+        27,
+        33
       ],
       "model": "veo-3-fast",
       "model_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/veo-video-generation",
@@ -608,17 +628,17 @@
       "signals": null
     },
     {
-      "rank": 31,
+      "rank": 32,
       "rank_spread": [
-        28,
-        38
+        29,
+        39
       ],
       "model": "p-video",
       "model_url": "https://www.pruna.ai/p-video",
       "vendor": null,
       "license": null,
-      "votes": 23373,
-      "score": 1243,
+      "votes": 23365,
+      "score": 1244,
       "ci_low": 16,
       "ci_high": 16,
       "preliminary": false,
@@ -628,10 +648,10 @@
       "signals": null
     },
     {
-      "rank": 32,
+      "rank": 33,
       "rank_spread": [
-        28,
-        38
+        29,
+        39
       ],
       "model": "vidu-q2-turbo",
       "model_url": "https://shengshu.feishu.cn/wiki/LGayww6Dni4Uijkb2N0crvuznhh",
@@ -648,10 +668,10 @@
       "signals": null
     },
     {
-      "rank": 33,
+      "rank": 34,
       "rank_spread": [
-        31,
-        38
+        32,
+        39
       ],
       "model": "kling-v2.1-master",
       "model_url": "https://fal.ai/models/fal-ai/kling-video/v2.1/master/text-to-video",
@@ -668,17 +688,17 @@
       "signals": null
     },
     {
-      "rank": 34,
+      "rank": 35,
       "rank_spread": [
-        31,
-        38
+        32,
+        39
       ],
       "model": "hailuo-02-pro",
       "model_url": "https://www.minimax.io/news/minimax-hailuo-02",
       "vendor": "MiniMax",
       "license": "proprietary",
       "votes": 21743,
-      "score": 1228,
+      "score": 1229,
       "ci_low": 11,
       "ci_high": 11,
       "preliminary": false,
@@ -688,17 +708,17 @@
       "signals": null
     },
     {
-      "rank": 35,
+      "rank": 36,
       "rank_spread": [
-        31,
-        38
+        32,
+        39
       ],
       "model": "kling-v2.1-standard",
       "model_url": "https://fal.ai/models/fal-ai/kling-video/v2.1/standard/image-to-video",
       "vendor": "KlingAI",
       "license": "proprietary",
       "votes": 29957,
-      "score": 1228,
+      "score": 1229,
       "ci_low": 8,
       "ci_high": 8,
       "preliminary": false,
@@ -708,17 +728,17 @@
       "signals": null
     },
     {
-      "rank": 36,
+      "rank": 37,
       "rank_spread": [
-        31,
-        39
+        32,
+        40
       ],
       "model": "ray-3",
       "model_url": "https://lumalabs.ai/ray",
       "vendor": "Luma AI",
       "license": "proprietary",
       "votes": 1585,
-      "score": 1225,
+      "score": 1226,
       "ci_low": 19,
       "ci_high": 19,
       "preliminary": false,
@@ -728,17 +748,17 @@
       "signals": null
     },
     {
-      "rank": 37,
+      "rank": 38,
       "rank_spread": [
-        31,
-        38
+        32,
+        39
       ],
       "model": "hailuo-02-standard",
       "model_url": "https://www.minimax.io/news/minimax-hailuo-02",
       "vendor": "MiniMax",
       "license": "proprietary",
       "votes": 21785,
-      "score": 1223,
+      "score": 1224,
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
@@ -748,10 +768,10 @@
       "signals": null
     },
     {
-      "rank": 38,
+      "rank": 39,
       "rank_spread": [
-        31,
-        39
+        32,
+        40
       ],
       "model": "vidu-q2-pro",
       "model_url": "https://shengshu.feishu.cn/wiki/LGayww6Dni4Uijkb2N0crvuznhh",
@@ -768,17 +788,17 @@
       "signals": null
     },
     {
-      "rank": 39,
+      "rank": 40,
       "rank_spread": [
-        37,
-        41
+        38,
+        42
       ],
       "model": "hunyuan-video-1.5",
       "model_url": "https://hunyuan.tencent.com/video/en?tabIndex=0",
       "vendor": "Tencent",
       "license": "open",
-      "votes": 5462,
-      "score": 1197,
+      "votes": 5463,
+      "score": 1198,
       "ci_low": 16,
       "ci_high": 16,
       "preliminary": false,
@@ -788,17 +808,17 @@
       "signals": null
     },
     {
-      "rank": 40,
+      "rank": 41,
       "rank_spread": [
-        39,
-        41
+        40,
+        42
       ],
       "model": "hailuo-02-fast",
       "model_url": "https://www.minimax.io/news/minimax-hailuo-02",
       "vendor": "MiniMax",
       "license": "proprietary",
       "votes": 22519,
-      "score": 1193,
+      "score": 1194,
       "ci_low": 11,
       "ci_high": 11,
       "preliminary": false,
@@ -808,10 +828,10 @@
       "signals": null
     },
     {
-      "rank": 41,
+      "rank": 42,
       "rank_spread": [
-        39,
-        43
+        40,
+        44
       ],
       "model": "seedance-v1-lite",
       "model_url": "https://seed.bytedance.com/en/seedance",
@@ -828,10 +848,10 @@
       "signals": null
     },
     {
-      "rank": 42,
+      "rank": 43,
       "rank_spread": [
-        41,
-        44
+        42,
+        45
       ],
       "model": "wan-v2.2-a14b",
       "model_url": "https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B",
@@ -848,17 +868,17 @@
       "signals": null
     },
     {
-      "rank": 43,
+      "rank": 44,
       "rank_spread": [
-        41,
-        44
+        42,
+        45
       ],
       "model": "veo-2",
       "model_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/models/veo/2-0-generate-001",
       "vendor": "Google",
       "license": "proprietary",
       "votes": 10303,
-      "score": 1165,
+      "score": 1166,
       "ci_low": 16,
       "ci_high": 16,
       "preliminary": false,
@@ -868,17 +888,17 @@
       "signals": null
     },
     {
-      "rank": 44,
+      "rank": 45,
       "rank_spread": [
-        42,
-        44
+        43,
+        45
       ],
       "model": "ltx-2-19b",
       "model_url": "https://huggingface.co/Lightricks/LTX-2",
       "vendor": null,
       "license": null,
-      "votes": 243434,
-      "score": 1156,
+      "votes": 255128,
+      "score": 1159,
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
@@ -888,10 +908,10 @@
       "signals": null
     },
     {
-      "rank": 45,
+      "rank": 46,
       "rank_spread": [
-        45,
-        45
+        46,
+        46
       ],
       "model": "ray2",
       "model_url": "https://lumalabs.ai/ray",
@@ -908,10 +928,10 @@
       "signals": null
     },
     {
-      "rank": 46,
+      "rank": 47,
       "rank_spread": [
-        46,
-        46
+        47,
+        47
       ],
       "model": "runway-gen4-turbo",
       "model_url": "https://runwayml.com/research/introducing-runway-gen-4",
@@ -928,10 +948,10 @@
       "signals": null
     },
     {
-      "rank": 47,
+      "rank": 48,
       "rank_spread": [
-        47,
-        47
+        48,
+        48
       ],
       "model": "pika-v2.2",
       "model_url": "https://fal.ai/models/fal-ai/pika/v2.2/text-to-video",
