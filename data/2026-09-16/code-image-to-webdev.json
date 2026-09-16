@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "code-image-to-webdev",
     "source_url": "https://arena.ai/leaderboard/code/image-to-webdev",
-    "fetched_at": "2026-09-16T00:44:48.885215+00:00",
+    "fetched_at": "2026-09-16T06:39:16.109695+00:00",
     "last_updated": "Sep 13, 2026",
     "model_count": 50
   },
@@ -523,7 +523,7 @@
       "ci_high": 21,
       "preliminary": false,
       "price_prompt": 0.71,
-      "price_completion": 3.5,
+      "price_completion": 3.21,
       "context_length": 262100,
       "signals": null
     },
