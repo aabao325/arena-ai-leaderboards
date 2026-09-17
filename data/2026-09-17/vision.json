@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "vision",
     "source_url": "https://arena.ai/leaderboard/vision",
-    "fetched_at": "2026-09-17T17:13:47.826494+00:00",
+    "fetched_at": "2026-09-17T20:31:29.863625+00:00",
     "last_updated": "Sep 13, 2026",
     "model_count": 152
   },
@@ -13,7 +13,7 @@
         1,
         8
       ],
-      "model": "claude-fable-5",
+      "model": "claude-fable-5-high",
       "model_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
       "vendor": "Anthropic",
       "license": "proprietary",
