@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "image-to-video",
     "source_url": "https://arena.ai/leaderboard/image-to-video",
-    "fetched_at": "2026-09-20T06:55:23.350377+00:00",
+    "fetched_at": "2026-09-20T07:00:31.095282+00:00",
     "last_updated": "Sep 14, 2026",
     "model_count": 48
   },
@@ -11,7 +11,7 @@
       "rank": 1,
       "model": "minimax-h3",
       "vendor": "MiniMax",
-      "license": "proprietary",
+      "license": "open",
       "score": 1494.0,
       "ci": 5.0,
       "votes": 49443
@@ -362,7 +362,7 @@
       "rank": 40,
       "model": "hunyuan-video-1.5",
       "vendor": "Tencent",
-      "license": "proprietary",
+      "license": "open",
       "score": 1198.0,
       "ci": 16.0,
       "votes": 5463
@@ -407,7 +407,7 @@
       "rank": 45,
       "model": "ltx-2-19b",
       "vendor": null,
-      "license": "proprietary",
+      "license": "open",
       "score": 1159.0,
       "ci": 5.0,
       "votes": 255128
