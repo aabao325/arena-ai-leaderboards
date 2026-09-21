@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text-to-video",
     "source_url": "https://arena.ai/leaderboard/text-to-video",
-    "fetched_at": "2026-09-21T07:00:27.694038+00:00",
+    "fetched_at": "2026-09-21T07:03:47.740546+00:00",
     "last_updated": "Sep 4, 2026",
     "model_count": 48
   },
@@ -74,7 +74,7 @@
       "rank": 8,
       "model": "minimax-h3",
       "vendor": "MiniMax",
-      "license": "proprietary",
+      "license": "open",
       "score": 1462.0,
       "ci": 10.0,
       "votes": 7648
@@ -344,7 +344,7 @@
       "rank": 38,
       "model": "hunyuan-video-1.5",
       "vendor": "Tencent",
-      "license": "proprietary",
+      "license": "open",
       "score": 1169.0,
       "ci": 16.0,
       "votes": 4278
@@ -371,7 +371,7 @@
       "rank": 41,
       "model": "ltx-2-19b",
       "vendor": null,
-      "license": "proprietary",
+      "license": "open",
       "score": 1154.0,
       "ci": 8.0,
       "votes": 70324
