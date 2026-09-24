@@ -395,47 +395,72 @@ def parse_leaderboard(content: str) -> list[dict]:
     return models
 
 
+# flat（div 网格）版式的块锚点：每个模型块以 [rank, 排名区间下界, 排名区间上界] 三个
+# 连续数字行打头，数字行之间夹着 Jina 对空单元格输出的空白行，之后一行是模型名。
+# 空白行的空白字符数量可能随上游渲染/Jina 的 Tab 处理变化，故用 [ \t]* 容错而不写死 '\t'。
+FLAT_BLOCK_ANCHOR = re.compile(
+    r"(?:^|\n)(\d{1,4})\n[ \t]*\n(\d{1,4})\n(\d{1,4})\n[ \t]*\n([^\n]+)\n"
+)
+
+
 def parse_leaderboard_flat(content: str) -> list[dict]:
     """回退解析：当 arena.ai 把榜单以 div 网格渲染、Jina 转不出 markdown 表格时使用。
 
-    页面本身已（部分）抓到，模型数据以 flat-text 呈现。以 'Vendor · License' 行为锚点：
-    - 模型名 = 锚点前一行；
-    - 锚点前（跨过 '\t' 分隔行，直到真正空行为界）有恰好 3 个数字 [rank, 区间下界, 区间上界]，
-      据此还原真实排名与排名区间（实测同一份数据 328/328 都是这个结构）；
-    - 锚点之后若干行依次是 score(纯数字)、±CI、一行 tab 分隔的 投票数/价格/上下文。
-    没有模型链接（留 null）。与 parse_leaderboard 输出同构。返回空列表表示没解析到模型。
+    这类版式在 Jina markdown 里是「每个模型一个固定形状的 rank 结构」：
 
-    注意：div 网格常是虚拟列表，Jina 只抓到已渲染的行，故此路径可能漏掉部分靠后模型
-    （不完整）。markdown 表格路径才是完整来源，本函数仅作 arena 以网格渲染时的兜底。
+        <rank>
+        <空单元格行>
+        <排名区间下界>
+        <排名区间上界>
+        <空单元格行>
+        <模型名>
+        <厂商 · 许可证>          # 没有厂商的老模型，这一行只有许可证
+        <空单元格行>
+        <score>
+        ±<CI>                    # 有些行在这之后另起一行写 Preliminary
+        <投票数>\\t<提示价> / <补全价>\\t<上下文长度>
+
+    分块方式：每个 rank 结构是一个块起点，块内容 = 到下一个块起点为止的文本。
+
+    之所以用 rank 结构、而不是以往那种「找含 ' · ' 的行」作锚点：后者会漏掉
+    **没有厂商的模型** —— 它们的许可证行里没有 ' · '（如 'Apache 2.0'、'MIT'、
+    'CC-BY-NC-4.0'），旧写法直接 `if " · " not in line: continue` 把这几十条整行丢掉。
+    实测 arena.ai 的 text 榜 402 条里有 50 条属于这种，于是只能解析出 352 条，
+    再被完整性闸门判定「残缺」、连续沿用旧快照 —— 页面时间戳因此长期不动。
+
+    没有模型链接（留 null）。与 parse_leaderboard 输出同构。返回空列表表示没解析到模型。
     """
-    lines = content.split("\n")
+    hits = list(FLAT_BLOCK_ANCHOR.finditer(content))
     models = []
-    for i, line in enumerate(lines):
-        if " · " not in line:
-            continue
-        name = lines[i - 1].strip() if i > 0 else ""
+    for i, m in enumerate(hits):
+        block_end = hits[i + 1].start() if i + 1 < len(hits) else len(content)
+        block_lines = content[m.end():block_end].split("\n")
+
+        name = m.group(4).strip()
         if not name:
             continue
-        vendor, license_ = split_vendor_license(line.strip())
-        # 向前回溯取 [rank, 区间下界, 区间上界]：跨过 '\t' 分隔行，遇真正空行('')为界
-        head_nums = []
-        j = i - 2
-        while j >= 0 and lines[j] != "":
-            tj = lines[j].strip()
-            if re.fullmatch(r"\d+", tj):
-                head_nums.insert(0, int(tj))
-            j -= 1
-        if len(head_nums) == 3:
-            rank_val = head_nums[0]
-            rank_spread_val = [head_nums[1], head_nums[2]]
-        else:
-            rank_val = None          # 结构异常时留 null，由 schema/前端各自兜底
-            rank_spread_val = None
-        seg = lines[i + 1:i + 7]
+
+        # 块首行：'厂商 · 许可证'；没有厂商的模型这一行只有许可证（个别老模型只标厂商）
+        vendor = license_ = None
+        first = block_lines[0].strip() if block_lines else ""
+        if " · " in first:
+            vendor, license_ = split_vendor_license(first)
+        elif first:
+            if first in VENDORS:
+                vendor = first                    # 只写了厂商、没写许可证
+            else:
+                license_ = normalize_license(first)
+
+        # 其后依次是 score、±CI、一行 tab 分隔的 投票数/价格/上下文，中间可能夹 Preliminary。
+        # 逐行按形状取值，不依赖行号，这样 6 行块和 7 行块都能吃。
         score = ci = votes = None
         price_prompt = price_completion = context_length = None
-        for s in seg:
+        preliminary = False
+        for s in block_lines[1:14]:
             st = s.strip()
+            if "Preliminary" in st:
+                preliminary = True
+                continue
             if score is None and re.fullmatch(r"\d{3,4}", st):
                 score = int(st)
             elif ci is None and st.startswith("±"):
@@ -452,10 +477,11 @@ def parse_leaderboard_flat(content: str) -> list[dict]:
                     elif re.fullmatch(r"[\d.]+[KM]", ps, re.IGNORECASE):
                         context_length = parse_context(ps)
         if score is None:
-            continue  # 没有分数的行不是有效模型行（如页脚/装饰）
+            # 结构对不上：多为 div 网格只渲染了骨架（模型名整段缺失），不是有效模型行
+            continue
         models.append({
-            "rank": rank_val if rank_val is not None else len(models) + 1,
-            "rank_spread": rank_spread_val,
+            "rank": int(m.group(1)),
+            "rank_spread": [int(m.group(2)), int(m.group(3))],
             "model": name,
             "model_url": None,
             "vendor": vendor,
@@ -464,7 +490,7 @@ def parse_leaderboard_flat(content: str) -> list[dict]:
             "score": score,
             "ci_low": ci,
             "ci_high": ci,
-            "preliminary": False,
+            "preliminary": preliminary,
             "price_prompt": price_prompt,
             "price_completion": price_completion,
             "context_length": context_length,
@@ -497,8 +523,11 @@ def carry_over_last_snapshot(data_root: Path, today_dir: Path, file_slug: str):
 
 
 def last_snapshot_model_count(data_root: Path, today_dir: Path, file_slug: str):
-    """读最近一个历史快照里该分类的 model_count，用于判断本次结果是否明显残缺。
-    找不到历史快照返回 None。"""
+    """读最近一个历史快照里该分类的 model_count。
+
+    仅用于日志/诊断参考，**不再参与完整性门控**：拿历史快照当基准一旦上游精简模型
+    就会长期误判残缺（text 曾因此连续 30 天沿用旧快照），门控已改看页面自述总数
+    （见 page_reported_model_count）。找不到历史快照返回 None。"""
     date_re = re.compile(r"^\d{4}-\d{2}-\d{2}$")
     day_dirs = sorted(
         (d for d in data_root.iterdir()
@@ -516,9 +545,28 @@ def last_snapshot_model_count(data_root: Path, today_dir: Path, file_slug: str):
     return None
 
 
-# flat 回退解析的结果若不足上一个完整快照的这个比例，判定为「明显残缺」，
+# flat 回退解析的结果若不足完整性基准的这个比例，判定为「明显残缺」，
 # 宁可沿用上一个完整快照（完整优先），也不写残缺数据。
 FLAT_COMPLETENESS_MIN_RATIO = 0.95
+
+# 榜单页面前言里会自述模型总数，如 '402 models'。这是比「上一次快照的 model_count」
+# 更可靠的完整性基准：模型数会随上游增删而真实变化，拿旧快照当基准一旦页面少了模型
+# 就永远判定残缺，反而把该分类冻结在旧数据上（text 曾因此连续 30 天沿用旧快照，
+# 前端时间戳一直不动）。页面自述总数随页面同步变化，不会失真。
+#
+# 必须写成「同一行、复数 models」：页面里的筛选器下拉还会出现形如 '1510\nModel'、
+# '1 Model' 的碎片，若用 \s+ 跨行、models? 放行单数，就会把它们当成自述总数，
+# 基准被抬高到 1510 后门控永远判残缺 —— 正是要修的那个僵局，只是换了个来源。
+PAGE_TOTAL_RE = re.compile(r"(\d[\d,]*)[ \t]+models\b", re.IGNORECASE)
+
+
+def page_reported_model_count(content: str):
+    """取榜单页面自述的模型总数（如前言里的 '402 models'）。取不到返回 None。"""
+    m = PAGE_TOTAL_RE.search(content or "")
+    if not m:
+        return None
+    n = int(m.group(1).replace(",", ""))
+    return n or None
 
 
 def main():
@@ -582,22 +630,25 @@ def main():
                 _, _, header_idx = table
             else:
                 # markdown 表格始终没出现（arena.ai 把该榜以 div 网格渲染，Jina 转不出表格）。
-                # 改用 flat-text 回退解析：以 'Vendor · License' 行为锚点，前一行=模型名，
-                # 锚点前 3 个数字=[rank, 区间下界, 区间上界]，其后为 score/±CI/投票/价格/上下文。
-                # 此路径拿不到模型链接（留 null）。注意：div 网格是虚拟列表，Jina 只抓到已渲染的行，
-                # 结果可能明显残缺（少掉靠后模型）。
+                # 改用 flat-text 回退解析：以「rank 结构」为锚点定位每个模型块（见
+                # parse_leaderboard_flat 的说明，早期版本以 'Vendor · License' 行作锚点，
+                # 会把没有厂商的模型整条丢掉）。此路径拿不到模型链接（留 null）。
                 flat = parse_leaderboard_flat(content or "")
                 if not flat:
                     raise last_soft_err or ValueError("no leaderboard table found in fetched content")
-                # 完整优先：flat 结果若明显少于上一个完整快照，判定为残缺，宁可抛错走「沿用旧快照」，
-                # 也不写残缺数据覆盖掉完整的历史快照（避免前端榜单突然少一截）。
-                prev_count = last_snapshot_model_count(repo_root / "data", day_dir, file_slug)
-                if prev_count and len(flat) < prev_count * FLAT_COMPLETENESS_MIN_RATIO:
+                # 完整优先：解析结果若明显少于页面自述的模型数，判定本次渲染残缺，宁可抛错走
+                # 「沿用旧快照」，也不写残缺数据覆盖掉完整的历史快照（避免前端榜单少一截）。
+                # 基准取页面自述总数而非上次快照的 model_count —— 后者一旦上游精简模型就会
+                # 长期误判残缺，把该分类永久冻结（text 曾连续 30 天沿用旧快照即由此而来）。
+                page_total = page_reported_model_count(content)
+                if page_total and len(flat) < page_total * FLAT_COMPLETENESS_MIN_RATIO:
                     raise ValueError(
-                        f"flat 回退仅得 {len(flat)} 个模型，明显少于上次快照 {prev_count} 个"
-                        f"（阈值 {FLAT_COMPLETENESS_MIN_RATIO:.0%}），判定残缺，改为沿用完整旧快照")
+                        f"flat 回退仅得 {len(flat)} 个模型，明显少于页面自述 {page_total} 个"
+                        f"（阈值 {FLAT_COMPLETENESS_MIN_RATIO:.0%}），判定本次渲染残缺，"
+                        f"改为沿用完整旧快照")
                 print(f"  markdown 表格缺失，改用 flat-text 回退解析：得到 {len(flat)} 个模型"
-                      + (f"（上次快照 {prev_count} 个，达标）" if prev_count else ""),
+                      + (f"（页面自述 {page_total} 个，达标）" if page_total
+                         else "（页面未自述总数，跳过完整性比对）"),
                       file=sys.stderr)
                 models = flat
                 header_idx = None  # flat 无表头行，last_updated 从整页 preamble 提取
