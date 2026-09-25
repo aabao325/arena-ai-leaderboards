@@ -1,9 +1,9 @@
 {
   "date": "2026-09-25",
-  "fetched_at": "2026-09-25T14:07:27.716989+00:00",
+  "fetched_at": "2026-09-25T18:50:31.348830+00:00",
   "leaderboards": {
     "agent": {
-      "model_count": 43
+      "model_count": 44
     },
     "text": {
       "model_count": 402
