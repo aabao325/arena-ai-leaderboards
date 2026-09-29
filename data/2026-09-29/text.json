@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text",
     "source_url": "https://arena.ai/leaderboard/text",
-    "fetched_at": "2026-09-29T02:15:29.268540+00:00",
+    "fetched_at": "2026-09-29T08:58:47.308257+00:00",
     "last_updated": "Sep 25, 2026",
     "model_count": 409
   },
@@ -1242,8 +1242,8 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.08,
-      "price_completion": 0.33,
+      "price_prompt": 0.13,
+      "price_completion": 0.53,
       "context_length": 262100,
       "signals": null
     },
@@ -2322,8 +2322,8 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.13,
-      "price_completion": 0.2,
+      "price_prompt": 0.27,
+      "price_completion": 0.41,
       "context_length": 163800,
       "signals": null
     },
@@ -2462,8 +2462,8 @@
       "ci_low": 6,
       "ci_high": 6,
       "preliminary": false,
-      "price_prompt": 0.13,
-      "price_completion": 0.2,
+      "price_prompt": 0.27,
+      "price_completion": 0.41,
       "context_length": 163800,
       "signals": null
     },
@@ -2582,7 +2582,7 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.27,
+      "price_prompt": 0.3,
       "price_completion": 1.0,
       "context_length": 163800,
       "signals": null
@@ -2702,7 +2702,7 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.27,
+      "price_prompt": 0.3,
       "price_completion": 1.0,
       "context_length": 163800,
       "signals": null
@@ -3622,8 +3622,8 @@
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
-      "price_prompt": 0.1,
-      "price_completion": 0.3,
+      "price_prompt": 0.05,
+      "price_completion": 0.19,
       "context_length": 262100,
       "signals": null
     },
@@ -4862,8 +4862,8 @@
       "ci_low": 5,
       "ci_high": 5,
       "preliminary": false,
-      "price_prompt": 0.12,
-      "price_completion": 0.5,
+      "price_prompt": 0.13,
+      "price_completion": 0.52,
       "context_length": 131100,
       "signals": null
     },
