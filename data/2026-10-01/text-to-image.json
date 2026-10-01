@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "leaderboard": "text-to-image",
+    "source_url": "https://arena.ai/leaderboard/text-to-image",
+    "fetched_at": "2026-10-01T07:44:14.361670+00:00",
+    "last_updated": "Sep 24, 2026",
+    "model_count": 20
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1424.0,
+      "ci": 8.0,
+      "votes": 10884
+    },
+    {
+      "rank": 2,
+      "model": "gpt-image-2.5-flare",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1401.0,
+      "ci": 8.0,
+      "votes": 10058
+    },
+    {
+      "rank": 3,
+      "model": "gpt-image-2 (medium)",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1383.0,
+      "ci": 4.0,
+      "votes": 88744
+    },
+    {
+      "rank": 4,
+      "model": "mai-image-2.6",
+      "vendor": "Microsoft AI",
+      "license": "proprietary",
+      "score": 1335.0,
+      "ci": 6.0,
+      "votes": 18625
+    },
+    {
+      "rank": 5,
+      "model": "reve-2.1",
+      "vendor": "Reve",
+      "license": "proprietary",
+      "score": 1302.0,
+      "ci": 8.0,
+      "votes": 8305
+    },
+    {
+      "rank": 6,
+      "model": "grok-imagine-image-2.0 (low)",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "score": 1301.0,
+      "ci": 8.0,
+      "votes": 7257
+    },
+    {
+      "rank": 7,
+      "model": "muse-image",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "score": 1276.0,
+      "ci": 5.0,
+      "votes": 35422
+    },
+    {
+      "rank": 8,
+      "model": "reve-2.0",
+      "vendor": "Reve",
+      "license": "proprietary",
+      "score": 1269.0,
+      "ci": 6.0,
+      "votes": 15802
+    },
+    {
+      "rank": 9,
+      "model": "gemini-3.1-flash-image (nano-banana-2) [web-search]",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1261.0,
+      "ci": 4.0,
+      "votes": 53228
+    },
+    {
+      "rank": 10,
+      "model": "seedream-5.0-pro",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "score": 1256.0,
+      "ci": 4.0,
+      "votes": 85690
+    },
+    {
+      "rank": 11,
+      "model": "qwen-image-3.0-pro",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "score": 1256.0,
+      "ci": 6.0,
+      "votes": 11520
+    },
+    {
+      "rank": 12,
+      "model": "mai-image-2.5",
+      "vendor": "Microsoft AI",
+      "license": "proprietary",
+      "score": 1254.0,
+      "ci": 4.0,
+      "votes": 61448
+    },
+    {
+      "rank": 13,
+      "model": "gemini-3.1-flash-lite-image (nano-banana-2-lite)",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1250.0,
+      "ci": 6.0,
+      "votes": 17851
+    },
+    {
+      "rank": 14,
+      "model": "gemini-3-pro-image-2k (nano-banana-pro)",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1247.0,
+      "ci": 3.0,
+      "votes": 168447
+    },
+    {
+      "rank": 15,
+      "model": "gpt-image-1.5-high-fidelity",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1238.0,
+      "ci": 3.0,
+      "votes": 165437
+    },
+    {
+      "rank": 16,
+      "model": "gemini-3-pro-image-preview (nano-banana-pro)",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1234.0,
+      "ci": 5.0,
+      "votes": 86451
+    },
+    {
+      "rank": 17,
+      "model": "qwen-image-2.1",
+      "vendor": "Alibaba",
+      "license": null,
+      "score": 1228.0,
+      "ci": 9.0,
+      "votes": 4445
+    },
+    {
+      "rank": 18,
+      "model": "ideogram-4.0-quality",
+      "vendor": "Ideogram",
+      "license": "open",
+      "score": 1205.0,
+      "ci": 4.0,
+      "votes": 53371
+    },
+    {
+      "rank": 19,
+      "model": "qwen-image-2.0-pro-2026-06-22",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "score": 1192.0,
+      "ci": 6.0,
+      "votes": 13123
+    },
+    {
+      "rank": 20,
+      "model": "uni-1.1-max",
+      "vendor": "Luma AI",
+      "license": "proprietary",
+      "score": 1189.0,
+      "ci": 6.0,
+      "votes": 14083
+    }
+  ]
+}
