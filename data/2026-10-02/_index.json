@@ -1,12 +1,12 @@
 {
   "date": "2026-10-02",
-  "fetched_at": "2026-10-02T15:57:00.413811+00:00",
+  "fetched_at": "2026-10-02T20:55:47.308426+00:00",
   "leaderboards": {
     "agent": {
-      "model_count": 48
+      "model_count": 51
     },
     "text": {
-      "model_count": 410
+      "model_count": 413
     },
     "code-webdev": {
       "model_count": 138
@@ -15,7 +15,7 @@
       "model_count": 50
     },
     "vision": {
-      "model_count": 156
+      "model_count": 159
     },
     "document": {
       "model_count": 44

@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text-to-image",
     "source_url": "https://arena.ai/leaderboard/text-to-image",
-    "fetched_at": "2026-10-02T15:57:00.413811+00:00",
+    "fetched_at": "2026-10-02T20:55:47.308426+00:00",
     "last_updated": "Sep 24, 2026",
     "model_count": 81
   },
@@ -101,7 +101,7 @@
       "score": 1335,
       "ci_low": 12,
       "ci_high": 12,
-      "preliminary": false,
+      "preliminary": true,
       "price_prompt": null,
       "price_completion": null,
       "context_length": null,
