@@ -1,0 +1,409 @@
+{
+  "meta": {
+    "leaderboard": "agent",
+    "source_url": "https://arena.ai/leaderboard/agent",
+    "fetched_at": "2026-10-03T07:03:29.820019+00:00",
+    "last_updated": "Oct 2, 2026",
+    "model_count": 10,
+    "dimensions": [
+      "Net Improvement",
+      "Confirmed Success",
+      "Praise vs Complaint",
+      "Steerability",
+      "Bash Recovery",
+      "Tool Hallucination"
+    ]
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "Claude Fable 5.1 (Max)",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "scores": [
+        {
+          "name": "Net Improvement",
+          "score": 14.31,
+          "ci": 1.9
+        },
+        {
+          "name": "Confirmed Success",
+          "score": 17.64,
+          "ci": 2.82
+        },
+        {
+          "name": "Praise vs Complaint",
+          "score": 32.19,
+          "ci": 7.71
+        },
+        {
+          "name": "Steerability",
+          "score": 8.84,
+          "ci": 2.86
+        },
+        {
+          "name": "Bash Recovery",
+          "score": 12.39,
+          "ci": 0.96
+        },
+        {
+          "name": "Tool Hallucination",
+          "score": 0.48,
+          "ci": 0.03
+        }
+      ],
+      "sessions": 15130
+    },
+    {
+      "rank": 2,
+      "model": "Claude Opus 5.5 (High)",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "scores": [
+        {
+          "name": "Net Improvement",
+          "score": 13.82,
+          "ci": 2.17
+        },
+        {
+          "name": "Confirmed Success",
+          "score": 14.12,
+          "ci": 4.06
+        },
+        {
+          "name": "Praise vs Complaint",
+          "score": 31.23,
+          "ci": 8.72
+        },
+        {
+          "name": "Steerability",
+          "score": 10.48,
+          "ci": 2.38
+        },
+        {
+          "name": "Bash Recovery",
+          "score": 12.78,
+          "ci": 0.87
+        },
+        {
+          "name": "Tool Hallucination",
+          "score": 0.47,
+          "ci": 0.04
+        }
+      ],
+      "sessions": 5359
+    },
+    {
+      "rank": 3,
+      "model": "Claude Sonnet 5.5 (Max)",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "scores": [
+        {
+          "name": "Net Improvement",
+          "score": 12.52,
+          "ci": 3.09
+        },
+        {
+          "name": "Confirmed Success",
+          "score": 13.91,
+          "ci": 5.35
+        },
+        {
+          "name": "Praise vs Complaint",
+          "score": 26.27,
+          "ci": 13.05
+        },
+        {
+          "name": "Steerability",
+          "score": 6.9,
+          "ci": 3.07
+        },
+        {
+          "name": "Bash Recovery",
+          "score": 15.05,
+          "ci": 2.36
+        },
+        {
+          "name": "Tool Hallucination",
+          "score": 0.47,
+          "ci": 0.04
+        }
+      ],
+      "sessions": 5219
+    },
+    {
+      "rank": 4,
+      "model": "GPT 6 Astra (Max)",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "scores": [
+        {
+          "name": "Net Improvement",
+          "score": 12.27,
+          "ci": 2.23
+        },
+        {
+          "name": "Confirmed Success",
+          "score": 13.24,
+          "ci": 3.7
+        },
+        {
+          "name": "Praise vs Complaint",
+          "score": 34.63,
+          "ci": 9.33
+        },
+        {
+          "name": "Steerability",
+          "score": 7.75,
+          "ci": 2.64
+        },
+        {
+          "name": "Bash Recovery",
+          "score": 5.34,
+          "ci": 1.8
+        },
+        {
+          "name": "Tool Hallucination",
+          "score": 0.39,
+          "ci": 0.14
+        }
+      ],
+      "sessions": 11717
+    },
+    {
+      "rank": 5,
+      "model": "GPT 6.1 Sol (Max)",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "scores": [
+        {
+          "name": "Net Improvement",
+          "score": 11.23,
+          "ci": 2.76
+        },
+        {
+          "name": "Confirmed Success",
+          "score": 15.47,
+          "ci": 4.1
+        },
+        {
+          "name": "Praise vs Complaint",
+          "score": 25.53,
+          "ci": 12.05
+        },
+        {
+          "name": "Steerability",
+          "score": 11.18,
+          "ci": 2.78
+        },
+        {
+          "name": "Bash Recovery",
+          "score": 3.47,
+          "ci": 1.71
+        },
+        {
+          "name": "Tool Hallucination",
+          "score": 0.49,
+          "ci": 0.03
+        }
+      ],
+      "sessions": 6278
+    },
+    {
+      "rank": 6,
+      "model": "GPT 6 Sol (Max)",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "scores": [
+        {
+          "name": "Net Improvement",
+          "score": 9.71,
+          "ci": 2.37
+        },
+        {
+          "name": "Confirmed Success",
+          "score": 7.13,
+          "ci": 4.3
+        },
+        {
+          "name": "Praise vs Complaint",
+          "score": 23.06,
+          "ci": 9.6
+        },
+        {
+          "name": "Steerability",
+          "score": 11.23,
+          "ci": 2.04
+        },
+        {
+          "name": "Bash Recovery",
+          "score": 7.01,
+          "ci": 1.84
+        },
+        {
+          "name": "Tool Hallucination",
+          "score": 0.12,
+          "ci": 0.14
+        }
+      ],
+      "sessions": 6106
+    },
+    {
+      "rank": 7,
+      "model": "Claude Opus 5 (High)",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "scores": [
+        {
+          "name": "Net Improvement",
+          "score": 8.67,
+          "ci": 1.41
+        },
+        {
+          "name": "Confirmed Success",
+          "score": 7.56,
+          "ci": 2.99
+        },
+        {
+          "name": "Praise vs Complaint",
+          "score": 16.56,
+          "ci": 5.2
+        },
+        {
+          "name": "Steerability",
+          "score": 6.63,
+          "ci": 1.78
+        },
+        {
+          "name": "Bash Recovery",
+          "score": 12.13,
+          "ci": 0.83
+        },
+        {
+          "name": "Tool Hallucination",
+          "score": 0.48,
+          "ci": 0.03
+        }
+      ],
+      "sessions": 27560
+    },
+    {
+      "rank": 8,
+      "model": "Claude Fable 5 (High)",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "scores": [
+        {
+          "name": "Net Improvement",
+          "score": 8.21,
+          "ci": 1.22
+        },
+        {
+          "name": "Confirmed Success",
+          "score": 6.07,
+          "ci": 2.61
+        },
+        {
+          "name": "Praise vs Complaint",
+          "score": 17.08,
+          "ci": 4.57
+        },
+        {
+          "name": "Steerability",
+          "score": 8.9,
+          "ci": 1.31
+        },
+        {
+          "name": "Bash Recovery",
+          "score": 8.52,
+          "ci": 1.31
+        },
+        {
+          "name": "Tool Hallucination",
+          "score": 0.49,
+          "ci": 0.03
+        }
+      ],
+      "sessions": 41832
+    },
+    {
+      "rank": 9,
+      "model": "Claude Opus 5 (Max)",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "scores": [
+        {
+          "name": "Net Improvement",
+          "score": 7.92,
+          "ci": 1.47
+        },
+        {
+          "name": "Confirmed Success",
+          "score": 9.52,
+          "ci": 3.07
+        },
+        {
+          "name": "Praise vs Complaint",
+          "score": 12.01,
+          "ci": 5.43
+        },
+        {
+          "name": "Steerability",
+          "score": 4.35,
+          "ci": 2.02
+        },
+        {
+          "name": "Bash Recovery",
+          "score": 13.27,
+          "ci": 0.76
+        },
+        {
+          "name": "Tool Hallucination",
+          "score": 0.47,
+          "ci": 0.04
+        }
+      ],
+      "sessions": 22781
+    },
+    {
+      "rank": 10,
+      "model": "Gemini 4 Argon (High)",
+      "vendor": "Google",
+      "license": "proprietary",
+      "scores": [
+        {
+          "name": "Net Improvement",
+          "score": 7.57,
+          "ci": 1.93
+        },
+        {
+          "name": "Confirmed Success",
+          "score": 15.44,
+          "ci": 2.96
+        },
+        {
+          "name": "Praise vs Complaint",
+          "score": 27.72,
+          "ci": 7.58
+        },
+        {
+          "name": "Steerability",
+          "score": 13.48,
+          "ci": 1.74
+        },
+        {
+          "name": "Bash Recovery",
+          "score": 18.93,
+          "ci": 3.49
+        },
+        {
+          "name": "Tool Hallucination",
+          "score": 0.13,
+          "ci": 0.22
+        }
+      ],
+      "sessions": 10030
+    }
+  ]
+}
