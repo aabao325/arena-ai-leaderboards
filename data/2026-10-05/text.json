@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "text",
     "source_url": "https://arena.ai/leaderboard/text",
-    "fetched_at": "2026-10-05T17:21:40.591018+00:00",
+    "fetched_at": "2026-10-05T23:20:15.128162+00:00",
     "last_updated": "Oct 2, 2026",
     "model_count": 413
   },
@@ -1342,8 +1342,8 @@
       "ci_low": 7,
       "ci_high": 7,
       "preliminary": false,
-      "price_prompt": 0.13,
-      "price_completion": 0.53,
+      "price_prompt": 0.08,
+      "price_completion": 0.33,
       "context_length": 262100,
       "signals": null
     },
@@ -2442,7 +2442,7 @@
       "ci_low": 3,
       "ci_high": 3,
       "preliminary": false,
-      "price_prompt": 0.28,
+      "price_prompt": 0.26,
       "price_completion": 0.42,
       "context_length": 163800,
       "signals": null
@@ -2502,7 +2502,7 @@
       "ci_low": 4,
       "ci_high": 4,
       "preliminary": false,
-      "price_prompt": 0.28,
+      "price_prompt": 0.26,
       "price_completion": 0.42,
       "context_length": 163800,
       "signals": null
@@ -2662,7 +2662,7 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.27,
+      "price_prompt": 0.3,
       "price_completion": 1.0,
       "context_length": 163800,
       "signals": null
@@ -2762,7 +2762,7 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": false,
-      "price_prompt": 0.27,
+      "price_prompt": 0.3,
       "price_completion": 1.0,
       "context_length": 163800,
       "signals": null

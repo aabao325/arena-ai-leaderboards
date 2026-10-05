@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "agent",
     "source_url": "https://arena.ai/leaderboard/agent",
-    "fetched_at": "2026-10-05T17:21:40.591018+00:00",
+    "fetched_at": "2026-10-05T23:20:15.128162+00:00",
     "last_updated": "Oct 2, 2026",
     "model_count": 51
   },
@@ -1867,8 +1867,8 @@
       "ci_low": null,
       "ci_high": null,
       "preliminary": false,
-      "price_prompt": 0.13,
-      "price_completion": 0.53,
+      "price_prompt": 0.08,
+      "price_completion": 0.33,
       "context_length": null,
       "signals": {
         "net_improvement": {
