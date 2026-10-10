@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "code-webdev",
     "source_url": "https://arena.ai/leaderboard/code/webdev",
-    "fetched_at": "2026-10-10T01:11:13.993446+00:00",
+    "fetched_at": "2026-10-10T07:42:08.560549+00:00",
     "last_updated": "Oct 8, 2026",
     "model_count": 142
   },
@@ -362,8 +362,8 @@
       "ci_low": 10,
       "ci_high": 10,
       "preliminary": true,
-      "price_prompt": 0.75,
-      "price_completion": 2.25,
+      "price_prompt": 0.83,
+      "price_completion": 2.5,
       "context_length": 1000000,
       "signals": null
     },
@@ -1122,8 +1122,8 @@
       "ci_low": 9,
       "ci_high": 9,
       "preliminary": false,
-      "price_prompt": 0.08,
-      "price_completion": 0.33,
+      "price_prompt": 0.13,
+      "price_completion": 0.53,
       "context_length": 262100,
       "signals": null
     },
@@ -1762,8 +1762,8 @@
       "ci_low": 12,
       "ci_high": 12,
       "preliminary": false,
-      "price_prompt": 0.45,
-      "price_completion": 2.25,
+      "price_prompt": 0.5,
+      "price_completion": 2.5,
       "context_length": 262100,
       "signals": null
     },
@@ -1904,7 +1904,7 @@
       "preliminary": false,
       "price_prompt": 3.0,
       "price_completion": 15.0,
-      "context_length": 1000000,
+      "context_length": 200000,
       "signals": null
     },
     {
@@ -2103,7 +2103,7 @@
       "ci_high": 9,
       "preliminary": false,
       "price_prompt": 0.26,
-      "price_completion": 0.42,
+      "price_completion": 0.8,
       "context_length": 163800,
       "signals": null
     },
@@ -2383,7 +2383,7 @@
       "ci_high": 8,
       "preliminary": false,
       "price_prompt": 0.26,
-      "price_completion": 0.42,
+      "price_completion": 0.8,
       "context_length": 163800,
       "signals": null
     },
