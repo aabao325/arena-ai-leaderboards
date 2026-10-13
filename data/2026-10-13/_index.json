@@ -1,15 +1,15 @@
 {
   "date": "2026-10-13",
-  "fetched_at": "2026-10-13T12:06:24.001225+00:00",
+  "fetched_at": "2026-10-13T19:29:35.909663+00:00",
   "leaderboards": {
     "agent": {
       "model_count": 52
     },
     "text": {
-      "model_count": 414
+      "model_count": 415
     },
     "code-webdev": {
-      "model_count": 142
+      "model_count": 143
     },
     "code-image-to-webdev": {
       "model_count": 64
@@ -21,7 +21,7 @@
       "model_count": 44
     },
     "search": {
-      "model_count": 34
+      "model_count": 42
     },
     "text-to-image": {
       "model_count": 82
