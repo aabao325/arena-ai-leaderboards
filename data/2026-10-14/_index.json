@@ -1,24 +1,20 @@
 {
   "date": "2026-10-14",
-  "fetched_at": "2026-10-14T02:07:20.170357+00:00",
-  "leaderboards": {
-    "agent": {
-      "model_count": 52
-    },
-    "text": {
-      "model_count": 415
-    },
-    "code-webdev": {
-      "model_count": 143
-    },
-    "text-to-image": {
-      "model_count": 82
-    },
-    "text-to-video": {
-      "model_count": 48
-    }
-  },
+  "fetched_at": "2026-10-14T07:58:34.280781+00:00",
+  "leaderboards": {},
   "errors": [
+    {
+      "leaderboard": "agent",
+      "error": "no leaderboard table found in fetched content"
+    },
+    {
+      "leaderboard": "text",
+      "error": "no leaderboard table found in fetched content"
+    },
+    {
+      "leaderboard": "code-webdev",
+      "error": "no leaderboard table found in fetched content"
+    },
     {
       "leaderboard": "code-image-to-webdev",
       "error": "no leaderboard table found in fetched content"
@@ -36,7 +32,15 @@
       "error": "no leaderboard table found in fetched content"
     },
     {
+      "leaderboard": "text-to-image",
+      "error": "no leaderboard table found in fetched content"
+    },
+    {
       "leaderboard": "image-edit",
+      "error": "no leaderboard table found in fetched content"
+    },
+    {
+      "leaderboard": "text-to-video",
       "error": "no leaderboard table found in fetched content"
     },
     {
