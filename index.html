@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 模型排行榜 — Arena AI 每日数据</title>
+  <meta name="description" content="查看最新的 AI 模型排名、ELO 分数、投票数和趋势变化">
+  <style>
+    :root {
+      --bg-0: #05070C;
+      --bg-1: #0A0D12;
+      --bg-2: #0F131C;
+      --bg-3: #161D2B;
+      --bg-4: #1E2636;
+      --accent: #3B6DFF;
+      --accent-dim: #2A4FB8;
+      --text-pri: #F8FAFC;
+      --text-sec: #94A3B8;
+      --text-ter: #64748B;
+      --border: #1E293B;
+      --success: #6EE7B7;
+      --warning: #E9A568;
+      --error: #F87171;
+
+      --space-1: clamp(0.25rem, 0.5vw, 0.5rem);
+      --space-2: clamp(0.5rem, 1vw, 0.75rem);
+      --space-3: clamp(0.75rem, 1.5vw, 1rem);
+      --space-4: clamp(1rem, 2vw, 1.5rem);
+      --space-6: clamp(1.5rem, 3vw, 2.5rem);
+      --space-8: clamp(2rem, 4vw, 3.5rem);
+
+      --text-xs: clamp(0.75rem, 1.5vw, 0.8125rem);
+      --text-sm: clamp(0.875rem, 1.75vw, 0.9375rem);
+      --text-base: clamp(1rem, 2vw, 1.0625rem);
+      --text-lg: clamp(1.125rem, 2.25vw, 1.25rem);
+      --text-xl: clamp(1.25rem, 2.5vw, 1.5rem);
+      --text-2xl: clamp(1.5rem, 3vw, 2rem);
+      --text-3xl: clamp(1.875rem, 3.75vw, 2.5rem);
+      --text-4xl: clamp(2.25rem, 4.5vw, 3.5rem);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-0);
+      color: var(--text-pri);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: var(--space-6) var(--space-4);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: var(--space-8);
+    }
+
+    h1 {
+      font-size: var(--text-4xl);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-3);
+      background: linear-gradient(135deg, var(--text-pri) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: var(--text-lg);
+      color: var(--text-sec);
+      margin-bottom: var(--space-6);
+    }
+
+    .category-tabs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: var(--space-2);
+      margin-bottom: var(--space-6);
+      background: var(--bg-1);
+      padding: var(--space-3);
+      border-radius: 999px;
+    }
+
+    .category-tab {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-sec);
+      padding: var(--space-2) var(--space-4);
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .category-tab:hover {
+      background: var(--bg-2);
+      color: var(--text-pri);
+    }
+
+    .category-tab.active {
+      background: var(--accent);
+      color: var(--text-pri);
+      border-color: var(--accent);
+    }
+
+    .stat-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+    }
+
+    .stat-card {
+      background: var(--bg-2);
+      padding: var(--space-4);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .stat-label {
+      font-size: var(--text-xs);
+      color: var(--text-ter);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-2);
+    }
+
+    .stat-value {
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      color: var(--text-pri);
+    }
+
+    .stat-change {
+      font-size: var(--text-sm);
+      margin-top: var(--space-1);
+    }
+
+    .stat-change.up { color: var(--success); }
+    .stat-change.down { color: var(--error); }
+
+    .table-container {
+      background: var(--bg-1);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background: var(--bg-2);
+    }
+
+    th {
+      padding: var(--space-3) var(--space-4);
+      text-align: left;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--text-sec);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th.number {
+      text-align: right;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    tbody tr:hover {
+      background: var(--bg-2);
+    }
+
+    td {
+      padding: var(--space-3) var(--space-4);
+      font-size: var(--text-sm);
+    }
+
+    td.number {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .rank-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: var(--text-sm);
+    }
+
+    .rank-badge.top1 {
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+      color: #000;
+    }
+
+    .rank-badge.top2 {
+      background: linear-gradient(135deg, #C0C0C0 0%, #808080 100%);
+      color: #000;
+    }
+
+    .rank-badge.top3 {
+      background: linear-gradient(135deg, #CD7F32 0%, #8B4513 100%);
+      color: #FFF;
+    }
+
+    .rank-badge.normal {
+      background: var(--bg-3);
+      color: var(--text-sec);
+    }
+
+    .model-name {
+      font-weight: 600;
+      color: var(--text-pri);
+      margin-bottom: var(--space-1);
+    }
+
+    .vendor {
+      font-size: var(--text-xs);
+      color: var(--text-ter);
+    }
+
+    .license-badge {
+      display: inline-block;
+      padding: var(--space-1) var(--space-2);
+      border-radius: 999px;
+      font-size: var(--text-xs);
+      font-weight: 500;
+    }
+
+    .license-badge.open {
+      background: color-mix(in srgb, var(--success) 15%, transparent);
+      color: var(--success);
+    }
+
+    .license-badge.proprietary {
+      background: color-mix(in srgb, var(--accent) 15%, transparent);
+      color: var(--accent);
+    }
+
+    .score-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: var(--space-1);
+    }
+
+    .score-main {
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--text-pri);
+    }
+
+    .score-ci {
+      font-size: var(--text-xs);
+      color: var(--text-ter);
+    }
+
+    .loading {
+      text-align: center;
+      padding: var(--space-8);
+      font-size: var(--text-lg);
+      color: var(--text-sec);
+    }
+
+    .error {
+      background: color-mix(in srgb, var(--error) 10%, var(--bg-2));
+      border: 1px solid var(--error);
+      padding: var(--space-4);
+      border-radius: 12px;
+      color: var(--error);
+      text-align: center;
+    }
+
+    .update-time {
+      text-align: center;
+      margin-top: var(--space-6);
+      font-size: var(--text-sm);
+      color: var(--text-ter);
+    }
+
+    @media (max-width: 768px) {
+      .category-tabs {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        border-radius: 16px;
+      }
+
+      .category-tab {
+        border-radius: 12px;
+        font-size: var(--text-xs);
+      }
+
+      .stat-cards {
+        grid-template-columns: 1fr;
+      }
+
+      th, td {
+        padding: var(--space-2);
+      }
+
+      .vendor {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏆 AI 模型排行榜</h1>
+      <p class="subtitle">基于 Arena AI 真实用户投票的每日排名数据</p>
+    </header>
+
+    <div class="category-tabs" id="categoryTabs"></div>
+
+    <div class="stat-cards" id="statCards"></div>
+
+    <div class="table-container">
+      <div class="loading" id="loading">正在加载数据...</div>
+      <div class="error" id="error" style="display: none;"></div>
+      <table id="leaderboardTable" style="display: none;">
+        <thead id="tableHead"></thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="update-time" id="updateTime"></div>
+  </div>
+
+  <script>
+    const CATEGORIES = [
+      { key: 'text', label: '💬 对话文本', icon: '💬' },
+      { key: 'code', label: '💻 代码生成', icon: '💻' },
+      { key: 'vision', label: '👁️ 图像理解', icon: '👁️' },
+      { key: 'document', label: '📄 文档理解', icon: '📄' },
+      { key: 'text-to-image', label: '🎨 文生图', icon: '🎨' },
+      { key: 'image-edit', label: '✂️ 图片编辑', icon: '✂️' },
+      { key: 'search', label: '🔍 AI 搜索', icon: '🔍' },
+      { key: 'text-to-video', label: '🎬 文生视频', icon: '🎬' },
+      { key: 'image-to-video', label: '🎞️ 图生视频', icon: '🎞️' },
+      { key: 'video-edit', label: '🎥 视频编辑', icon: '🎥' },
+      { key: 'agent', label: '🤖 AI Agent', icon: '🤖' },
+    ];
+
+    let currentCategory = 'text';
+    let currentData = null;
+
+    // 初始化分类标签
+    function initCategoryTabs() {
+      const container = document.getElementById('categoryTabs');
+      container.innerHTML = CATEGORIES.map(cat => `
+        <button
+          class="category-tab ${cat.key === currentCategory ? 'active' : ''}"
+          data-category="${cat.key}"
+          onclick="switchCategory('${cat.key}')"
+        >
+          ${cat.label}
+        </button>
+      `).join('');
+    }
+
+    // 切换分类
+    async function switchCategory(category) {
+      currentCategory = category;
+      document.querySelectorAll('.category-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.category === category);
+      });
+      await loadData(category);
+    }
+
+    // 加载数据
+    async function loadData(category) {
+      const loading = document.getElementById('loading');
+      const error = document.getElementById('error');
+      const table = document.getElementById('leaderboardTable');
+
+      loading.style.display = 'block';
+      error.style.display = 'none';
+      table.style.display = 'none';
+
+      try {
+        // 尝试从多个数据源加载
+        const sources = [
+          `https://raw.githubusercontent.com/aabao325/arena-ai-leaderboards/main/data/latest/${category}.json`,
+          `./data/latest/${category}.json`,
+        ];
+
+        let data = null;
+        for (const url of sources) {
+          try {
+            const res = await fetch(url);
+            if (res.ok) {
+              data = await res.json();
+              break;
+            }
+          } catch (e) {
+            console.warn(`Failed to load from ${url}:`, e);
+          }
+        }
+
+        if (!data) {
+          throw new Error('无法加载数据，请稍后重试');
+        }
+
+        currentData = data;
+        renderStats(data);
+        renderTable(data);
+        renderUpdateTime(data);
+
+        loading.style.display = 'none';
+        table.style.display = 'table';
+
+      } catch (e) {
+        loading.style.display = 'none';
+        error.style.display = 'block';
+        error.textContent = `❌ ${e.message}`;
+      }
+    }
+
+    // 渲染统计卡片
+    function renderStats(data) {
+      const container = document.getElementById('statCards');
+      const models = data.models || [];
+      const topScore = models[0]?.score || 0;
+      const avgScore = models.length > 0
+        ? Math.round(models.reduce((s, m) => s + (m.score || 0), 0) / models.length)
+        : 0;
+      const totalVotes = models.reduce((s, m) => s + (m.votes || 0), 0);
+
+      container.innerHTML = `
+        <div class="stat-card">
+          <div class="stat-label">参与模型数</div>
+          <div class="stat-value">${models.length}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">冠军分数</div>
+          <div class="stat-value">${topScore}</div>
+          <div class="stat-change">${models[0]?.model || 'N/A'}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">平均分数</div>
+          <div class="stat-value">${avgScore}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">总投票数</div>
+          <div class="stat-value">${(totalVotes / 1000).toFixed(1)}K</div>
+        </div>
+      `;
+    }
+
+    // 渲染表格
+    function renderTable(data) {
+      const thead = document.getElementById('tableHead');
+      const tbody = document.getElementById('tableBody');
+
+      thead.innerHTML = `
+        <tr>
+          <th>排名</th>
+          <th>模型</th>
+          <th>授权</th>
+          <th class="number">ELO 分数</th>
+          <th class="number">投票数</th>
+        </tr>
+      `;
+
+      tbody.innerHTML = (data.models || []).map(model => {
+        const rankClass = model.rank === 1 ? 'top1' :
+                         model.rank === 2 ? 'top2' :
+                         model.rank === 3 ? 'top3' : 'normal';
+
+        return `
+          <tr>
+            <td>
+              <span class="rank-badge ${rankClass}">${model.rank}</span>
+            </td>
+            <td>
+              <div class="model-name">${model.model}</div>
+              ${model.vendor ? `<div class="vendor">${model.vendor}</div>` : ''}
+            </td>
+            <td>
+              ${model.license ? `<span class="license-badge ${model.license}">${model.license === 'open' ? '开源' : '闭源'}</span>` : '<span style="color: var(--text-ter);">—</span>'}
+            </td>
+            <td class="number">
+              ${model.score ? `
+                <div class="score-group">
+                  <span class="score-main">${model.score}</span>
+                  ${model.ci ? `<span class="score-ci">±${model.ci}</span>` : ''}
+                </div>
+              ` : '<span style="color: var(--text-ter);">—</span>'}
+            </td>
+            <td class="number">
+              ${model.votes ? (model.votes >= 1000 ? `${(model.votes / 1000).toFixed(1)}K` : model.votes) : '<span style="color: var(--text-ter);">—</span>'}
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // 渲染更新时间
+    function renderUpdateTime(data) {
+      const container = document.getElementById('updateTime');
+      if (data.meta?.fetched_at) {
+        const date = new Date(data.meta.fetched_at);
+        container.textContent = `数据更新时间：${date.toLocaleString('zh-CN')}`;
+      }
+    }
+
+    // 初始化
+    initCategoryTabs();
+    loadData(currentCategory);
+  </script>
+</body>
+</html>
