@@ -83,7 +83,7 @@ SIGNAL_COLUMNS = {
 
 
 def fetch_page(url: str, jina_api_key: str | None = None, fmt: str = "markdown",
-               wait_timeout: int | None = None) -> str:
+               wait_timeout: int | None = None, user_agent_idx: int = 0) -> str:
     """Fetch a page via Jina Reader; returns the raw JSON-wrapped response text.
 
     wait_timeout（秒）を渡すと Jina に `x-timeout` を指定する。Jina は既定では
@@ -91,12 +91,23 @@ def fetch_page(url: str, jina_api_key: str | None = None, fmt: str = "markdown",
     巨大ページでは表がまだ描画されていない骨組みが返ることがある。x-timeout を
     付けると Jina は network-idle まで（最大 180s）待ってから返すので、
     大ページでも表が揃った状態を取りやすくなる（docs: x-timeout≥20 で最も完全）。
+
+    user_agent_idx: User-Agent 轮换索引，降低被识别为机器人的概率（2026-10-14 新增）。
     """
+    # User-Agent 池：轮换使用，降低被封禁风险
+    user_agents = [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/131.0",
+    ]
+
     reader_url = f"{JINA_READER_BASE}{url}"
     headers = {
         "Accept": "application/json",
         "X-Return-Format": fmt,
-        "User-Agent": "Mozilla/5.0 (compatible; arena-leaderboard-bot/1.0)",
+        "User-Agent": user_agents[user_agent_idx % len(user_agents)],
     }
     if jina_api_key:
         headers["Authorization"] = f"Bearer {jina_api_key}"
@@ -588,10 +599,15 @@ def main():
     errors = []
     carried = []  # 本次抓取失败、改为沿用历史快照的分类
 
-    for file_slug, url_path in LEADERBOARDS:
+    for category_idx, (file_slug, url_path) in enumerate(LEADERBOARDS):
         print(f"\n{'='*50}", file=sys.stderr)
         print(f"Processing: {file_slug} ({url_path})", file=sys.stderr)
         url = f"{ARENA_BASE}{url_path}"
+
+        # 分类间增加间隔，避免触发 Jina 限流（2026-10-14 新增）
+        if category_idx > 0:
+            time.sleep(3)
+
         try:
             # 无 key 免费层偶发「HTTP 200 但页面表格没渲染出来」（尤其 text 这种大页面），
             # fetch_page 的重试只覆盖网络错误，覆不到这种「拿到了但内容不全」的情况。
@@ -602,13 +618,16 @@ def main():
             models = None
             last_soft_err = None
             # リトライごとに Jina の待ち時間(x-timeout)を段階的に上げる：
-            # 1回目=既定(速い) → 2回目=25s → 3回目=45s。text のような巨大ページは
+            # 1回目=既定(速い) → 2回目=30s → 3回目=60s → 4回目=90s → 5回目=120s。
+            # 2026-10-13 晚开始，arena.ai 改版导致 Jina 抓取成功率骤降，原来的 45s 已不够用，
+            # 提升到 120s 并增加重试次数以提高稳定性。text のような巨大ページは
             # 描画完了に時間がかかるので、回を追うごとに network-idle まで待たせて
             # 「表がまだ無い骨組み」が返るのを防ぐ。小さいページは1回目で通るので無駄がない。
-            wait_timeouts = [None, 25, 45]
-            for content_attempt in range(3):
+            wait_timeouts = [None, 30, 60, 90, 120]
+            for content_attempt in range(len(wait_timeouts)):
                 try:
-                    raw = fetch_page(url, jina_key, wait_timeout=wait_timeouts[content_attempt])
+                    raw = fetch_page(url, jina_key, wait_timeout=wait_timeouts[content_attempt],
+                                   user_agent_idx=category_idx * 10 + content_attempt)
                     payload = json.loads(raw)
                     content = payload["data"]["content"]
                     table = find_table(content)
@@ -620,11 +639,12 @@ def main():
                     break  # 拿到有效数据，跳出重试
                 except ValueError as soft_e:
                     last_soft_err = soft_e
-                    nxt = wait_timeouts[content_attempt + 1] if content_attempt < 2 else None
+                    nxt = wait_timeouts[content_attempt + 1] if content_attempt < len(wait_timeouts) - 1 else None
                     print(f"  content attempt {content_attempt+1} incomplete: {soft_e}"
                           + (f"; 下次用 x-timeout={nxt}s 重试" if nxt else ""), file=sys.stderr)
-                    if content_attempt < 2:
-                        time.sleep(5 * (content_attempt + 1))
+                    if content_attempt < len(wait_timeouts) - 1:
+                        # 增加重试间隔，避免触发 Jina 限流（2026-10-14 优化）
+                        time.sleep(8 * (content_attempt + 1))
             if models:
                 # markdown 表格路径成功
                 _, _, header_idx = table
@@ -658,7 +678,8 @@ def main():
             # 额外拉一次 HTML 模式，扫描每一行的符号标记，回填到已解析的 signals 里。
             if file_slug == "agent":
                 try:
-                    html_raw = fetch_page(url, jina_key, fmt="html")
+                    html_raw = fetch_page(url, jina_key, fmt="html",
+                                        user_agent_idx=category_idx * 10 + 100)
                     html_payload = json.loads(html_raw)
                     html_content = html_payload["data"]["html"]
                     ordered_names = [m["model"] for m in sorted(models, key=lambda x: x["rank"] or 0)]
