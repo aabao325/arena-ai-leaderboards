@@ -27,24 +27,32 @@ from jsonschema import Draft202012Validator
 JINA_READER_BASE = "https://r.jina.ai/"
 ARENA_BASE = "https://arena.ai/leaderboard/"
 
-# 已验证可用的榜单分类，对应 arena.ai 页面 footer "LEADERBOARD RANKINGS" 列表。
-# 每项是 (文件名用的 slug, 实际请求路径)：Code 分类下 arena.ai 有两个独立子榜
-# —— /leaderboard/code 与 /leaderboard/code/webdev 内容完全相同（前者只是后者的别名），
-# 真正独立的第二个子榜是 /leaderboard/code/image-to-webdev，之前的版本遗漏了它。
-# 文件名不能带斜杠，所以 "code/webdev" 落盘成 code-webdev.json。
+# 2026-10-15 更新：arena.ai 改版，新的 URL 结构为 /leaderboard/{category}/{subcategory}
+# 旧版 URL（如 /ranking/text、/ranking/vision）现在全部 404
+# 新版分类引入了三级层次（例如 Image -> Image Edit Arena -> Single/Multi Image Edit -> subcats）
+# 文件名不能带斜杠，所以 "chat/text" 落盘成 text.json（保持向后兼容）
 LEADERBOARDS = [
-    ("agent", "agent"),
-    ("text", "text"),
+    # Agent（单独一个子类）
+    ("agent", "agent/agent"),
+
+    # Chat（4 个子类：原 text/search/vision/document 移到 chat 下）
+    ("text", "chat/text"),
+    ("search", "chat/search"),
+    ("vision", "chat/vision"),
+    ("document", "chat/document"),
+
+    # Code（2 个子类）
     ("code-webdev", "code/webdev"),
     ("code-image-to-webdev", "code/image-to-webdev"),
-    ("vision", "vision"),
-    ("document", "document"),
-    ("search", "search"),
-    ("text-to-image", "text-to-image"),
-    ("image-edit", "image-edit"),
-    ("text-to-video", "text-to-video"),
-    ("image-to-video", "image-to-video"),
-    ("video-edit", "video-edit"),
+
+    # Image（3 个子类；image-edit 默认抓 overall，暂不拆分 single/multi 的 8 个 subcats）
+    ("image-edit", "image/image-edit"),
+    ("text-to-image", "image/text-to-image"),
+    ("image-to-video", "image/image-to-video"),
+
+    # Video（2 个子类）
+    ("text-to-video", "video/text-to-video"),
+    ("video-edit", "video/video-edit"),
 ]
 
 # 厂商白名单：按长度降序匹配，避免短词（如 "AI"）在匹配更长厂商名（如 "Microsoft AI"）
@@ -108,6 +116,7 @@ def fetch_page(url: str, jina_api_key: str | None = None, fmt: str = "markdown",
         "Accept": "application/json",
         "X-Return-Format": fmt,
         "User-Agent": user_agents[user_agent_idx % len(user_agents)],
+        # X-With-Generated-Alt 需要付费账户（会 401），已移除
     }
     if jina_api_key:
         headers["Authorization"] = f"Bearer {jina_api_key}"
@@ -629,6 +638,13 @@ def main():
                     raw = fetch_page(url, jina_key, wait_timeout=wait_timeouts[content_attempt],
                                    user_agent_idx=category_idx * 10 + content_attempt)
                     payload = json.loads(raw)
+
+                    # 2026-10-15: 检查 Cloudflare 403 拦截
+                    http_status = payload.get("data", {}).get("httpStatus", 200)
+                    warning = payload.get("data", {}).get("warning", "")
+                    if http_status == 403 or "403: Forbidden" in warning:
+                        raise ValueError(f"Cloudflare 403 blocked (attempt {content_attempt+1})")
+
                     content = payload["data"]["content"]
                     table = find_table(content)
                     if not table:
@@ -649,10 +665,28 @@ def main():
                 # markdown 表格路径成功
                 _, _, header_idx = table
             else:
-                # markdown 表格始终没出现（arena.ai 把该榜以 div 网格渲染，Jina 转不出表格）。
+                # markdown 表格始终没出现 或 遇到 Cloudflare 403（2026-10-15 新增后者）。
                 # 改用 flat-text 回退解析：以「rank 结构」为锚点定位每个模型块（见
                 # parse_leaderboard_flat 的说明，早期版本以 'Vendor · License' 行作锚点，
                 # 会把没有厂商的模型整条丢掉）。此路径拿不到模型链接（留 null）。
+
+                # 如果 content 为空（403 导致），尝试最后一次用更长超时抓取
+                if not content or len(content) < 100:
+                    print(f"  content 为空或过短（{len(content or '')} chars），尝试用 x-timeout=150s 最后一搏",
+                          file=sys.stderr)
+                    try:
+                        raw = fetch_page(url, jina_key, wait_timeout=150,
+                                       user_agent_idx=category_idx * 10 + 99)
+                        payload = json.loads(raw)
+                        http_status = payload.get("data", {}).get("httpStatus", 200)
+                        if http_status != 403:
+                            content = payload["data"]["content"]
+                            print(f"  最后一搏成功，获得 {len(content)} 字符", file=sys.stderr)
+                        else:
+                            print(f"  最后一搏仍然 403，放弃", file=sys.stderr)
+                    except Exception as e:
+                        print(f"  最后一搏失败: {e}", file=sys.stderr)
+
                 flat = parse_leaderboard_flat(content or "")
                 if not flat:
                     raise last_soft_err or ValueError("no leaderboard table found in fetched content")

@@ -20,12 +20,19 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install jsonschema
+        run: |
+          pip install jsonschema playwright
+          playwright install chromium --with-deps
 
       - name: Fetch leaderboards
         env:
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
-        run: python scripts/fetch_leaderboards.py
+        run: |
+          echo "尝试使用 Playwright 浏览器自动化抓取（绕过 Cloudflare）..."
+          python scripts/fetch_with_playwright.py || {
+            echo "⚠️  Playwright 失败，回退到 Jina Reader..."
+            python scripts/fetch_leaderboards.py
+          }
 
       - name: Commit and push
         if: always()   # 即使抓取步骤失败，也把已成功抓到的分类正常入库，不浪费
