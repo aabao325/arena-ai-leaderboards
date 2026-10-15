@@ -2,6 +2,7 @@
 """
 使用 Playwright 浏览器自动化抓取 arena.ai 排行榜
 绕过 Cloudflare 防护和 CAPTCHA
+集成 CF 破解模块
 """
 import sys
 import json
@@ -10,6 +11,10 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 sys.stdout.reconfigure(encoding='utf-8')
+
+# 导入 CF 破解模块
+sys.path.insert(0, str(Path(__file__).parent))
+from cf_bypass import bypass_cloudflare
 
 # 新的 URL 结构
 LEADERBOARDS = [
@@ -35,6 +40,13 @@ async def fetch_leaderboard(page, name, url):
     try:
         # 访问页面，等待 DOM 加载完成
         await page.goto(url, wait_until="domcontentloaded", timeout=60000)
+
+        # 🔥 关键：自动绕过 Cloudflare 验证
+        print(f"[{name}] 检测并破解 Cloudflare 验证...")
+        cf_success = await bypass_cloudflare(page, max_retries=3)
+
+        if not cf_success:
+            print(f"[{name}] ⚠️  CF 验证破解失败，但尝试继续...")
 
         # 等待表格出现（最多等待 30 秒）
         try:
@@ -83,12 +95,18 @@ async def fetch_leaderboard(page, name, url):
 async def main():
     async with async_playwright() as p:
         # 启动浏览器（使用 chromium，headless 模式）
+        # 🔥 增强 Stealth 参数，绕过 Cloudflare 检测
         browser = await p.chromium.launch(
             headless=True,
             args=[
                 '--disable-blink-features=AutomationControlled',  # 隐藏自动化标识
                 '--disable-dev-shm-usage',  # Docker 环境需要
                 '--no-sandbox',  # CI 环境需要
+                '--disable-quic',  # 禁用 QUIC（强制 TCP）
+                '--webrtc-ip-handling-policy=disable_non_proxied_udp',  # WebRTC 防护
+                '--force-webrtc-ip-handling-policy',
+                '--disable-webrtc-multiple-routes',
+                '--enforce-webrtc-ip-permission-check',
             ]
         )
 
