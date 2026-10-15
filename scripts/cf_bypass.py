@@ -167,9 +167,9 @@ class CloudflareBypass:
                             await asyncio.sleep(3)
                             return True
                         else:
-                            #logger.debug("🖥️ 验证按钮不可用")
+                            print("🖥️ 验证按钮不可用（disabled 或不可见），改走 JS 强制点击")
                 except Exception as e:
-                    #logger.debug(f"🖥️ 直接点击失败: {e}")
+                    print(f"🖥️ 直接点击失败，改走 JS 强制点击: {e}")
 
                 # 方法2：JS 强制点击
                 print("🖥️ 尝试 JS 强制点击...")
