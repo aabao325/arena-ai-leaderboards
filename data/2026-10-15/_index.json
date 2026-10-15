@@ -1,20 +1,18 @@
 {
   "date": "2026-10-15",
-  "fetched_at": "2026-10-15T00:48:44.070863+00:00",
+  "fetched_at": "2026-10-15T03:01:52.684557+00:00",
   "leaderboards": {
-    "text": {
-      "model_count": 415
-    },
-    "code-webdev": {
-      "model_count": 143
-    },
-    "text-to-video": {
-      "model_count": 48
+    "agent": {
+      "model_count": 54
     }
   },
   "errors": [
     {
-      "leaderboard": "agent",
+      "leaderboard": "text",
+      "error": "no leaderboard table found in fetched content"
+    },
+    {
+      "leaderboard": "code-webdev",
       "error": "no leaderboard table found in fetched content"
     },
     {
@@ -39,6 +37,10 @@
     },
     {
       "leaderboard": "image-edit",
+      "error": "no leaderboard table found in fetched content"
+    },
+    {
+      "leaderboard": "text-to-video",
       "error": "no leaderboard table found in fetched content"
     },
     {
