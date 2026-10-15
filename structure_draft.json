@@ -1,0 +1,54 @@
+{
+  "agent": {
+    "subcategories": [
+      "unknown1",
+      "unknown2"
+    ]
+  },
+  "chat": {
+    "subcategories": [
+      "text",
+      "search",
+      "vision",
+      "document"
+    ]
+  },
+  "code": {
+    "subcategories": [
+      "unknown"
+    ]
+  },
+  "image": {
+    "subcategories": {
+      "image-edit": {
+        "url": "image/image-edit",
+        "variants": [
+          "single-image-edit",
+          "multi-image-edit"
+        ],
+        "multi-image-edit-subcats": [
+          "overall",
+          "product-branding-co",
+          "3d-imaging-modeling",
+          "cartoon-anime-fantasy",
+          "photorealistic-cinematography",
+          "art",
+          "portraits",
+          "text-rendering"
+        ]
+      },
+      "text-to-image": {
+        "url": "image/text-to-image"
+      },
+      "image-to-video": {
+        "url": "image/image-to-video"
+      }
+    }
+  },
+  "video": {
+    "subcategories": [
+      "text-to-video",
+      "video-edit"
+    ]
+  }
+}

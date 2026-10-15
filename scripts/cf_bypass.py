@@ -57,10 +57,10 @@ class CloudflareBypass:
         """注入 turnstilePatch 补丁"""
         try:
             await self.page.evaluate(TURNSTILE_PATCH)
-            logger.info("✅ turnstilePatch 补丁注入成功")
+            print("✅ turnstilePatch 补丁注入成功")
             return True
         except Exception as e:
-            logger.error(f"❌ turnstilePatch 补丁注入失败: {e}")
+            print(f"❌ turnstilePatch 补丁注入失败: {e}")
             return False
 
     async def check_cf_challenge(self) -> bool:
@@ -70,10 +70,10 @@ class CloudflareBypass:
             challenge = await self.page.query_selector('[name="cf-turnstile-response"]')
 
             if not challenge:
-                logger.debug("未检测到 cf-turnstile-response 元素")
+                #logger.debug("未检测到 cf-turnstile-response 元素")
                 return False
 
-            logger.debug("检测到 cf-turnstile-response 元素")
+            #logger.debug("检测到 cf-turnstile-response 元素")
 
             # 检查是否有可见的 iframe
             iframes = await self.page.query_selector_all('iframe')
@@ -87,16 +87,16 @@ class CloudflareBypass:
                         if frame:
                             checkbox = await frame.query_selector('input[type="checkbox"]')
                             if checkbox:
-                                logger.info("🖥️ 检测到可见的 CF 验证 iframe")
+                                print("🖥️ 检测到可见的 CF 验证 iframe")
                                 return True
                 except Exception:
                     continue
 
-            logger.debug("未检测到可见的 CF 验证 iframe")
+            #logger.debug("未检测到可见的 CF 验证 iframe")
             return False
 
         except Exception as e:
-            logger.debug(f"CF 验证检测异常: {e}")
+            #logger.debug(f"CF 验证检测异常: {e}")
             return False
 
     async def solve_challenge(self, max_attempts: int = 3) -> bool:
@@ -109,7 +109,7 @@ class CloudflareBypass:
         Returns:
             是否成功破解
         """
-        logger.info("🖥️ 开始破解 CF 验证...")
+        print("🖥️ 开始破解 CF 验证...")
 
         for attempt in range(max_attempts):
             try:
@@ -131,26 +131,26 @@ class CloudflareBypass:
                         checkbox = await frame.query_selector('input[type="checkbox"]')
                         if checkbox:
                             challenge_iframe = frame
-                            logger.info(f"🖥️ [尝试 {attempt + 1}/{max_attempts}] 定位到验证 iframe")
+                            print(f"🖥️ [尝试 {attempt + 1}/{max_attempts}] 定位到验证 iframe")
                             break
                     except Exception:
                         continue
 
                 if not challenge_iframe:
-                    logger.warning("🖥️ 未找到可见的验证 iframe")
+                    print("🖥️ 未找到可见的验证 iframe")
                     await asyncio.sleep(2)
                     continue
 
                 # 2. 注入反检测 JS
-                logger.info("🖥️ 注入反检测 JS...")
+                print("🖥️ 注入反检测 JS...")
                 try:
                     await challenge_iframe.evaluate(TURNSTILE_PATCH)
-                    logger.info("🖥️ ✅ 反检测 JS 注入成功")
+                    print("🖥️ ✅ 反检测 JS 注入成功")
                 except Exception as e:
-                    logger.warning(f"🖥️ ⚠️  反检测 JS 注入失败: {e}")
+                    print(f"🖥️ ⚠️  反检测 JS 注入失败: {e}")
 
                 # 3. 尝试点击验证按钮
-                logger.info("🖥️ 尝试点击验证按钮...")
+                print("🖥️ 尝试点击验证按钮...")
 
                 # 方法1：直接点击
                 try:
@@ -161,18 +161,18 @@ class CloudflareBypass:
 
                         if is_enabled and is_visible_check:
                             await checkbox.click(timeout=2000)
-                            logger.info("🖥️ ✅ 直接点击成功")
+                            print("🖥️ ✅ 直接点击成功")
 
                             # 等待验证通过
                             await asyncio.sleep(3)
                             return True
                         else:
-                            logger.debug("🖥️ 验证按钮不可用")
+                            #logger.debug("🖥️ 验证按钮不可用")
                 except Exception as e:
-                    logger.debug(f"🖥️ 直接点击失败: {e}")
+                    #logger.debug(f"🖥️ 直接点击失败: {e}")
 
                 # 方法2：JS 强制点击
-                logger.info("🖥️ 尝试 JS 强制点击...")
+                print("🖥️ 尝试 JS 强制点击...")
 
                 click_js = """
                 (function() {
@@ -217,27 +217,27 @@ class CloudflareBypass:
                     click_result = await challenge_iframe.evaluate(click_js)
 
                     if click_result:
-                        logger.info("🖥️ ✅ JS 强制点击成功")
+                        print("🖥️ ✅ JS 强制点击成功")
 
                         # 等待验证通过
                         await asyncio.sleep(5)
                         return True
                     else:
-                        logger.warning("🖥️ ⚠️  JS 强制点击返回失败")
+                        print("🖥️ ⚠️  JS 强制点击返回失败")
                 except Exception as e:
-                    logger.error(f"🖥️ ❌ JS 强制点击异常: {e}")
+                    print(f"🖥️ ❌ JS 强制点击异常: {e}")
 
                 # 失败后等待一会儿再重试
                 if attempt < max_attempts - 1:
-                    logger.info(f"🖥️ 等待 5 秒后重试...")
+                    print(f"🖥️ 等待 5 秒后重试...")
                     await asyncio.sleep(5)
 
             except Exception as e:
-                logger.error(f"🖥️ [尝试 {attempt + 1}/{max_attempts}] 破解过程异常: {e}")
+                print(f"🖥️ [尝试 {attempt + 1}/{max_attempts}] 破解过程异常: {e}")
                 if attempt < max_attempts - 1:
                     await asyncio.sleep(5)
 
-        logger.error("🖥️ ❌ 所有破解尝试均失败")
+        print("🖥️ ❌ 所有破解尝试均失败")
         return False
 
     async def wait_for_page_ready(self, timeout: int = 30) -> bool:
@@ -253,10 +253,10 @@ class CloudflareBypass:
         try:
             # 等待页面稳定
             await self.page.wait_for_load_state('networkidle', timeout=timeout * 1000)
-            logger.info("✅ 页面已完全加载")
+            print("✅ 页面已完全加载")
             return True
         except Exception as e:
-            logger.warning(f"⚠️  页面加载超时: {e}")
+            print(f"⚠️  页面加载超时: {e}")
             return False
 
 
@@ -284,22 +284,22 @@ async def bypass_cloudflare(page: Page, max_retries: int = 3) -> bool:
         has_challenge = await bypass.check_cf_challenge()
 
         if not has_challenge:
-            logger.info("✅ 未检测到 CF 验证，页面正常")
+            print("✅ 未检测到 CF 验证，页面正常")
             return True
 
-        logger.info(f"🖥️ 检测到 CF 验证，开始破解（重试 {retry + 1}/{max_retries}）")
+        print(f"🖥️ 检测到 CF 验证，开始破解（重试 {retry + 1}/{max_retries}）")
 
         success = await bypass.solve_challenge()
 
         if success:
-            logger.info("🖥️ ✅ CF 验证破解成功")
+            print("🖥️ ✅ CF 验证破解成功")
 
             # 等待页面完全加载
             await bypass.wait_for_page_ready()
             return True
         else:
-            logger.warning(f"🖥️ ⚠️  破解失败，等待后重试...")
+            print(f"🖥️ ⚠️  破解失败，等待后重试...")
             await asyncio.sleep(5)
 
-    logger.error("🖥️ ❌ 所有重试均失败")
+    print("🖥️ ❌ 所有重试均失败")
     return False

@@ -1,0 +1,194 @@
+{
+  "categories": {
+    "agent": {
+      "label_zh": "智能体",
+      "label_en": "Agent",
+      "subcategories": [
+        {
+          "key": "agent",
+          "url": "agent/agent",
+          "label_zh": "智能体",
+          "label_en": "Agent",
+          "desc_zh": "真实工具调用与多步任务执行能力排名",
+          "desc_en": "Real tool-use and multi-step task execution rankings"
+        }
+      ]
+    },
+    "chat": {
+      "label_zh": "对话",
+      "label_en": "Chat",
+      "subcategories": [
+        {
+          "key": "text",
+          "url": "chat/text",
+          "label_zh": "文本",
+          "label_en": "Text",
+          "desc_zh": "覆盖纯文本对话与推理任务的综合排名",
+          "desc_en": "Rankings across text-to-text tasks and more"
+        },
+        {
+          "key": "search",
+          "url": "chat/search",
+          "label_zh": "搜索",
+          "label_en": "Search",
+          "desc_zh": "集成网页检索能力的大模型排名",
+          "desc_en": "Rankings across web search-integrated LLMs"
+        },
+        {
+          "key": "vision",
+          "url": "chat/vision",
+          "label_zh": "视觉",
+          "label_en": "Vision",
+          "desc_zh": "多模态图像理解模型排名",
+          "desc_en": "Rankings across multimodal visual models"
+        },
+        {
+          "key": "document",
+          "url": "chat/document",
+          "label_zh": "文档",
+          "label_en": "Document",
+          "desc_zh": "文档解析与理解模型排名",
+          "desc_en": "Rankings across document analysis models"
+        }
+      ]
+    },
+    "code": {
+      "label_zh": "代码",
+      "label_en": "Code",
+      "subcategories": [
+        {
+          "key": "code-webdev",
+          "url": "code/webdev",
+          "label_zh": "网页开发",
+          "label_en": "WebDev",
+          "desc_zh": "根据需求生成完整可运行网页应用的对战排名",
+          "desc_en": "Rankings for generating a full working web app from a prompt"
+        },
+        {
+          "key": "code-image-to-webdev",
+          "url": "code/image-to-webdev",
+          "label_zh": "图生网页",
+          "label_en": "Image to WebDev",
+          "desc_zh": "根据设计图/截图还原网页实现的对战排名",
+          "desc_en": "Rankings for reproducing a web page from a design/screenshot"
+        }
+      ]
+    },
+    "image": {
+      "label_zh": "图像",
+      "label_en": "Image",
+      "subcategories": [
+        {
+          "key": "image-edit",
+          "url": "image/image-edit",
+          "label_zh": "图像编辑竞技场",
+          "label_en": "Image Edit Arena",
+          "desc_zh": "图像编辑 AI 模型整体排名",
+          "desc_en": "View overall rankings across image editing AI models",
+          "has_variants": true,
+          "variants": [
+            {
+              "key": "single-image-edit",
+              "label_zh": "单图编辑",
+              "label_en": "Single Image Edit",
+              "url_fragment": "?category=single-image-edit"
+            },
+            {
+              "key": "multi-image-edit",
+              "label_zh": "多图编辑",
+              "label_en": "Multi Image Edit",
+              "url_fragment": "?category=multi-image-edit",
+              "has_subcats": true,
+              "subcats": [
+                {
+                  "key": "overall",
+                  "label_zh": "综合",
+                  "label_en": "Overall"
+                },
+                {
+                  "key": "product-branding",
+                  "label_zh": "产品与品牌",
+                  "label_en": "Product, Branding & Co..."
+                },
+                {
+                  "key": "3d-imaging",
+                  "label_zh": "3D 成像与建模",
+                  "label_en": "3D Imaging & Modeling"
+                },
+                {
+                  "key": "cartoon-anime",
+                  "label_zh": "卡通、动漫与幻想",
+                  "label_en": "Cartoon, Anime & Fantasy"
+                },
+                {
+                  "key": "photorealistic",
+                  "label_zh": "写实摄影",
+                  "label_en": "Photorealistic & Cinematography"
+                },
+                {
+                  "key": "art",
+                  "label_zh": "艺术",
+                  "label_en": "Art"
+                },
+                {
+                  "key": "portraits",
+                  "label_zh": "人像",
+                  "label_en": "Portraits"
+                },
+                {
+                  "key": "text-rendering",
+                  "label_zh": "文字渲染",
+                  "label_en": "Text Rendering"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "text-to-image",
+          "url": "image/text-to-image",
+          "label_zh": "文生图",
+          "label_en": "Text to Image",
+          "desc_zh": "文本生成图像模型排名",
+          "desc_en": "Rankings across text-to-image models"
+        },
+        {
+          "key": "image-to-video",
+          "url": "image/image-to-video",
+          "label_zh": "图生视频",
+          "label_en": "Image to Video",
+          "desc_zh": "图像驱动生成视频模型排名",
+          "desc_en": "Rankings across image-to-video models"
+        }
+      ]
+    },
+    "video": {
+      "label_zh": "视频",
+      "label_en": "Video",
+      "subcategories": [
+        {
+          "key": "text-to-video",
+          "url": "video/text-to-video",
+          "label_zh": "文生视频",
+          "label_en": "Text to Video",
+          "desc_zh": "文本生成视频模型排名",
+          "desc_en": "Rankings across text-to-video models"
+        },
+        {
+          "key": "video-edit",
+          "url": "video/video-edit",
+          "label_zh": "视频剪辑",
+          "label_en": "Video Edit",
+          "desc_zh": "指令式视频编辑模型排名",
+          "desc_en": "Rankings across instruction-based video editing models"
+        }
+      ]
+    }
+  },
+  "notes": [
+    "新的 URL 结构：https://arena.ai/leaderboard/{category}/{subcategory}",
+    "image-edit 分类新增了 variants（single/multi）和 subcats（8 个子分类）",
+    "Multi Image Edit 的子分类通过 URL query params 或 JS 路由切换，暂时抓取 Overall 即可",
+    "文件命名仍用 {key}.json，例如 image-edit.json（默认抓 Overall）"
+  ]
+}
