@@ -1,1 +1,21 @@
 __pycache__/
+*.pyc
+
+# 抓取运行产物：日志、RSC 原始载荷。可随时重抓，不入库。
+scripts/_out/
+
+# Camoufox 持久化 profile：含 cf_clearance 等会话凭据，**绝不入库**
+scripts/profile/
+profile/
+
+# 一次性探测脚本与手工 dump，排查完即可删
+challenge_dump.html
+probe_*.py
+local_probe.py
+test_cf_bypass.py
+analyze_structure.py
+check_urls.py
+explore_site.py
+extract_categories.py
+find_urls.py
+probe_createdat/

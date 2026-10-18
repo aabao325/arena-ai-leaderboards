@@ -27,6 +27,10 @@ from jsonschema import Draft202012Validator
 JINA_READER_BASE = "https://r.jina.ai/"
 ARENA_BASE = "https://arena.ai/leaderboard/"
 
+# data/ 下最多保留多少份日期快照。页面只读 latest 指向的那一份，
+# 旧快照边际价值很低，留着只让仓库变大（曾堆到 207 份 / 56 MB）。
+KEEP_SNAPSHOTS = 10
+
 # 2026-10-15 更新：arena.ai 改版，新的 URL 结构为 /leaderboard/{category}/{subcategory}
 # 旧版 URL（如 /ranking/text、/ranking/vision）现在全部 404
 # 新版分类引入了三级层次（例如 Image -> Image Edit Arena -> Single/Multi Image Edit -> subcats）
@@ -519,6 +523,33 @@ def parse_leaderboard_flat(content: str) -> list[dict]:
     return models
 
 
+def prune_old_snapshots(data_root: Path, keep: int = KEEP_SNAPSHOTS):
+    """只保留最近 `keep` 份日期快照目录，其余删除。
+
+    这个函数在仓库的 data/ 里执行 rmtree，误删不可逆，所以判据必须窄：
+    只匹配 `YYYY-MM-DD` 形状的目录，latest.json / _index.json 等文件不碰。
+
+    历史：data/ 曾积累到 207 份、56 MB。页面只读 latest 指向的那一份，
+    旧快照几乎没有价值，留着只是让每次 clone 变慢。
+    """
+    if keep < 1 or not data_root.is_dir():
+        return []
+    date_re = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+    days = sorted(d for d in data_root.iterdir() if d.is_dir() and date_re.match(d.name))
+    doomed = days[:-keep] if len(days) > keep else []
+    removed = []
+    for d in doomed:
+        try:
+            shutil.rmtree(d)
+            removed.append(d.name)
+        except Exception as e:
+            print(f"  prune skipped {d.name}: {e}", file=sys.stderr)
+    if removed:
+        print(f"\nPruned {len(removed)} old snapshot(s) "
+              f"({removed[0]} .. {removed[-1]}), keeping latest {keep}", file=sys.stderr)
+    return removed
+
+
 def carry_over_last_snapshot(data_root: Path, today_dir: Path, file_slug: str):
     """某分类本次抓取失败时，从最近一个有该分类的历史日期复制其快照到今天目录。
 
@@ -790,6 +821,12 @@ def main():
     with open(repo_root / "data" / "latest.json", "w") as f:
         json.dump(latest, f, indent=2)
     print(f"\nUpdated data/latest.json -> {date_str}", file=sys.stderr)
+
+    # ── 保留策略：只留最近 N 份日期快照 ──
+    # data/ 每抓一次多一个日期目录，207 份曾堆到 56 MB。页面只用 latest 指向的那份，
+    # 历史快照边际价值很低，所以定期裁掉，避免仓库无限膨胀。
+    # 只删 YYYY-MM-DD 形状的目录，latest.json 等文件一律不碰。
+    prune_old_snapshots(repo_root / "data", KEEP_SNAPSHOTS)
 
     print(f"\n{'='*50}", file=sys.stderr)
     print(f"Done: {len(results)}/{len(LEADERBOARDS)} leaderboards", file=sys.stderr)

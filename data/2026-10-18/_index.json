@@ -1,0 +1,790 @@
+{
+ "date": "2026-10-18",
+ "fetched_at": "2026-10-18T05:11:18.629133+00:00",
+ "board_count": 16,
+ "groups": [
+  {
+   "key": "agent",
+   "label": "智能体",
+   "boards": [
+    {
+     "slug": "agent-work",
+     "title": "Agent · Work",
+     "sub_label": "Agent | Work",
+     "icon": "suitcase",
+     "score_unit": "net-improvement",
+     "pricing_unit": null,
+     "score_scale": 10000,
+     "model_count": 52,
+     "top_models": [
+      {
+       "model": "Claude Opus 5.5 (Max)",
+       "vendor": "Anthropic",
+       "score": null,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Fable 5.1 (Max)",
+       "vendor": "Anthropic",
+       "score": null,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-6.1 Sol (Max)",
+       "vendor": "OpenAI",
+       "score": null,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Sonnet 5.5 (Max)",
+       "vendor": "Anthropic",
+       "score": null,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-6 Astra (Max)",
+       "vendor": "OpenAI",
+       "score": null,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "agent-alignment",
+     "title": "Agent · Alignment",
+     "sub_label": "Agent | Alignment",
+     "icon": "shield",
+     "score_unit": "index",
+     "pricing_unit": null,
+     "score_scale": 1,
+     "model_count": 30,
+     "top_models": [
+      {
+       "model": "GPT-6.1 Sol",
+       "vendor": "OpenAI",
+       "score": 88,
+       "rank": 1,
+       "license": null
+      },
+      {
+       "model": "GPT-6 Astra",
+       "vendor": "OpenAI",
+       "score": 88,
+       "rank": 2,
+       "license": null
+      },
+      {
+       "model": "GPT-6 Luna",
+       "vendor": "OpenAI",
+       "score": 88,
+       "rank": 3,
+       "license": null
+      },
+      {
+       "model": "GPT-6 Sol",
+       "vendor": "OpenAI",
+       "score": 88,
+       "rank": 4,
+       "license": null
+      },
+      {
+       "model": "GPT-5.6 Sol",
+       "vendor": "OpenAI",
+       "score": 84,
+       "rank": 5,
+       "license": null
+      }
+     ]
+    },
+    {
+     "slug": "agent-code",
+     "title": "Agent · Code",
+     "sub_label": "Agent | Code",
+     "icon": "terminal",
+     "score_unit": "net-improvement",
+     "pricing_unit": null,
+     "score_scale": 10000,
+     "model_count": 52,
+     "top_models": [
+      {
+       "model": "Claude Opus 5.5 (Max)",
+       "vendor": "Anthropic",
+       "score": null,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Sonnet 5.5 (Max)",
+       "vendor": "Anthropic",
+       "score": null,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-6.1 Sol (Max)",
+       "vendor": "OpenAI",
+       "score": null,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Fable 5.1 (Max)",
+       "vendor": "Anthropic",
+       "score": null,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-6 Astra (Max)",
+       "vendor": "OpenAI",
+       "score": null,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "agent",
+     "title": "Agent · Overall",
+     "sub_label": "Agent | Overall",
+     "icon": "agent",
+     "score_unit": "net-improvement",
+     "pricing_unit": null,
+     "score_scale": 10000,
+     "model_count": 52,
+     "top_models": [
+      {
+       "model": "Claude Opus 5.5 (Max)",
+       "vendor": "Anthropic",
+       "score": null,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-6 Astra (Max)",
+       "vendor": "OpenAI",
+       "score": null,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Fable 5.1 (Max)",
+       "vendor": "Anthropic",
+       "score": null,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-6.1 Sol (Max)",
+       "vendor": "OpenAI",
+       "score": null,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "Gemini 4 Argon (High)",
+       "vendor": "Google",
+       "score": null,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "chat",
+   "label": "对话",
+   "boards": [
+    {
+     "slug": "chat-text",
+     "title": "Best Text",
+     "sub_label": "Text | Overall",
+     "icon": "chat",
+     "score_unit": "rating",
+     "pricing_unit": "tokens",
+     "score_scale": 1,
+     "model_count": 416,
+     "top_models": [
+      {
+       "model": "Gemini 4 Argon (High)",
+       "vendor": "Google",
+       "score": 1524,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "Muse Wonder (Max)",
+       "vendor": "Meta",
+       "score": 1509,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Opus 5.5 (High)",
+       "vendor": "Anthropic",
+       "score": 1508,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Fable 5 (High)",
+       "vendor": "Anthropic",
+       "score": 1504,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Opus 4.6 (High)",
+       "vendor": "Anthropic",
+       "score": 1503,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "chat-search",
+     "title": "Chat Search",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
+     "score_scale": 1,
+     "model_count": 42,
+     "top_models": [
+      {
+       "model": "GPT-5.6 Sol (xHigh)",
+       "vendor": "OpenAI",
+       "score": 1261,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "Qwen3.8-Max",
+       "vendor": "Alibaba",
+       "score": 1261,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Opus 4.6 (Search)",
+       "vendor": "Anthropic",
+       "score": 1251,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-5.5 (Search)",
+       "vendor": "OpenAI",
+       "score": 1247,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Fable 5.1 (High)",
+       "vendor": "Anthropic",
+       "score": 1246,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "chat-vision",
+     "title": "Chat Vision",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
+     "score_scale": 1,
+     "model_count": 165,
+     "top_models": [
+      {
+       "model": "Claude Fable 5 (High)",
+       "vendor": "Anthropic",
+       "score": 1308,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "Qwen3.8-Max",
+       "vendor": "Alibaba",
+       "score": 1301,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Opus 4.6 (High)",
+       "vendor": "Anthropic",
+       "score": 1299,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Opus 4.7",
+       "vendor": "Anthropic",
+       "score": 1298,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Opus 4.7 (High)",
+       "vendor": "Anthropic",
+       "score": 1298,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "chat-document",
+     "title": "Chat Document",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
+     "score_scale": 1,
+     "model_count": 44,
+     "top_models": [
+      {
+       "model": "Claude Opus 5 (High)",
+       "vendor": "Anthropic",
+       "score": 1516,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Fable 5.1 (Max)",
+       "vendor": "Anthropic",
+       "score": 1513,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Opus 4.6 (High)",
+       "vendor": "Anthropic",
+       "score": 1507,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Opus 4.6",
+       "vendor": "Anthropic",
+       "score": 1507,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Fable 5 (High)",
+       "vendor": "Anthropic",
+       "score": 1496,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "code",
+   "label": "代码",
+   "boards": [
+    {
+     "slug": "code-webdev",
+     "title": "Best WebDev",
+     "sub_label": "Code | Overall",
+     "icon": "app-window",
+     "score_unit": "rating",
+     "pricing_unit": "tokens",
+     "score_scale": 1,
+     "model_count": 145,
+     "top_models": [
+      {
+       "model": "Claude Opus 5.5 (Max)",
+       "vendor": "Anthropic",
+       "score": 1807,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-6 Astra (Max)",
+       "vendor": "OpenAI",
+       "score": 1777,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Sonnet 5.5 (xHigh)",
+       "vendor": "Anthropic",
+       "score": 1768,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-6.1 Sol (Max)",
+       "vendor": "OpenAI",
+       "score": 1755,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Fable 5.1 (Max)",
+       "vendor": "Anthropic",
+       "score": 1741,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "code-image-to-webdev",
+     "title": "Code Image To Webdev",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
+     "score_scale": 1,
+     "model_count": 64,
+     "top_models": [
+      {
+       "model": "Claude Opus 5.5 (Max)",
+       "vendor": "Anthropic",
+       "score": 1749,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Sonnet 5.5 (xHigh)",
+       "vendor": "Anthropic",
+       "score": 1740,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-6 Astra (Max)",
+       "vendor": "OpenAI",
+       "score": 1731,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Claude Fable 5.1 (Max)",
+       "vendor": "Anthropic",
+       "score": 1720,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-6.1 Sol (Max)",
+       "vendor": "OpenAI",
+       "score": 1703,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "image",
+   "label": "图像",
+   "boards": [
+    {
+     "slug": "image-text-to-image",
+     "title": "Best Image",
+     "sub_label": "Image | Overall",
+     "icon": "image",
+     "score_unit": "rating",
+     "pricing_unit": "image",
+     "score_scale": 1,
+     "model_count": 82,
+     "top_models": [
+      {
+       "model": "GPT-Image-2.5 Sunburst",
+       "vendor": "OpenAI",
+       "score": 1425,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-Image-2.5 Flare",
+       "vendor": "OpenAI",
+       "score": 1398,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-Image-2 (Medium)",
+       "vendor": "OpenAI",
+       "score": 1383,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Grok Imagine Image 2.0",
+       "vendor": "SpaceXAI",
+       "score": 1334,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "MAI-Image-2.6",
+       "vendor": "Microsoft AI",
+       "score": 1332,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "image-image-edit",
+     "title": "Image Image Edit",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
+     "score_scale": 1,
+     "model_count": 59,
+     "top_models": [
+      {
+       "model": "GPT-Image-2.5 Sunburst",
+       "vendor": "OpenAI",
+       "score": 1524,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-Image-2.5 Flare",
+       "vendor": "OpenAI",
+       "score": 1481,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-Image-2 (Medium)",
+       "vendor": "OpenAI",
+       "score": 1462,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Grok Imagine Image 2.0",
+       "vendor": "SpaceXAI",
+       "score": 1439,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "MAI-Image-2.6",
+       "vendor": "Microsoft AI",
+       "score": 1428,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "image-image-edit-single-image",
+     "title": "Image Image Edit Single Image",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
+     "score_scale": 1,
+     "model_count": 59,
+     "top_models": [
+      {
+       "model": "GPT-Image-2.5 Sunburst",
+       "vendor": "OpenAI",
+       "score": 1524,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-Image-2.5 Flare",
+       "vendor": "OpenAI",
+       "score": 1481,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-Image-2 (Medium)",
+       "vendor": "OpenAI",
+       "score": 1462,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Grok Imagine Image 2.0",
+       "vendor": "SpaceXAI",
+       "score": 1439,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "MAI-Image-2.6",
+       "vendor": "Microsoft AI",
+       "score": 1428,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "video",
+   "label": "视频",
+   "boards": [
+    {
+     "slug": "video-text-to-video",
+     "title": "Best Video",
+     "sub_label": "Video | Overall",
+     "icon": "film",
+     "score_unit": "rating",
+     "pricing_unit": "second",
+     "score_scale": 1,
+     "model_count": 48,
+     "top_models": [
+      {
+       "model": "Gemini Omni 1.1 Flash",
+       "vendor": "Google",
+       "score": 1516,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "gemini-omni-flash",
+       "vendor": "Google",
+       "score": 1513,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "FLUX 3 Video",
+       "vendor": "Black Forest Labs",
+       "score": 1493,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Grok Imagine Video 1.5",
+       "vendor": "SpaceXAI",
+       "score": 1492,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "Dreamina Seedance 2.0 (720p)",
+       "vendor": "Bytedance",
+       "score": 1479,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "video-image-to-video",
+     "title": "Video Image To Video",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
+     "score_scale": 1,
+     "model_count": 48,
+     "top_models": [
+      {
+       "model": "MiniMax H3",
+       "vendor": "MiniMax",
+       "score": 1495,
+       "rank": 1,
+       "license": null
+      },
+      {
+       "model": "Gemini Omni 1.1 Flash",
+       "vendor": "Google",
+       "score": 1488,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "Wan 3.0",
+       "vendor": "Alibaba",
+       "score": 1480,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Dreamina Seedance 2.5 (720p)",
+       "vendor": "Bytedance",
+       "score": 1477,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "Dreamina Seedance 2.0 (720p)",
+       "vendor": "Bytedance",
+       "score": 1475,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "video-video-edit",
+     "title": "Video Video Edit",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
+     "score_scale": 1,
+     "model_count": 10,
+     "top_models": [
+      {
+       "model": "Wan 3.0",
+       "vendor": "Alibaba",
+       "score": 1414,
+       "rank": 1,
+       "license": null
+      },
+      {
+       "model": "Dreamina Seedance 2.5 (720p)",
+       "vendor": "Bytedance",
+       "score": 1410,
+       "rank": 2,
+       "license": null
+      },
+      {
+       "model": "MiniMax H3",
+       "vendor": "MiniMax",
+       "score": 1392,
+       "rank": 3,
+       "license": null
+      },
+      {
+       "model": "gemini-omni-flash",
+       "vendor": "Google",
+       "score": 1367,
+       "rank": 4,
+       "license": null
+      },
+      {
+       "model": "Dreamina Seedance 2.0 (720p)",
+       "vendor": "Bytedance",
+       "score": 1365,
+       "rank": 5,
+       "license": null
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "failed": []
+}
