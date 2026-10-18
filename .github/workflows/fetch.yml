@@ -1,86 +1,110 @@
-name: Fetch Arena Leaderboards
+name: Validate Leaderboard Data
+
+# ============================================================
+#  为什么这里**不再抓取数据**
+#
+#  arena.ai 在 Cloudflare 后面，且 /leaderboard/* 有一条**按路径的 WAF 规则**：
+#  从 GitHub Actions 的 Azure 数据中心 IP 过去，连首页都过不去，更别说铸出
+#  cf_clearance（它绑定 IP + UA + TLS 指纹，而 runner 每次运行都是新 IP）。
+#
+#  2026-10-16 实测：住宅 IP + Camoufox 3 秒过验证；同一套代码在 Actions 里
+#  任何请求都返回 403。问题在网络层，不在浏览器指纹。
+#
+#  ⇒ 抓取改在**本机**定时执行（scripts/run-daily.bat + Windows 任务计划），
+#    本工作流只做三件事：校验数据完整性、给出可视化摘要、失败时提醒。
+# ============================================================
 
 on:
+  push:
+    paths:
+      - 'data/**'
   schedule:
-    - cron: '37 * * * *'  # Hourly at :37 (avoids top-of-hour congestion; commit step no-ops when data is unchanged)
-  workflow_dispatch:       # Manual trigger
+    # 每天一次巡检：本机如果某天没跑成，这里能发出提醒
+    - cron: '17 3 * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write
-  issues: write   # 失败时自动开 Issue 提醒
+  contents: read
+  issues: write
 
 jobs:
-  fetch:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
-        run: |
-          pip install jsonschema playwright
-          playwright install chromium --with-deps
+      - name: Validate snapshot structure
+        run: python scripts/validate_snapshot.py
 
-      - name: Fetch leaderboards
-        env:
-          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+      - name: Check freshness
         run: |
-          echo "尝试使用 Playwright 浏览器自动化抓取（绕过 Cloudflare）..."
-          python scripts/fetch_with_playwright.py || {
-            echo "⚠️  Playwright 失败，回退到 Jina Reader..."
-            python scripts/fetch_leaderboards.py
-          }
+          python - <<'PY'
+          import json, sys
+          from datetime import datetime, timezone
+          from pathlib import Path
 
-      - name: Commit and push
-        if: always()   # 即使抓取步骤失败，也把已成功抓到的分类正常入库，不浪费
+          latest = json.loads(Path("data/latest.json").read_text(encoding="utf-8"))
+          fetched = latest.get("fetched_at")
+          if not fetched:
+              print("::warning::latest.json 没有 fetched_at，无法判断新鲜度")
+              sys.exit(0)
+          ts = datetime.fromisoformat(fetched)
+          age_h = (datetime.now(timezone.utc) - ts).total_seconds() / 3600
+          print(f"上次抓取: {fetched}（{age_h:.1f} 小时前）")
+          if age_h > 30:
+              print(f"::warning::数据已 {age_h:.0f} 小时未更新，本机定时任务可能没跑")
+          PY
+
+      - name: Summary
+        if: always()
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            DATE=$(date -u +%Y-%m-%d)
-            git commit -m "data: update leaderboards $DATE"
-            git push
-          fi
+          python - <<'PY' >> $GITHUB_STEP_SUMMARY
+          import json
+          from pathlib import Path
+          latest = json.loads(Path("data/latest.json").read_text(encoding="utf-8"))
+          idx_path = Path("data") / (latest.get("path") or latest.get("date")) / "_index.json"
+          print(f"## 快照 {latest.get('date')}\n")
+          if not idx_path.exists():
+              print("⚠️ 缺少 _index.json（前端首页需要它）")
+              raise SystemExit(0)
+          idx = json.loads(idx_path.read_text(encoding="utf-8"))
+          print(f"- 榜单数：**{idx.get('board_count')}**")
+          print(f"- 抓取时间：`{idx.get('fetched_at')}`")
+          if idx.get("failed"):
+              print(f"- ⚠️ 失败：{', '.join(f['slug'] for f in idx['failed'])}")
+          print("\n| 分组 | 榜单 | 行数 | 第 1 名 |\n|---|---|---|---|")
+          for g in idx.get("groups", []):
+              for b in g.get("boards", []):
+                  top = (b.get("top_models") or [{}])[0].get("model", "—")
+                  print(f"| {g.get('label')} | {b.get('title')} | {b.get('model_count')} | {top} |")
+          PY
 
-      - name: Notify on failure
-        if: failure()   # 仅当前面步骤真失败时才触发（脚本超阈值 exit 1）
+      - name: Open issue on failure
+        if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          # 去重防刷屏：已存在带 fetch-failure 标签的 open Issue 就不再新开，
-          # 避免每天失败都刷一条。等你处理完关掉它，下次再失败才会重新开。
-          TITLE="⚠️ 榜单抓取失败，可能需要更换 Jina API key"
-          EXISTING=$(gh issue list --state open --label fetch-failure --limit 1 --json number --jq '.[0].number' 2>/dev/null || echo "")
+          EXISTING=$(gh issue list --state open --label data-check --limit 1 --json number --jq '.[0].number' 2>/dev/null || echo "")
           if [ -n "$EXISTING" ]; then
-            echo "已有未关闭的失败提醒 Issue #$EXISTING，跳过（避免刷屏）"
+            echo "已有未关闭的提醒 Issue #$EXISTING，跳过"
             exit 0
           fi
-          # 确保标签存在（不存在则创建，已存在忽略报错）
-          gh label create fetch-failure --color B60205 --description "榜单抓取失败自动提醒" 2>/dev/null || true
-          # 正文写进文件再用 --body-file，避免 heredoc 破坏 YAML 块缩进
+          gh label create data-check --color FBCA04 --description "数据校验失败自动提醒" 2>/dev/null || true
           {
-            echo "榜单抓取工作流失败了，且失败分类超过半数，通常意味着需要人工介入。"
+            echo "数据校验失败了。"
             echo ""
-            echo "**最常见原因：Jina API key 额度耗尽（返回 HTTP 402）。**"
-            echo "处理步骤："
-            echo "1. 去 https://jina.ai/ 登录，领一把有额度的新 API key"
-            echo "2. 到本仓库 Settings → Secrets and variables → Actions，更新 \`JINA_API_KEY\`"
-            echo "3. 手动重跑一次工作流验证（Actions → Fetch Arena Leaderboards → Run workflow）"
-            echo "4. 恢复正常后，**关闭本 Issue**（关掉后下次再失败才会重新提醒，不关会一直静默）"
+            echo "**最常见原因：本机的定时抓取没成功执行。**"
+            echo "排查步骤："
+            echo "1. 在抓取用的那台机器上看 \`scripts\\_out\\run_and_push.log\` 的最后几十行"
+            echo "2. 手动跑一次 \`scripts\\run-daily.bat\` 看是否报错"
+            echo "3. 常见原因：电脑关机 / 没登录 / IP 被 Cloudflare 策略拒绝"
+            echo "4. 恢复后关闭本 Issue（关掉后下次再失败才会重新提醒）"
             echo ""
-            echo "> 注：偶发的单个分类抓空已由脚本自动重试 + 容错处理，不会触发本提醒；"
-            echo "> 能走到这里说明是较严重的整体性故障（额度耗尽 / 源站或 Jina 不可用等）。"
-            echo ""
-            echo "失败运行日志：$RUN_URL"
+            echo "运行日志：$RUN_URL"
           } > /tmp/issue_body.md
-          gh issue create --title "$TITLE" --label fetch-failure --body-file /tmp/issue_body.md
-          echo "已创建失败提醒 Issue"
-
-
+          gh issue create --title "⚠️ 榜单数据校验失败" --label data-check --body-file /tmp/issue_body.md
