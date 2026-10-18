@@ -19,3 +19,5 @@ explore_site.py
 extract_categories.py
 find_urls.py
 probe_createdat/
+
+scripts/.venv/

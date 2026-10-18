@@ -1,0 +1,3 @@
+# Keep Camoufox pinned: scripts/cf_solver.py relies on the API used by 0.5.4.
+camoufox==0.5.4
+jsonschema>=4.20,<5

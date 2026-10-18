@@ -303,6 +303,7 @@ class CFBrowser:
         self.locale = locale
         self.log = log or Log()
 
+        self._camoufox = None
         self.browser = None
         self.context = None
         self.page = None
@@ -317,7 +318,7 @@ class CFBrowser:
         return self
 
     async def __aexit__(self, *exc):
-        await self.close()
+        await self.close(*exc)
 
     async def start(self):
         self.profile.mkdir(parents=True, exist_ok=True)
@@ -333,7 +334,16 @@ class CFBrowser:
             self._lock_cm = profile_lock(self.profile)
             self._lock_cm.__enter__()
 
-        self.browser = await AsyncCamoufox(**kwargs).__aenter__()
+        # Keep the manager: it owns the Playwright driver and its async pipes.
+        self._camoufox = AsyncCamoufox(**kwargs)
+        try:
+            self.browser = await self._camoufox.__aenter__()
+        except BaseException:
+            self._camoufox = None
+            if self._lock_cm is not None:
+                self._lock_cm.__exit__(None, None, None)
+                self._lock_cm = None
+            raise
 
         # 关键区别（已核对 async_api.py:120-122）：
         #   persistent_context=False → __aenter__ 返回 playwright Browser
@@ -353,22 +363,19 @@ class CFBrowser:
             await self.close()
             raise RuntimeError(f"创建页面失败: {e}") from e
         return self
-    async def close(self):
-        if self.browser is not None:
-            try:
-                await self.browser.__aexit__(None, None, None)
-            except Exception:
-                pass
+    async def close(self, *exc):
+        manager, self._camoufox = self._camoufox, None
+        try:
+            if manager is not None:
+                await manager.__aexit__(*exc)
+        finally:
             self.browser = None
-        self.context = self.page = None
+            self.context = self.page = None
 
-        # 必须等浏览器真正关掉才放锁：close() 是把 profile 刷盘的那一步
-        if self._lock_cm is not None:
-            try:
-                self._lock_cm.__exit__(None, None, None)
-            except Exception:
-                pass
-            self._lock_cm = None
+            # 必须等浏览器真正关掉才放锁：close() 是把 profile 刷盘的那一步
+            if self._lock_cm is not None:
+                lock_cm, self._lock_cm = self._lock_cm, None
+                lock_cm.__exit__(None, None, None)
 
     # ── 核心：过验证 ──
     async def solve(self) -> bool:

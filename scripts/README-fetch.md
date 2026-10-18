@@ -12,6 +12,20 @@
 
 ---
 
+### Windows 本地自动抓取
+
+首次配置或修复缺失依赖时，在仓库根目录运行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\install-deps.ps1
+powershell -ExecutionPolicy Bypass -File scripts\setup-task.ps1 -Hourly
+# 如需恢复每天 09:00：powershell -ExecutionPolicy Bypass -File scripts\setup-task.ps1 -Time "09:00"
+```
+
+依赖安装在 `scripts\.venv`，脚本也会下载 Camoufox 浏览器。以后任务会优先使用该虚拟环境；运行记录保存在 `scripts\_out\run_and_push.log`。首次安装需要联网，并要求本机已安装 Python 3.10 或更高版本。
+
+---
+
 ## 结论（2026-10-16 实测）
 
 **Camoufox 能过 Cloudflare。问题从来不在指纹，在入口。**

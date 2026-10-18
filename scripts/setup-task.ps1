@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 #  注册 Windows 定时任务：每天自动抓取 + 推送
 #
 #  在管理员 PowerShell 里运行一次即可：
@@ -7,6 +7,7 @@
 #  带参数：
 #      -Time "09:00"        每天执行时间（默认 09:00）
 #      -TaskName "..."      任务名
+#      -Hourly              每小时执行一次（从下一个整点开始）
 #      -Unregister          删除任务
 #
 #  为什么用 PowerShell 而不是 schtasks 命令行：
@@ -17,6 +18,7 @@
 param(
     [string]$Time = "09:00",
     [string]$TaskName = "Arena Leaderboard Fetch",
+    [switch]$Hourly,
     [switch]$Unregister
 )
 
@@ -40,21 +42,36 @@ if (-not (Test-Path $BatchPath)) {
     exit 1
 }
 
-# python 必须在 PATH 里；这里先验证，免得任务跑起来才失败
-$py = Get-Command python -ErrorAction SilentlyContinue
-if (-not $py) {
-    Write-Host "找不到 python。请先把 Python 加进 PATH。" -ForegroundColor Red
-    exit 1
+# Prefer the project environment installed by install-deps.ps1.
+$VenvPython = Join-Path $ScriptDir ".venv\Scripts\python.exe"
+if (Test-Path -LiteralPath $VenvPython) {
+    $PythonPath = $VenvPython
+} else {
+    $py = Get-Command python -ErrorAction SilentlyContinue
+    if (-not $py) { $py = Get-Command py -ErrorAction SilentlyContinue }
+    if (-not $py) {
+        Write-Host "找不到 Python。请安装 Python 3.10+，再运行 scripts\install-deps.ps1。" -ForegroundColor Red
+        exit 1
+    }
+    $PythonPath = $py.Source
 }
-Write-Host "Python: $($py.Source)"
+Write-Host "Python: $PythonPath"
 
 $Action = New-ScheduledTaskAction `
     -Execute $BatchPath `
     -WorkingDirectory $ScriptDir
 
-# 每天固定时间触发。错开整点（下面 -Time 默认 09:00 可以自己改）
-$Trigger = New-ScheduledTaskTrigger -Daily -At $Time
-
+if ($Hourly) {
+    $NextHour = (Get-Date).Date.AddHours((Get-Date).Hour + 1)
+    $Trigger = New-ScheduledTaskTrigger `
+        -Once `
+        -At $NextHour `
+        -RepetitionInterval (New-TimeSpan -Hours 1) `
+        -RepetitionDuration (New-TimeSpan -Days 3650)
+} else {
+    # 每天固定时间触发（默认 09:00，可以用 -Time 修改）
+    $Trigger = New-ScheduledTaskTrigger -Daily -At $Time
+}
 $Settings = New-ScheduledTaskSettingsSet `
     -AllowStartIfOnBatteries `
     -DontStopIfGoingOnBatteries `
@@ -85,7 +102,11 @@ Register-ScheduledTask `
 
 Write-Host ""
 Write-Host "✓ 已注册任务: $TaskName" -ForegroundColor Green
-Write-Host "  每天 $Time 执行"
+if ($Hourly) {
+    Write-Host "  每小时执行一次（从 $NextHour 开始）"
+} else {
+    Write-Host "  每天 $Time 执行"
+}
 Write-Host "  脚本: $BatchPath"
 Write-Host ""
 Write-Host "常用命令:"

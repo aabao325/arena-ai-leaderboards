@@ -20,9 +20,10 @@ REM ============================================================
 set "HERE=%~dp0"
 cd /d "%HERE%"
 
-set "PY="
-where python >nul 2>nul
-if not errorlevel 1 set "PY=python"
+set "PY=%HERE%.venv\Scripts\python.exe"
+if not exist "%PY%" set "PY="
+if not defined PY where python >nul 2>nul
+if not errorlevel 1 if not defined PY set "PY=python"
 if not defined PY (
     where py >nul 2>nul
     if not errorlevel 1 set "PY=py"
@@ -32,7 +33,7 @@ if not defined PY (
     exit /b 1
 )
 
-%PY% run_and_push.py %*
+"%PY%" run_and_push.py %*
 set "RC=%errorlevel%"
 
 if not "%RC%"=="0" (
