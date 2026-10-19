@@ -24,6 +24,8 @@ powershell -ExecutionPolicy Bypass -File scripts\setup-task.ps1 -Hourly
 
 依赖安装在 `scripts\.venv`，脚本也会下载 Camoufox 浏览器。以后任务会优先使用该虚拟环境；运行记录保存在 `scripts\_out\run_and_push.log`。首次安装需要联网，并要求本机已安装 Python 3.10 或更高版本。
 
+计划任务会从本机安装目录显式定位 Git，因此不依赖交互式终端的 PATH。首次自动推送前，请为运行任务的 Windows 用户配置 Git 提交姓名、邮箱和 Git Credential Manager 的 GitHub 凭据；凭据应存放在 Windows 凭据管理器中，不要写入脚本或仓库。详细失败原因请查看同一日志文件。
+
 ---
 
 ## 结论（2026-10-16 实测）

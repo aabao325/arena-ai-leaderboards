@@ -23,6 +23,8 @@
 from __future__ import annotations
 
 import argparse
+import os
+import shutil
 import subprocess
 import sys
 import time
@@ -46,6 +48,42 @@ def log(msg=""):
         f.write(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] {line}\n")
 
 
+def resolve_git():
+    """Find Git explicitly; scheduled tasks do not inherit the interactive PATH."""
+    candidates = []
+    configured = os.environ.get("ARENA_GIT_EXE")
+    if configured:
+        candidates.append(Path(configured))
+
+    on_path = shutil.which("git")
+    if on_path:
+        candidates.append(Path(on_path))
+
+    for base in (os.environ.get("ProgramFiles"), os.environ.get("ProgramFiles(x86)")):
+        if base:
+            candidates.append(Path(base) / "Git" / "cmd" / "git.exe")
+
+    local_app_data = os.environ.get("LOCALAPPDATA")
+    if local_app_data:
+        installs = sorted(
+            Path(local_app_data).glob("github-copilot-git-*/cmd/git.exe"),
+            key=lambda path: path.stat().st_mtime,
+            reverse=True,
+        )
+        candidates.extend(installs)
+
+    seen = set()
+    for candidate in candidates:
+        normalized = str(candidate.resolve()).casefold()
+        if normalized not in seen and candidate.is_file():
+            return str(candidate.resolve())
+        seen.add(normalized)
+
+    raise FileNotFoundError(
+        "Git executable not found. Install Git for Windows or set ARENA_GIT_EXE."
+    )
+
+
 def run(cmd, cwd=None, timeout=900):
     """跑一条命令，返回 (退出码, 合并输出)。"""
     try:
@@ -56,6 +94,8 @@ def run(cmd, cwd=None, timeout=900):
         return p.returncode, (p.stdout or "") + (p.stderr or "")
     except subprocess.TimeoutExpired:
         return 124, f"超时（{timeout}s）"
+    except OSError as exc:
+        return 127, "Unable to start command: " + str(exc)
 
 
 def main():
@@ -67,6 +107,16 @@ def main():
 
     log("=" * 66)
     log(f"定时抓取开始  {datetime.now():%Y-%m-%d %H:%M:%S}")
+
+    # Resolve Git before spending time on a fetch.
+    git_exe = None
+    if not args.dry_run:
+        try:
+            git_exe = resolve_git()
+        except OSError as exc:
+            log(f"Git preflight failed: {exc}")
+            return 2
+        log(f"Git: {git_exe}")
 
     # ── 1. 抓取 ──
     code, out = run(
@@ -87,19 +137,22 @@ def main():
         log("--dry-run：跳过提交与推送")
         return 0
 
-    code, out = run(["git", "add", "data", "scripts"])
+    code, out = run([git_exe, "add", "data", "scripts"])
     if code != 0:
         log(f"✗ git add 失败: {out[:300]}")
         return 2
 
-    code, out = run(["git", "diff", "--cached", "--quiet"])
+    code, out = run([git_exe, "diff", "--cached", "--quiet"])
     if code == 0:
         log("数据无变化，无需提交")
         return 0
+    if code != 1:
+        log(f"git diff --cached failed: {out[:400]}")
+        return 2
 
     date_str = datetime.now().strftime("%Y-%m-%d")
     msg = f"data: update leaderboards {date_str}"
-    code, out = run(["git", "commit", "-m", msg])
+    code, out = run([git_exe, "commit", "-m", msg])
     if code != 0:
         log(f"✗ git commit 失败: {out[:400]}")
         return 2
@@ -111,14 +164,19 @@ def main():
         return 0
 
     for attempt in (1, 2):
-        code, out = run(["git", "push"], timeout=300)
+        code, out = run([git_exe, "push"], timeout=300)
         if code == 0:
             log(f"✓ 已推送（第 {attempt} 次尝试）")
             return 0
         log(f"⚠ 推送失败（第 {attempt} 次）: {out.strip()[:300]}")
         if attempt == 1:
             # 可能是远程有别人的提交，先 rebase 再试
-            run(["git", "pull", "--rebase", "--autostash"], timeout=300)
+            pull_code, pull_out = run(
+                [git_exe, "pull", "--rebase", "--autostash"], timeout=300
+            )
+            if pull_code != 0:
+                log(f"git pull --rebase failed: {pull_out.strip()[:400]}")
+                return 2
             time.sleep(5)
 
     log("✗ 推送连续两次失败 —— 需要人工检查网络或凭据")

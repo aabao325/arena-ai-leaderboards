@@ -1,6 +1,6 @@
 {
  "date": "2026-10-18",
- "fetched_at": "2026-10-18T14:35:16.760582+00:00",
+ "fetched_at": "2026-10-18T23:00:04.949723+00:00",
  "board_count": 16,
  "groups": [
   {
@@ -403,19 +403,19 @@
      "score_unit": "rating",
      "pricing_unit": "tokens",
      "score_scale": 1,
-     "model_count": 145,
+     "model_count": 146,
      "top_models": [
       {
        "model": "Claude Opus 5.5 (Max)",
        "vendor": "Anthropic",
-       "score": 1807,
+       "score": 1806,
        "rank": 1,
        "license": "proprietary"
       },
       {
        "model": "GPT-6 Astra (Max)",
        "vendor": "OpenAI",
-       "score": 1777,
+       "score": 1776,
        "rank": 2,
        "license": "proprietary"
       },
@@ -429,14 +429,14 @@
       {
        "model": "GPT-6.1 Sol (Max)",
        "vendor": "OpenAI",
-       "score": 1755,
+       "score": 1754,
        "rank": 4,
        "license": "proprietary"
       },
       {
        "model": "Claude Fable 5.1 (Max)",
        "vendor": "Anthropic",
-       "score": 1741,
+       "score": 1742,
        "rank": 5,
        "license": "proprietary"
       }

@@ -2,7 +2,7 @@
  "meta": {
   "leaderboard": "code-image-to-webdev",
   "source_url": "https://arena.ai/leaderboard/code/image-to-webdev",
-  "fetched_at": "2026-10-18T14:35:16.760582+00:00",
+  "fetched_at": "2026-10-18T23:00:04.949723+00:00",
   "last_updated": "2026-10-09T19:00:00.000Z",
   "model_count": 64,
   "model_count_upstream": 64,
@@ -242,7 +242,7 @@
     9,
     23
    ],
-   "model": "DeepSeek-V4.1-Flash (Max)",
+   "model": "DeepSeek-V4.1-Flash-20260910 (Max)",
    "model_url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
    "vendor": "DeepSeek",
    "license": "open",
