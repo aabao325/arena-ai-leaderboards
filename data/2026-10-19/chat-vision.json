@@ -2,7 +2,7 @@
  "meta": {
   "leaderboard": "chat-vision",
   "source_url": "https://arena.ai/leaderboard/chat/vision",
-  "fetched_at": "2026-10-19T08:00:05.100898+00:00",
+  "fetched_at": "2026-10-19T09:00:05.122159+00:00",
   "last_updated": "2026-10-09T19:00:00.000Z",
   "model_count": 165,
   "model_count_upstream": 165,
@@ -1591,8 +1591,8 @@
    "ci_high": 6,
    "preliminary": false,
    "votes": 29644,
-   "price_prompt": 0.195,
-   "price_completion": 1.56,
+   "price_prompt": 0.27,
+   "price_completion": 2.16,
    "context_length": 262144,
    "signals": null
   },
