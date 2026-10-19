@@ -2,9 +2,9 @@
  "meta": {
   "leaderboard": "agent",
   "source_url": "https://arena.ai/leaderboard/agent",
-  "fetched_at": "2026-10-19T22:00:05.092982+00:00",
+  "fetched_at": "2026-10-19T23:00:05.048649+00:00",
   "last_updated": null,
-  "model_count": 56,
+  "model_count": 58,
   "title": "Agent · Overall",
   "title_zh": "智能体",
   "sub_label": "Agent | Overall",
@@ -95,7 +95,7 @@
    "rank": 4,
    "rank_spread": [
     2,
-    6
+    7
    ],
    "model": "GPT-6.1 Sol (Max)",
    "model_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
@@ -120,7 +120,7 @@
    "rank": 5,
    "rank_spread": [
     2,
-    9
+    11
    ],
    "model": "Claude Sonnet 5.5 (Max)",
    "model_url": "https://www.anthropic.com/claude-sonnet-5-5",
@@ -145,7 +145,7 @@
    "rank": 6,
    "rank_spread": [
     2,
-    7
+    8
    ],
    "model": "Gemini 4 Argon (High)",
    "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
@@ -169,8 +169,33 @@
   {
    "rank": 7,
    "rank_spread": [
+    4,
+    11
+   ],
+   "model": "GPT-6.1 Sol (Medium)",
+   "model_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+   "vendor": "OpenAI",
+   "license": "proprietary",
+   "score": null,
+   "ci_low": null,
+   "ci_high": null,
+   "preliminary": false,
+   "votes": 11536,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": {
+    "avg_score": {
+     "value": 1058.0,
+     "ci": 149.0
+    }
+   }
+  },
+  {
+   "rank": 8,
+   "rank_spread": [
     5,
-    10
+    12
    ],
    "model": "GPT-6 Sol (Max)",
    "model_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
@@ -192,10 +217,35 @@
    }
   },
   {
-   "rank": 8,
+   "rank": 9,
    "rank_spread": [
     6,
-    11
+    13
+   ],
+   "model": "GPT-6.1 Sol (Low)",
+   "model_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+   "vendor": "OpenAI",
+   "license": "proprietary",
+   "score": null,
+   "ci_low": null,
+   "ci_high": null,
+   "preliminary": false,
+   "votes": 9938,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": {
+    "avg_score": {
+     "value": 867.0,
+     "ci": 139.0
+    }
+   }
+  },
+  {
+   "rank": 10,
+   "rank_spread": [
+    6,
+    13
    ],
    "model": "Claude Fable 5 (High)",
    "model_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -217,10 +267,10 @@
    }
   },
   {
-   "rank": 9,
+   "rank": 11,
    "rank_spread": [
     6,
-    11
+    13
    ],
    "model": "Claude Opus 5 (Max)",
    "model_url": "https://www.anthropic.com/news/claude-opus-5",
@@ -242,10 +292,10 @@
    }
   },
   {
-   "rank": 10,
+   "rank": 12,
    "rank_spread": [
-    7,
-    13
+    8,
+    15
    ],
    "model": "GPT-5.6 Sol (xHigh)",
    "model_url": "https://openai.com/index/gpt-5-6/",
@@ -267,10 +317,10 @@
    }
   },
   {
-   "rank": 11,
+   "rank": 13,
    "rank_spread": [
-    8,
-    23
+    9,
+    25
    ],
    "model": "DeepSeek-V4.1-Flash-20261017 (Max)",
    "model_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
@@ -292,10 +342,10 @@
    }
   },
   {
-   "rank": 12,
+   "rank": 14,
    "rank_spread": [
-    10,
-    25
+    12,
+    27
    ],
    "model": "Claude Sonnet 5 (High)",
    "model_url": "https://www.anthropic.com/news/claude-sonnet-5",
@@ -317,10 +367,10 @@
    }
   },
   {
-   "rank": 13,
+   "rank": 15,
    "rank_spread": [
-    10,
-    28
+    12,
+    30
    ],
    "model": "Muse Wonder (Max)",
    "model_url": "https://research.meta.ai/blog/muse-wonder",
@@ -342,10 +392,10 @@
    }
   },
   {
-   "rank": 14,
+   "rank": 16,
    "rank_spread": [
-    11,
-    23
+    13,
+    25
    ],
    "model": "MiMo-V2.6-Pro",
    "model_url": "https://mimo.xiaomi.com/mimo-v2-6",
@@ -367,10 +417,10 @@
    }
   },
   {
-   "rank": 15,
+   "rank": 17,
    "rank_spread": [
-    11,
-    24
+    13,
+    26
    ],
    "model": "Gemini 3.8 Flash (High)",
    "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
@@ -392,10 +442,10 @@
    }
   },
   {
-   "rank": 16,
+   "rank": 18,
    "rank_spread": [
-    11,
-    24
+    13,
+    26
    ],
    "model": "Muse Spark 1.3 (Max)",
    "model_url": "https://developer.meta.com/ai/models/muse-spark/",
@@ -417,10 +467,10 @@
    }
   },
   {
-   "rank": 17,
+   "rank": 19,
    "rank_spread": [
-    11,
-    30
+    13,
+    32
    ],
    "model": "Grok 4.7 (xHigh)",
    "model_url": "https://docs.x.ai/developers/models/grok-4.7",
@@ -442,10 +492,10 @@
    }
   },
   {
-   "rank": 18,
+   "rank": 20,
    "rank_spread": [
-    11,
-    30
+    13,
+    32
    ],
    "model": "GPT-5.5 (xHigh)",
    "model_url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -467,10 +517,10 @@
    }
   },
   {
-   "rank": 19,
+   "rank": 21,
    "rank_spread": [
-    11,
-    25
+    13,
+    27
    ],
    "model": "GPT-6 Luna (Max)",
    "model_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
@@ -492,10 +542,10 @@
    }
   },
   {
-   "rank": 20,
+   "rank": 22,
    "rank_spread": [
-    11,
-    27
+    13,
+    29
    ],
    "model": "DeepSeek-V4.1-Flash-20260910 (Max)",
    "model_url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
@@ -517,10 +567,10 @@
    }
   },
   {
-   "rank": 21,
+   "rank": 23,
    "rank_spread": [
-    11,
-    31
+    13,
+    33
    ],
    "model": "MiMo-V2.6-Flash",
    "model_url": "https://mimo.xiaomi.com/mimo-v2-6",
@@ -542,10 +592,10 @@
    }
   },
   {
-   "rank": 22,
+   "rank": 24,
    "rank_spread": [
-    11,
-    29
+    13,
+    31
    ],
    "model": "Hy4 preview",
    "model_url": "https://hy.tencent.ai/research/hy4-preview",
@@ -567,10 +617,10 @@
    }
   },
   {
-   "rank": 23,
+   "rank": 25,
    "rank_spread": [
-    11,
-    31
+    13,
+    33
    ],
    "model": "GLM-5.2 (Max)",
    "model_url": "https://huggingface.co/zai-org/GLM-5.2",
@@ -592,10 +642,10 @@
    }
   },
   {
-   "rank": 24,
+   "rank": 26,
    "rank_spread": [
-    13,
-    31
+    15,
+    33
    ],
    "model": "Kimi K3 (Max)",
    "model_url": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart",
@@ -617,10 +667,10 @@
    }
   },
   {
-   "rank": 25,
+   "rank": 27,
    "rank_spread": [
-    17,
-    31
+    19,
+    33
    ],
    "model": "Qwen3.8-Max",
    "model_url": "https://qwen.ai/blog?id=qwen3.8",
@@ -642,10 +692,10 @@
    }
   },
   {
-   "rank": 26,
+   "rank": 28,
    "rank_spread": [
-    15,
-    32
+    17,
+    34
    ],
    "model": "Claude Haiku 5.5 (High)",
    "model_url": "https://www.anthropic.com/claude-haiku-5-5",
@@ -667,10 +717,10 @@
    }
   },
   {
-   "rank": 27,
+   "rank": 29,
    "rank_spread": [
-    18,
-    32
+    20,
+    34
    ],
    "model": "GLM-5.3 (Max)",
    "model_url": "https://z.ai/blog/glm-5.3",
@@ -692,10 +742,10 @@
    }
   },
   {
-   "rank": 28,
+   "rank": 30,
    "rank_spread": [
-    17,
-    33
+    19,
+    35
    ],
    "model": "GPT-5.4 (High)",
    "model_url": "https://platform.openai.com/docs/models/gpt-5.4",
@@ -717,10 +767,10 @@
    }
   },
   {
-   "rank": 29,
+   "rank": 31,
    "rank_spread": [
-    19,
-    34
+    21,
+    36
    ],
    "model": "Grok 4.6 (xHigh)",
    "model_url": "https://docs.x.ai/developers/models/grok-4.6",
@@ -742,10 +792,10 @@
    }
   },
   {
-   "rank": 30,
+   "rank": 32,
    "rank_spread": [
-    22,
-    36
+    24,
+    38
    ],
    "model": "GPT-5.6 Terra (xHigh)",
    "model_url": "https://openai.com/index/gpt-5-6/",
@@ -767,10 +817,10 @@
    }
   },
   {
-   "rank": 31,
+   "rank": 33,
    "rank_spread": [
-    20,
-    38
+    22,
+    40
    ],
    "model": "DeepSeek-V4-Pro (High, 20260813)",
    "model_url": "https://api-docs.deepseek.com/updates/#date-2026-08-13",
@@ -792,10 +842,10 @@
    }
   },
   {
-   "rank": 32,
+   "rank": 34,
    "rank_spread": [
-    26,
-    38
+    28,
+    40
    ],
    "model": "GPT-5.5",
    "model_url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -817,10 +867,10 @@
    }
   },
   {
-   "rank": 33,
+   "rank": 35,
    "rank_spread": [
-    28,
-    38
+    30,
+    40
    ],
    "model": "GPT-6 Luna (Medium)",
    "model_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
@@ -842,10 +892,10 @@
    }
   },
   {
-   "rank": 34,
+   "rank": 36,
    "rank_spread": [
-    29,
-    38
+    31,
+    40
    ],
    "model": "Gemini 3.7 Flash (High)",
    "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
@@ -867,10 +917,10 @@
    }
   },
   {
-   "rank": 35,
+   "rank": 37,
    "rank_spread": [
-    30,
-    38
+    32,
+    40
    ],
    "model": "GLM-5.3-Flash",
    "model_url": "https://z.ai/blog/glm-5.3",
@@ -892,10 +942,10 @@
    }
   },
   {
-   "rank": 36,
+   "rank": 38,
    "rank_spread": [
-    30,
-    43
+    32,
+    45
    ],
    "model": "Step 5 Preview",
    "model_url": "https://stepfun.ai/",
@@ -917,10 +967,10 @@
    }
   },
   {
-   "rank": 37,
+   "rank": 39,
    "rank_spread": [
-    31,
-    42
+    33,
+    44
    ],
    "model": "GPT-5.6 Luna (xHigh)",
    "model_url": "https://openai.com/index/gpt-5-6/",
@@ -942,10 +992,10 @@
    }
   },
   {
-   "rank": 38,
+   "rank": 40,
    "rank_spread": [
-    36,
-    44
+    38,
+    46
    ],
    "model": "Qwen3.8-Flash-Next",
    "model_url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
@@ -967,10 +1017,10 @@
    }
   },
   {
-   "rank": 39,
+   "rank": 41,
    "rank_spread": [
-    31,
-    47
+    33,
+    49
    ],
    "model": "MiniMax-M3.1-Flash",
    "model_url": "https://www.minimax.io/blog/minimax-m31f",
@@ -992,10 +1042,10 @@
    }
   },
   {
-   "rank": 40,
+   "rank": 42,
    "rank_spread": [
-    37,
-    44
+    39,
+    46
    ],
    "model": "Qwen3.8-27B",
    "model_url": "https://huggingface.co/Qwen/Qwen3.8-27B",
@@ -1017,10 +1067,10 @@
    }
   },
   {
-   "rank": 41,
+   "rank": 43,
    "rank_spread": [
-    36,
-    47
+    38,
+    49
    ],
    "model": "Gemini 3.1 Pro Preview",
    "model_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
@@ -1042,10 +1092,10 @@
    }
   },
   {
-   "rank": 42,
+   "rank": 44,
    "rank_spread": [
-    36,
-    50
+    38,
+    52
    ],
    "model": "Mistral Large 4",
    "model_url": "https://mistral.ai/news/mistral-large-4/",
@@ -1067,10 +1117,10 @@
    }
   },
   {
-   "rank": 43,
+   "rank": 45,
    "rank_spread": [
-    36,
-    50
+    38,
+    52
    ],
    "model": "Beam 1.0 501B A23B",
    "model_url": "https://reflection.ai/blog/introducing-beam",
@@ -1092,10 +1142,10 @@
    }
   },
   {
-   "rank": 44,
+   "rank": 46,
    "rank_spread": [
-    38,
-    49
+    40,
+    51
    ],
    "model": "GPT-6 Luna (Low)",
    "model_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
@@ -1117,10 +1167,10 @@
    }
   },
   {
-   "rank": 45,
+   "rank": 47,
    "rank_spread": [
-    40,
-    51
+    42,
+    53
    ],
    "model": "Hy3",
    "model_url": "https://huggingface.co/tencent/Hy3",
@@ -1142,10 +1192,10 @@
    }
   },
   {
-   "rank": 46,
+   "rank": 48,
    "rank_spread": [
-    40,
-    51
+    42,
+    53
    ],
    "model": "Qwen3.7-Max",
    "model_url": null,
@@ -1167,10 +1217,10 @@
    }
   },
   {
-   "rank": 47,
+   "rank": 49,
    "rank_spread": [
-    42,
-    51
+    44,
+    53
    ],
    "model": "Muse Spark 1.1",
    "model_url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
@@ -1192,10 +1242,10 @@
    }
   },
   {
-   "rank": 48,
+   "rank": 50,
    "rank_spread": [
-    40,
-    52
+    42,
+    54
    ],
    "model": "Qwen3.7-Plus",
    "model_url": "https://qwen.ai/blog?id=qwen3.7-plus",
@@ -1217,10 +1267,10 @@
    }
   },
   {
-   "rank": 49,
+   "rank": 51,
    "rank_spread": [
-    42,
-    51
+    44,
+    53
    ],
    "model": "Muse Spark 1.2 (xHigh)",
    "model_url": "https://developer.meta.com/ai/models/muse-spark/",
@@ -1242,10 +1292,10 @@
    }
   },
   {
-   "rank": 50,
+   "rank": 52,
    "rank_spread": [
-    45,
-    52
+    47,
+    54
    ],
    "model": "MiMo-V2.5-Pro",
    "model_url": "https://mimo.xiaomi.com/mimo-v2-5-pro/",
@@ -1267,10 +1317,10 @@
    }
   },
   {
-   "rank": 51,
+   "rank": 53,
    "rank_spread": [
-    49,
-    53
+    51,
+    55
    ],
    "model": "MiniMax-M3",
    "model_url": "https://www.minimax.io/models/text/m3",
@@ -1292,10 +1342,10 @@
    }
   },
   {
-   "rank": 52,
+   "rank": 54,
    "rank_spread": [
-    43,
-    55
+    45,
+    57
    ],
    "model": "Nemotron 3 Ultra",
    "model_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
@@ -1317,10 +1367,10 @@
    }
   },
   {
-   "rank": 53,
+   "rank": 55,
    "rank_spread": [
-    51,
-    54
+    53,
+    56
    ],
    "model": "Mistral Medium 3.5",
    "model_url": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04",
@@ -1342,10 +1392,10 @@
    }
   },
   {
-   "rank": 54,
+   "rank": 56,
    "rank_spread": [
-    52,
-    55
+    54,
+    57
    ],
    "model": "Inkling",
    "model_url": "https://thinkingmachines.ai/news/introducing-inkling/",
@@ -1367,10 +1417,10 @@
    }
   },
   {
-   "rank": 55,
+   "rank": 57,
    "rank_spread": [
-    53,
-    56
+    55,
+    58
    ],
    "model": "Inkling-Small",
    "model_url": "https://thinkingmachines.ai/news/inkling-small/",
@@ -1392,10 +1442,10 @@
    }
   },
   {
-   "rank": 56,
+   "rank": 58,
    "rank_spread": [
-    55,
-    56
+    57,
+    58
    ],
    "model": "Solar Pro 4",
    "model_url": "https://www.upstage.ai/blog/en/solar-pro-4",
