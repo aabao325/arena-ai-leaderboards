@@ -1,7 +1,7 @@
 {
  "date": "2026-10-19",
- "fetched_at": "2026-10-19T17:00:05.123130+00:00",
- "board_count": 16,
+ "fetched_at": "2026-10-19T19:00:05.060441+00:00",
+ "board_count": 15,
  "groups": [
   {
    "key": "agent",
@@ -303,19 +303,19 @@
      "score_unit": null,
      "pricing_unit": null,
      "score_scale": 1,
-     "model_count": 165,
+     "model_count": 166,
      "top_models": [
       {
        "model": "Claude Fable 5 (High)",
        "vendor": "Anthropic",
-       "score": 1308,
+       "score": 1309,
        "rank": 1,
        "license": "proprietary"
       },
       {
        "model": "Qwen3.8-Max",
        "vendor": "Alibaba",
-       "score": 1301,
+       "score": 1300,
        "rank": 2,
        "license": "proprietary"
       },
@@ -329,7 +329,7 @@
       {
        "model": "Claude Opus 4.7",
        "vendor": "Anthropic",
-       "score": 1298,
+       "score": 1299,
        "rank": 4,
        "license": "proprietary"
       },
@@ -403,26 +403,26 @@
      "score_unit": "rating",
      "pricing_unit": "tokens",
      "score_scale": 1,
-     "model_count": 148,
+     "model_count": 149,
      "top_models": [
       {
        "model": "Claude Opus 5.5 (Max)",
        "vendor": "Anthropic",
-       "score": 1806,
+       "score": 1807,
        "rank": 1,
        "license": "proprietary"
       },
       {
        "model": "GPT-6 Astra (Max)",
        "vendor": "OpenAI",
-       "score": 1775,
+       "score": 1774,
        "rank": 2,
        "license": "proprietary"
       },
       {
        "model": "Claude Sonnet 5.5 (xHigh)",
        "vendor": "Anthropic",
-       "score": 1769,
+       "score": 1768,
        "rank": 3,
        "license": "proprietary"
       },
@@ -450,40 +450,40 @@
      "score_unit": null,
      "pricing_unit": null,
      "score_scale": 1,
-     "model_count": 64,
+     "model_count": 65,
      "top_models": [
       {
        "model": "Claude Opus 5.5 (Max)",
        "vendor": "Anthropic",
-       "score": 1749,
+       "score": 1753,
        "rank": 1,
        "license": "proprietary"
       },
       {
        "model": "Claude Sonnet 5.5 (xHigh)",
        "vendor": "Anthropic",
-       "score": 1740,
+       "score": 1737,
        "rank": 2,
        "license": "proprietary"
       },
       {
        "model": "GPT-6 Astra (Max)",
        "vendor": "OpenAI",
-       "score": 1731,
+       "score": 1726,
        "rank": 3,
        "license": "proprietary"
       },
       {
        "model": "Claude Fable 5.1 (Max)",
        "vendor": "Anthropic",
-       "score": 1720,
+       "score": 1722,
        "rank": 4,
        "license": "proprietary"
       },
       {
        "model": "GPT-6.1 Sol (Max)",
        "vendor": "OpenAI",
-       "score": 1703,
+       "score": 1702,
        "rank": 5,
        "license": "proprietary"
       }
@@ -545,53 +545,6 @@
     {
      "slug": "image-image-edit",
      "title": "Image Image Edit",
-     "sub_label": null,
-     "icon": null,
-     "score_unit": null,
-     "pricing_unit": null,
-     "score_scale": 1,
-     "model_count": 59,
-     "top_models": [
-      {
-       "model": "GPT-Image-2.5 Sunburst",
-       "vendor": "OpenAI",
-       "score": 1524,
-       "rank": 1,
-       "license": "proprietary"
-      },
-      {
-       "model": "GPT-Image-2.5 Flare",
-       "vendor": "OpenAI",
-       "score": 1481,
-       "rank": 2,
-       "license": "proprietary"
-      },
-      {
-       "model": "GPT-Image-2 (Medium)",
-       "vendor": "OpenAI",
-       "score": 1462,
-       "rank": 3,
-       "license": "proprietary"
-      },
-      {
-       "model": "Grok Imagine Image 2.0",
-       "vendor": "SpaceXAI",
-       "score": 1439,
-       "rank": 4,
-       "license": "proprietary"
-      },
-      {
-       "model": "MAI-Image-2.6",
-       "vendor": "Microsoft AI",
-       "score": 1428,
-       "rank": 5,
-       "license": "proprietary"
-      }
-     ]
-    },
-    {
-     "slug": "image-image-edit-single-image",
-     "title": "Image Image Edit Single Image",
      "sub_label": null,
      "icon": null,
      "score_unit": null,

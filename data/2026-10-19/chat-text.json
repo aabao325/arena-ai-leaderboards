@@ -2,7 +2,7 @@
  "meta": {
   "leaderboard": "chat-text",
   "source_url": "https://arena.ai/leaderboard/chat/text",
-  "fetched_at": "2026-10-19T17:00:05.123130+00:00",
+  "fetched_at": "2026-10-19T19:00:05.060441+00:00",
   "last_updated": "2026-10-15T13:00:00.000Z",
   "model_count": 416,
   "model_count_upstream": 416,
@@ -1491,8 +1491,8 @@
    "ci_high": 6,
    "preliminary": false,
    "votes": 12208,
-   "price_prompt": 0.132,
-   "price_completion": 0.528,
+   "price_prompt": 0.0825,
+   "price_completion": 0.33,
    "context_length": 262144,
    "signals": null
   },
@@ -2423,7 +2423,7 @@
     142
    ],
    "model": "NVIDIA-Nemotron-3-Ultra-550B-A55B (NVFP4)",
-   "model_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+   "model_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
    "vendor": "Nvidia",
    "license": "open",
    "score": 1426,
@@ -4323,7 +4323,7 @@
     235
    ],
    "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B (NVFP4)",
-   "model_url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/?nvid=nv-csfg-698644",
+   "model_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
    "vendor": "Nvidia",
    "license": "open",
    "score": 1351,
