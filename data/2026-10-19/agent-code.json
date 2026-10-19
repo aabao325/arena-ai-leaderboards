@@ -2,7 +2,7 @@
  "meta": {
   "leaderboard": "agent-code",
   "source_url": "https://arena.ai/leaderboard/agent",
-  "fetched_at": "2026-10-19T19:00:05.060441+00:00",
+  "fetched_at": "2026-10-19T21:00:05.017257+00:00",
   "last_updated": null,
   "model_count": 56,
   "title": "Agent · Code",
@@ -873,7 +873,7 @@
     44
    ],
    "model": "MiniMax-M3.1-Flash",
-   "model_url": "https://www.minimax.io/models/text/m3",
+   "model_url": "https://www.minimax.io/blog/minimax-m31f",
    "vendor": "MiniMax",
    "license": null,
    "score": null,
@@ -881,8 +881,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 2882,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.15,
+   "price_completion": 0.6,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1106,8 +1106,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 4090,
-   "price_prompt": 1.0,
-   "price_completion": 3.0,
+   "price_prompt": 0.3,
+   "price_completion": 1.0,
    "context_length": null,
    "signals": {
     "avg_score": {

@@ -2,7 +2,7 @@
  "meta": {
   "leaderboard": "code-webdev",
   "source_url": "https://arena.ai/leaderboard/code/webdev",
-  "fetched_at": "2026-10-19T19:00:05.060441+00:00",
+  "fetched_at": "2026-10-19T21:00:05.017257+00:00",
   "last_updated": "2026-10-19T15:00:00.000Z",
   "model_count": 149,
   "model_count_upstream": 149,
@@ -663,7 +663,7 @@
     39
    ],
    "model": "MiniMax-M3.1-Flash",
-   "model_url": "https://www.minimax.io/models/text/m3",
+   "model_url": "https://www.minimax.io/blog/minimax-m31f",
    "vendor": "MiniMax",
    "license": null,
    "score": 1587,
@@ -671,8 +671,8 @@
    "ci_high": 14,
    "preliminary": false,
    "votes": 1853,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.15,
+   "price_completion": 0.6,
    "context_length": null,
    "signals": null
   },
@@ -1651,8 +1651,8 @@
    "ci_high": 13,
    "preliminary": false,
    "votes": 2930,
-   "price_prompt": 1.0,
-   "price_completion": 3.0,
+   "price_prompt": 0.3,
+   "price_completion": 1.0,
    "context_length": 1048576,
    "signals": null
   },

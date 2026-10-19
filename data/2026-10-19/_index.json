@@ -1,7 +1,7 @@
 {
  "date": "2026-10-19",
- "fetched_at": "2026-10-19T19:00:05.060441+00:00",
- "board_count": 15,
+ "fetched_at": "2026-10-19T21:00:05.017257+00:00",
+ "board_count": 14,
  "groups": [
   {
    "key": "agent",
@@ -290,53 +290,6 @@
        "model": "Claude Fable 5.1 (High)",
        "vendor": "Anthropic",
        "score": 1246,
-       "rank": 5,
-       "license": "proprietary"
-      }
-     ]
-    },
-    {
-     "slug": "chat-vision",
-     "title": "Chat Vision",
-     "sub_label": null,
-     "icon": null,
-     "score_unit": null,
-     "pricing_unit": null,
-     "score_scale": 1,
-     "model_count": 166,
-     "top_models": [
-      {
-       "model": "Claude Fable 5 (High)",
-       "vendor": "Anthropic",
-       "score": 1309,
-       "rank": 1,
-       "license": "proprietary"
-      },
-      {
-       "model": "Qwen3.8-Max",
-       "vendor": "Alibaba",
-       "score": 1300,
-       "rank": 2,
-       "license": "proprietary"
-      },
-      {
-       "model": "Claude Opus 4.6 (High)",
-       "vendor": "Anthropic",
-       "score": 1299,
-       "rank": 3,
-       "license": "proprietary"
-      },
-      {
-       "model": "Claude Opus 4.7",
-       "vendor": "Anthropic",
-       "score": 1299,
-       "rank": 4,
-       "license": "proprietary"
-      },
-      {
-       "model": "Claude Opus 4.7 (High)",
-       "vendor": "Anthropic",
-       "score": 1298,
        "rank": 5,
        "license": "proprietary"
       }
@@ -739,5 +692,12 @@
    ]
   }
  ],
- "failed": []
+ "failed": [
+  {
+   "slug": "chat-vision",
+   "title": "Chat Vision",
+   "href": "/leaderboard/chat/vision",
+   "reason": "网络错误"
+  }
+ ]
 }
