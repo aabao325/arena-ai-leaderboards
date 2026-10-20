@@ -2,7 +2,7 @@
  "meta": {
   "leaderboard": "chat-search",
   "source_url": "https://arena.ai/leaderboard/chat/search",
-  "fetched_at": "2026-10-20T14:00:05.372227+00:00",
+  "fetched_at": "2026-10-20T15:00:05.323020+00:00",
   "last_updated": "2026-10-13T14:00:00.000Z",
   "model_count": 42,
   "model_count_upstream": 42,
@@ -711,8 +711,8 @@
    "ci_high": 5,
    "preliminary": false,
    "votes": 86689,
-   "price_prompt": 0.625,
-   "price_completion": 5.0,
+   "price_prompt": 1.25,
+   "price_completion": 10.0,
    "context_length": 1048576,
    "signals": null
   },
