@@ -1,0 +1,220 @@
+{
+ "meta": {
+  "leaderboard": "video-video-edit",
+  "source_url": "https://arena.ai/leaderboard/video/video-edit",
+  "fetched_at": "2026-10-20T00:00:05.160088+00:00",
+  "last_updated": "2026-08-26T18:00:00.000Z",
+  "model_count": 10,
+  "model_count_upstream": 10,
+  "title": "Video Video Edit",
+  "title_zh": "视频",
+  "sub_label": null,
+  "group": "video",
+  "icon": null,
+  "score_unit": null,
+  "score_scale": 1,
+  "score_in_signals": false
+ },
+ "models": [
+  {
+   "rank": 1,
+   "rank_spread": [
+    1,
+    1
+   ],
+   "model": "Wan 3.0",
+   "model_url": null,
+   "vendor": "Alibaba",
+   "license": null,
+   "score": 1414,
+   "ci_low": 26,
+   "ci_high": 26,
+   "preliminary": false,
+   "votes": null,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": null
+  },
+  {
+   "rank": 2,
+   "rank_spread": [
+    2,
+    2
+   ],
+   "model": "Dreamina Seedance 2.5 (720p)",
+   "model_url": null,
+   "vendor": "Bytedance",
+   "license": null,
+   "score": 1410,
+   "ci_low": 26,
+   "ci_high": 26,
+   "preliminary": false,
+   "votes": null,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": null
+  },
+  {
+   "rank": 3,
+   "rank_spread": [
+    3,
+    3
+   ],
+   "model": "MiniMax H3",
+   "model_url": null,
+   "vendor": "MiniMax",
+   "license": null,
+   "score": 1392,
+   "ci_low": 19,
+   "ci_high": 19,
+   "preliminary": false,
+   "votes": null,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": null
+  },
+  {
+   "rank": 4,
+   "rank_spread": [
+    4,
+    4
+   ],
+   "model": "gemini-omni-flash",
+   "model_url": null,
+   "vendor": "Google",
+   "license": null,
+   "score": 1367,
+   "ci_low": 15,
+   "ci_high": 15,
+   "preliminary": false,
+   "votes": null,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": null
+  },
+  {
+   "rank": 5,
+   "rank_spread": [
+    5,
+    5
+   ],
+   "model": "Dreamina Seedance 2.0 (720p)",
+   "model_url": null,
+   "vendor": "Bytedance",
+   "license": null,
+   "score": 1365,
+   "ci_low": 14,
+   "ci_high": 14,
+   "preliminary": false,
+   "votes": null,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": null
+  },
+  {
+   "rank": 6,
+   "rank_spread": [
+    6,
+    6
+   ],
+   "model": "HappyHorse 1.0",
+   "model_url": null,
+   "vendor": "Alibaba-ATH",
+   "license": null,
+   "score": 1307,
+   "ci_low": 14,
+   "ci_high": 14,
+   "preliminary": false,
+   "votes": null,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": null
+  },
+  {
+   "rank": 7,
+   "rank_spread": [
+    7,
+    7
+   ],
+   "model": "Grok Imagine Video",
+   "model_url": null,
+   "vendor": "SpaceXAI",
+   "license": null,
+   "score": 1258,
+   "ci_low": 10,
+   "ci_high": 10,
+   "preliminary": false,
+   "votes": null,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": null
+  },
+  {
+   "rank": 8,
+   "rank_spread": [
+    8,
+    8
+   ],
+   "model": "Kling O3 Pro",
+   "model_url": null,
+   "vendor": "KlingAI",
+   "license": null,
+   "score": 1255,
+   "ci_low": 11,
+   "ci_high": 11,
+   "preliminary": false,
+   "votes": null,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": null
+  },
+  {
+   "rank": 9,
+   "rank_spread": [
+    9,
+    9
+   ],
+   "model": "Kling O1 Pro",
+   "model_url": null,
+   "vendor": "KlingAI",
+   "license": null,
+   "score": 1197,
+   "ci_low": 10,
+   "ci_high": 10,
+   "preliminary": false,
+   "votes": null,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": null
+  },
+  {
+   "rank": 10,
+   "rank_spread": [
+    10,
+    10
+   ],
+   "model": "Runway Gen-4 Aleph",
+   "model_url": null,
+   "vendor": "Runway",
+   "license": null,
+   "score": 1182,
+   "ci_low": 9,
+   "ci_high": 9,
+   "preliminary": false,
+   "votes": null,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": null
+  }
+ ]
+}
