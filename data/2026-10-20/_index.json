@@ -1,7 +1,7 @@
 {
  "date": "2026-10-20",
- "fetched_at": "2026-10-20T16:00:05.291314+00:00",
- "board_count": 15,
+ "fetched_at": "2026-10-20T17:00:05.237822+00:00",
+ "board_count": 16,
  "groups": [
   {
    "key": "agent",
@@ -550,12 +550,12 @@
      "score_unit": null,
      "pricing_unit": null,
      "score_scale": 1,
-     "model_count": 59,
+     "model_count": 60,
      "top_models": [
       {
        "model": "GPT-Image-2.5 Sunburst",
        "vendor": "OpenAI",
-       "score": 1524,
+       "score": 1514,
        "rank": 1,
        "license": "proprietary"
       },
@@ -569,7 +569,7 @@
       {
        "model": "GPT-Image-2 (Medium)",
        "vendor": "OpenAI",
-       "score": 1462,
+       "score": 1461,
        "rank": 3,
        "license": "proprietary"
       },
@@ -581,9 +581,56 @@
        "license": "proprietary"
       },
       {
-       "model": "MAI-Image-2.6",
-       "vendor": "Microsoft AI",
-       "score": 1428,
+       "model": "Gemini Nano Banana 2.1",
+       "vendor": "Google",
+       "score": 1426,
+       "rank": 5,
+       "license": "proprietary"
+      }
+     ]
+    },
+    {
+     "slug": "image-image-edit-single-image",
+     "title": "Image Image Edit Single Image",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
+     "score_scale": 1,
+     "model_count": 60,
+     "top_models": [
+      {
+       "model": "GPT-Image-2.5 Sunburst",
+       "vendor": "OpenAI",
+       "score": 1514,
+       "rank": 1,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-Image-2.5 Flare",
+       "vendor": "OpenAI",
+       "score": 1481,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "GPT-Image-2 (Medium)",
+       "vendor": "OpenAI",
+       "score": 1461,
+       "rank": 3,
+       "license": "proprietary"
+      },
+      {
+       "model": "Grok Imagine Image 2.0",
+       "vendor": "SpaceXAI",
+       "score": 1439,
+       "rank": 4,
+       "license": "proprietary"
+      },
+      {
+       "model": "Gemini Nano Banana 2.1",
+       "vendor": "Google",
+       "score": 1426,
        "rank": 5,
        "license": "proprietary"
       }
