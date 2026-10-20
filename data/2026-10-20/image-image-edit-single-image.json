@@ -2,7 +2,7 @@
  "meta": {
   "leaderboard": "image-image-edit-single-image",
   "source_url": "https://arena.ai/leaderboard/image/image-edit/single-image",
-  "fetched_at": "2026-10-20T17:00:05.237822+00:00",
+  "fetched_at": "2026-10-20T19:00:05.246912+00:00",
   "last_updated": "2026-10-19T17:00:00.000Z",
   "model_count": 60,
   "model_count_upstream": 60,
@@ -163,7 +163,7 @@
     10
    ],
    "model": "Krea 3 Ultra",
-   "model_url": null,
+   "model_url": "https://www.krea.ai/blog/introducing-krea-3",
    "vendor": "Krea",
    "license": null,
    "score": 1411,
