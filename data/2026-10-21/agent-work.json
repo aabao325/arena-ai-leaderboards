@@ -2,7 +2,7 @@
  "meta": {
   "leaderboard": "agent-work",
   "source_url": "https://arena.ai/leaderboard/agent",
-  "fetched_at": "2026-10-21T03:00:05.381289+00:00",
+  "fetched_at": "2026-10-21T04:00:05.237734+00:00",
   "last_updated": null,
   "model_count": 57,
   "title": "Agent · Work",
@@ -1281,8 +1281,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 28211,
-   "price_prompt": 0.435,
-   "price_completion": 0.87,
+   "price_prompt": 0.3045,
+   "price_completion": 0.609,
    "context_length": null,
    "signals": {
     "avg_score": {
