@@ -2,7 +2,7 @@
  "meta": {
   "leaderboard": "agent",
   "source_url": "https://arena.ai/leaderboard/agent",
-  "fetched_at": "2026-10-21T14:00:05.233114+00:00",
+  "fetched_at": "2026-10-21T15:00:05.549061+00:00",
   "last_updated": null,
   "model_count": 57,
   "title": "Agent · Overall",
@@ -31,8 +31,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 11538,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 4.0,
+   "price_completion": 20.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -56,8 +56,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 14216,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 10.0,
+   "price_completion": 50.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -81,8 +81,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 16896,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 10.0,
+   "price_completion": 50.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -106,8 +106,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 15208,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 2.0,
+   "price_completion": 10.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -156,8 +156,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 37164,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 2.0,
+   "price_completion": 10.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -206,8 +206,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 9725,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 1.0,
+   "price_completion": 5.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -231,8 +231,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 43368,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 10.0,
+   "price_completion": 50.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -256,8 +256,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 24224,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 5.0,
+   "price_completion": 25.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -281,8 +281,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 37308,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 4.0,
+   "price_completion": 20.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -331,8 +331,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 33766,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 2.0,
+   "price_completion": 10.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -356,8 +356,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 10084,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 4.0,
+   "price_completion": 20.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -381,8 +381,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 38839,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.435,
+   "price_completion": 0.87,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -406,8 +406,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 39360,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.75,
+   "price_completion": 3.75,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -431,8 +431,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 77316,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 1.25,
+   "price_completion": 4.25,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -456,8 +456,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 16263,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 2.0,
+   "price_completion": 6.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -481,8 +481,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 54420,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 5.0,
+   "price_completion": 30.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -506,8 +506,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 186259,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.05,
+   "price_completion": 0.25,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -531,8 +531,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 259628,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.3,
+   "price_completion": 1.2,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -556,8 +556,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 21908,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.14,
+   "price_completion": 0.28,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -581,8 +581,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 91085,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.834,
+   "price_completion": 2.501,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -606,8 +606,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 89361,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 1.4,
+   "price_completion": 4.4,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -631,8 +631,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 138654,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 3.0,
+   "price_completion": 15.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -656,8 +656,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 73548,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 2.0,
+   "price_completion": 6.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -681,8 +681,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 26803,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.1,
+   "price_completion": 0.5,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -706,8 +706,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 87921,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 1.4,
+   "price_completion": 4.4,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -731,8 +731,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 81933,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 2.5,
+   "price_completion": 15.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -781,8 +781,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 24904,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 2.0,
+   "price_completion": 12.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -806,8 +806,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 7333,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 1.32,
+   "price_completion": 3.96,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -831,8 +831,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 82719,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 5.0,
+   "price_completion": 30.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -881,8 +881,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 55949,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.75,
+   "price_completion": 3.75,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -931,8 +931,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 91269,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.05,
+   "price_completion": 0.18,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -956,8 +956,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 44057,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.2,
+   "price_completion": 1.2,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1006,8 +1006,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 103655,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.16,
+   "price_completion": 0.47,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1031,8 +1031,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 87565,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 1.0,
+   "price_completion": 6.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1081,8 +1081,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 12000,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.3,
+   "price_completion": 1.0,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1106,8 +1106,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 14042,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.68,
+   "price_completion": 2.09,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1156,8 +1156,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 31784,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.132,
+   "price_completion": 0.528,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1206,8 +1206,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 148932,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 1.25,
+   "price_completion": 4.25,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1231,8 +1231,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 23779,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.32,
+   "price_completion": 1.28,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1256,8 +1256,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 53217,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 1.25,
+   "price_completion": 4.25,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1281,8 +1281,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 49473,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.3045,
+   "price_completion": 0.609,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1306,8 +1306,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 43495,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.3,
+   "price_completion": 1.2,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1331,8 +1331,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 13241,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.75,
+   "price_completion": 3.75,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1381,8 +1381,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 43799,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 1.0,
+   "price_completion": 4.05,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1431,8 +1431,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 10496,
-   "price_prompt": null,
-   "price_completion": null,
+   "price_prompt": 0.15,
+   "price_completion": 0.6,
    "context_length": null,
    "signals": {
     "avg_score": {
