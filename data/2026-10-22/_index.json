@@ -1,213 +1,19 @@
 {
  "date": "2026-10-22",
- "fetched_at": "2026-10-22T19:00:05.718203+00:00",
- "board_count": 16,
+ "fetched_at": "2026-10-22T21:00:05.770273+00:00",
+ "board_count": 11,
  "groups": [
-  {
-   "key": "agent",
-   "label": "智能体",
-   "boards": [
-    {
-     "slug": "agent-work",
-     "title": "Agent · Work",
-     "sub_label": "Agent | Work",
-     "icon": "suitcase",
-     "score_unit": "net-improvement",
-     "pricing_unit": null,
-     "score_scale": 10000,
-     "model_count": 57,
-     "top_models": [
-      {
-       "model": "Claude Opus 5.5 (Max)",
-       "vendor": "Anthropic",
-       "score": null,
-       "rank": 1,
-       "license": "proprietary"
-      },
-      {
-       "model": "Claude Fable 5.1 (Max)",
-       "vendor": "Anthropic",
-       "score": null,
-       "rank": 2,
-       "license": "proprietary"
-      },
-      {
-       "model": "GPT-6 Astra (Max)",
-       "vendor": "OpenAI",
-       "score": null,
-       "rank": 3,
-       "license": "proprietary"
-      },
-      {
-       "model": "GPT-6.1 Sol (Max)",
-       "vendor": "OpenAI",
-       "score": null,
-       "rank": 4,
-       "license": "proprietary"
-      },
-      {
-       "model": "Claude Sonnet 5.5 (Max)",
-       "vendor": "Anthropic",
-       "score": null,
-       "rank": 5,
-       "license": "proprietary"
-      }
-     ]
-    },
-    {
-     "slug": "agent-alignment",
-     "title": "Agent · Alignment",
-     "sub_label": "Agent | Alignment",
-     "icon": "shield",
-     "score_unit": "index",
-     "pricing_unit": null,
-     "score_scale": 1,
-     "model_count": 30,
-     "top_models": [
-      {
-       "model": "GPT-6.1 Sol",
-       "vendor": "OpenAI",
-       "score": 88,
-       "rank": 1,
-       "license": null
-      },
-      {
-       "model": "GPT-6 Astra",
-       "vendor": "OpenAI",
-       "score": 88,
-       "rank": 2,
-       "license": null
-      },
-      {
-       "model": "GPT-6 Luna",
-       "vendor": "OpenAI",
-       "score": 88,
-       "rank": 3,
-       "license": null
-      },
-      {
-       "model": "GPT-6 Sol",
-       "vendor": "OpenAI",
-       "score": 88,
-       "rank": 4,
-       "license": null
-      },
-      {
-       "model": "GPT-5.6 Sol",
-       "vendor": "OpenAI",
-       "score": 84,
-       "rank": 5,
-       "license": null
-      }
-     ]
-    },
-    {
-     "slug": "agent-code",
-     "title": "Agent · Code",
-     "sub_label": "Agent | Code",
-     "icon": "terminal",
-     "score_unit": "net-improvement",
-     "pricing_unit": null,
-     "score_scale": 10000,
-     "model_count": 57,
-     "top_models": [
-      {
-       "model": "Claude Opus 5.5 (Max)",
-       "vendor": "Anthropic",
-       "score": null,
-       "rank": 1,
-       "license": "proprietary"
-      },
-      {
-       "model": "GPT-6 Astra (Max)",
-       "vendor": "OpenAI",
-       "score": null,
-       "rank": 2,
-       "license": "proprietary"
-      },
-      {
-       "model": "Claude Fable 5.1 (Max)",
-       "vendor": "Anthropic",
-       "score": null,
-       "rank": 3,
-       "license": "proprietary"
-      },
-      {
-       "model": "GPT-6.1 Sol (Max)",
-       "vendor": "OpenAI",
-       "score": null,
-       "rank": 4,
-       "license": "proprietary"
-      },
-      {
-       "model": "Claude Sonnet 5.5 (Max)",
-       "vendor": "Anthropic",
-       "score": null,
-       "rank": 5,
-       "license": "proprietary"
-      }
-     ]
-    },
-    {
-     "slug": "agent",
-     "title": "Agent · Overall",
-     "sub_label": "Agent | Overall",
-     "icon": "agent",
-     "score_unit": "net-improvement",
-     "pricing_unit": null,
-     "score_scale": 10000,
-     "model_count": 57,
-     "top_models": [
-      {
-       "model": "Claude Opus 5.5 (Max)",
-       "vendor": "Anthropic",
-       "score": null,
-       "rank": 1,
-       "license": "proprietary"
-      },
-      {
-       "model": "GPT-6 Astra (Max)",
-       "vendor": "OpenAI",
-       "score": null,
-       "rank": 2,
-       "license": "proprietary"
-      },
-      {
-       "model": "Claude Fable 5.1 (Max)",
-       "vendor": "Anthropic",
-       "score": null,
-       "rank": 3,
-       "license": "proprietary"
-      },
-      {
-       "model": "GPT-6.1 Sol (Max)",
-       "vendor": "OpenAI",
-       "score": null,
-       "rank": 4,
-       "license": "proprietary"
-      },
-      {
-       "model": "Claude Sonnet 5.5 (Max)",
-       "vendor": "Anthropic",
-       "score": null,
-       "rank": 5,
-       "license": "proprietary"
-      }
-     ]
-    }
-   ]
-  },
   {
    "key": "chat",
    "label": "对话",
    "boards": [
     {
      "slug": "chat-text",
-     "title": "Best Text",
-     "sub_label": "Text | Overall",
-     "icon": "chat",
-     "score_unit": "rating",
-     "pricing_unit": "tokens",
+     "title": "Chat Text",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
      "score_scale": 1,
      "model_count": 417,
      "top_models": [
@@ -397,11 +203,11 @@
    "boards": [
     {
      "slug": "code-webdev",
-     "title": "Best WebDev",
-     "sub_label": "Code | Overall",
-     "icon": "app-window",
-     "score_unit": "rating",
-     "pricing_unit": "tokens",
+     "title": "Code Webdev",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
      "score_scale": 1,
      "model_count": 150,
      "top_models": [
@@ -497,11 +303,11 @@
    "boards": [
     {
      "slug": "image-text-to-image",
-     "title": "Best Image",
-     "sub_label": "Image | Overall",
-     "icon": "image",
-     "score_unit": "rating",
-     "pricing_unit": "image",
+     "title": "Image Text To Image",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
      "score_scale": 1,
      "model_count": 82,
      "top_models": [
@@ -588,53 +394,6 @@
        "license": "proprietary"
       }
      ]
-    },
-    {
-     "slug": "image-image-edit-single-image",
-     "title": "Image Image Edit Single Image",
-     "sub_label": null,
-     "icon": null,
-     "score_unit": null,
-     "pricing_unit": null,
-     "score_scale": 1,
-     "model_count": 60,
-     "top_models": [
-      {
-       "model": "GPT-Image-2.5 Sunburst",
-       "vendor": "OpenAI",
-       "score": 1514,
-       "rank": 1,
-       "license": "proprietary"
-      },
-      {
-       "model": "GPT-Image-2.5 Flare",
-       "vendor": "OpenAI",
-       "score": 1481,
-       "rank": 2,
-       "license": "proprietary"
-      },
-      {
-       "model": "GPT-Image-2 (Medium)",
-       "vendor": "OpenAI",
-       "score": 1461,
-       "rank": 3,
-       "license": "proprietary"
-      },
-      {
-       "model": "Grok Imagine Image 2.0",
-       "vendor": "SpaceXAI",
-       "score": 1439,
-       "rank": 4,
-       "license": "proprietary"
-      },
-      {
-       "model": "Gemini Nano Banana 2.1",
-       "vendor": "Google",
-       "score": 1426,
-       "rank": 5,
-       "license": "proprietary"
-      }
-     ]
     }
    ]
   },
@@ -644,11 +403,11 @@
    "boards": [
     {
      "slug": "video-text-to-video",
-     "title": "Best Video",
-     "sub_label": "Video | Overall",
-     "icon": "film",
-     "score_unit": "rating",
-     "pricing_unit": "second",
+     "title": "Video Text To Video",
+     "sub_label": null,
+     "icon": null,
+     "score_unit": null,
+     "pricing_unit": null,
      "score_scale": 1,
      "model_count": 48,
      "top_models": [
@@ -786,5 +545,18 @@
    ]
   }
  ],
- "failed": []
+ "failed": [
+  {
+   "slug": "agent",
+   "title": "Agent",
+   "href": "/leaderboard/agent",
+   "reason": "0 行"
+  },
+  {
+   "slug": "agent-alignment",
+   "title": "Agent Alignment",
+   "href": "/leaderboard/agent/alignment",
+   "reason": "0 行"
+  }
+ ]
 }
