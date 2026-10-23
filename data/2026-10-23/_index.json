@@ -1,6 +1,6 @@
 {
  "date": "2026-10-23",
- "fetched_at": "2026-10-23T00:00:05.668769+00:00",
+ "fetched_at": "2026-10-23T01:00:05.848312+00:00",
  "board_count": 16,
  "groups": [
   {
@@ -214,20 +214,20 @@
       {
        "model": "Gemini 4 Argon (High)",
        "vendor": "Google",
-       "score": 1524,
+       "score": 1517,
        "rank": 1,
-       "license": "proprietary"
-      },
-      {
-       "model": "Muse Wonder (Max)",
-       "vendor": "Meta",
-       "score": 1510,
-       "rank": 2,
        "license": "proprietary"
       },
       {
        "model": "Claude Opus 5.5 (High)",
        "vendor": "Anthropic",
+       "score": 1509,
+       "rank": 2,
+       "license": "proprietary"
+      },
+      {
+       "model": "Muse Wonder (Max)",
+       "vendor": "Meta",
        "score": 1509,
        "rank": 3,
        "license": "proprietary"
@@ -235,12 +235,12 @@
       {
        "model": "Claude Fable 5 (High)",
        "vendor": "Anthropic",
-       "score": 1504,
+       "score": 1503,
        "rank": 4,
        "license": "proprietary"
       },
       {
-       "model": "Claude Opus 4.6 (High)",
+       "model": "Claude Fable 5.1 (Max)",
        "vendor": "Anthropic",
        "score": 1503,
        "rank": 5,
