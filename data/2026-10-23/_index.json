@@ -1,6 +1,6 @@
 {
  "date": "2026-10-23",
- "fetched_at": "2026-10-23T17:00:05.888899+00:00",
+ "fetched_at": "2026-10-23T18:00:05.999642+00:00",
  "board_count": 16,
  "groups": [
   {
@@ -15,7 +15,7 @@
      "score_unit": "net-improvement",
      "pricing_unit": null,
      "score_scale": 10000,
-     "model_count": 57,
+     "model_count": 58,
      "top_models": [
       {
        "model": "Claude Opus 5.5 (Max)",
@@ -109,7 +109,7 @@
      "score_unit": "net-improvement",
      "pricing_unit": null,
      "score_scale": 10000,
-     "model_count": 57,
+     "model_count": 58,
      "top_models": [
       {
        "model": "Claude Opus 5.5 (Max)",
@@ -156,7 +156,7 @@
      "score_unit": "net-improvement",
      "pricing_unit": null,
      "score_scale": 10000,
-     "model_count": 57,
+     "model_count": 58,
      "top_models": [
       {
        "model": "Claude Opus 5.5 (Max)",
@@ -403,7 +403,7 @@
      "score_unit": "rating",
      "pricing_unit": null,
      "score_scale": 1,
-     "model_count": 150,
+     "model_count": 151,
      "top_models": [
       {
        "model": "Claude Opus 5.5 (Max)",

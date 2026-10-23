@@ -2,9 +2,9 @@
  "meta": {
   "leaderboard": "agent",
   "source_url": "https://arena.ai/leaderboard/agent",
-  "fetched_at": "2026-10-23T17:00:05.888899+00:00",
+  "fetched_at": "2026-10-23T18:00:05.999642+00:00",
   "last_updated": null,
-  "model_count": 57,
+  "model_count": 58,
   "title": "Agent · Overall",
   "title_zh": "智能体",
   "sub_label": "Agent | Overall",
@@ -581,8 +581,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 91085,
-   "price_prompt": 0.834,
-   "price_completion": 2.501,
+   "price_prompt": 0.7506,
+   "price_completion": 2.2509,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1156,8 +1156,8 @@
    "ci_high": null,
    "preliminary": false,
    "votes": 31784,
-   "price_prompt": 0.132,
-   "price_completion": 0.528,
+   "price_prompt": 0.0825,
+   "price_completion": 0.33,
    "context_length": null,
    "signals": {
     "avg_score": {
@@ -1270,7 +1270,7 @@
    "rank": 51,
    "rank_spread": [
     46,
-    53
+    54
    ],
    "model": "MiMo-V2.5-Pro",
    "model_url": "https://mimo.xiaomi.com/mimo-v2-5-pro/",
@@ -1295,7 +1295,7 @@
    "rank": 52,
    "rank_spread": [
     51,
-    54
+    55
    ],
    "model": "MiniMax-M3",
    "model_url": "https://www.minimax.io/models/text/m3",
@@ -1320,7 +1320,7 @@
    "rank": 53,
    "rank_spread": [
     52,
-    55
+    56
    ],
    "model": "Mistral Medium 3.5",
    "model_url": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04",
@@ -1345,7 +1345,7 @@
    "rank": 54,
    "rank_spread": [
     50,
-    56
+    57
    ],
    "model": "Nemotron 3 Ultra",
    "model_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
@@ -1370,7 +1370,7 @@
    "rank": 55,
    "rank_spread": [
     53,
-    56
+    57
    ],
    "model": "Inkling",
    "model_url": "https://thinkingmachines.ai/news/introducing-inkling/",
@@ -1394,8 +1394,33 @@
   {
    "rank": 56,
    "rank_spread": [
+    51,
+    58
+   ],
+   "model": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B (NVFP4)",
+   "model_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+   "vendor": "Nvidia",
+   "license": "open",
+   "score": null,
+   "ci_low": null,
+   "ci_high": null,
+   "preliminary": false,
+   "votes": 672,
+   "price_prompt": null,
+   "price_completion": null,
+   "context_length": null,
+   "signals": {
+    "avg_score": {
+     "value": -1424.0,
+     "ci": 577.0
+    }
+   }
+  },
+  {
+   "rank": 57,
+   "rank_spread": [
     54,
-    57
+    58
    ],
    "model": "Inkling-Small",
    "model_url": "https://thinkingmachines.ai/news/inkling-small/",
@@ -1417,10 +1442,10 @@
    }
   },
   {
-   "rank": 57,
+   "rank": 58,
    "rank_spread": [
     56,
-    57
+    58
    ],
    "model": "Solar Pro 4",
    "model_url": "https://www.upstage.ai/blog/en/solar-pro-4",
