@@ -1,7 +1,7 @@
 {
  "date": "2026-10-24",
- "fetched_at": "2026-10-24T10:00:04.900855+00:00",
- "board_count": 16,
+ "fetched_at": "2026-10-24T11:00:04.906728+00:00",
+ "board_count": 15,
  "groups": [
   {
    "key": "agent",
@@ -735,56 +735,16 @@
        "license": "proprietary"
       }
      ]
-    },
-    {
-     "slug": "video-video-edit",
-     "title": "Video Video Edit",
-     "sub_label": null,
-     "icon": null,
-     "score_unit": null,
-     "pricing_unit": null,
-     "score_scale": 1,
-     "model_count": 10,
-     "top_models": [
-      {
-       "model": "Wan 3.0",
-       "vendor": "Alibaba",
-       "score": 1414,
-       "rank": 1,
-       "license": null
-      },
-      {
-       "model": "Dreamina Seedance 2.5 (720p)",
-       "vendor": "Bytedance",
-       "score": 1410,
-       "rank": 2,
-       "license": null
-      },
-      {
-       "model": "MiniMax H3",
-       "vendor": "MiniMax",
-       "score": 1392,
-       "rank": 3,
-       "license": null
-      },
-      {
-       "model": "gemini-omni-flash",
-       "vendor": "Google",
-       "score": 1367,
-       "rank": 4,
-       "license": null
-      },
-      {
-       "model": "Dreamina Seedance 2.0 (720p)",
-       "vendor": "Bytedance",
-       "score": 1365,
-       "rank": 5,
-       "license": null
-      }
-     ]
     }
    ]
   }
  ],
- "failed": []
+ "failed": [
+  {
+   "slug": "video-video-edit",
+   "title": "Video Video Edit",
+   "href": "/leaderboard/video/video-edit",
+   "reason": "网络错误"
+  }
+ ]
 }
