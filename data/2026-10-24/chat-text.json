@@ -2,7 +2,7 @@
  "meta": {
   "leaderboard": "chat-text",
   "source_url": "https://arena.ai/leaderboard/chat/text",
-  "fetched_at": "2026-10-24T02:00:04.942181+00:00",
+  "fetched_at": "2026-10-24T03:00:05.015102+00:00",
   "last_updated": "2026-10-22T22:00:00.000Z",
   "model_count": 418,
   "model_count_upstream": 418,
@@ -29,7 +29,7 @@
    "score": 1517,
    "ci_low": 7,
    "ci_high": 7,
-   "preliminary": true,
+   "preliminary": false,
    "votes": 10083,
    "price_prompt": 2.0,
    "price_completion": 10.0,
@@ -1491,8 +1491,8 @@
    "ci_high": 6,
    "preliminary": false,
    "votes": 13220,
-   "price_prompt": 0.0825,
-   "price_completion": 0.33,
+   "price_prompt": 0.132,
+   "price_completion": 0.528,
    "context_length": 262144,
    "signals": null
   },
